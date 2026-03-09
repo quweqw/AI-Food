@@ -1,0 +1,19 @@
+venv/
+__pycache__/
+
+# AI models
+*.pt
+*.onnx
+*.weights
+
+# datasets
+datasets/
+
+# environment variables
+.env
+
+# macOS
+.DS_Store
+
+# python cache
+*.pyc
