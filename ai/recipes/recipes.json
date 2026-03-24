@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Chicken Rice Bowl",
+    "ingredients": ["chicken", "rice", "soy sauce"],
+    "instructions": "Cook rice. Fry chicken. Mix with sauce."
+  },
+  {
+    "name": "Beef Burger",
+    "ingredients": ["beef", "bun", "cheese"],
+    "instructions": "Grill beef. Assemble burger."
+  },
+  {
+    "name": "Pasta Marinara",
+    "ingredients": ["pasta", "tomato", "garlic"],
+    "instructions": "Boil pasta. Add sauce."
+  }
+]

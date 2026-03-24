@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-multipart
+ultralytics
+opencv-python
+pillow
+numpy
+torch
+torchvision --index-url https://download.pytorch.org/whl/cu121
+python-dotenv
+pydantic
+requests
+tensorrt
+pandas
+open_clip_torch
+faiss-cpu
+tqdm

@@ -1,0 +1,10 @@
+{
+    "chicken": { "calories": 165, "protein": 31, "fat": 3.6, "carbs": 0 },
+    "rice": { "calories": 130, "protein": 2.7, "fat": 0.3, "carbs": 28 },
+    "egg": { "calories": 155, "protein": 13, "fat": 11, "carbs": 1.1 },
+    "beef": { "calories": 250, "protein": 26, "fat": 15, "carbs": 0 },
+    "potato": { "calories": 77, "protein": 2, "fat": 0.1, "carbs": 17 },
+    "shrimp": { "calories": 99, "protein": 24, "fat": 0.3, "carbs": 0.2 },
+    "pasta": { "calories": 131, "protein": 5, "fat": 1.1, "carbs": 25 },
+    "noodles": { "calories": 138, "protein": 4.5, "fat": 2.1, "carbs": 27 }
+}
