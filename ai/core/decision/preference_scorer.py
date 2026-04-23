@@ -2,63 +2,40 @@ from typing import List
 
 
 class PreferenceScorer:
-    def __init__(self):
-        # Веса (можешь тюнить)
-        self.preferred_weight = 0.3
-        self.penalty_weight = 0.4
 
-    def score(self, ingredients: List[str], user_profile) -> float:
+    def score(self, ingredients, user_profile):
         """
-        Оценивает соответствие предпочтениям пользователя
-
-        Возвращает score от 0 до 1
+        Score от 0 до 1
         """
 
         if not ingredients:
             return 0.0
 
-        ingredients_set = {i.lower() for i in ingredients}
+        score = 0.5  # базовый
 
-        preferred = set(getattr(user_profile, "preferred_ingredients", []))
-        excluded = set(getattr(user_profile, "excluded_ingredients", []))
-
-        score = 1.0
+        ingredients = [i.lower() for i in ingredients]
 
         # ==============================
-        # 1. PREFERRED INGREDIENTS BONUS
+        # + за любимые продукты
         # ==============================
-        if preferred:
-            match_count = len(ingredients_set & preferred)
-            bonus = (match_count / len(preferred)) * self.preferred_weight
-            score += bonus
+        for ing in ingredients:
+            if ing in user_profile.preferred_ingredients:
+                score += 0.15
 
         # ==============================
-        # 2. EXCLUDED INGREDIENTS PENALTY
+        # - за нелюбимые
         # ==============================
-        if excluded:
-            bad_count = len(ingredients_set & excluded)
-            penalty = bad_count * self.penalty_weight
-            score -= penalty
+        for ing in ingredients:
+            if ing in user_profile.disliked_ingredients:
+                score -= 0.25
 
         # ==============================
-        # 3. GOAL-BASED SCORING
+        # - за повторяемость (слабый штраф)
         # ==============================
-        goal = getattr(user_profile, "goal", "balanced")
+        recent = user_profile.get_recent_ingredients()
 
-        # Простейшая эвристика
-        if goal == "fitness":
-            if any(p in ingredients_set for p in ["chicken", "egg", "fish", "shrimp"]):
-                score += 0.2
+        overlap = len(set(ingredients) & recent)
+        score -= overlap * 0.05
 
-        elif goal == "weight_loss":
-            if any(f in ingredients_set for f in ["fried", "oil", "butter"]):
-                score -= 0.2
-
-        elif goal == "mass_gain":
-            if any(c in ingredients_set for c in ["rice", "pasta", "noodles", "bread"]):
-                score += 0.2
-
-        # ==============================
-        # NORMALIZE
-        # ==============================
+        # clamp
         return max(0.0, min(score, 1.0))

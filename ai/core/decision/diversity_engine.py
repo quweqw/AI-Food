@@ -6,61 +6,36 @@ class DiversityEngine:
         # Сколько последних блюд учитывать
         self.history_window = 5
 
-    def score(self, ingredients: List[str], user_profile) -> float:
-        """
-        Оценивает разнообразие питания:
-        - штрафует повторяющиеся блюда
-        - штрафует повторяющиеся ингредиенты
-
-        Возвращает score от 0 до 1
-        """
-
+    def score(self, ingredients, user_profile):
         if not hasattr(user_profile, "recent_meals"):
             return 1.0
 
-        recent_meals = user_profile.recent_meals[-self.history_window:]
+        recent = user_profile.recent_meals[-self.history_window:]
 
-        if not recent_meals:
+        if not recent:
             return 1.0
 
         score = 1.0
-        ingredients_set = {i.lower() for i in ingredients}
+        ingredients_set = set(ingredients)
 
         # ==============================
-        # 1. EXACT MEAL REPEAT
+        # ЖЁСТКИЙ штраф за повтор блюда
         # ==============================
-        current_signature = " ".join(sorted(ingredients_set))
+        current = set(ingredients)
 
-        for meal in recent_meals:
-            if isinstance(meal, dict):
-                past_ingredients = set(meal.get("ingredients", []))
-                past_signature = " ".join(sorted(past_ingredients))
-            else:
-                # если строка
-                past_signature = str(meal).lower()
+        for meal in recent:
+            past = set(meal.get("ingredients", []))
 
-            if current_signature == past_signature:
-                score -= 0.4
+            if current == past:
+                score -= 0.5
 
         # ==============================
-        # 2. INGREDIENT OVERLAP
+        # мягкий штраф за пересечение
         # ==============================
-        overlap_penalty = 0.0
+        for meal in recent:
+            past = set(meal.get("ingredients", []))
+            overlap = len(current & past)
 
-        for meal in recent_meals:
-            if isinstance(meal, dict):
-                past_ingredients = set(meal.get("ingredients", []))
-            else:
-                continue
+            score -= overlap * 0.08
 
-            overlap = len(ingredients_set & past_ingredients)
-
-            if overlap > 0:
-                overlap_penalty += 0.1 * overlap
-
-        score -= overlap_penalty
-
-        # ==============================
-        # CLAMP
-        # ==============================
         return max(0.0, min(score, 1.0))

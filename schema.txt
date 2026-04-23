@@ -1,0 +1,112 @@
+AI Food
+│
+├── ai
+│   │
+│   ├── __pycache__
+│   │
+│   ├── clip
+│   │   │
+│   │   ├── embeddings
+│   │   │   │
+│   │   │   ├── __init__.py
+│   │   │   ├── build_embeddings.py
+│   │   │   ├── food_embeddings.npy
+│   │   │   └── food_labels.npy
+│   │   │
+│   │   ├── index
+│   │   │   │
+│   │   │   ├── __init__.py
+│   │   │   ├── build_index.py
+│   │   │   └── food_index.faiss
+│   │   │
+│   │   ├── models
+│   │   │
+│   │   ├── search
+│   │   │   │
+│   │   │   └── __init__.py
+│   │   │
+│   │   └── __init__.py
+│   │
+│   ├── core
+│   │   │
+│   │   ├── __pycache__
+│   │   │
+│   │   ├── decision
+│   │   │   │
+│   │   │   ├── __pycache__
+│   │   │   ├── diversity_engine.py
+│   │   │   ├── ingredient_scorer.py
+│   │   │   ├── preference_scorer.py
+│   │   │   ├── ranking_engine.py
+│   │   │   ├── safety_checker.py
+│   │   │   └── substitution_engine.py
+│   │   │
+│   │   ├── meal_builder.py
+│   │   └── user_profile.py
+│   │
+│   ├── data
+│   │   │
+│   │   └── substitutions.json
+│   │
+│   ├── food_normalizer
+│   │   │
+│   │   ├── __pycache__
+│   │   ├── build_vocab_embeddings.py
+│   │   ├── embed_vocab.npy
+│   │   ├── normalizer.py
+│   │   ├── start_vocab.json
+│   │   ├── vocab.json
+│   │   └── vocab_edit.py
+│   │
+│   ├── llm
+│   │   │
+│   │   ├── __pycache__
+│   │   ├── __init__.py
+│   │   ├── llm_service.py
+│   │   ├── nutrition_db.json
+│   │   ├── nutrition_engine.py
+│   │   ├── parser.py
+│   │   └── prompts.py
+│   │
+│   ├── pipeline
+│   │   │
+│   │   ├── __pycache__
+│   │   ├── __init__.py
+│   │   └── food_recognizer.py
+│   │
+│   ├── recipes
+│   │   │
+│   │   ├── __pycache__
+│   │   ├── build_index.py
+│   │   ├── recipe_embeddings.npy
+│   │   ├── recipe_index.faiss
+│   │   ├── recipe_search.py
+│   │   └── recipes.json
+│   │
+│   ├── yolo
+│   │   │
+│   │   ├── __pycache__
+│   │   │
+│   │   ├── inference
+│   │   │   │
+│   │   │   ├── __pycache__
+│   │   │   ├── __init__.py
+│   │   │   ├── crop_food.py
+│   │   │   └── detect_food.py
+│   │   │
+│   │   ├── models
+│   │   │   │
+│   │   │   └── food_yolo_seg.pt
+│   │   │
+│   │   ├── results
+│   │   │
+│   │   ├── __init__.py
+│   │
+│   └── __init__.py
+│
+├── venv
+│
+├── recipe_embeddings.npy
+├── recipe_index.faiss
+└── reqirements.txt
+ 

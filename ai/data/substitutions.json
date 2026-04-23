@@ -1,0 +1,2488 @@
+{
+  "milk": [
+    {
+      "item": "oat milk",
+      "base_score": 0.95,
+      "tags": ["vegan", "dairy-free", "nut-free"],
+      "texture": "creamy liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "almond milk",
+      "base_score": 0.9,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "light liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "soy milk",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "coconut milk",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "rich liquid",
+      "cuisine": ["asian", "tropical"]
+    },
+    {
+      "item": "rice milk",
+      "base_score": 0.75,
+      "tags": ["vegan", "dairy-free", "nut-free"],
+      "texture": "thin liquid",
+      "cuisine": ["any"]
+    }
+  ],
+  "butter": [
+    {
+      "item": "margarine",
+      "base_score": 0.9,
+      "tags": ["dairy-free", "vegan-option"],
+      "texture": "solid spread",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "coconut oil",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "solid at room temp",
+      "cuisine": ["baking", "asian"]
+    },
+    {
+      "item": "olive oil",
+      "base_score": 0.7,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "liquid",
+      "cuisine": ["mediterranean", "savory"]
+    },
+    {
+      "item": "avocado oil",
+      "base_score": 0.75,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "shortening",
+      "base_score": 0.8,
+      "tags": ["dairy-free"],
+      "texture": "solid fat",
+      "cuisine": ["baking"]
+    }
+  ],
+  "egg": [
+    {
+      "item": "flax egg",
+      "base_score": 0.85,
+      "tags": ["vegan", "egg-free"],
+      "texture": "binding gel",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "chia egg",
+      "base_score": 0.85,
+      "tags": ["vegan", "egg-free"],
+      "texture": "binding gel",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "applesauce",
+      "base_score": 0.7,
+      "tags": ["vegan", "egg-free"],
+      "texture": "moist puree",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "mashed banana",
+      "base_score": 0.6,
+      "tags": ["vegan", "egg-free"],
+      "texture": "moist puree",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.8,
+      "tags": ["vegan", "egg-free"],
+      "texture": "scramble",
+      "cuisine": ["savory"]
+    }
+  ],
+  "cheese": [
+    {
+      "item": "nutritional yeast",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "powder/flakes",
+      "cuisine": ["savory", "sauce"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.75,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "crumble/block",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "cashew cream",
+      "base_score": 0.9,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy spread",
+      "cuisine": ["any"]
+    }
+  ],
+  "cream": [
+    {
+      "item": "coconut cream",
+      "base_score": 0.9,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "thick creamy",
+      "cuisine": ["asian", "dessert"]
+    },
+    {
+      "item": "oat cream",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free", "nut-free"],
+      "texture": "liquid cream",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "soy cream",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "liquid cream",
+      "cuisine": ["any"]
+    }
+  ],
+  "yogurt": [
+    {
+      "item": "coconut yogurt",
+      "base_score": 0.9,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy cultured",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "soy yogurt",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy cultured",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "almond yogurt",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "light cultured",
+      "cuisine": ["any"]
+    }
+  ],
+  "wheat flour white": [
+    {
+      "item": "rice flour",
+      "base_score": 0.7,
+      "tags": ["gluten-free"],
+      "texture": "fine powder",
+      "cuisine": ["baking", "asian"]
+    },
+    {
+      "item": "almond flour",
+      "base_score": 0.75,
+      "tags": ["gluten-free", "grain-free"],
+      "texture": "nutty meal",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "oat flour",
+      "base_score": 0.8,
+      "tags": ["gluten-free-option"],
+      "texture": "fine powder",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "coconut flour",
+      "base_score": 0.6,
+      "tags": ["gluten-free", "grain-free"],
+      "texture": "absorbent powder",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "chickpea flour",
+      "base_score": 0.7,
+      "tags": ["gluten-free", "high-protein"],
+      "texture": "fine powder",
+      "cuisine": ["savory", "indian"]
+    }
+  ],
+  "soy sauce": [
+    {
+      "item": "tamari",
+      "base_score": 0.95,
+      "tags": ["gluten-free", "soy"],
+      "texture": "liquid",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "coconut aminos",
+      "base_score": 0.85,
+      "tags": ["soy-free", "gluten-free"],
+      "texture": "liquid",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "fish sauce",
+      "base_score": 0.6,
+      "tags": ["seafood", "gluten-free"],
+      "texture": "liquid",
+      "cuisine": ["southeast asian"]
+    }
+  ],
+  "shrimp": [
+    {
+      "item": "tofu firm",
+      "base_score": 0.7,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "soft block",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "chicken",
+      "base_score": 0.8,
+      "tags": ["meat", "shellfish-free"],
+      "texture": "meaty",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "mushroom",
+      "base_score": 0.65,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "umami",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "scallops",
+      "base_score": 0.9,
+      "tags": ["shellfish"],
+      "texture": "tender",
+      "cuisine": ["seafood"]
+    }
+  ],
+  "fish": [
+    {
+      "item": "tofu firm",
+      "base_score": 0.6,
+      "tags": ["vegan", "seafood-free"],
+      "texture": "soft block",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "chicken",
+      "base_score": 0.7,
+      "tags": ["meat", "seafood-free"],
+      "texture": "flaky/meaty",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "mushroom",
+      "base_score": 0.6,
+      "tags": ["vegan", "seafood-free"],
+      "texture": "umami",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "jackfruit young",
+      "base_score": 0.5,
+      "tags": ["vegan", "seafood-free"],
+      "texture": "shredded",
+      "cuisine": ["asian", "caribbean"]
+    }
+  ],
+  "beef": [
+    {
+      "item": "chicken",
+      "base_score": 0.8,
+      "tags": ["meat", "lighter"],
+      "texture": "meaty",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "mushroom portobello",
+      "base_score": 0.7,
+      "tags": ["vegan", "meatless"],
+      "texture": "hearty umami",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "lentils",
+      "base_score": 0.6,
+      "tags": ["vegan", "high-protein"],
+      "texture": "soft legume",
+      "cuisine": ["stews", "soups"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.65,
+      "tags": ["vegan", "meatless"],
+      "texture": "firm block",
+      "cuisine": ["asian", "any"]
+    },
+    {
+      "item": "seitan",
+      "base_score": 0.75,
+      "tags": ["vegan", "high-protein"],
+      "texture": "chewy meat-like",
+      "cuisine": ["any"]
+    }
+  ],
+  "chicken": [
+    {
+      "item": "turkey breast skinless",
+      "base_score": 0.9,
+      "tags": ["poultry", "lean"],
+      "texture": "meaty",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.7,
+      "tags": ["vegan", "meatless"],
+      "texture": "firm block",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "seitan",
+      "base_score": 0.75,
+      "tags": ["vegan", "high-protein"],
+      "texture": "chewy",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "jackfruit young",
+      "base_score": 0.6,
+      "tags": ["vegan", "meatless"],
+      "texture": "shredded",
+      "cuisine": ["tacos", "sandwiches"]
+    }
+  ],
+  "pork": [
+    {
+      "item": "chicken",
+      "base_score": 0.8,
+      "tags": ["poultry", "leaner"],
+      "texture": "meaty",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "turkey",
+      "base_score": 0.8,
+      "tags": ["poultry", "lean"],
+      "texture": "meaty",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "seitan",
+      "base_score": 0.7,
+      "tags": ["vegan", "high-protein"],
+      "texture": "chewy",
+      "cuisine": ["any"]
+    }
+  ],
+  "bacon": [
+    {
+      "item": "turkey bacon",
+      "base_score": 0.85,
+      "tags": ["poultry", "processed"],
+      "texture": "crispy strips",
+      "cuisine": ["american"]
+    },
+    {
+      "item": "coconut bacon",
+      "base_score": 0.7,
+      "tags": ["vegan", "plant-based"],
+      "texture": "crispy flakes",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "tempeh bacon",
+      "base_score": 0.75,
+      "tags": ["vegan", "fermented"],
+      "texture": "chewy strips",
+      "cuisine": ["any"]
+    }
+  ],
+  "peanut butter": [
+    {
+      "item": "almond butter",
+      "base_score": 0.9,
+      "tags": ["nut-butter", "peanut-free"],
+      "texture": "creamy spread",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "sunflower seed butter",
+      "base_score": 0.85,
+      "tags": ["nut-free", "seed-butter"],
+      "texture": "creamy spread",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "tahini",
+      "base_score": 0.8,
+      "tags": ["sesame", "nut-free"],
+      "texture": "liquid paste",
+      "cuisine": ["mediterranean", "middle eastern"]
+    },
+    {
+      "item": "cashew butter",
+      "base_score": 0.9,
+      "tags": ["nut-butter"],
+      "texture": "creamy spread",
+      "cuisine": ["any"]
+    }
+  ],
+  "honey": [
+    {
+      "item": "maple syrup",
+      "base_score": 0.9,
+      "tags": ["vegan", "liquid sweetener"],
+      "texture": "syrup",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "agave nectar",
+      "base_score": 0.85,
+      "tags": ["vegan", "liquid sweetener"],
+      "texture": "syrup",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "date syrup",
+      "base_score": 0.8,
+      "tags": ["vegan", "fruit sweetener"],
+      "texture": "syrup",
+      "cuisine": ["middle eastern"]
+    },
+    {
+      "item": "molasses",
+      "base_score": 0.7,
+      "tags": ["vegan", "mineral-rich"],
+      "texture": "thick syrup",
+      "cuisine": ["baking"]
+    }
+  ],
+  "sugar": [
+    {
+      "item": "maple syrup",
+      "base_score": 0.7,
+      "tags": ["natural liquid sweetener"],
+      "texture": "liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "honey",
+      "base_score": 0.8,
+      "tags": ["natural sweetener"],
+      "texture": "viscous liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "stevia",
+      "base_score": 0.6,
+      "tags": ["zero-calorie", "sugar-free"],
+      "texture": "powder/liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "coconut sugar",
+      "base_score": 0.85,
+      "tags": ["low-glycemic", "unrefined"],
+      "texture": "granulated",
+      "cuisine": ["baking"]
+    }
+  ],
+  "chocolate": [
+    {
+      "item": "carob powder",
+      "base_score": 0.75,
+      "tags": ["caffeine-free", "chocolate-free"],
+      "texture": "powder",
+      "cuisine": ["baking", "drinks"]
+    },
+    {
+      "item": "white chocolate",
+      "base_score": 0.5,
+      "tags": ["no-cocoa-solids"],
+      "texture": "creamy",
+      "cuisine": ["desserts"]
+    }
+  ],
+  "rice": [
+    {
+      "item": "quinoa raw",
+      "base_score": 0.8,
+      "tags": ["gluten-free", "high-protein"],
+      "texture": "fluffy grain",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "cauliflower rice",
+      "base_score": 0.6,
+      "tags": ["low-carb", "vegan"],
+      "texture": "grated vegetable",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "bulgur raw",
+      "base_score": 0.75,
+      "tags": ["whole-grain"],
+      "texture": "chewy grain",
+      "cuisine": ["middle eastern"]
+    },
+    {
+      "item": "couscous raw",
+      "base_score": 0.8,
+      "tags": ["pasta-grain"],
+      "texture": "small pellets",
+      "cuisine": ["north african"]
+    }
+  ],
+  "pasta": [
+    {
+      "item": "zucchini noodles",
+      "base_score": 0.6,
+      "tags": ["low-carb", "gluten-free", "vegan"],
+      "texture": "vegetable strands",
+      "cuisine": ["italian"]
+    },
+    {
+      "item": "rice noodles",
+      "base_score": 0.8,
+      "tags": ["gluten-free"],
+      "texture": "soft noodles",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "chickpea pasta",
+      "base_score": 0.85,
+      "tags": ["gluten-free", "high-protein"],
+      "texture": "firm pasta",
+      "cuisine": ["italian"]
+    },
+    {
+      "item": "spaghetti squash",
+      "base_score": 0.6,
+      "tags": ["low-carb", "gluten-free"],
+      "texture": "strands",
+      "cuisine": ["american"]
+    }
+  ],
+  "tomato sauce": [
+    {
+      "item": "pesto",
+      "base_score": 0.7,
+      "tags": ["tomato-free", "herb-based"],
+      "texture": "thick paste",
+      "cuisine": ["italian"]
+    },
+    {
+      "item": "alfredo sauce",
+      "base_score": 0.6,
+      "tags": ["creamy"],
+      "texture": "creamy",
+      "cuisine": ["italian"]
+    },
+    {
+      "item": "marinara sauce",
+      "base_score": 0.95,
+      "tags": ["tomato-based"],
+      "texture": "smooth",
+      "cuisine": ["italian"]
+    }
+  ],
+  "mayonnaise": [
+    {
+      "item": "vegan mayo",
+      "base_score": 0.95,
+      "tags": ["vegan", "egg-free"],
+      "texture": "creamy spread",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "greek yogurt",
+      "base_score": 0.7,
+      "tags": ["tangy", "lower-fat"],
+      "texture": "creamy",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "avocado",
+      "base_score": 0.6,
+      "tags": ["vegan", "whole-food"],
+      "texture": "creamy spread",
+      "cuisine": ["sandwiches"]
+    }
+  ],
+  "sour cream": [
+    {
+      "item": "greek yogurt",
+      "base_score": 0.9,
+      "tags": ["tangy", "thick"],
+      "texture": "creamy",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "coconut cream",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "thick creamy",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "cashew sour cream",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy tangy",
+      "cuisine": ["any"]
+    }
+  ],
+  "ice cream": [
+    {
+      "item": "banana nice cream",
+      "base_score": 0.7,
+      "tags": ["vegan", "dairy-free", "whole-food"],
+      "texture": "frozen creamy",
+      "cuisine": ["dessert"]
+    },
+    {
+      "item": "coconut milk ice cream",
+      "base_score": 0.9,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "frozen creamy",
+      "cuisine": ["dessert"]
+    },
+    {
+      "item": "sorbet",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free", "fruit-based"],
+      "texture": "icy",
+      "cuisine": ["dessert"]
+    }
+  ],
+  "bread": [
+    {
+      "item": "gluten-free bread",
+      "base_score": 0.9,
+      "tags": ["gluten-free"],
+      "texture": "soft loaf",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "lettuce wrap",
+      "base_score": 0.5,
+      "tags": ["low-carb", "gluten-free"],
+      "texture": "crisp leaf",
+      "cuisine": ["sandwich"]
+    },
+    {
+      "item": "corn tortilla",
+      "base_score": 0.7,
+      "tags": ["gluten-free"],
+      "texture": "flatbread",
+      "cuisine": ["mexican"]
+    }
+  ],
+  "crab": [
+    {
+      "item": "chicken",
+      "base_score": 0.8,
+      "tags": ["meat", "shellfish-free"],
+      "texture": "flaky",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.7,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "soft block",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "jackfruit",
+      "base_score": 0.65,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "shredded",
+      "cuisine": ["seafood-style"]
+    },
+    {
+      "item": "surimi",
+      "base_score": 0.9,
+      "tags": ["seafood", "processed"],
+      "texture": "imitation crab",
+      "cuisine": ["japanese", "salads"]
+    }
+  ],
+  "lobster": [
+    {
+      "item": "chicken",
+      "base_score": 0.75,
+      "tags": ["meat", "shellfish-free"],
+      "texture": "meaty",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "monkfish",
+      "base_score": 0.85,
+      "tags": ["seafood"],
+      "texture": "firm sweet",
+      "cuisine": ["seafood"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.7,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "firm block",
+      "cuisine": ["asian"]
+    }
+  ],
+  "clams": [
+    {
+      "item": "mussels",
+      "base_score": 0.9,
+      "tags": ["shellfish"],
+      "texture": "chewy",
+      "cuisine": ["seafood"]
+    },
+    {
+      "item": "oyster mushroom",
+      "base_score": 0.7,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "tender",
+      "cuisine": ["asian", "pasta"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.6,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "soft",
+      "cuisine": ["soups"]
+    }
+  ],
+  "mussels": [
+    {
+      "item": "clams",
+      "base_score": 0.9,
+      "tags": ["shellfish"],
+      "texture": "chewy",
+      "cuisine": ["seafood"]
+    },
+    {
+      "item": "oyster mushroom",
+      "base_score": 0.7,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "tender",
+      "cuisine": ["asian"]
+    }
+  ],
+  "oysters": [
+    {
+      "item": "mussels",
+      "base_score": 0.8,
+      "tags": ["shellfish"],
+      "texture": "briny soft",
+      "cuisine": ["seafood"]
+    },
+    {
+      "item": "mushroom",
+      "base_score": 0.65,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "umami",
+      "cuisine": ["any"]
+    }
+  ],
+  "scallops": [
+    {
+      "item": "shrimp",
+      "base_score": 0.85,
+      "tags": ["shellfish"],
+      "texture": "tender",
+      "cuisine": ["seafood"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.7,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "sliced rounds",
+      "cuisine": ["pan-seared"]
+    },
+    {
+      "item": "mushroom stems",
+      "base_score": 0.65,
+      "tags": ["vegan"],
+      "texture": "meaty",
+      "cuisine": ["vegan"]
+    }
+  ],
+  "squid": [
+    {
+      "item": "octopus",
+      "base_score": 0.9,
+      "tags": ["seafood"],
+      "texture": "chewy",
+      "cuisine": ["mediterranean"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.65,
+      "tags": ["vegan"],
+      "texture": "rings",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "rice cake",
+      "base_score": 0.6,
+      "tags": ["vegan", "gluten-free"],
+      "texture": "chewy",
+      "cuisine": ["korean"]
+    }
+  ],
+  "octopus": [
+    {
+      "item": "squid",
+      "base_score": 0.9,
+      "tags": ["seafood"],
+      "texture": "chewy",
+      "cuisine": ["mediterranean"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.6,
+      "tags": ["vegan"],
+      "texture": "grilled",
+      "cuisine": ["greek"]
+    }
+  ],
+  "caviar black": [
+    {
+      "item": "seaweed kelp caviar",
+      "base_score": 0.8,
+      "tags": ["vegan", "seafood-free"],
+      "texture": "pearls",
+      "cuisine": ["gourmet"]
+    },
+    {
+      "item": "chia seeds",
+      "base_score": 0.6,
+      "tags": ["vegan"],
+      "texture": "gel pearls",
+      "cuisine": ["garnish"]
+    }
+  ],
+  "duck": [
+    {
+      "item": "chicken",
+      "base_score": 0.8,
+      "tags": ["poultry"],
+      "texture": "leaner",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "turkey",
+      "base_score": 0.85,
+      "tags": ["poultry"],
+      "texture": "dark meat",
+      "cuisine": ["roast"]
+    },
+    {
+      "item": "seitan",
+      "base_score": 0.7,
+      "tags": ["vegan"],
+      "texture": "dense",
+      "cuisine": ["asian"]
+    }
+  ],
+  "goose": [
+    {
+      "item": "duck",
+      "base_score": 0.9,
+      "tags": ["poultry"],
+      "texture": "rich dark meat",
+      "cuisine": ["roast"]
+    },
+    {
+      "item": "turkey",
+      "base_score": 0.8,
+      "tags": ["poultry"],
+      "texture": "large bird",
+      "cuisine": ["holiday"]
+    }
+  ],
+  "rabbit": [
+    {
+      "item": "chicken",
+      "base_score": 0.85,
+      "tags": ["poultry", "lean"],
+      "texture": "mild",
+      "cuisine": ["stew"]
+    },
+    {
+      "item": "turkey breast skinless",
+      "base_score": 0.8,
+      "tags": ["poultry", "lean"],
+      "texture": "white meat",
+      "cuisine": ["any"]
+    }
+  ],
+  "veal": [
+    {
+      "item": "pork",
+      "base_score": 0.8,
+      "tags": ["meat"],
+      "texture": "tender",
+      "cuisine": ["italian"]
+    },
+    {
+      "item": "chicken",
+      "base_score": 0.75,
+      "tags": ["poultry", "leaner"],
+      "texture": "mild",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.6,
+      "tags": ["vegan"],
+      "texture": "cutlets",
+      "cuisine": ["schnitzel"]
+    }
+  ],
+  "venison": [
+    {
+      "item": "beef",
+      "base_score": 0.85,
+      "tags": ["meat"],
+      "texture": "lean red meat",
+      "cuisine": ["game"]
+    },
+    {
+      "item": "bison",
+      "base_score": 0.9,
+      "tags": ["meat", "lean"],
+      "texture": "rich",
+      "cuisine": ["steaks"]
+    },
+    {
+      "item": "elk",
+      "base_score": 0.95,
+      "tags": ["game meat"],
+      "texture": "similar",
+      "cuisine": ["wild game"]
+    }
+  ],
+  "bison": [
+    {
+      "item": "beef",
+      "base_score": 0.9,
+      "tags": ["meat"],
+      "texture": "slightly leaner",
+      "cuisine": ["american"]
+    },
+    {
+      "item": "venison",
+      "base_score": 0.85,
+      "tags": ["game meat"],
+      "texture": "lean",
+      "cuisine": ["grill"]
+    }
+  ],
+  "elk": [
+    {
+      "item": "venison",
+      "base_score": 0.95,
+      "tags": ["game meat"],
+      "texture": "lean",
+      "cuisine": ["roast"]
+    },
+    {
+      "item": "beef",
+      "base_score": 0.8,
+      "tags": ["meat"],
+      "texture": "red meat",
+      "cuisine": ["stew"]
+    }
+  ],
+  "turkey": [
+    {
+      "item": "chicken",
+      "base_score": 0.9,
+      "tags": ["poultry"],
+      "texture": "mild",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "seitan",
+      "base_score": 0.75,
+      "tags": ["vegan"],
+      "texture": "roast",
+      "cuisine": ["holiday"]
+    },
+    {
+      "item": "tofu firm",
+      "base_score": 0.65,
+      "tags": ["vegan"],
+      "texture": "loaf",
+      "cuisine": ["sandwiches"]
+    }
+  ],
+  "ostrich": [
+    {
+      "item": "beef",
+      "base_score": 0.85,
+      "tags": ["meat"],
+      "texture": "lean red meat",
+      "cuisine": ["steak"]
+    },
+    {
+      "item": "bison",
+      "base_score": 0.8,
+      "tags": ["meat", "lean"],
+      "texture": "similar",
+      "cuisine": ["grill"]
+    }
+  ],
+  "quail": [
+    {
+      "item": "chicken",
+      "base_score": 0.85,
+      "tags": ["poultry"],
+      "texture": "small game bird",
+      "cuisine": ["roast"]
+    },
+    {
+      "item": "pheasant",
+      "base_score": 0.9,
+      "tags": ["game bird"],
+      "texture": "delicate",
+      "cuisine": ["gourmet"]
+    }
+  ],
+  "pheasant": [
+    {
+      "item": "chicken",
+      "base_score": 0.8,
+      "tags": ["poultry"],
+      "texture": "lean",
+      "cuisine": ["roast"]
+    },
+    {
+      "item": "quail",
+      "base_score": 0.85,
+      "tags": ["game bird"],
+      "texture": "mild",
+      "cuisine": ["gourmet"]
+    }
+  ],
+  "buttermilk": [
+    {
+      "item": "kefir",
+      "base_score": 0.9,
+      "tags": ["cultured dairy"],
+      "texture": "tangy liquid",
+      "cuisine": ["baking", "drinks"]
+    },
+    {
+      "item": "yogurt thinned",
+      "base_score": 0.85,
+      "tags": ["dairy"],
+      "texture": "creamy acid",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "soy milk + lemon juice",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "curdled plant milk",
+      "cuisine": ["baking"]
+    }
+  ],
+  "cream cheese": [
+    {
+      "item": "mascarpone",
+      "base_score": 0.85,
+      "tags": ["dairy"],
+      "texture": "rich spread",
+      "cuisine": ["desserts", "bagels"]
+    },
+    {
+      "item": "tofu firm blended",
+      "base_score": 0.75,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy puree",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "coconut cream",
+      "base_score": 0.7,
+      "tags": ["vegan"],
+      "texture": "thick spread",
+      "cuisine": ["desserts"]
+    }
+  ],
+  "ricotta whole milk": [
+    {
+      "item": "cottage cheese",
+      "base_score": 0.8,
+      "tags": ["dairy"],
+      "texture": "curds",
+      "cuisine": ["italian"]
+    },
+    {
+      "item": "tofu firm crumbled",
+      "base_score": 0.75,
+      "tags": ["vegan"],
+      "texture": "grainy",
+      "cuisine": ["lasagna", "cannoli"]
+    },
+    {
+      "item": "almond ricotta",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy",
+      "cuisine": ["italian"]
+    }
+  ],
+  "mascarpone": [
+    {
+      "item": "cream cheese",
+      "base_score": 0.85,
+      "tags": ["dairy"],
+      "texture": "smooth",
+      "cuisine": ["desserts"]
+    },
+    {
+      "item": "coconut cream",
+      "base_score": 0.75,
+      "tags": ["vegan"],
+      "texture": "rich",
+      "cuisine": ["tiramisu"]
+    },
+    {
+      "item": "cashew cream",
+      "base_score": 0.8,
+      "tags": ["vegan"],
+      "texture": "smooth",
+      "cuisine": ["italian"]
+    }
+  ],
+  "ghee": [
+    {
+      "item": "coconut oil",
+      "base_score": 0.9,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "solid fat",
+      "cuisine": ["indian", "sauté"]
+    },
+    {
+      "item": "avocado oil",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "liquid oil",
+      "cuisine": ["high-heat"]
+    },
+    {
+      "item": "butter",
+      "base_score": 0.95,
+      "tags": ["dairy"],
+      "texture": "clarified",
+      "cuisine": ["any"]
+    }
+  ],
+  "condensed milk": [
+    {
+      "item": "coconut condensed milk",
+      "base_score": 0.9,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "thick sweet",
+      "cuisine": ["desserts"]
+    },
+    {
+      "item": "evaporated milk + sugar",
+      "base_score": 0.85,
+      "tags": ["dairy"],
+      "texture": "syrupy",
+      "cuisine": ["baking"]
+    }
+  ],
+  "evaporated milk": [
+    {
+      "item": "coconut milk",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "creamy liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "oat milk",
+      "base_score": 0.8,
+      "tags": ["vegan", "nut-free"],
+      "texture": "light cream",
+      "cuisine": ["any"]
+    }
+  ],
+  "powdered milk": [
+    {
+      "item": "coconut milk powder",
+      "base_score": 0.8,
+      "tags": ["vegan"],
+      "texture": "powder",
+      "cuisine": ["baking", "drinks"]
+    },
+    {
+      "item": "soy milk powder",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "powder",
+      "cuisine": ["any"]
+    }
+  ],
+  "casein powder": [
+    {
+      "item": "whey powder",
+      "base_score": 0.9,
+      "tags": ["dairy", "protein"],
+      "texture": "powder",
+      "cuisine": ["shakes"]
+    },
+    {
+      "item": "pea protein powder",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "powder",
+      "cuisine": ["smoothies"]
+    }
+  ],
+  "whey powder": [
+    {
+      "item": "pea protein powder",
+      "base_score": 0.85,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "powder",
+      "cuisine": ["shakes"]
+    },
+    {
+      "item": "soy protein powder",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "powder",
+      "cuisine": ["baking", "drinks"]
+    }
+  ],
+  "egg white powder": [
+    {
+      "item": "aquafaba powder",
+      "base_score": 0.8,
+      "tags": ["vegan", "egg-free"],
+      "texture": "meringue base",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "flax egg",
+      "base_score": 0.6,
+      "tags": ["vegan"],
+      "texture": "binding",
+      "cuisine": ["baking"]
+    }
+  ],
+  "whole wheat flour": [
+    {
+      "item": "oat flour",
+      "base_score": 0.75,
+      "tags": ["gluten-free-option"],
+      "texture": "nutty",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "almond flour",
+      "base_score": 0.7,
+      "tags": ["gluten-free", "low-carb"],
+      "texture": "moist",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "buckwheat flour",
+      "base_score": 0.8,
+      "tags": ["gluten-free"],
+      "texture": "earthy",
+      "cuisine": ["pancakes", "bread"]
+    }
+  ],
+  "bread flour": [
+    {
+      "item": "wheat flour white + vital wheat gluten",
+      "base_score": 0.95,
+      "tags": ["gluten"],
+      "texture": "strong",
+      "cuisine": ["bread"]
+    },
+    {
+      "item": "whole wheat flour",
+      "base_score": 0.85,
+      "tags": ["whole grain"],
+      "texture": "hearty",
+      "cuisine": ["bread"]
+    }
+  ],
+  "cake flour": [
+    {
+      "item": "wheat flour white + cornstarch",
+      "base_score": 0.9,
+      "tags": ["gluten"],
+      "texture": "tender",
+      "cuisine": ["cakes"]
+    },
+    {
+      "item": "pastry flour",
+      "base_score": 0.95,
+      "tags": ["gluten"],
+      "texture": "fine",
+      "cuisine": ["baking"]
+    }
+  ],
+  "self-raising flour": [
+    {
+      "item": "wheat flour white + baking powder + salt",
+      "base_score": 1.0,
+      "tags": ["diy"],
+      "texture": "leavened",
+      "cuisine": ["baking"]
+    }
+  ],
+  "barley flour": [
+    {
+      "item": "oat flour",
+      "base_score": 0.8,
+      "tags": ["gluten-free-option"],
+      "texture": "mild",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "brown rice flour",
+      "base_score": 0.75,
+      "tags": ["gluten-free"],
+      "texture": "slightly gritty",
+      "cuisine": ["baking"]
+    }
+  ],
+  "rye flour": [
+    {
+      "item": "whole wheat flour",
+      "base_score": 0.85,
+      "tags": ["gluten"],
+      "texture": "dense",
+      "cuisine": ["bread"]
+    },
+    {
+      "item": "buckwheat flour",
+      "base_score": 0.75,
+      "tags": ["gluten-free"],
+      "texture": "earthy",
+      "cuisine": ["pancakes"]
+    }
+  ],
+  "corn flour": [
+    {
+      "item": "rice flour",
+      "base_score": 0.8,
+      "tags": ["gluten-free"],
+      "texture": "fine",
+      "cuisine": ["breading"]
+    },
+    {
+      "item": "masa harina",
+      "base_score": 0.9,
+      "tags": ["gluten-free"],
+      "texture": "nixtamalized",
+      "cuisine": ["tortillas"]
+    }
+  ],
+  "cornstarch": [
+    {
+      "item": "arrowroot powder",
+      "base_score": 0.9,
+      "tags": ["gluten-free", "grain-free"],
+      "texture": "thickener",
+      "cuisine": ["sauces"]
+    },
+    {
+      "item": "tapioca starch",
+      "base_score": 0.95,
+      "tags": ["gluten-free"],
+      "texture": "clear thickener",
+      "cuisine": ["pie fillings"]
+    },
+    {
+      "item": "potato starch",
+      "base_score": 0.85,
+      "tags": ["gluten-free"],
+      "texture": "thickener",
+      "cuisine": ["soups"]
+    }
+  ],
+  "tapioca starch": [
+    {
+      "item": "arrowroot powder",
+      "base_score": 0.95,
+      "tags": ["gluten-free"],
+      "texture": "thickener",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "cornstarch",
+      "base_score": 0.9,
+      "tags": ["gluten-free"],
+      "texture": "thickener",
+      "cuisine": ["any"]
+    }
+  ],
+  "potato starch": [
+    {
+      "item": "cornstarch",
+      "base_score": 0.85,
+      "tags": ["gluten-free"],
+      "texture": "thickener",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "tapioca starch",
+      "base_score": 0.9,
+      "tags": ["gluten-free"],
+      "texture": "thickener",
+      "cuisine": ["sauces"]
+    }
+  ],
+  "arrowroot powder": [
+    {
+      "item": "tapioca starch",
+      "base_score": 0.95,
+      "tags": ["gluten-free"],
+      "texture": "thickener",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "cornstarch",
+      "base_score": 0.85,
+      "tags": ["gluten-free"],
+      "texture": "thickener",
+      "cuisine": ["any"]
+    }
+  ],
+  "semolina": [
+    {
+      "item": "cornmeal",
+      "base_score": 0.7,
+      "tags": ["gluten-free"],
+      "texture": "gritty",
+      "cuisine": ["pasta", "porridge"]
+    },
+    {
+      "item": "rice flour",
+      "base_score": 0.65,
+      "tags": ["gluten-free"],
+      "texture": "fine",
+      "cuisine": ["dusting"]
+    }
+  ],
+  "couscous raw": [
+    {
+      "item": "quinoa raw",
+      "base_score": 0.85,
+      "tags": ["gluten-free", "high-protein"],
+      "texture": "fluffy",
+      "cuisine": ["salads"]
+    },
+    {
+      "item": "bulgur raw",
+      "base_score": 0.8,
+      "tags": ["whole-grain"],
+      "texture": "chewy",
+      "cuisine": ["tabbouleh"]
+    },
+    {
+      "item": "millet raw",
+      "base_score": 0.75,
+      "tags": ["gluten-free"],
+      "texture": "tiny grains",
+      "cuisine": ["side dish"]
+    }
+  ],
+  "quinoa raw": [
+    {
+      "item": "millet raw",
+      "base_score": 0.85,
+      "tags": ["gluten-free"],
+      "texture": "small grains",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "buckwheat raw",
+      "base_score": 0.8,
+      "tags": ["gluten-free"],
+      "texture": "nutty",
+      "cuisine": ["kasha"]
+    },
+    {
+      "item": "brown rice raw",
+      "base_score": 0.75,
+      "tags": ["gluten-free"],
+      "texture": "chewy",
+      "cuisine": ["bowls"]
+    }
+  ],
+  "bulgur raw": [
+    {
+      "item": "quinoa raw",
+      "base_score": 0.8,
+      "tags": ["gluten-free"],
+      "texture": "fluffy",
+      "cuisine": ["salads"]
+    },
+    {
+      "item": "couscous raw",
+      "base_score": 0.85,
+      "tags": ["gluten"],
+      "texture": "small pellets",
+      "cuisine": ["middle eastern"]
+    }
+  ],
+  "buckwheat raw": [
+    {
+      "item": "quinoa raw",
+      "base_score": 0.85,
+      "tags": ["gluten-free"],
+      "texture": "nutty",
+      "cuisine": ["porridge"]
+    },
+    {
+      "item": "millet raw",
+      "base_score": 0.8,
+      "tags": ["gluten-free"],
+      "texture": "mild",
+      "cuisine": ["side dish"]
+    }
+  ],
+  "millet raw": [
+    {
+      "item": "quinoa raw",
+      "base_score": 0.9,
+      "tags": ["gluten-free"],
+      "texture": "small grains",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "amaranth",
+      "base_score": 0.85,
+      "tags": ["gluten-free"],
+      "texture": "tiny",
+      "cuisine": ["porridge"]
+    }
+  ],
+  "amaranth": [
+    {
+      "item": "quinoa raw",
+      "base_score": 0.85,
+      "tags": ["gluten-free"],
+      "texture": "creamy when cooked",
+      "cuisine": ["porridge"]
+    },
+    {
+      "item": "millet raw",
+      "base_score": 0.8,
+      "tags": ["gluten-free"],
+      "texture": "small",
+      "cuisine": ["side"]
+    }
+  ],
+  "spelt raw": [
+    {
+      "item": "wheat flour white",
+      "base_score": 0.9,
+      "tags": ["gluten"],
+      "texture": "similar",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "rye flour",
+      "base_score": 0.85,
+      "tags": ["gluten"],
+      "texture": "nutty",
+      "cuisine": ["bread"]
+    }
+  ],
+  "chickpeas raw": [
+    {
+      "item": "fava beans raw",
+      "base_score": 0.8,
+      "tags": ["legume"],
+      "texture": "firm",
+      "cuisine": ["mediterranean"]
+    },
+    {
+      "item": "cannellini beans",
+      "base_score": 0.75,
+      "tags": ["legume"],
+      "texture": "creamy",
+      "cuisine": ["stews"]
+    }
+  ],
+  "black beans raw": [
+    {
+      "item": "pinto beans raw",
+      "base_score": 0.9,
+      "tags": ["legume"],
+      "texture": "creamy",
+      "cuisine": ["mexican"]
+    },
+    {
+      "item": "kidney beans",
+      "base_score": 0.85,
+      "tags": ["legume"],
+      "texture": "firm",
+      "cuisine": ["chili"]
+    }
+  ],
+  "pinto beans raw": [
+    {
+      "item": "black beans raw",
+      "base_score": 0.9,
+      "tags": ["legume"],
+      "texture": "similar",
+      "cuisine": ["mexican"]
+    },
+    {
+      "item": "cranberry beans",
+      "base_score": 0.85,
+      "tags": ["legume"],
+      "texture": "nutty",
+      "cuisine": ["italian"]
+    }
+  ],
+  "lima beans raw": [
+    {
+      "item": "fava beans raw",
+      "base_score": 0.85,
+      "tags": ["legume"],
+      "texture": "buttery",
+      "cuisine": ["succotash"]
+    },
+    {
+      "item": "edamame",
+      "base_score": 0.8,
+      "tags": ["soy"],
+      "texture": "firm",
+      "cuisine": ["asian"]
+    }
+  ],
+  "fava beans raw": [
+    {
+      "item": "lima beans raw",
+      "base_score": 0.85,
+      "tags": ["legume"],
+      "texture": "meaty",
+      "cuisine": ["mediterranean"]
+    },
+    {
+      "item": "chickpeas raw",
+      "base_score": 0.8,
+      "tags": ["legume"],
+      "texture": "firm",
+      "cuisine": ["falafel"]
+    }
+  ],
+  "soybeans raw": [
+    {
+      "item": "fava beans raw",
+      "base_score": 0.8,
+      "tags": ["legume"],
+      "texture": "firm",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "chickpeas raw",
+      "base_score": 0.75,
+      "tags": ["legume"],
+      "texture": "nutty",
+      "cuisine": ["hummus"]
+    }
+  ],
+  "edamame": [
+    {
+      "item": "fava beans",
+      "base_score": 0.85,
+      "tags": ["legume"],
+      "texture": "tender",
+      "cuisine": ["snack"]
+    },
+    {
+      "item": "lima beans",
+      "base_score": 0.8,
+      "tags": ["legume"],
+      "texture": "buttery",
+      "cuisine": ["salads"]
+    }
+  ],
+  "almonds": [
+    {
+      "item": "pumpkin seeds",
+      "base_score": 0.7,
+      "tags": ["nut-free", "seed"],
+      "texture": "crunchy",
+      "cuisine": ["snacks", "baking"]
+    },
+    {
+      "item": "sunflower seeds",
+      "base_score": 0.7,
+      "tags": ["nut-free"],
+      "texture": "small crunchy",
+      "cuisine": ["trail mix"]
+    }
+  ],
+  "walnuts": [
+    {
+      "item": "pecan",
+      "base_score": 0.9,
+      "tags": ["tree nut"],
+      "texture": "buttery",
+      "cuisine": ["baking", "salads"]
+    },
+    {
+      "item": "pumpkin seeds",
+      "base_score": 0.65,
+      "tags": ["nut-free"],
+      "texture": "crunchy",
+      "cuisine": ["pesto", "snacks"]
+    }
+  ],
+  "pecan": [
+    {
+      "item": "walnuts",
+      "base_score": 0.9,
+      "tags": ["tree nut"],
+      "texture": "similar",
+      "cuisine": ["pies", "salads"]
+    },
+    {
+      "item": "pumpkin seeds",
+      "base_score": 0.65,
+      "tags": ["nut-free"],
+      "texture": "crunchy",
+      "cuisine": ["baking"]
+    }
+  ],
+  "brazil nuts": [
+    {
+      "item": "macadamia nuts",
+      "base_score": 0.8,
+      "tags": ["tree nut"],
+      "texture": "creamy",
+      "cuisine": ["snacks"]
+    },
+    {
+      "item": "cashews",
+      "base_score": 0.75,
+      "tags": ["tree nut"],
+      "texture": "soft",
+      "cuisine": ["nut milk"]
+    }
+  ],
+  "pine nuts": [
+    {
+      "item": "pumpkin seeds",
+      "base_score": 0.7,
+      "tags": ["nut-free"],
+      "texture": "small crunch",
+      "cuisine": ["pesto"]
+    },
+    {
+      "item": "sunflower seeds",
+      "base_score": 0.65,
+      "tags": ["nut-free"],
+      "texture": "similar size",
+      "cuisine": ["salads"]
+    }
+  ],
+  "pistachios": [
+    {
+      "item": "pumpkin seeds",
+      "base_score": 0.7,
+      "tags": ["nut-free"],
+      "texture": "greenish crunch",
+      "cuisine": ["ice cream", "snacks"]
+    },
+    {
+      "item": "cashews",
+      "base_score": 0.75,
+      "tags": ["tree nut"],
+      "texture": "creamy",
+      "cuisine": ["desserts"]
+    }
+  ],
+  "cashews": [
+    {
+      "item": "brazil nuts",
+      "base_score": 0.8,
+      "tags": ["tree nut"],
+      "texture": "creamy",
+      "cuisine": ["sauces", "snacks"]
+    },
+    {
+      "item": "pumpkin seeds",
+      "base_score": 0.6,
+      "tags": ["nut-free"],
+      "texture": "crunchy",
+      "cuisine": ["vegan cheese"]
+    }
+  ],
+  "hazelnuts": [
+    {
+      "item": "almonds",
+      "base_score": 0.85,
+      "tags": ["tree nut"],
+      "texture": "crunchy",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "pumpkin seeds",
+      "base_score": 0.6,
+      "tags": ["nut-free"],
+      "texture": "crunchy",
+      "cuisine": ["spreads"]
+    }
+  ],
+  "peanuts": [
+    {
+      "item": "chickpeas roasted",
+      "base_score": 0.7,
+      "tags": ["legume", "nut-free"],
+      "texture": "crunchy",
+      "cuisine": ["snacks"]
+    },
+    {
+      "item": "soy nuts",
+      "base_score": 0.8,
+      "tags": ["legume"],
+      "texture": "crunchy",
+      "cuisine": ["trail mix"]
+    }
+  ],
+  "chia seeds": [
+    {
+      "item": "flax seeds",
+      "base_score": 0.9,
+      "tags": ["seed", "omega-3"],
+      "texture": "gel-forming",
+      "cuisine": ["pudding", "egg replacement"]
+    },
+    {
+      "item": "psyllium husk",
+      "base_score": 0.8,
+      "tags": ["fiber"],
+      "texture": "binding",
+      "cuisine": ["baking"]
+    }
+  ],
+  "flax seeds": [
+    {
+      "item": "chia seeds",
+      "base_score": 0.9,
+      "tags": ["seed", "omega-3"],
+      "texture": "gel-forming",
+      "cuisine": ["egg replacement"]
+    },
+    {
+      "item": "psyllium husk",
+      "base_score": 0.85,
+      "tags": ["fiber"],
+      "texture": "binding",
+      "cuisine": ["gluten-free baking"]
+    }
+  ],
+  "pumpkin seeds": [
+    {
+      "item": "sunflower seeds",
+      "base_score": 0.85,
+      "tags": ["seed", "nut-free"],
+      "texture": "crunchy",
+      "cuisine": ["snacks", "pesto"]
+    },
+    {
+      "item": "pine nuts",
+      "base_score": 0.7,
+      "tags": ["tree nut"],
+      "texture": "small",
+      "cuisine": ["salads"]
+    }
+  ],
+  "sesame seeds": [
+    {
+      "item": "poppy seeds",
+      "base_score": 0.8,
+      "tags": ["seed"],
+      "texture": "tiny crunch",
+      "cuisine": ["baking", "garnish"]
+    },
+    {
+      "item": "flax seeds",
+      "base_score": 0.7,
+      "tags": ["seed"],
+      "texture": "similar size",
+      "cuisine": ["bread"]
+    }
+  ],
+  "poppy seeds": [
+    {
+      "item": "sesame seeds",
+      "base_score": 0.8,
+      "tags": ["seed"],
+      "texture": "crunchy",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "chia seeds",
+      "base_score": 0.7,
+      "tags": ["seed"],
+      "texture": "mild crunch",
+      "cuisine": ["muffins"]
+    }
+  ],
+  "olive oil": [
+    {
+      "item": "avocado oil",
+      "base_score": 0.9,
+      "tags": ["vegan", "high-heat"],
+      "texture": "liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "grapeseed oil",
+      "base_score": 0.85,
+      "tags": ["neutral", "vegan"],
+      "texture": "light",
+      "cuisine": ["dressings", "sauté"]
+    }
+  ],
+  "coconut oil": [
+    {
+      "item": "palm oil",
+      "base_score": 0.9,
+      "tags": ["vegan", "solid fat"],
+      "texture": "saturated",
+      "cuisine": ["baking", "frying"]
+    },
+    {
+      "item": "shortening",
+      "base_score": 0.85,
+      "tags": ["dairy-free"],
+      "texture": "solid",
+      "cuisine": ["baking"]
+    }
+  ],
+  "avocado oil": [
+    {
+      "item": "olive oil",
+      "base_score": 0.9,
+      "tags": ["vegan"],
+      "texture": "liquid",
+      "cuisine": ["salads", "high-heat"]
+    },
+    {
+      "item": "grapeseed oil",
+      "base_score": 0.85,
+      "tags": ["neutral"],
+      "texture": "light",
+      "cuisine": ["frying"]
+    }
+  ],
+  "canola oil": [
+    {
+      "item": "vegetable oil",
+      "base_score": 0.95,
+      "tags": ["neutral"],
+      "texture": "liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "sunflower oil",
+      "base_score": 0.9,
+      "tags": ["neutral"],
+      "texture": "light",
+      "cuisine": ["baking"]
+    }
+  ],
+  "vegetable oil": [
+    {
+      "item": "canola oil",
+      "base_score": 0.95,
+      "tags": ["neutral"],
+      "texture": "liquid",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "safflower oil",
+      "base_score": 0.9,
+      "tags": ["neutral"],
+      "texture": "light",
+      "cuisine": ["frying"]
+    }
+  ],
+  "sunflower oil": [
+    {
+      "item": "canola oil",
+      "base_score": 0.9,
+      "tags": ["neutral"],
+      "texture": "light",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "safflower oil",
+      "base_score": 0.95,
+      "tags": ["neutral"],
+      "texture": "similar",
+      "cuisine": ["frying"]
+    }
+  ],
+  "grapeseed oil": [
+    {
+      "item": "avocado oil",
+      "base_score": 0.85,
+      "tags": ["neutral", "high-heat"],
+      "texture": "light",
+      "cuisine": ["sauté"]
+    },
+    {
+      "item": "canola oil",
+      "base_score": 0.8,
+      "tags": ["neutral"],
+      "texture": "light",
+      "cuisine": ["dressings"]
+    }
+  ],
+  "palm oil": [
+    {
+      "item": "coconut oil",
+      "base_score": 0.9,
+      "tags": ["vegan", "solid fat"],
+      "texture": "saturated",
+      "cuisine": ["baking"]
+    },
+    {
+      "item": "shortening",
+      "base_score": 0.85,
+      "tags": ["dairy-free"],
+      "texture": "solid",
+      "cuisine": ["baking"]
+    }
+  ],
+  "peanut oil": [
+    {
+      "item": "canola oil",
+      "base_score": 0.9,
+      "tags": ["neutral", "nut-free"],
+      "texture": "high-heat",
+      "cuisine": ["frying"]
+    },
+    {
+      "item": "grapeseed oil",
+      "base_score": 0.85,
+      "tags": ["neutral"],
+      "texture": "light",
+      "cuisine": ["stir-fry"]
+    }
+  ],
+  "sesame oil": [
+    {
+      "item": "toasted pumpkin seed oil",
+      "base_score": 0.7,
+      "tags": ["nut-free", "seed oil"],
+      "texture": "aromatic",
+      "cuisine": ["asian finishing"]
+    },
+    {
+      "item": "grapeseed oil + tahini",
+      "base_score": 0.65,
+      "tags": ["sesame-flavor"],
+      "texture": "liquid",
+      "cuisine": ["dressings"]
+    }
+  ],
+  "lard": [
+    {
+      "item": "shortening",
+      "base_score": 0.9,
+      "tags": ["dairy-free", "vegetable"],
+      "texture": "solid fat",
+      "cuisine": ["baking", "frying"]
+    },
+    {
+      "item": "coconut oil",
+      "base_score": 0.85,
+      "tags": ["vegan"],
+      "texture": "saturated",
+      "cuisine": ["pie crust"]
+    }
+  ],
+  "beef tallow": [
+    {
+      "item": "lard",
+      "base_score": 0.9,
+      "tags": ["animal fat"],
+      "texture": "solid",
+      "cuisine": ["frying"]
+    },
+    {
+      "item": "coconut oil",
+      "base_score": 0.8,
+      "tags": ["vegan"],
+      "texture": "solid",
+      "cuisine": ["roasting"]
+    }
+  ],
+  "duck fat": [
+    {
+      "item": "chicken fat",
+      "base_score": 0.9,
+      "tags": ["poultry fat"],
+      "texture": "rich",
+      "cuisine": ["confit"]
+    },
+    {
+      "item": "lard",
+      "base_score": 0.85,
+      "tags": ["animal fat"],
+      "texture": "solid",
+      "cuisine": ["roast potatoes"]
+    }
+  ],
+  "chicken fat": [
+    {
+      "item": "duck fat",
+      "base_score": 0.9,
+      "tags": ["poultry fat"],
+      "texture": "rich",
+      "cuisine": ["sauté"]
+    },
+    {
+      "item": "schmaltz",
+      "base_score": 1.0,
+      "tags": ["rendered chicken fat"],
+      "texture": "spread",
+      "cuisine": ["jewish"]
+    }
+  ],
+  "fish sauce": [
+    {
+      "item": "soy sauce + seaweed",
+      "base_score": 0.8,
+      "tags": ["vegan", "fish-free"],
+      "texture": "liquid",
+      "cuisine": ["asian"]
+    },
+    {
+      "item": "coconut aminos",
+      "base_score": 0.85,
+      "tags": ["soy-free", "vegan"],
+      "texture": "liquid",
+      "cuisine": ["southeast asian"]
+    }
+  ],
+  "oyster sauce": [
+    {
+      "item": "mushroom sauce",
+      "base_score": 0.8,
+      "tags": ["vegan", "shellfish-free"],
+      "texture": "thick",
+      "cuisine": ["chinese"]
+    },
+    {
+      "item": "soy sauce + sugar + mushroom powder",
+      "base_score": 0.75,
+      "tags": ["vegetarian"],
+      "texture": "syrupy",
+      "cuisine": ["stir-fry"]
+    }
+  ],
+  "worcestershire sauce": [
+    {
+      "item": "soy sauce + apple cider vinegar + spices",
+      "base_score": 0.7,
+      "tags": ["vegan", "anchovy-free"],
+      "texture": "liquid",
+      "cuisine": ["british", "american"]
+    }
+  ],
+  "teriyaki sauce": [
+    {
+      "item": "tamari + maple syrup",
+      "base_score": 0.9,
+      "tags": ["gluten-free", "vegan"],
+      "texture": "glaze",
+      "cuisine": ["japanese"]
+    },
+    {
+      "item": "soy sauce + honey",
+      "base_score": 0.95,
+      "tags": ["traditional"],
+      "texture": "sweet savory",
+      "cuisine": ["japanese"]
+    }
+  ],
+  "hot sauce": [
+    {
+      "item": "salsa",
+      "base_score": 0.7,
+      "tags": ["chunky", "mild"],
+      "texture": "chunky",
+      "cuisine": ["mexican"]
+    },
+    {
+      "item": "chili paste",
+      "base_score": 0.8,
+      "tags": ["spicy"],
+      "texture": "paste",
+      "cuisine": ["asian"]
+    }
+  ],
+  "pesto": [
+    {
+      "item": "basil + garlic + nutritional yeast + pumpkin seeds",
+      "base_score": 0.8,
+      "tags": ["vegan", "dairy-free"],
+      "texture": "paste",
+      "cuisine": ["italian"]
+    }
+  ],
+  "tomato paste": [
+    {
+      "item": "tomato sauce reduced",
+      "base_score": 0.9,
+      "tags": ["tomato"],
+      "texture": "thick",
+      "cuisine": ["any"]
+    },
+    {
+      "item": "sun dried tomatoes pureed",
+      "base_score": 0.85,
+      "tags": ["concentrated"],
+      "texture": "intense",
+      "cuisine": ["mediterranean"]
+    }
+  ],
+  "curry powder": [
+    {
+      "item": "garam masala",
+      "base_score": 0.7,
+      "tags": ["spice blend"],
+      "texture": "powder",
+      "cuisine": ["indian"]
+    },
+    {
+      "item": "turmeric + cumin + coriander",
+      "base_score": 0.85,
+      "tags": ["diy"],
+      "texture": "powder",
+      "cuisine": ["indian"]
+    }
+  ],
+  "taco seasoning": [
+    {
+      "item": "chili powder + cumin + paprika",
+      "base_score": 0.9,
+      "tags": ["diy"],
+      "texture": "powder",
+      "cuisine": ["mexican"]
+    }
+  ],
+  "coffee beans": [
+    {
+      "item": "carob powder",
+      "base_score": 0.6,
+      "tags": ["caffeine-free"],
+      "texture": "powder",
+      "cuisine": ["beverage"]
+    },
+    {
+      "item": "barley_raw roasted",
+      "base_score": 0.65,
+      "tags": ["caffeine-free", "grain coffee"],
+      "texture": "brew",
+      "cuisine": ["coffee substitute"]
+    },
+    {
+      "item": "green tea",
+      "base_score": 0.5,
+      "tags": ["caffeine", "antioxidants"],
+      "texture": "brew",
+      "cuisine": ["beverage"]
+    }
+  ],
+  "black tea": [
+    {
+      "item": "green tea",
+      "base_score": 0.8,
+      "tags": ["caffeine", "lighter"],
+      "texture": "brew",
+      "cuisine": ["beverage"]
+    },
+    {
+      "item": "herbal tea",
+      "base_score": 0.6,
+      "tags": ["caffeine-free"],
+      "texture": "infusion",
+      "cuisine": ["any"]
+    }
+  ],
+  "green tea": [
+    {
+      "item": "matcha powder",
+      "base_score": 0.9,
+      "tags": ["powdered", "caffeine"],
+      "texture": "fine powder",
+      "cuisine": ["japanese"]
+    },
+    {
+      "item": "white tea",
+      "base_score": 0.85,
+      "tags": ["caffeine", "delicate"],
+      "texture": "brew",
+      "cuisine": ["beverage"]
+    }
+  ],
+  "kombucha": [
+    {
+      "item": "water kefir",
+      "base_score": 0.85,
+      "tags": ["probiotic", "fermented"],
+      "texture": "fizzy",
+      "cuisine": ["beverage"]
+    },
+    {
+      "item": "kvass",
+      "base_score": 0.7,
+      "tags": ["fermented", "rye-based"],
+      "texture": "slightly fizzy",
+      "cuisine": ["eastern european"]
+    }
+  ],
+  "beer lager": [
+    {
+      "item": "cider alcoholic",
+      "base_score": 0.7,
+      "tags": ["gluten-free", "alcoholic"],
+      "texture": "carbonated",
+      "cuisine": ["beverage"]
+    },
+    {
+      "item": "gluten-free beer",
+      "base_score": 0.9,
+      "tags": ["gluten-free"],
+      "texture": "beer",
+      "cuisine": ["any"]
+    }
+  ],
+  "wine red": [
+    {
+      "item": "pomegranate juice",
+      "base_score": 0.6,
+      "tags": ["non-alcoholic", "tart"],
+      "texture": "liquid",
+      "cuisine": ["cooking"]
+    },
+    {
+      "item": "beef broth + vinegar",
+      "base_score": 0.7,
+      "tags": ["non-alcoholic"],
+      "texture": "liquid",
+      "cuisine": ["braising"]
+    }
+  ],
+  "wine white": [
+    {
+      "item": "apple juice + lemon juice",
+      "base_score": 0.6,
+      "tags": ["non-alcoholic"],
+      "texture": "liquid",
+      "cuisine": ["cooking"]
+    },
+    {
+      "item": "chicken broth + vinegar",
+      "base_score": 0.7,
+      "tags": ["non-alcoholic"],
+      "texture": "liquid",
+      "cuisine": ["sauces"]
+    }
+  ],
+  "vodka": [
+    {
+      "item": "gin",
+      "base_score": 0.8,
+      "tags": ["botanical"],
+      "texture": "spirit",
+      "cuisine": ["cocktails"]
+    },
+    {
+      "item": "white rum",
+      "base_score": 0.7,
+      "tags": ["lighter"],
+      "texture": "spirit",
+      "cuisine": ["cocktails"]
+    }
+  ],
+  "rum": [
+    {
+      "item": "vodka",
+      "base_score": 0.7,
+      "tags": ["neutral"],
+      "texture": "spirit",
+      "cuisine": ["cocktails"]
+    },
+    {
+      "item": "whiskey",
+      "base_score": 0.6,
+      "tags": ["oaked"],
+      "texture": "spirit",
+      "cuisine": ["cocktails"]
+    }
+  ],
+  "energy drink": [
+    {
+      "item": "coffee",
+      "base_score": 0.8,
+      "tags": ["caffeine"],
+      "texture": "hot/cold",
+      "cuisine": ["beverage"]
+    },
+    {
+      "item": "green tea",
+      "base_score": 0.7,
+      "tags": ["caffeine", "antioxidants"],
+      "texture": "brew",
+      "cuisine": ["beverage"]
+    }
+  ],
+  "sports drink": [
+    {
+      "item": "coconut water",
+      "base_score": 0.8,
+      "tags": ["natural electrolytes"],
+      "texture": "liquid",
+      "cuisine": ["beverage"]
+    },
+    {
+      "item": "water + salt + sugar",
+      "base_score": 0.7,
+      "tags": ["homemade"],
+      "texture": "liquid",
+      "cuisine": ["any"]
+    }
+  ]
+}

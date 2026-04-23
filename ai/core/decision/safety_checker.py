@@ -25,64 +25,36 @@ class SafetyChecker:
         }
 
     def check(self, ingredients: List[str], user_profile) -> Dict:
-        """
-        Проверяет:
-        - прямые аллергии
-        - аллергенные группы
-        - исключённые ингредиенты
-
-        Возвращает:
-        {
-            "is_safe": bool,
-            "issues": [str],
-            "warnings": [str]
-        }
-        """
-
         ingredients_set = {i.lower() for i in ingredients}
 
         issues = []
         warnings = []
 
-        # ==============================
-        # 1. EXCLUDED INGREDIENTS
-        # ==============================
+        allergies = {i.lower() for i in getattr(user_profile, "allergies", [])}
+        excluded = {i.lower() for i in getattr(user_profile, "excluded_ingredients", [])}
+
         for ing in ingredients_set:
-            if ing in user_profile.excluded_ingredients:
+            if ing in excluded:
                 issues.append(f"excluded ingredient: {ing}")
 
-        # ==============================
-        # 2. DIRECT ALLERGIES
-        # ==============================
-        for ing in ingredients_set:
-            if ing in user_profile.allergies:
-                issues.append(f"allergy: {ing}")
+            if ing in allergies:
+                issues.append(f"direct allergy: {ing}")
 
-        # ==============================
-        # 3. ALLERGEN GROUPS
-        # ==============================
         for ing in ingredients_set:
             group = self.allergen_map.get(ing)
-
-            if group and group in user_profile.allergies:
+            if group and group.lower() in allergies:
                 issues.append(f"allergen group: {group} (from {ing})")
 
-        # ==============================
-        # 4. DIET WARNINGS (soft rules)
-        # ==============================
         goal = getattr(user_profile, "goal", "balanced")
 
-        if goal == "weight_loss":
-            if "oil" in ingredients_set or "butter" in ingredients_set:
-                warnings.append("high fat ingredients for weight loss")
+        if goal in ("weight_loss", "cut", "sushka", "сушка"):
+            if "oil" in ingredients_set or "butter" in ingredients_set or "cream" in ingredients_set:
+                warnings.append("higher fat content for cutting phase")
 
-        if goal == "fitness":
-            if not any(p in ingredients_set for p in ["chicken", "egg", "fish", "shrimp"]):
-                warnings.append("low protein meal")
+        if goal in ("muscle_gain", "bulk", "massonabor", "массонабор"):
+            if not any(p in ingredients_set for p in ["chicken", "egg", "fish", "shrimp", "beef", "tofu"]):
+                warnings.append("low protein density for mass gain")
 
-        # ==============================
-        # FINAL RESULT
-        # ==============================
         return {
             "is_safe": len(issues) == 0,
             "issues": issues,

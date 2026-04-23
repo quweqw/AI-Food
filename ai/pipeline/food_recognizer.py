@@ -10,15 +10,19 @@ import faiss
 
 from ai.food_normalizer.normalizer import FoodNormalizer
 from ai.yolo.inference.crop_food import crop_food
-from ai.core.meal_builder import MealBuilder
 from ai.recipes.recipe_search import RecipeSearch
 from ai.llm.llm_service import FoodLLM
-from ai.llm.prompts import build_prompt
 from ai.llm.nutrition_engine import NutritionEngine
+
 from ai.core.decision.safety_checker import SafetyChecker
 from ai.core.decision.preference_scorer import PreferenceScorer
 from ai.core.decision.ranking_engine import RankingEngine
 from ai.core.decision.diversity_engine import DiversityEngine
+from ai.core.decision.ingredient_scorer import IngredientScorer
+from ai.core.decision.substitution_engine import SubstitutionEngine
+
+from ai.core.meal_planner import MealPlanner
+from ai.core.user_profile import UserProfile
 
 # ==============================
 # CONFIG
@@ -48,17 +52,33 @@ _labels = None
 # ==============================
 
 normalizer = FoodNormalizer()
-meal_builder = MealBuilder()
 recipe_search = RecipeSearch()
 llm = FoodLLM()
 nutrition_engine = NutritionEngine()
+
 safety_checker = SafetyChecker()
 preference_scorer = PreferenceScorer()
 ranking_engine = RankingEngine()
+diversity_engine = DiversityEngine()
+ingredient_scorer = IngredientScorer()
+substitution_engine = SubstitutionEngine()
+
+meal_planner = MealPlanner(
+    recipe_search=recipe_search,
+    nutrition_engine=nutrition_engine,
+    llm=llm,
+    safety_checker=safety_checker,
+    preference_scorer=preference_scorer,
+    diversity_engine=diversity_engine,
+    substitution_engine=substitution_engine,
+    ranking_engine=ranking_engine
+)
 
 # ==============================
 # LOAD CLIP
 # ==============================
+
+from ai.core.models.clip_loader import get_clip
 
 def load_clip(model_name="ViT-L-14", pretrained="openai"):
     global _clip_model, _preprocess
@@ -66,10 +86,7 @@ def load_clip(model_name="ViT-L-14", pretrained="openai"):
     if _clip_model is None:
         logger.info("Loading CLIP model...")
 
-        model, _, preprocess = open_clip.create_model_and_transforms(
-            model_name,
-            pretrained=pretrained
-        )
+        model, tokenizer, preprocess = get_clip(model_name)
 
         model = model.to(DEVICE)
         model.eval()
@@ -81,23 +98,16 @@ def load_clip(model_name="ViT-L-14", pretrained="openai"):
 
 
 # ==============================
-# LOAD FAISS (image index)
+# LOAD FAISS
 # ==============================
 
 def load_faiss():
     global _index, _labels
 
     if _index is None:
-        if not FAISS_INDEX_PATH.exists():
-            raise FileNotFoundError(f"FAISS index not found: {FAISS_INDEX_PATH}")
-
-        logger.info("Loading FAISS index...")
         _index = faiss.read_index(str(FAISS_INDEX_PATH))
 
     if _labels is None:
-        if not LABELS_PATH.exists():
-            raise FileNotFoundError(f"Labels file not found: {LABELS_PATH}")
-
         _labels = np.load(LABELS_PATH, allow_pickle=True)
 
     return _index, _labels
@@ -116,13 +126,10 @@ def encode_images(image_paths, batch_size=32):
     for path in image_paths:
         try:
             img = Image.open(path).convert("RGB")
-            tensor = preprocess(img)
-
-            tensors.append(tensor)
+            tensors.append(preprocess(img))
             valid_paths.append(path)
-
-        except Exception as e:
-            logger.warning(f"Cannot load image {path}: {e}")
+        except:
+            continue
 
     if not tensors:
         return [], []
@@ -135,7 +142,6 @@ def encode_images(image_paths, batch_size=32):
 
             feats = clip_model.encode_image(batch)
             feats = feats.cpu().numpy()
-
             feats = feats / (np.linalg.norm(feats, axis=1, keepdims=True) + 1e-10)
 
             embeddings.extend(feats)
@@ -144,293 +150,184 @@ def encode_images(image_paths, batch_size=32):
 
 
 # ==============================
-# IMAGE FAISS SEARCH (debug)
-# ==============================
-
-def search_embeddings(embeddings, top_k=5):
-    index, labels = load_faiss()
-
-    results = []
-
-    for emb in embeddings:
-        emb = emb.astype("float32").reshape(1, -1)
-
-        distances, indices = index.search(emb, top_k)
-
-        matches = []
-        for score, idx in zip(distances[0], indices[0]):
-            matches.append({
-                "label": labels[idx],
-                "score": float(score)
-            })
-
-        results.append(matches)
-
-    return results
-
-
-# ==============================
-# CLIP DISH INFERENCE (fallback)
+# CLIP FALLBACK
 # ==============================
 
 def infer_dish_with_clip(ingredients):
-    clip_model, _ = load_clip()
-    tokenizer = open_clip.get_tokenizer("ViT-L-14")
-
-    query = f"a dish with {', '.join(ingredients)}"
-
-    with torch.no_grad():
-        tokens = tokenizer([query]).to(DEVICE)
-        emb = clip_model.encode_text(tokens)
-        emb = emb.cpu().numpy()
-
-    emb = emb / (np.linalg.norm(emb, axis=1, keepdims=True) + 1e-10)
-
-    return query
+    return f"{', '.join(ingredients)} dish"
 
 
 # ==============================
-# MAIN PIPELINE
+# MAIN
 # ==============================
 
-def recognize_food(
-    image_path,
-    top_k=5,
-    preferences=None,
-    restrictions=None,
-    goal=None
-):
-    logger.info("Running YOLO segmentation...")
+def recognize_food(image_path, user_profile=None, top_k=5):
 
+    logger.info("Running YOLO...")
     crops_data = crop_food(image_path)
 
+    if user_profile is None:
+        user_profile = UserProfile(
+            age=25,
+            sex="male",
+            height_cm=180,
+            weight_kg=75,
+            activity_level="moderate",
+            allergies=[],
+            disliked_ingredients=[],
+            preferred_ingredients=[],
+            goal="balanced"
+        )
+
     if not crops_data:
-        logger.warning("No food detected.")
         return None
+
 
     crops = [c["path"] for c in crops_data]
     yolo_labels = [c["label"].lower() for c in crops_data]
 
-    logger.info(f"YOLO labels: {yolo_labels}")
-    logger.info(f"{len(crops)} food objects detected")
-
-    if not crops:
-        logger.warning("No food detected.")
-        return None
-
-    logger.info(f"{len(crops)} food objects detected")
-
-    # ==============================
-    # CLIP embeddings
-    # ==============================
-
     embeddings, valid_paths = encode_images(crops)
-
-    if not embeddings:
-        logger.warning("No embeddings generated.")
-        return None
 
     # ==============================
     # NORMALIZATION
     # ==============================
 
-    all_normalized = []
+    all_normalized = [normalizer.normalize(e) for e in embeddings]
 
-    for emb, crop_path in zip(embeddings, valid_paths):
-        results = normalizer.normalize(emb)
-        all_normalized.append(results)
+    scored = ingredient_scorer.combine(yolo_labels, all_normalized)
+    ingredients = [i["name"] for i in scored if i["score"] > 0.3][:5]
 
-        logger.info(f"\n{crop_path}")
-        for r in results:
-            logger.info(f"  {r['name']} ({r['score']:.3f})")
+    if not ingredients:
+        ingredients = yolo_labels
 
-    # ==============================
-    # AGGREGATION
-    # ==============================
-
-    aggregated = normalizer.aggregate(all_normalized)
-
-    ingredients_with_scores = [
-        {"name": name, "score": score}
-        for name, score in aggregated
-        if score > 0.3   # Фильтр шума
-    ][:5]
+    goal = user_profile.goal
 
     # ==============================
-    # MERGE CLIP + YOLO (FIX)
+    # SUBSTITUTION
     # ==============================
 
-    clip_ingredients = [i["name"] for i in ingredients_with_scores]
-
-    # Взвешенное объединение
-    ingredients = list(set(clip_ingredients + yolo_labels))
-    logger.info(f"CLIP ingredients: {clip_ingredients}")
-    logger.info(f"Final merged ingredients: {ingredients}")
+    sub_result = substitution_engine.apply(ingredients, user_profile)
+    ingredients = sub_result["ingredients"]
 
     # ==============================
-    # DECISION LAYER (NEW)
+    # SAFETY
     # ==============================
 
-    from ai.core.user_profile import UserProfile
-
-    user_profile = UserProfile(
-        allergies=[],
-        preferred_ingredients=["chicken", "rice"],
-        goal=goal
-    )
-
-    # SAFETY CHECK
     safety = safety_checker.check(ingredients, user_profile)
 
     if not safety["is_safe"]:
-        logger.warning(f"Unsafe food detected: {safety['issues']}")
-        return {
-            "status": "unsafe",
-            "issues": safety["issues"],
-            "ingredients": ingredients
-        }
-
-    # PREFERENCE SCORE
-    pref_score = preference_scorer.score(ingredients, user_profile)
+        return {"status": "unsafe", "issues": safety}
 
     # ==============================
-    # MEAL BUILDER (fallback)
+    # LLM DISH NAME
     # ==============================
 
-    meal_name = meal_builder.build_meal(ingredients)
-    cuisine = meal_builder.detect_cuisine(ingredients)
+    prompt = f"""
+Given ingredients: {ingredients}
+Goal: {goal}
 
-    if meal_name == " ".join(ingredients[:2]):
-        logger.info("Using CLIP fallback for dish inference...")
-        meal_name = infer_dish_with_clip(ingredients)
+Return JSON:
+{{
+  "dish_name": "..."
+}}
+"""
+
+    dish_data = llm.generate_json(prompt)
+    meal_name = dish_data.get("dish_name", infer_dish_with_clip(ingredients))
 
     # ==============================
-    # RECIPE SEARCH (secondary)
+    # RECIPE (LLM SAFE)
     # ==============================
 
-    query = f"{meal_name} with {', '.join(ingredients)}"
-    recipes = recipe_search.search(query, top_k=3)
+    recipe_prompt = f"""
+    You are a strict cooking AI.
 
-    # ==============================
-    # LLM GENERATION (MAIN BRAIN)
-    # ==============================
+    Ingredients: {ingredients}
+    Goal: {goal}
 
-    preferences = preferences or "balanced"
-    restrictions = restrictions or "none"
-    goal = goal or "healthy eating"
+    Rules:
+    - Use ONLY provided ingredients
+    - Do NOT add new ingredients
+    - Keep recipe simple
 
-    prompt = build_prompt(
-        ingredients=ingredients,
-        preferences=preferences,
-        restrictions=restrictions,
-        goal=goal
-    )
+    Return JSON:
+    {{
+    "steps": ["step 1", "step 2"],
+    "tips": "..."
+    }}
+    """
 
-    dish_data = llm.generate_dish(ingredients, goal)
     recipe_data = llm.generate_recipe(ingredients, goal)
 
-    llm_result = {
-        **dish_data,
-        "recipe": recipe_data
-    }
+    # fallback защита
+    if "steps" not in recipe_data:
+        recipe_data = {
+            "steps": [],
+            "tips": ""
+        }
+    # нормализация
+    recipe_data["steps"] = [
+        str(s).strip() for s in recipe_data.get("steps", []) if s
+    ]
+
+    recipe_data["tips"] = str(recipe_data.get("tips", "")).strip()
 
     # ==============================
-    # VALIDATE LLM OUTPUT (CRITICAL)
-    # ==============================
-
-    if isinstance(llm_result, dict):
-
-        llm_ingredients = llm_result.get("ingredients", [])
-
-        # нормализуем в lowercase
-        llm_ingredients = [i.lower() for i in llm_ingredients]
-
-        base_ingredients = [i.lower() for i in ingredients]
-
-        # проверяем: LLM не добавил лишнего
-        if not all(i in base_ingredients for i in llm_ingredients):
-            logger.warning("LLM hallucinated ingredients → REJECTED")
-
-            llm_result["ingredients"] = ingredients
-            llm_result["dish_name"] = " ".join(ingredients)
-
-    logger.info(f"LLM Result: {llm_result}")
-
-    # ==============================
-    # APPLY LLM OUTPUT
-    # ==============================
-
-    if isinstance(llm_result, dict):
-
-        if llm_result.get("dish_name"):
-            meal_name = llm_result["dish_name"]
-
-    # ==============================
-    # NUTRITION ENGINE (REAL DATA)
+    # NUTRITION
     # ==============================
 
     nutrition = nutrition_engine.calculate(ingredients)
 
-    if isinstance(llm_result, dict):
-        llm_result["calories"] = nutrition["calories"]
-        llm_result["protein"] = nutrition["protein"]
-        llm_result["fat"] = nutrition["fat"]
-        llm_result["carbs"] = nutrition["carbs"]
-
     # ==============================
-    # NUTRITION SCORE (TOP)
+    # SCORING
     # ==============================
 
-    nutrition_score = ranking_engine.score_nutrition(
-        nutrition,
-        goal=user_profile.goal
-    )
+    pref = preference_scorer.score(ingredients, user_profile)
+    div = diversity_engine.score(ingredients, user_profile)
+    nut = ranking_engine.score_nutrition(nutrition, goal)
+
+    final_score = ranking_engine.combine(pref, div, nut)
 
     # ==============================
-    # DEBUG FAISS
+    # HISTORY
     # ==============================
 
-    matches = search_embeddings(embeddings, top_k)
+    user_profile.add_meal(ingredients)
 
     # ==============================
-    # FINAL RANKING (TOP VERSION)
+    # MEAL PLAN
     # ==============================
 
-    from ai.core.decision.diversity_engine import DiversityEngine
-
-    diversity_engine = DiversityEngine()
-    div_score = diversity_engine.score(ingredients, user_profile)
-
-    final_score = ranking_engine.combine(
-        pref_score=pref_score,
-        diversity_score=div_score,
-        nutrition_score=nutrition_score
-    )
+    meal_plan = meal_planner.build_plan(user_profile=user_profile, days=3)
 
     # ==============================
     # OUTPUT
     # ==============================
 
-    output = []
+    def clean_output(obj):
+        if isinstance(obj, dict):
+            return {k: clean_output(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [clean_output(v) for v in obj]
+        elif isinstance(obj, str):
+            try:
+                return obj.encode("latin1").decode("utf-8")
+            except:
+                return obj
+        return obj
 
-    for crop_path, result, norm in zip(valid_paths, matches, all_normalized):
-        output.append({
-            "crop_path": crop_path,
-            "matches": result,
-            "normalized": norm
-        })
-
-    return {
-        "ingredients": ingredients,
+    result = {
         "meal": meal_name,
-        "cuisine": cuisine,
-        "recipes": recipes,
-        "llm": llm_result,
+        "ingredients": ingredients,
         "nutrition": nutrition,
-        "safety": safety,
         "score": final_score,
-        "details": output
+        "recipe": recipe_data,
+        "meal_plan": meal_plan,
+        "safety": safety,
+        "substitutions": sub_result["replacements"]
     }
+
+    return clean_output(result)
 
 
 # ==============================
@@ -439,39 +336,11 @@ def recognize_food(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-
-    parser.add_argument("image", help="Path to input image")
-
-    parser.add_argument("--topk", type=int, default=5)
+    parser.add_argument("image")
 
     args = parser.parse_args()
 
-    result = recognize_food(args.image, args.topk)
+    result = recognize_food(args.image)
 
-    if not result:
-        print("No food detected.")
-        exit()
-
-    print("\n=== FINAL RESULT ===")
-    print("Meal:", result["meal"])
-    print("Cuisine:", result["cuisine"])
-    print("Ingredients:", result["ingredients"])
-
-    print("\n=== SAFETY ===")
-    print(result["safety"])
-
-    print("\n=== SCORE ===")
-    print(result["score"])
-
-    print("\n=== NUTRITION ===")
-    if result["llm"]:
-        print("Calories:", result["llm"].get("calories"))
-        print("Protein:", result["llm"].get("protein"))
-        print("Fat:", result["llm"].get("fat"))
-        print("Carbs:", result["llm"].get("carbs"))
-
-    print("\n=== RECIPES ===")
-    for r in result["recipes"]:
-        print(f"\n{r['name']} (score={r['score']:.3f})")
-        print("Ingredients:", ", ".join(r["ingredients"]))
-        print("Instructions:", r["instructions"])
+    print("\n=== RESULT ===")
+    print(result)

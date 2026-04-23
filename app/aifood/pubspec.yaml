@@ -1,0 +1,49 @@
+name: ai_food
+description: AI Food - food recognition and meal planning
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Навигация
+  go_router: ^13.0.0
+
+  # Шрифты
+  google_fonts: ^6.1.0
+
+  # Сеть (запросы к твоему Python backend)
+  dio: ^5.4.0
+
+  # Хранение токена
+  flutter_secure_storage: ^9.0.0
+
+  # Локальное хранение (история чатов, настройки)
+  shared_preferences: ^2.2.0
+
+  # Камера и галерея
+  image_picker: ^1.0.7
+
+  # Управление состоянием
+  flutter_riverpod: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Idiqlat
+      fonts:
+        - asset: assets/fonts/Idiqlat-ExtraLight.ttf
+          weight: 400
+        - asset: assets/fonts/Idiqlat-Light.ttf
+          weight: 700
+        - asset: assets/fonts/Idiqlat-Regular.ttf
+          weight: 900

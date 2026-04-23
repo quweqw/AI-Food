@@ -1,17 +1,1242 @@
 [
   {
     "name": "Chicken Rice Bowl",
-    "ingredients": ["chicken", "rice", "soy sauce"],
-    "instructions": "Cook rice. Fry chicken. Mix with sauce."
+    "ingredients": ["chicken breast", "rice", "soy sauce", "garlic", "ginger", "green onion", "sesame oil"],
+    "instructions": "Rinse 1 cup jasmine rice and cook with 1.5 cups water. Slice 200g chicken breast into strips, marinate with 1 tbsp soy sauce, minced garlic, grated ginger. Heat 1 tsp sesame oil in a pan, stir-fry chicken until golden and cooked through. Slice green onions. Serve chicken over steamed rice, drizzle with extra soy sauce, and garnish with green onions."
   },
   {
     "name": "Beef Burger",
-    "ingredients": ["beef", "bun", "cheese"],
-    "instructions": "Grill beef. Assemble burger."
+    "ingredients": ["ground beef", "burger bun", "cheddar cheese", "lettuce", "tomato", "onion", "pickles", "ketchup", "mustard", "salt", "pepper"],
+    "instructions": "Form 150g ground beef into a patty, season both sides with salt and pepper. Heat a skillet or grill over medium-high heat, cook patty 3-4 minutes per side for medium. During last minute, place cheddar slice on patty to melt. Toast bun halves. Assemble: bottom bun, lettuce, tomato slice, onion ring, patty with cheese, pickles, ketchup and mustard, top bun."
   },
   {
     "name": "Pasta Marinara",
-    "ingredients": ["pasta", "tomato", "garlic"],
-    "instructions": "Boil pasta. Add sauce."
+    "ingredients": ["spaghetti", "canned crushed tomatoes", "garlic", "olive oil", "fresh basil", "salt", "red pepper flakes"],
+    "instructions": "Bring large pot of salted water to boil, cook 200g spaghetti according to package until al dente. Meanwhile, thinly slice 3 garlic cloves, sauté in 3 tbsp olive oil over medium heat until fragrant but not brown. Add 400g crushed tomatoes, pinch salt and red pepper flakes, simmer 10 minutes. Tear fresh basil leaves. Drain pasta, reserving 1/4 cup water. Toss pasta with sauce, add reserved water if needed. Top with basil."
+  },
+  {
+    "name": "Vegetable Stir Fry",
+    "ingredients": ["broccoli", "carrot", "bell pepper", "snap peas", "soy sauce", "ginger", "garlic", "sesame oil", "cornstarch", "tofu"],
+    "instructions": "Press and cube 200g firm tofu. Mix 3 tbsp soy sauce, 1 tsp grated ginger, 1 minced garlic clove, 1 tsp cornstarch, 2 tbsp water. Blanch broccoli florets and sliced carrot in boiling water 2 minutes, drain. Heat 1 tbsp sesame oil in wok, fry tofu until crisp, remove. Stir-fry sliced bell pepper and snap peas 2 min. Add blanched veggies, tofu, and sauce. Cook until sauce thickens and coats everything. Serve with rice."
+  },
+  {
+    "name": "Classic Omelette",
+    "ingredients": ["eggs", "milk", "butter", "salt", "pepper", "cheddar cheese", "ham"],
+    "instructions": "Whisk 3 large eggs with 2 tbsp milk, pinch salt and pepper until frothy. Heat 1 tbsp butter in non-stick pan over medium-low heat. Pour in egg mixture, let set slightly. Gently lift edges with spatula, tilt pan to let uncooked egg flow underneath. When almost set, sprinkle 30g shredded cheddar and diced ham over half. Fold omelette in half, cook 1 minute more. Slide onto plate."
+  },
+  {
+    "name": "Caesar Salad",
+    "ingredients": ["romaine lettuce", "croutons", "parmesan cheese", "caesar dressing", "lemon", "anchovy fillet", "garlic", "olive oil", "egg yolk"],
+    "instructions": "For dressing: mash 1 anchovy fillet with 1 minced garlic clove and pinch salt. Whisk in 1 egg yolk, juice of 1/2 lemon, slowly drizzle 1/4 cup olive oil while whisking until emulsified. Stir in 2 tbsp grated parmesan. Wash and dry romaine leaves, tear into bite-sized pieces. Toss lettuce with dressing, add croutons, shave more parmesan on top. Serve immediately."
+  },
+  {
+    "name": "Tomato Soup",
+    "ingredients": ["canned whole tomatoes", "onion", "garlic", "vegetable broth", "olive oil", "heavy cream", "basil", "sugar", "salt"],
+    "instructions": "Dice 1 onion and 2 garlic cloves, sauté in 2 tbsp olive oil until soft. Add 800g canned tomatoes with juices, crush by hand. Add 2 cups vegetable broth, 1 tsp sugar, salt, and a few basil leaves. Simmer 25 minutes. Blend with immersion blender until smooth. Stir in 1/4 cup heavy cream, adjust seasoning. Serve with fresh basil."
+  },
+  {
+    "name": "Pancakes",
+    "ingredients": ["flour", "baking powder", "sugar", "salt", "milk", "egg", "butter", "maple syrup"],
+    "instructions": "Whisk 1.5 cups flour, 3.5 tsp baking powder, 1 tbsp sugar, 1/4 tsp salt. In another bowl, mix 1.25 cups milk, 1 egg, 3 tbsp melted butter. Combine wet and dry, stir until just mixed (lumpy batter is fine). Heat non-stick pan over medium, lightly grease. Pour 1/4 cup batter per pancake, cook until bubbles form on surface, flip and cook until golden. Serve with butter and maple syrup."
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "ingredients": ["chicken thighs", "carrot", "celery", "onion", "egg noodles", "chicken broth", "bay leaf", "thyme", "parsley", "salt", "pepper"],
+    "instructions": "In large pot, combine 4 chicken thighs, 2 chopped carrots, 2 celery stalks, 1 onion (quartered), 8 cups broth, 2 bay leaves, few thyme sprigs. Bring to boil, simmer 30 min. Remove chicken, shred meat, discard skin/bones. Strain broth, return to pot, bring to boil, add 200g egg noodles, cook 6 min. Return shredded chicken and chopped parsley, season with salt and pepper."
+  },
+  {
+    "name": "Guacamole",
+    "ingredients": ["avocado", "lime", "red onion", "cilantro", "jalapeño", "tomato", "salt"],
+    "instructions": "Halve and pit 3 ripe avocados, scoop flesh into bowl. Mash with fork to desired chunkiness. Add juice of 1 lime, 1/4 cup finely diced red onion, 2 tbsp chopped cilantro, 1 minced jalapeño (seeds removed for less heat), 1 diced Roma tomato. Mix gently, season with salt to taste. Serve with tortilla chips."
+  },
+  {
+    "name": "Baked Salmon",
+    "ingredients": ["salmon fillet", "lemon", "dill", "garlic", "olive oil", "salt", "pepper", "asparagus"],
+    "instructions": "Preheat oven to 200°C (400°F). Pat 2 salmon fillets dry, place on parchment-lined baking sheet. Drizzle with olive oil, season with salt, pepper, minced garlic, and chopped fresh dill. Top with lemon slices. Toss asparagus with olive oil, salt, arrange around salmon. Bake 12-15 minutes until salmon flakes easily and asparagus is tender."
+  },
+  {
+    "name": "Beef Tacos",
+    "ingredients": ["ground beef", "taco seasoning", "tortillas", "cheddar cheese", "lettuce", "tomato", "sour cream", "salsa", "onion"],
+    "instructions": "Brown 500g ground beef in skillet over medium-high heat, breaking up with spoon. Drain excess fat. Add packet of taco seasoning and 1/2 cup water, simmer 5 minutes. Warm corn or flour tortillas. Fill each tortilla with seasoned beef, shredded lettuce, diced tomato, chopped onion, grated cheddar, a dollop of sour cream, and salsa."
+  },
+  {
+    "name": "Mushroom Risotto",
+    "ingredients": ["arborio rice", "mushrooms", "onion", "garlic", "white wine", "vegetable broth", "parmesan", "butter", "olive oil", "thyme"],
+    "instructions": "Heat 4 cups vegetable broth, keep warm. Sauté 250g sliced mushrooms in butter until browned, set aside. In same pan, sauté 1 finely chopped onion and 2 garlic cloves in olive oil until soft. Add 1.5 cups arborio rice, stir 2 minutes. Pour in 1/2 cup white wine, stir until absorbed. Add hot broth a ladle at a time, stirring constantly, waiting until absorbed before adding more, about 18-20 min. Stir in mushrooms, 1/2 cup grated parmesan, 2 tbsp butter, thyme leaves. Season with salt and pepper."
+  },
+  {
+    "name": "Greek Salad",
+    "ingredients": ["cucumber", "tomato", "red onion", "kalamata olives", "feta cheese", "olive oil", "oregano", "red wine vinegar", "bell pepper"],
+    "instructions": "Dice 1 cucumber, 2 tomatoes, 1 bell pepper, thinly slice 1/4 red onion. Combine in bowl with 1/2 cup kalamata olives. Whisk 3 tbsp olive oil, 1 tbsp red wine vinegar, 1 tsp dried oregano, pinch salt. Pour over veggies, toss. Top with a slab of feta cheese (do not crumble), drizzle with extra olive oil and oregano. Serve with crusty bread."
+  },
+  {
+    "name": "Chocolate Chip Cookies",
+    "ingredients": ["butter", "brown sugar", "white sugar", "egg", "vanilla", "flour", "baking soda", "salt", "chocolate chips"],
+    "instructions": "Preheat oven to 190°C (375°F). Cream 1/2 cup softened butter with 1/2 cup brown sugar and 1/4 cup white sugar. Beat in 1 egg and 1 tsp vanilla. Mix in 1.25 cups flour, 1/2 tsp baking soda, 1/4 tsp salt. Stir in 1 cup chocolate chips. Drop spoonfuls onto baking sheet. Bake 9-11 minutes until edges golden. Cool on sheet 5 min then transfer to rack."
+  },
+  {
+    "name": "Hummus",
+    "ingredients": ["chickpeas", "tahini", "lemon juice", "garlic", "olive oil", "cumin", "salt", "paprika"],
+    "instructions": "Drain and rinse 1 can chickpeas, reserve a few for garnish. In food processor, combine chickpeas, 1/4 cup tahini, juice of 1 lemon, 1-2 garlic cloves, 1/2 tsp cumin, pinch salt. Blend while drizzling 2-3 tbsp olive oil and 2-3 tbsp cold water until smooth and creamy. Taste adjust seasoning. Spread on plate, drizzle with olive oil, sprinkle paprika and whole chickpeas."
+  },
+  {
+    "name": "Fried Rice",
+    "ingredients": ["cooked rice", "egg", "carrot", "peas", "green onion", "soy sauce", "sesame oil", "garlic", "ginger"],
+    "instructions": "Use day-old cooked rice (about 3 cups). Whisk 2 eggs with pinch salt. Heat 1 tbsp oil in wok, scramble eggs, remove. Add more oil, sauté minced garlic and ginger, then diced carrot. Add rice, breaking clumps, stir-fry until heated. Add 1/2 cup peas, scrambled eggs, 3 tbsp soy sauce, 1 tsp sesame oil. Toss well. Garnish with chopped green onion."
+  },
+  {
+    "name": "Caprese Skewers",
+    "ingredients": ["cherry tomatoes", "fresh mozzarella balls", "fresh basil leaves", "balsamic glaze", "olive oil", "salt", "pepper"],
+    "instructions": "Thread a cherry tomato, a folded basil leaf, and a small mozzarella ball (bocconcini) onto small skewers or toothpicks. Arrange on platter. Drizzle with extra virgin olive oil and balsamic glaze (reduced balsamic vinegar). Sprinkle with flaky sea salt and freshly ground black pepper. Serve immediately as appetizer."
+  },
+  {
+    "name": "Vegetable Curry",
+    "ingredients": ["coconut milk", "curry paste", "onion", "garlic", "ginger", "potato", "carrot", "cauliflower", "chickpeas", "spinach", "lime", "cilantro"],
+    "instructions": "Sauté 1 diced onion, 2 minced garlic cloves, 1 tbsp grated ginger in oil. Add 3 tbsp red or yellow curry paste, cook 1 min. Pour in 1 can coconut milk, 1/2 cup water, bring to simmer. Add 2 cubed potatoes, 2 sliced carrots, 1 cup cauliflower florets. Simmer 15 min until tender. Stir in 1 can drained chickpeas and big handful spinach until wilted. Finish with lime juice and cilantro. Serve with rice."
+  },
+  {
+    "name": "Banana Bread",
+    "ingredients": ["ripe bananas", "flour", "baking soda", "salt", "butter", "brown sugar", "egg", "vanilla", "walnuts"],
+    "instructions": "Preheat oven to 175°C (350°F). Grease loaf pan. Mash 3 very ripe bananas. Whisk 1.5 cups flour, 1 tsp baking soda, 1/4 tsp salt. In separate bowl, cream 1/3 cup melted butter with 1/2 cup brown sugar. Beat in 1 egg and 1 tsp vanilla. Stir in mashed bananas. Fold dry ingredients into wet until just combined. Mix in 1/2 cup chopped walnuts. Pour into pan, bake 50-60 min until toothpick clean."
+  },
+  {
+    "name": "Shrimp Scampi",
+    "ingredients": ["shrimp", "linguine", "butter", "olive oil", "garlic", "white wine", "lemon", "parsley", "red pepper flakes"],
+    "instructions": "Cook 200g linguine in salted water until al dente. Meanwhile, melt 2 tbsp butter with 2 tbsp olive oil in large skillet. Sauté 4 minced garlic cloves and pinch red pepper flakes 1 min. Add 300g peeled shrimp, cook 2 min per side until pink. Pour in 1/4 cup white wine, juice of 1/2 lemon, simmer 1 min. Toss drained pasta with sauce, add chopped parsley. Serve with lemon wedges."
+  },
+  {
+    "name": "Minestrone Soup",
+    "ingredients": ["onion", "carrot", "celery", "zucchini", "canned tomatoes", "cannellini beans", "small pasta", "vegetable broth", "spinach", "parmesan rind", "basil"],
+    "instructions": "Sauté diced onion, carrot, celery in olive oil 5 min. Add diced zucchini, cook 3 min. Add 1 can crushed tomatoes, 6 cups broth, parmesan rind, bring to boil. Add 1/2 cup small pasta (ditalini) and 1 can drained beans. Simmer until pasta cooked, about 10 min. Remove rind, stir in handful spinach and fresh basil. Serve with grated parmesan."
+  },
+  {
+    "name": "Cucumber Sandwiches",
+    "ingredients": ["white bread", "cream cheese", "cucumber", "fresh dill", "lemon zest", "salt", "butter"],
+    "instructions": "Mix 8 oz softened cream cheese with 2 tbsp finely chopped dill, 1 tsp lemon zest, pinch salt. Thinly slice 1 English cucumber, salt lightly and pat dry. Spread thin layer of butter on 8 slices white bread (prevents sogginess). Spread cream cheese mixture generously. Layer cucumber slices over 4 slices, top with remaining bread. Trim crusts, cut into triangles or fingers. Serve chilled."
+  },
+  {
+    "name": "Lemon Garlic Roasted Chicken",
+    "ingredients": ["whole chicken", "lemon", "garlic", "rosemary", "thyme", "butter", "olive oil", "salt", "pepper", "onion", "carrot"],
+    "instructions": "Preheat oven to 220°C (425°F). Pat dry a 1.5kg whole chicken. Mix 4 tbsp softened butter with minced garlic, chopped rosemary, thyme, lemon zest. Gently loosen skin over breast and thighs, spread herb butter under skin. Season cavity with salt and pepper, stuff with halved lemon and garlic cloves. Rub skin with olive oil, salt, pepper. Place in roasting pan with onion and carrot chunks. Roast 20 min, then reduce heat to 190°C (375°F) and roast 50-60 min until juices run clear. Rest 15 min before carving."
+  },
+    {
+    "name": "French Onion Soup",
+    "ingredients": ["yellow onions", "butter", "beef broth", "dry white wine", "baguette", "gruyère cheese", "thyme", "bay leaf", "salt", "pepper"],
+    "instructions": "Thinly slice 4 large yellow onions. Melt 3 tbsp butter in heavy pot over medium-low heat, add onions and cook slowly, stirring occasionally, until deeply caramelized and golden brown, about 35-40 minutes. Stir in 1/2 cup dry white wine, scraping up browned bits. Add 6 cups beef broth, 2 thyme sprigs, 1 bay leaf, salt and pepper. Simmer 20 minutes. Discard herbs. Ladle soup into ovenproof bowls, top with toasted baguette slices, generously cover with grated gruyère. Broil until cheese is bubbly and golden, 2-3 minutes. Serve immediately."
+  },
+  {
+    "name": "Pad Thai",
+    "ingredients": ["rice noodles", "shrimp", "firm tofu", "eggs", "bean sprouts", "green onions", "peanuts", "tamarind paste", "fish sauce", "palm sugar", "garlic", "lime", "chili flakes"],
+    "instructions": "Soak 200g rice noodles in warm water 20 min until pliable but firm, drain. Mix sauce: 3 tbsp tamarind paste, 3 tbsp fish sauce, 2 tbsp palm sugar, stir until dissolved. Heat wok, add oil, fry diced tofu until golden, remove. Sauté minced garlic, add shrimp, cook until pink, push aside. Crack 2 eggs into wok, scramble lightly. Add noodles, sauce, toss to coat. Add tofu, bean sprouts, chopped green onions, toss. Serve topped with crushed peanuts, lime wedges, chili flakes."
+  },
+  {
+    "name": "Beef Stroganoff",
+    "ingredients": ["beef sirloin", "mushrooms", "onion", "garlic", "sour cream", "beef broth", "flour", "butter", "egg noodles", "paprika", "parsley", "salt", "pepper"],
+    "instructions": "Slice 500g beef sirloin into thin strips, season with salt, pepper, paprika. Cook 300g egg noodles according to package. Heat butter in large skillet, sear beef in batches until browned, remove. Sauté sliced onion and 250g sliced mushrooms until soft, add minced garlic. Sprinkle 2 tbsp flour, stir 1 min. Gradually whisk in 1.5 cups beef broth, simmer until thickened. Reduce heat, stir in 1/2 cup sour cream, return beef, warm through (do not boil). Serve over noodles, garnish with parsley."
+  },
+  {
+    "name": "Gazpacho",
+    "ingredients": ["ripe tomatoes", "cucumber", "bell pepper", "red onion", "garlic", "stale bread", "sherry vinegar", "olive oil", "salt", "cumin"],
+    "instructions": "Roughly chop 1kg ripe tomatoes, 1 cucumber (peeled), 1 green bell pepper, 1/4 red onion. Soak a slice of stale crustless bread in water, squeeze out excess. In blender, combine vegetables, bread, 1 garlic clove, 2 tbsp sherry vinegar, 1/2 cup olive oil, 1 tsp salt, pinch cumin. Blend until very smooth. Pass through fine strainer for silky texture (optional). Chill at least 2 hours. Serve cold, garnished with finely diced cucumber, pepper, and croutons."
+  },
+  {
+    "name": "Eggplant Parmesan",
+    "ingredients": ["eggplant", "flour", "eggs", "breadcrumbs", "parmesan", "mozzarella", "marinara sauce", "basil", "olive oil", "salt"],
+    "instructions": "Slice 2 medium eggplants into 1/2-inch rounds. Salt generously, let sit 30 min to release moisture, pat dry. Dredge each slice in flour, then beaten egg, then breadcrumbs mixed with grated parmesan. Fry in olive oil until golden both sides, drain on paper towels. In baking dish, spread layer of marinara sauce, layer eggplant slices, more sauce, fresh basil leaves, shredded mozzarella. Repeat layers. Bake at 190°C (375°F) for 25-30 min until bubbly and golden. Let rest 10 min before serving."
+  },
+  {
+    "name": "Chicken Caesar Wrap",
+    "ingredients": ["cooked chicken breast", "tortilla wraps", "romaine lettuce", "caesar dressing", "parmesan cheese", "croutons", "lemon juice"],
+    "instructions": "Slice or shred cooked chicken breast. In large bowl, toss chopped romaine with caesar dressing, a squeeze of lemon, and grated parmesan. Place tortilla wrap on flat surface, pile dressed lettuce in center, top with chicken and crushed croutons. Fold in sides, then roll tightly from bottom. Cut diagonally in half. Serve immediately or wrap in foil for packed lunch."
+  },
+  {
+    "name": "Lentil Soup",
+    "ingredients": ["brown lentils", "onion", "carrot", "celery", "garlic", "canned tomatoes", "vegetable broth", "cumin", "coriander", "lemon", "olive oil", "spinach"],
+    "instructions": "Rinse 1.5 cups brown lentils, pick over. In large pot, sauté diced onion, carrot, celery in olive oil until softened. Add minced garlic, 1 tsp cumin, 1/2 tsp coriander, cook 1 min. Add 1 can diced tomatoes, 6 cups broth, lentils. Bring to boil, reduce heat, simmer 30-35 min until lentils tender. Stir in large handful fresh spinach until wilted. Finish with squeeze of lemon juice. Serve with crusty bread."
+  },
+  {
+    "name": "Shakshuka",
+    "ingredients": ["eggs", "canned tomatoes", "bell pepper", "onion", "garlic", "cumin", "paprika", "cayenne", "feta cheese", "parsley", "olive oil"],
+    "instructions": "Sauté diced onion and bell pepper in olive oil until soft. Add minced garlic, 1 tsp cumin, 1 tsp paprika, pinch cayenne, cook 1 min. Pour in 1 large can crushed tomatoes, simmer 10-15 min until thickened. Make wells in sauce and crack 4-6 eggs into wells. Cover and cook over low heat until egg whites set but yolks remain runny, about 5-8 min. Crumble feta over top, garnish with chopped parsley. Serve with warm pita bread."
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "ingredients": ["chicken thighs", "yogurt", "garlic", "ginger", "garam masala", "cumin", "turmeric", "canned tomatoes", "heavy cream", "onion", "butter", "cilantro"],
+    "instructions": "Marinate 500g cubed chicken thighs in mixture of 1/2 cup yogurt, minced garlic, ginger, 1 tbsp garam masala, 1 tsp cumin, 1/2 tsp turmeric, salt. Refrigerate 1-4 hours. Grill or broil chicken until charred and cooked. Meanwhile, sauté 1 diced onion in butter until golden, add garlic, ginger, spices, cook 1 min. Add 1 can crushed tomatoes, simmer 15 min. Blend sauce until smooth, return to pan, stir in 1/4 cup cream. Add grilled chicken, simmer 5 min. Garnish with cilantro, serve with rice or naan."
+  },
+  {
+    "name": "Falafel",
+    "ingredients": ["dried chickpeas", "onion", "garlic", "parsley", "cilantro", "cumin", "coriander", "baking soda", "flour", "sesame seeds", "oil for frying"],
+    "instructions": "Soak 1 cup dried chickpeas in water overnight (do not use canned). Drain well. In food processor, combine chickpeas, 1/2 onion, 2 garlic cloves, big handful each parsley and cilantro, 1 tsp cumin, 1 tsp coriander, 1/2 tsp baking soda, salt. Pulse until finely minced but not pureed. Add 2-3 tbsp flour to bind. Refrigerate mixture 1 hour. Form into small balls or patties, coat with sesame seeds. Deep fry at 180°C (350°F) until golden brown and crisp, 3-4 min. Drain on paper towels. Serve in pita with tahini sauce and salad."
+  },
+  {
+    "name": "Quiche Lorraine",
+    "ingredients": ["pie crust", "bacon", "eggs", "heavy cream", "gruyère cheese", "onion", "nutmeg", "salt", "pepper"],
+    "instructions": "Preheat oven to 190°C (375°F). Blind bake pie crust 10 min. Cook 150g bacon lardons until crisp, drain on paper towels. Sauté 1 small diced onion in bacon fat until soft. Spread bacon and onion over crust, top with 100g shredded gruyère. Whisk 4 eggs, 1.5 cups cream, pinch nutmeg, salt, pepper. Pour over fillings. Bake 30-35 min until set and golden. Cool slightly before slicing."
+  },
+  {
+    "name": "Sushi Rolls (Maki)",
+    "ingredients": ["sushi rice", "nori sheets", "rice vinegar", "sugar", "salt", "cucumber", "avocado", "imitation crab", "soy sauce", "wasabi", "pickled ginger"],
+    "instructions": "Cook 1.5 cups sushi rice, cool slightly. Mix 1/4 cup rice vinegar, 2 tbsp sugar, 1 tsp salt until dissolved, fold into rice. Let cool to room temp. Place nori sheet shiny side down on bamboo mat. Wet hands, spread thin layer of rice evenly over nori, leaving 2cm strip at top. Arrange fillings (cucumber strips, avocado slices, crab) in line across center. Roll tightly using mat, seal edge with water. Slice with sharp wet knife. Serve with soy sauce, wasabi, ginger."
+  },
+  {
+    "name": "Pumpkin Soup",
+    "ingredients": ["pumpkin", "onion", "garlic", "ginger", "vegetable broth", "coconut milk", "curry powder", "olive oil", "pumpkin seeds", "cilantro"],
+    "instructions": "Peel and cube 1kg pumpkin. Sauté diced onion in olive oil until soft. Add minced garlic, 1 tbsp grated ginger, 1 tsp curry powder, cook 1 min. Add pumpkin cubes, 4 cups vegetable broth. Bring to boil, simmer 20 min until pumpkin tender. Blend until smooth with immersion blender. Stir in 1/2 cup coconut milk, season with salt. Serve garnished with toasted pumpkin seeds, cilantro, and swirl of coconut milk."
+  },
+  {
+    "name": "Beef and Broccoli",
+    "ingredients": ["flank steak", "broccoli", "soy sauce", "oyster sauce", "brown sugar", "garlic", "ginger", "cornstarch", "sesame oil", "beef broth"],
+    "instructions": "Slice 400g flank steak thinly across grain. Mix marinade: 2 tbsp soy sauce, 1 tbsp cornstarch, 1 tsp sesame oil. Marinate beef 15 min. Blanch broccoli florets 1 min, drain. Mix sauce: 1/4 cup soy sauce, 2 tbsp oyster sauce, 1 tbsp brown sugar, 1/2 cup beef broth, 1 tsp cornstarch. Stir-fry beef in hot wok until browned, remove. Sauté garlic and ginger, add sauce, bring to simmer until thickened. Return beef and broccoli, toss to coat. Serve with steamed rice."
+  },
+  {
+    "name": "Bruschetta",
+    "ingredients": ["baguette", "ripe tomatoes", "garlic", "fresh basil", "olive oil", "balsamic vinegar", "salt", "pepper"],
+    "instructions": "Dice 4-5 ripe Roma tomatoes, place in bowl. Add 2 minced garlic cloves, 1/4 cup chopped fresh basil, 3 tbsp extra virgin olive oil, splash balsamic vinegar, salt and pepper. Let marinate 15-30 min. Slice baguette diagonally, brush with olive oil, toast or grill until golden. Rub each slice with cut garlic clove. Top with tomato mixture, drizzle with juices. Serve immediately."
+  },
+  {
+    "name": "Chicken Pot Pie",
+    "ingredients": ["chicken breast", "carrot", "celery", "onion", "peas", "butter", "flour", "chicken broth", "milk", "puff pastry", "thyme", "salt", "pepper"],
+    "instructions": "Poach 2 chicken breasts, dice. Sauté diced onion, carrot, celery in butter until soft. Add 1/3 cup flour, cook 1 min. Gradually whisk in 2 cups chicken broth and 1 cup milk, simmer until thick. Stir in chicken, 1/2 cup peas, thyme, salt, pepper. Pour into baking dish. Top with puff pastry sheet, cut slits for steam. Bake at 200°C (400°F) 25-30 min until golden and bubbling. Rest 5 min before serving."
+  },
+  {
+    "name": "Tiramisu",
+    "ingredients": ["mascarpone", "eggs", "sugar", "espresso", "ladyfinger biscuits", "cocoa powder", "marsala wine or rum"],
+    "instructions": "Brew 1.5 cups strong espresso, cool, add 2 tbsp marsala or rum. Separate 4 eggs. Beat yolks with 1/2 cup sugar until pale, mix in 500g mascarpone. Whip egg whites to stiff peaks, fold into mascarpone mixture. Quickly dip each ladyfinger into coffee mixture (do not soak), layer in dish. Spread half cream mixture over, repeat layers. Dust generously with cocoa powder. Refrigerate at least 4 hours, ideally overnight."
+  },
+  {
+    "name": "Greek Lemon Potatoes",
+    "ingredients": ["potatoes", "lemon", "olive oil", "garlic", "oregano", "vegetable broth", "semolina", "salt", "pepper"],
+    "instructions": "Preheat oven to 200°C (400°F). Cut 1kg potatoes into wedges. In baking dish, toss potatoes with 1/2 cup olive oil, juice of 2 lemons, 4 minced garlic cloves, 2 tsp dried oregano, salt, pepper, 1 tbsp semolina (for crispiness). Add 1 cup vegetable broth to dish. Bake uncovered 40-50 min, tossing halfway, until potatoes are tender inside, crispy outside, and liquid mostly absorbed. Serve with extra lemon wedges."
+  },
+  {
+    "name": "Black Bean Burgers",
+    "ingredients": ["black beans", "breadcrumbs", "onion", "garlic", "cumin", "chili powder", "egg", "burger buns", "avocado", "salsa"],
+    "instructions": "Mash 1 can drained black beans in bowl, leaving some chunks. Sauté finely chopped onion and garlic until soft, add to beans. Mix in 1/2 cup breadcrumbs, 1 beaten egg, 1 tsp cumin, 1/2 tsp chili powder, salt. Form into 4 patties. Chill 30 min. Cook patties in oiled skillet over medium heat 4-5 min per side until crisp. Serve on toasted buns with mashed avocado, salsa, lettuce."
+  },
+  {
+    "name": "Creamy Mushroom Pasta",
+    "ingredients": ["fettuccine", "mushrooms", "garlic", "butter", "heavy cream", "parmesan", "white wine", "thyme", "parsley", "salt", "pepper"],
+    "instructions": "Cook 300g fettuccine in salted water. Meanwhile, sauté 400g sliced mushrooms in butter over high heat until golden and moisture evaporated. Add minced garlic and thyme, cook 1 min. Deglaze with 1/4 cup white wine, reduce by half. Lower heat, stir in 1 cup heavy cream, simmer until slightly thickened. Toss with drained pasta and 1/2 cup grated parmesan, adding splash of pasta water if needed. Season with salt, pepper, garnish with parsley."
+  },
+  {
+    "name": "Chicken Shawarma",
+    "ingredients": ["chicken thighs", "yogurt", "lemon", "garlic", "cumin", "paprika", "turmeric", "cinnamon", "cayenne", "pita bread", "tomato", "cucumber", "tahini sauce"],
+    "instructions": "Make marinade: 1/2 cup yogurt, juice of 1 lemon, 3 minced garlic cloves, 1 tsp each cumin, paprika, 1/2 tsp turmeric, pinch cinnamon and cayenne. Coat 500g chicken thighs, marinate 2-8 hours. Grill or pan-fry chicken until charred and cooked through, slice thinly. Serve in warm pita with diced tomato, cucumber, red onion, and drizzle of tahini sauce or garlic yogurt."
+  },
+  {
+    "name": "Apple Crisp",
+    "ingredients": ["apples", "lemon juice", "sugar", "cinnamon", "flour", "rolled oats", "brown sugar", "butter", "vanilla ice cream"],
+    "instructions": "Preheat oven to 175°C (350°F). Peel and slice 6 medium apples, toss with 1 tbsp lemon juice, 1/4 cup sugar, 1 tsp cinnamon. Place in baking dish. In separate bowl, mix 3/4 cup flour, 3/4 cup oats, 3/4 cup brown sugar, 1/2 tsp cinnamon. Cut in 1/2 cup cold butter until crumbly. Sprinkle over apples. Bake 40-45 min until golden and bubbly. Serve warm with vanilla ice cream."
+  },
+  {
+    "name": "Egg Drop Soup",
+    "ingredients": ["chicken broth", "eggs", "cornstarch", "ginger", "green onions", "white pepper", "sesame oil", "salt"],
+    "instructions": "Bring 4 cups chicken broth to gentle simmer with 1/2 tsp grated ginger and pinch white pepper. Mix 2 tbsp cornstarch with 3 tbsp cold water, slowly whisk into broth until slightly thickened. Beat 2 eggs in measuring cup. Slowly drizzle eggs into simmering broth in thin stream while gently stirring in one direction to create ribbons. Turn off heat, stir in 1 tsp sesame oil, sliced green onions. Serve immediately."
+  },
+  {
+    "name": "Stuffed Bell Peppers",
+    "ingredients": ["bell peppers", "ground beef", "rice", "onion", "garlic", "canned tomatoes", "cheese", "oregano", "olive oil", "salt", "pepper"],
+    "instructions": "Preheat oven to 180°C (350°F). Cut tops off 4 bell peppers, remove seeds. Cook 1/2 cup rice. Sauté diced onion and garlic in olive oil, add 400g ground beef, cook until browned. Stir in 1 can diced tomatoes, cooked rice, oregano, salt, pepper. Stuff peppers with mixture, place in baking dish with small amount water in bottom. Cover with foil, bake 30 min. Uncover, top with shredded cheese, bake 10 more min until melted and peppers tender."
+  },
+    {
+    "name": "Lasagna Bolognese",
+    "ingredients": ["lasagna noodles", "ground beef", "ground pork", "onion", "carrot", "celery", "canned tomatoes", "red wine", "milk", "butter", "flour", "parmesan", "mozzarella", "nutmeg", "bay leaf"],
+    "instructions": "Prepare ragù: sauté finely diced onion, carrot, celery in olive oil. Add 300g ground beef and 200g ground pork, brown. Add 1/2 cup red wine, reduce. Add 800g crushed tomatoes, 1 cup milk, bay leaf, simmer 2 hours. Make béchamel: melt 50g butter, whisk in 50g flour, gradually add 500ml milk, cook until thick, season with salt, nutmeg. Cook lasagna noodles. Layer: ragù, noodles, béchamel, parmesan, repeat. Top with mozzarella. Bake at 180°C (350°F) 40-45 min until golden. Rest 15 min before serving."
+  },
+  {
+    "name": "Chili con Carne",
+    "ingredients": ["ground beef", "kidney beans", "onion", "garlic", "bell pepper", "canned tomatoes", "tomato paste", "beef broth", "chili powder", "cumin", "paprika", "oregano", "cayenne", "cornmeal", "cheddar cheese", "sour cream"],
+    "instructions": "Brown 500g ground beef in large pot, remove excess fat. Sauté diced onion, bell pepper, garlic until soft. Add 2 tbsp chili powder, 1 tbsp cumin, 1 tsp paprika, 1 tsp oregano, pinch cayenne, cook 1 min. Stir in 2 tbsp tomato paste, 800g crushed tomatoes, 1 cup beef broth. Return beef, add 2 cans drained kidney beans. Simmer 45 min, stirring occasionally. Mix 2 tbsp cornmeal with water, stir into chili to thicken. Simmer 5 more min. Serve topped with shredded cheddar and sour cream."
+  },
+  {
+    "name": "Mashed Potatoes",
+    "ingredients": ["potatoes", "butter", "whole milk", "heavy cream", "salt", "white pepper", "garlic", "nutmeg"],
+    "instructions": "Peel and cube 1kg Yukon Gold potatoes. Place in pot with cold salted water, add 2 crushed garlic cloves. Bring to boil, cook until fork-tender, 15-20 min. Drain well, return potatoes to pot over low heat to dry 2 min. Pass through ricer or mash thoroughly. Warm 1/2 cup milk and 1/4 cup cream together. Gradually fold into potatoes along with 100g softened butter, salt, white pepper, and pinch nutmeg. Beat until smooth and creamy. Serve hot with extra pat of butter."
+  },
+  {
+    "name": "Chicken Korma",
+    "ingredients": ["chicken thighs", "yogurt", "onion", "garlic", "ginger", "almonds", "coconut milk", "heavy cream", "garam masala", "coriander", "cumin", "turmeric", "cardamom", "cinnamon", "cilantro"],
+    "instructions": "Marinate 500g cubed chicken thighs in 1/2 cup yogurt, 1 tsp each garam masala, coriander, cumin, turmeric, and salt for 1 hour. Soak 1/4 cup almonds in hot water, peel, blend to paste with little water. Sauté sliced onion until golden, add minced garlic, ginger, 2 cardamom pods, 1 cinnamon stick. Add chicken with marinade, cook 5 min. Add almond paste, 1 cup coconut milk, simmer 20 min until chicken cooked. Stir in 1/4 cup cream, garam masala. Garnish with cilantro, serve with rice."
+  },
+  {
+    "name": "Overnight Oats",
+    "ingredients": ["rolled oats", "milk", "Greek yogurt", "chia seeds", "honey", "vanilla extract", "berries", "nuts"],
+    "instructions": "In jar or bowl, combine 1/2 cup rolled oats, 1/2 cup milk, 1/4 cup Greek yogurt, 1 tbsp chia seeds, 1 tsp honey, 1/4 tsp vanilla. Stir well. Cover and refrigerate overnight (or at least 4 hours). In morning, stir again. Top with fresh berries (blueberries, strawberries), chopped nuts (almonds, walnuts), and drizzle extra honey if desired. Eat cold or warm briefly in microwave."
+  },
+  {
+    "name": "Tuna Salad Sandwich",
+    "ingredients": ["canned tuna", "mayonnaise", "celery", "red onion", "lemon juice", "dijon mustard", "fresh dill", "salt", "pepper", "bread", "lettuce", "tomato"],
+    "instructions": "Drain 1 can tuna well, flake with fork. Finely chop 1 celery stalk and 2 tbsp red onion. Mix tuna with 3 tbsp mayonnaise, 1 tsp dijon mustard, juice of 1/4 lemon, chopped fresh dill, salt, pepper. Toast bread slices lightly. Spread tuna salad generously, top with lettuce leaf and tomato slice, close sandwich. Cut in half and serve with pickles or chips."
+  },
+  {
+    "name": "Crepes",
+    "ingredients": ["flour", "eggs", "milk", "water", "butter", "salt", "sugar", "vanilla", "nutella", "banana", "strawberries"],
+    "instructions": "Whisk 1 cup flour, pinch salt, 1 tbsp sugar. In separate bowl, whisk 2 eggs, 1.5 cups milk, 1/4 cup water, 2 tbsp melted butter, 1/2 tsp vanilla. Gradually whisk wet into dry until smooth. Let batter rest 30 min. Heat non-stick pan, lightly grease. Pour 1/4 cup batter, swirl to coat. Cook until edges lift, flip, cook 30 sec. Stack crepes. Fill with nutella, sliced banana, strawberries, fold or roll. Dust with powdered sugar."
+  },
+  {
+    "name": "Crème Brûlée",
+    "ingredients": ["heavy cream", "egg yolks", "sugar", "vanilla bean", "salt", "turbinado sugar for topping"],
+    "instructions": "Preheat oven to 150°C (300°F). Heat 2 cups heavy cream with split vanilla bean and seeds until just simmering. Whisk 5 egg yolks with 1/2 cup sugar and pinch salt until pale. Slowly whisk hot cream into yolks. Strain through fine sieve. Pour into ramekins. Place in water bath, bake 30-35 min until edges set but center slightly jiggly. Cool, refrigerate at least 4 hours. Sprinkle thin layer of turbinado sugar, caramelize with torch or under broiler. Serve immediately."
+  },
+  {
+    "name": "Salmon Burger",
+    "ingredients": ["salmon fillet", "panko breadcrumbs", "egg", "dijon mustard", "shallot", "dill", "lemon zest", "salt", "pepper", "burger buns", "lettuce", "tartar sauce"],
+    "instructions": "Skin and finely chop 400g salmon fillet (or pulse briefly in food processor). Mix with 1/2 cup panko, 1 beaten egg, 1 tbsp dijon, 1 minced shallot, 2 tbsp chopped dill, lemon zest, salt, pepper. Form into 4 patties. Refrigerate 30 min. Pan-fry in oil over medium heat 4 min per side until golden and cooked through. Toast buns, spread tartar sauce, top with patty, lettuce, red onion. Serve with lemon wedges."
+  },
+  {
+    "name": "Pasta Carbonara",
+    "ingredients": ["spaghetti", "guanciale or pancetta", "eggs", "pecorino romano", "black pepper", "salt"],
+    "instructions": "Bring salted water to boil, cook 400g spaghetti. Dice 150g guanciale, fry in skillet until crisp, remove from heat. In bowl, whisk 3 whole eggs plus 1 yolk, 1 cup grated pecorino, lots of black pepper. Drain pasta, reserving 1 cup water. Quickly toss hot pasta with guanciale and fat. Remove from heat, add egg mixture, stir vigorously adding splashes of pasta water until creamy sauce forms. Serve immediately with extra pecorino and pepper."
+  },
+  {
+    "name": "Ratatouille",
+    "ingredients": ["eggplant", "zucchini", "bell peppers", "tomato", "onion", "garlic", "olive oil", "thyme", "basil", "herbes de provence", "salt", "pepper"],
+    "instructions": "Dice 1 eggplant, 2 zucchini, 2 bell peppers, 2 tomatoes, 1 onion. Sauté onion and garlic in olive oil. Add eggplant, cook 5 min. Add peppers, cook 5 min. Add zucchini, cook 5 min. Add tomatoes, thyme, herbes de provence, salt, pepper. Cover and simmer 20-25 min, stirring occasionally, until vegetables tender but not mushy. Remove lid, cook few minutes to reduce excess liquid. Garnish with fresh basil. Serve warm or room temp."
+  },
+  {
+    "name": "Tom Yum Soup",
+    "ingredients": ["shrimp", "mushrooms", "lemongrass", "galangal", "kaffir lime leaves", "thai chilies", "fish sauce", "lime juice", "cilantro", "chicken broth", "coconut milk (optional)"],
+    "instructions": "Bring 4 cups chicken broth to boil. Add 2 bruised lemongrass stalks, 5 slices galangal, 4 torn kaffir lime leaves, 2 smashed chilies. Simmer 10 min. Add 200g mushrooms, cook 3 min. Add 300g peeled shrimp, cook until pink. Remove from heat, season with 3 tbsp fish sauce, 3 tbsp lime juice. Stir in chopped cilantro. For creamy version (Tom Yum Nam Khon), add 1/2 cup coconut milk. Serve hot."
+  },
+  {
+    "name": "Fish Tacos",
+    "ingredients": ["white fish fillets", "corn tortillas", "cabbage", "lime", "sour cream", "mayonnaise", "hot sauce", "cumin", "chili powder", "flour", "oil for frying"],
+    "instructions": "Make slaw: thinly slice cabbage, toss with lime juice, salt. Mix 1/4 cup sour cream, 2 tbsp mayo, hot sauce to taste for crema. Cut 500g fish into strips. Mix flour with cumin, chili powder, salt. Dredge fish, shake excess. Fry in hot oil until crisp and cooked, 3-4 min. Warm tortillas. Assemble: fish, slaw, drizzle crema, fresh cilantro, squeeze of lime."
+  },
+  {
+    "name": "New York Cheesecake",
+    "ingredients": ["cream cheese", "sugar", "eggs", "sour cream", "heavy cream", "vanilla", "lemon zest", "graham cracker crumbs", "butter"],
+    "instructions": "Preheat oven to 160°C (325°F). Mix 1.5 cups graham crumbs with 1/4 cup melted butter, press into springform pan. Bake 10 min. Beat 900g cream cheese with 1 cup sugar until smooth. Add 4 eggs one at a time, then 1/4 cup sour cream, 1/4 cup heavy cream, 2 tsp vanilla, lemon zest. Pour over crust. Bake in water bath 60-70 min until edges set, center slightly jiggly. Cool in oven with door ajar, then refrigerate overnight. Serve plain or with berry topping."
+  },
+  {
+    "name": "Chocolate Mousse",
+    "ingredients": ["dark chocolate", "eggs", "sugar", "heavy cream", "vanilla", "salt"],
+    "instructions": "Melt 200g dark chocolate over double boiler, cool slightly. Separate 4 eggs. Whisk yolks with 1/4 cup sugar until pale. Whip 1 cup heavy cream to soft peaks. In clean bowl, whip egg whites with pinch salt to stiff peaks. Stir chocolate into yolks, then fold in whipped cream, then egg whites gently. Spoon into glasses, refrigerate at least 2 hours. Garnish with whipped cream and chocolate shavings."
+  },
+  {
+    "name": "Salade Niçoise",
+    "ingredients": ["tuna", "green beans", "potatoes", "hard-boiled eggs", "tomatoes", "olives", "anchovies", "lettuce", "red onion", "olive oil", "red wine vinegar", "dijon mustard"],
+    "instructions": "Boil small potatoes until tender, cool, quarter. Blanch green beans until crisp-tender, shock in ice water. Make vinaigrette: whisk 3 tbsp olive oil, 1 tbsp red wine vinegar, 1 tsp dijon, salt, pepper. Arrange lettuce leaves on platter. Top with potatoes, green beans, halved hard-boiled eggs, tomato wedges, sliced red onion, niçoise olives, flaked tuna, anchovy fillets. Drizzle with vinaigrette. Serve with crusty bread."
+  },
+  {
+    "name": "Margherita Pizza",
+    "ingredients": ["pizza dough", "san marzano tomatoes", "fresh mozzarella", "fresh basil", "olive oil", "salt", "flour"],
+    "instructions": "Preheat oven with pizza stone to highest temp (250-280°C/500°F+) at least 30 min. Crush 1 can tomatoes by hand, season with pinch salt. Stretch dough on floured surface. Spread thin layer of tomato sauce, leaving border. Tear fresh mozzarella into pieces, scatter over. Drizzle with olive oil. Bake on stone 8-10 min until crust charred and cheese bubbly. Remove, top with fresh basil leaves, extra drizzle olive oil. Slice and serve."
+  },
+  {
+    "name": "Loaded Baked Potato",
+    "ingredients": ["russet potatoes", "butter", "sour cream", "cheddar cheese", "bacon", "green onions", "salt", "pepper"],
+    "instructions": "Preheat oven to 200°C (400°F). Scrub potatoes, prick with fork, rub with oil and salt. Bake directly on rack 60 min until soft. Cook 4 slices bacon until crisp, crumble. Slit potato open, fluff insides with fork. Add pat of butter, generous sour cream, salt, pepper, shredded cheddar, bacon crumbles, chopped green onions. Serve hot."
+  },
+  {
+    "name": "Scrambled Eggs",
+    "ingredients": ["eggs", "butter", "milk or cream", "salt", "pepper", "chives"],
+    "instructions": "Crack 4 eggs into bowl, add 2 tbsp milk, pinch salt and pepper. Whisk thoroughly. Melt 1 tbsp butter in non-stick pan over medium-low heat. Pour in eggs, let sit 20 seconds. Using spatula, gently push eggs from edges toward center, tilting pan to let uncooked egg flow underneath. Continue until eggs are soft and creamy but set, 2-3 min. Remove from heat just before fully set (residual heat finishes cooking). Sprinkle with chopped chives. Serve immediately."
+  },
+  {
+    "name": "Homemade Granola",
+    "ingredients": ["rolled oats", "nuts", "seeds", "honey", "maple syrup", "coconut oil", "vanilla", "cinnamon", "dried fruit", "salt"],
+    "instructions": "Preheat oven to 150°C (300°F). Mix 3 cups oats, 1 cup mixed nuts (almonds, walnuts), 1/2 cup seeds (pumpkin, sunflower). In small pot, warm 1/3 cup honey, 1/4 cup maple syrup, 1/4 cup coconut oil, 1 tsp vanilla, 1/2 tsp cinnamon, pinch salt. Pour over dry, mix well. Spread on baking sheet. Bake 20-25 min, stirring halfway, until golden. Cool completely, then mix in 1/2 cup dried fruit (cranberries, raisins). Store in airtight container."
+  },
+  {
+    "name": "Green Smoothie",
+    "ingredients": ["spinach", "banana", "Greek yogurt", "almond milk", "honey", "chia seeds", "ice"],
+    "instructions": "Add to blender: large handful fresh spinach, 1 ripe banana (frozen for creaminess), 1/2 cup Greek yogurt, 1 cup unsweetened almond milk, 1 tsp honey, 1 tsp chia seeds, handful ice. Blend until smooth. Taste and adjust sweetness. Pour into glass and enjoy immediately."
+  },
+  {
+    "name": "Avocado Toast",
+    "ingredients": ["sourdough bread", "ripe avocado", "lemon", "red pepper flakes", "sea salt", "olive oil", "poached egg (optional)"],
+    "instructions": "Toast thick slice of sourdough bread until golden and crisp. Mash half avocado with fork, spread on toast. Sprinkle with flaky sea salt, squeeze of fresh lemon juice, pinch red pepper flakes. Drizzle with good extra virgin olive oil. Top with poached egg if desired. Eat immediately before toast softens."
+  },
+  {
+    "name": "Miso Soup",
+    "ingredients": ["dashi stock", "miso paste", "soft tofu", "wakame seaweed", "green onions", "enoki mushrooms (optional)"],
+    "instructions": "Bring 4 cups dashi (or water with dashi powder) to gentle simmer. Add 1 tbsp dried wakame, let rehydrate. Reduce heat to low (do not boil miso). Dissolve 3-4 tbsp miso paste in small amount of broth, then stir back into pot. Add 1/2 block cubed soft tofu, sliced green onions, enoki mushrooms. Warm through without boiling. Serve immediately as starter."
+  },
+  {
+    "name": "Shortbread Cookies",
+    "ingredients": ["butter", "sugar", "flour", "salt", "vanilla", "turbinado sugar for sprinkling"],
+    "instructions": "Preheat oven to 160°C (325°F). Cream 1 cup softened butter with 1/2 cup sugar until light. Add 1 tsp vanilla. Gradually mix in 2 cups flour and 1/4 tsp salt until dough comes together. Press into 9-inch tart pan or roll and cut shapes. Prick with fork. Bake 30-35 min until edges lightly golden. Sprinkle with turbinado sugar while warm. Cut into wedges while still warm, cool completely."
+  },
+  {
+    "name": "Crab Cakes",
+    "ingredients": ["lump crab meat", "panko breadcrumbs", "egg", "mayonnaise", "dijon mustard", "worcestershire sauce", "old bay seasoning", "parsley", "lemon", "butter"],
+    "instructions": "Gently pick through 450g crab meat for shells. In bowl, whisk 1 egg, 3 tbsp mayo, 1 tsp dijon, 1 tsp Worcestershire, 1 tsp Old Bay, 2 tbsp chopped parsley. Fold in crab and 1/2 cup panko, careful not to break lumps. Form into 8 cakes, refrigerate 30 min. Pan-fry in butter and oil over medium heat 4 min per side until golden and crisp. Serve with lemon wedges and remoulade or tartar sauce."
+  },
+    {
+    "name": "Borscht",
+    "ingredients": ["beets", "cabbage", "carrot", "onion", "potato", "tomato paste", "beef broth", "white vinegar", "sugar", "dill", "sour cream", "bay leaf", "garlic"],
+    "instructions": "Peel and grate 3 medium beets and 1 carrot. Finely chop 1 onion. In large pot, sauté onion in oil until soft. Add grated beets and carrot, cook 5 min. Add 2 tbsp tomato paste, 1 tbsp vinegar, 1 tsp sugar, cook 2 min. Add 8 cups beef broth, 2 bay leaves, bring to boil. Add 2 diced potatoes and 2 cups shredded cabbage, simmer 20-25 min until vegetables tender. Season with salt, pepper, minced garlic. Remove from heat, let stand 10 min. Serve hot with dollop of sour cream and fresh chopped dill."
+  },
+  {
+    "name": "Pho Bo (Vietnamese Beef Noodle Soup)",
+    "ingredients": ["beef bones", "oxtail", "beef brisket", "rice noodles", "onion", "ginger", "star anise", "cinnamon stick", "cloves", "coriander seeds", "fish sauce", "rock sugar", "bean sprouts", "thai basil", "lime", "jalapeño", "green onions"],
+    "instructions": "Parboil beef bones and oxtail 5 min, rinse. Char 1 halved onion and 4-inch ginger piece over flame. Toast spices: 3 star anise, 1 cinnamon stick, 3 cloves, 1 tbsp coriander seeds in dry pan until fragrant, tie in cheesecloth. Add bones, oxtail, brisket, charred onion/ginger, spice bag to large pot with 5L water. Bring to boil, skim scum, reduce to gentle simmer for 3-4 hours. Remove brisket after 2 hours, cool, slice thinly. Strain broth, season with 1/4 cup fish sauce and 1 tbsp rock sugar. Cook rice noodles according to package. To serve: place noodles in bowl, top with sliced brisket and raw beef eye round (optional), ladle hot broth over to cook raw beef. Serve with plate of bean sprouts, basil, lime wedges, jalapeño slices, and hoisin/sriracha on side."
+  },
+  {
+    "name": "Coq au Vin",
+    "ingredients": ["chicken pieces", "bacon lardons", "pearl onions", "mushrooms", "red wine", "chicken broth", "carrot", "celery", "onion", "garlic", "tomato paste", "thyme", "bay leaf", "flour", "butter", "parsley"],
+    "instructions": "Marinate chicken pieces in 1 bottle red wine with chopped carrot, celery, onion, garlic, thyme, bay leaf overnight. Remove chicken, pat dry, reserve marinade and vegetables. In Dutch oven, render bacon lardons until crisp, remove. Brown chicken in bacon fat, remove. Sauté marinated vegetables until soft, add 2 tbsp tomato paste, cook 1 min. Sprinkle 2 tbsp flour, stir. Add reserved wine marinade, 2 cups chicken broth, bring to simmer. Return chicken and bacon, cook 45 min covered. Meanwhile, sauté pearl onions and mushrooms in butter until caramelized. Add to stew last 15 min. Serve garnished with parsley, with crusty bread or mashed potatoes."
+  },
+  {
+    "name": "Beef Bourguignon",
+    "ingredients": ["beef chuck", "bacon", "carrots", "pearl onions", "mushrooms", "red wine", "beef broth", "tomato paste", "garlic", "thyme", "bay leaf", "flour", "butter", "parsley"],
+    "instructions": "Cut 1.5kg beef chuck into 2-inch cubes, dry well. Render chopped bacon in Dutch oven, remove. Brown beef in batches in bacon fat, set aside. Sauté 2 sliced carrots and 1 chopped onion. Add 3 tbsp flour, cook 1 min. Add 1 bottle red wine, 2 cups beef broth, 2 tbsp tomato paste, garlic, thyme, bay leaf. Return beef and bacon, bring to simmer. Cover and cook in 160°C (325°F) oven for 2.5-3 hours until beef tender. Meanwhile, sauté pearl onions and quartered mushrooms in butter until golden. Add to stew last 15 min. Garnish with parsley. Serve with boiled potatoes or crusty bread."
+  },
+  {
+    "name": "Paella Valenciana",
+    "ingredients": ["bomba rice", "chicken thighs", "rabbit (optional)", "green beans", "butter beans", "tomato", "garlic", "saffron", "smoked paprika", "rosemary", "chicken broth", "olive oil", "lemon wedges"],
+    "instructions": "Heat olive oil in wide paella pan. Brown seasoned chicken thighs and rabbit pieces, set aside. Sauté chopped tomato and minced garlic, add 1 tsp smoked paprika. Add 2 cups bomba rice, stir to coat. Pour in 4 cups hot chicken broth infused with generous pinch saffron. Arrange meat on top, add green beans and butter beans. Do not stir after this point. Cook over medium-high heat 10 min, then reduce heat and cook 10-15 min until liquid absorbed. If needed, add more broth. In last minutes, increase heat to create socarrat (crispy bottom). Remove from heat, cover with foil, rest 5 min. Garnish with rosemary sprigs and lemon wedges."
+  },
+  {
+    "name": "Spanakopita (Greek Spinach Pie)",
+    "ingredients": ["phyllo dough", "spinach", "feta cheese", "ricotta cheese", "onion", "dill", "parsley", "eggs", "olive oil", "butter", "nutmeg", "salt", "pepper"],
+    "instructions": "Sauté 1 chopped onion in olive oil until soft. Add 1kg fresh spinach in batches until wilted. Drain and squeeze out excess moisture. Mix spinach with 200g crumbled feta, 200g ricotta, 2 beaten eggs, 1/4 cup chopped dill and parsley, pinch nutmeg, salt, pepper. Brush baking dish with butter. Layer 8-10 phyllo sheets, brushing each with melted butter. Spread spinach filling. Top with another 8-10 buttered phyllo sheets. Score top into squares. Bake at 180°C (350°F) 45-50 min until golden and crisp. Cool slightly before cutting."
+  },
+  {
+    "name": "Chicken Parmesan",
+    "ingredients": ["chicken breasts", "flour", "eggs", "breadcrumbs", "parmesan", "mozzarella", "marinara sauce", "spaghetti", "basil", "olive oil", "salt", "pepper"],
+    "instructions": "Butterfly 2 chicken breasts, pound to even thickness. Season with salt, pepper. Dredge in flour, then beaten eggs, then mixture of breadcrumbs and grated parmesan. Pan-fry in olive oil until golden both sides. Spread thin layer marinara in baking dish, place chicken cutlets, top with more marinara, fresh mozzarella slices, extra parmesan. Bake at 200°C (400°F) 15-20 min until cheese bubbly and chicken cooked. Serve over spaghetti tossed with marinara, garnish with fresh basil."
+  },
+  {
+    "name": "Pasta al Pesto",
+    "ingredients": ["basil leaves", "pine nuts", "garlic", "parmesan", "pecorino", "olive oil", "salt", "trofie or linguine", "potato", "green beans"],
+    "instructions": "Make pesto: in mortar or food processor, grind 2 cups fresh basil leaves, 1/4 cup toasted pine nuts, 1 garlic clove, pinch salt to paste. Gradually work in 1/2 cup grated parmesan and pecorino mix, then drizzle 1/2 cup olive oil until smooth. Cook pasta with diced potato and green beans in same pot (traditional for trofie). Reserve 1 cup pasta water. Drain, toss with pesto, adding pasta water as needed for creamy consistency. Serve with extra cheese."
+  },
+  {
+    "name": "Fettuccine Alfredo",
+    "ingredients": ["fettuccine", "butter", "heavy cream", "parmesan", "nutmeg", "salt", "white pepper", "parsley"],
+    "instructions": "Cook 400g fettuccine in salted water. In large skillet, melt 1/2 cup butter over medium heat. Add 1.5 cups heavy cream, bring to gentle simmer, cook 2-3 min until slightly thickened. Remove from heat, stir in 1.5 cups freshly grated parmesan until smooth. Season with pinch nutmeg, salt, white pepper. Drain pasta, add to sauce, toss to coat, adding splash pasta water if needed. Garnish with parsley and extra parmesan. Serve immediately."
+  },
+  {
+    "name": "Pork Schnitzel",
+    "ingredients": ["pork loin chops", "flour", "eggs", "breadcrumbs", "lemon", "butter", "oil", "parsley", "salt", "pepper", "lingonberry jam"],
+    "instructions": "Place pork chops between plastic wrap, pound to 1/4-inch thickness. Season with salt, pepper. Set up breading station: flour, beaten eggs, plain breadcrumbs. Dredge each chop in flour, egg, then breadcrumbs, pressing to adhere. Heat equal parts butter and oil in skillet. Fry schnitzel 2-3 min per side until golden and crispy. Drain briefly on paper towels. Serve immediately with lemon wedges, chopped parsley, and lingonberry jam or lemon caper butter."
+  },
+  {
+    "name": "Lamb Kofta Kebabs",
+    "ingredients": ["ground lamb", "onion", "garlic", "parsley", "mint", "cumin", "coriander", "cinnamon", "allspice", "cayenne", "salt", "pita bread", "tzatziki", "tomato", "cucumber"],
+    "instructions": "Grate 1 small onion, squeeze out liquid. Mix with 500g ground lamb, 2 minced garlic cloves, 1/4 cup each chopped parsley and mint, 1 tsp each cumin and coriander, 1/2 tsp cinnamon, pinch allspice and cayenne, 1 tsp salt. Knead well. Form into oblong patties around metal or soaked wooden skewers. Refrigerate 30 min. Grill or broil 4-5 min per side until charred and cooked. Serve in warm pita with tzatziki, sliced tomato, cucumber, red onion."
+  },
+  {
+    "name": "Butter Chicken (Murgh Makhani)",
+    "ingredients": ["chicken thighs", "yogurt", "lemon juice", "garlic", "ginger", "garam masala", "cumin", "turmeric", "chili powder", "butter", "onion", "canned tomatoes", "heavy cream", "kasuri methi", "cilantro"],
+    "instructions": "Marinate 600g chicken thigh pieces in mixture of 1/2 cup yogurt, lemon juice, minced garlic, ginger, 1 tsp each garam masala, cumin, turmeric, chili powder, salt for 2 hours. Grill or broil chicken until charred. For sauce: sauté 1 chopped onion in 3 tbsp butter until golden. Add garlic, ginger, spices, cook 1 min. Add 800g crushed tomatoes, simmer 20 min. Blend smooth, return to pan, stir in 1/2 cup cream, 1 tbsp crushed kasuri methi. Add grilled chicken, simmer 5 min. Garnish with cilantro and cream swirl."
+  },
+  {
+    "name": "Tabbouleh",
+    "ingredients": ["bulgur wheat", "parsley", "mint", "tomato", "cucumber", "green onion", "lemon juice", "olive oil", "salt", "pepper"],
+    "instructions": "Soak 1/2 cup fine bulgur in hot water 15 min until tender, drain and squeeze dry. Finely chop 2 large bunches parsley (about 3 cups chopped) and 1/2 cup mint. Dice 2 tomatoes and 1 cucumber. Mix bulgur with herbs and vegetables, add chopped green onions. Dress with juice of 2 lemons, 1/3 cup olive oil, salt, pepper. Let sit 30 min for flavors to meld. Serve with romaine lettuce leaves for scooping."
+  },
+  {
+    "name": "Moules Marinières",
+    "ingredients": ["mussels", "shallots", "garlic", "butter", "dry white wine", "parsley", "thyme", "bay leaf", "heavy cream (optional)", "crusty bread"],
+    "instructions": "Scrub and debeard 1kg mussels, discard any open ones that don't close when tapped. In large pot, melt 2 tbsp butter, sauté 2 finely chopped shallots and 2 minced garlic cloves until soft. Add 1 cup white wine, thyme, bay leaf, bring to boil. Add mussels, cover, cook 3-5 min shaking pot occasionally until shells open. Remove mussels to serving bowl. Discard any unopened. Stir 2 tbsp cold butter (and splash cream if desired) into broth, pour over mussels. Sprinkle with chopped parsley. Serve with crusty bread for dipping."
+  },
+  {
+    "name": "Panna Cotta",
+    "ingredients": ["heavy cream", "milk", "sugar", "gelatin", "vanilla bean", "berries", "mint"],
+    "instructions": "Bloom 2 tsp gelatin in 3 tbsp cold water. Heat 2 cups cream, 1/2 cup milk, 1/3 cup sugar, and split vanilla bean with seeds over medium heat until steaming. Remove from heat, discard bean, stir in bloomed gelatin until dissolved. Strain into pitcher. Lightly oil ramekins. Pour mixture into ramekins. Refrigerate at least 4 hours, preferably overnight. To unmold, dip ramekin in hot water briefly, invert onto plate. Serve with berry compote and fresh mint."
+  },
+  {
+    "name": "Brownies",
+    "ingredients": ["butter", "dark chocolate", "sugar", "eggs", "vanilla", "flour", "cocoa powder", "salt", "walnuts (optional)"],
+    "instructions": "Preheat oven to 175°C (350°F). Grease 8-inch square pan. Melt 1/2 cup butter and 200g chopped dark chocolate together, cool slightly. Whisk in 1 cup sugar, then 2 eggs one at a time, 1 tsp vanilla. Fold in 3/4 cup flour, 1/4 cup cocoa powder, 1/4 tsp salt until just combined. Stir in 1/2 cup chopped walnuts if using. Pour into pan, bake 20-25 min until toothpick comes out with moist crumbs. Cool completely before cutting."
+  },
+  {
+    "name": "Key Lime Pie",
+    "ingredients": ["graham cracker crust", "sweetened condensed milk", "egg yolks", "key lime juice", "lime zest", "whipped cream"],
+    "instructions": "Preheat oven to 175°C (350°F). Whisk 3 egg yolks with 1 can (400g) sweetened condensed milk. Gradually whisk in 1/2 cup key lime juice and 1 tbsp lime zest until thickened. Pour into prepared graham crust. Bake 15 min until set but still slightly wobbly. Cool completely, then refrigerate at least 3 hours. Serve cold topped with whipped cream and extra lime zest."
+  },
+  {
+    "name": "Frittata",
+    "ingredients": ["eggs", "milk", "potato", "onion", "bell pepper", "spinach", "feta cheese", "olive oil", "salt", "pepper", "parsley"],
+    "instructions": "Preheat broiler. Slice 1 potato thinly, parboil 5 min, drain. Sauté sliced onion and bell pepper in oven-safe skillet until soft. Add potato slices and handful spinach, wilt. Whisk 8 eggs with 1/4 cup milk, salt, pepper. Pour over vegetables, cook over medium heat 5 min until edges set. Crumble feta on top. Transfer to broiler 3-4 min until puffed and golden. Let rest 5 min, slice into wedges, garnish with parsley."
+  },
+  {
+    "name": "Ceviche",
+    "ingredients": ["white fish fillet", "lime juice", "lemon juice", "red onion", "tomato", "cucumber", "cilantro", "jalapeño", "avocado", "salt", "tortilla chips"],
+    "instructions": "Dice 500g very fresh white fish (sea bass, tilapia) into small cubes. Place in non-reactive bowl, cover with 1/2 cup lime juice and 1/4 cup lemon juice. Add thinly sliced red onion, minced jalapeño, salt. Refrigerate 15-20 min until fish turns opaque. Drain excess juice if desired. Mix in diced tomato, cucumber, chopped cilantro, and diced avocado just before serving. Serve with tortilla chips or tostadas."
+  },
+  {
+    "name": "Coleslaw",
+    "ingredients": ["green cabbage", "red cabbage", "carrot", "mayonnaise", "apple cider vinegar", "dijon mustard", "sugar", "celery seeds", "salt", "pepper"],
+    "instructions": "Shred 4 cups green cabbage, 1 cup red cabbage, and grate 1 carrot. In large bowl, whisk 1/2 cup mayo, 2 tbsp apple cider vinegar, 1 tbsp dijon, 1 tsp sugar, 1/2 tsp celery seeds, salt, pepper. Add shredded vegetables, toss to coat. Refrigerate at least 1 hour before serving. Toss again before serving."
+  },
+  {
+    "name": "Waldorf Salad",
+    "ingredients": ["apples", "celery", "walnuts", "grapes", "mayonnaise", "lemon juice", "sugar", "salt", "lettuce leaves"],
+    "instructions": "Core and dice 2 crisp apples (Granny Smith or Fuji), toss with 1 tbsp lemon juice to prevent browning. Slice 2 celery stalks thinly. Halve 1/2 cup red grapes. In bowl, mix 1/4 cup mayo with 1 tsp sugar and pinch salt. Gently fold apples, celery, grapes, and 1/2 cup toasted walnut pieces. Serve on bed of lettuce leaves."
+  },
+  {
+    "name": "Garlic Bread",
+    "ingredients": ["baguette", "butter", "garlic", "parsley", "parmesan (optional)", "salt"],
+    "instructions": "Preheat oven to 200°C (400°F). In small bowl, mix 1/2 cup softened butter with 4 minced garlic cloves, 2 tbsp chopped parsley, pinch salt. Slice baguette almost all the way through into 1-inch slices. Spread garlic butter between each slice generously. Wrap in foil, bake 10 min. Open foil, sprinkle with grated parmesan if desired, bake uncovered 5 more min until crisp and golden. Serve hot."
+  },
+  {
+    "name": "Chicken Satay",
+    "ingredients": ["chicken thighs", "coconut milk", "soy sauce", "curry powder", "turmeric", "brown sugar", "garlic", "lemongrass", "peanut butter", "lime", "cucumber", "red onion"],
+    "instructions": "Slice 500g chicken thighs into strips, thread onto soaked skewers. Marinate in mixture of 1/2 cup coconut milk, 2 tbsp soy sauce, 1 tbsp curry powder, 1 tsp turmeric, 1 tbsp brown sugar, minced garlic and lemongrass for 2 hours. Grill or broil skewers 3-4 min per side until charred and cooked. For peanut sauce: simmer 1/2 cup coconut milk with 1/3 cup peanut butter, 1 tbsp soy sauce, 1 tbsp brown sugar, lime juice, water to thin. Serve satay with peanut sauce and cucumber-onion relish."
+  },
+  {
+    "name": "Sticky Toffee Pudding",
+    "ingredients": ["dates", "baking soda", "boiling water", "butter", "brown sugar", "eggs", "flour", "vanilla", "heavy cream", "butter (for sauce)"],
+    "instructions": "Preheat oven to 180°C (350°F). Grease baking dish. Chop 200g dates, soak with 1 tsp baking soda in 1 cup boiling water 10 min. Cream 1/4 cup butter with 3/4 cup brown sugar, beat in 2 eggs. Mix in date mixture, then 1.5 cups flour. Pour into dish, bake 30-35 min. Make toffee sauce: melt 1/2 cup butter, 1 cup brown sugar, 1 cup cream, simmer 3 min. Poke holes in hot pudding, pour half sauce over. Serve warm with remaining sauce and vanilla ice cream."
+  },
+  {
+    "name": "Baklava",
+    "ingredients": ["phyllo dough", "walnuts", "pistachios", "sugar", "cinnamon", "butter", "honey", "water", "lemon juice", "rose water (optional)"],
+    "instructions": "Preheat oven to 175°C (350°F). Pulse 300g walnuts and 100g pistachios with 1/4 cup sugar and 1 tsp cinnamon in food processor. Brush baking dish with butter. Layer 10 phyllo sheets brushing each with melted butter. Spread half nut mixture. Add 5 more buttered phyllo sheets, remaining nuts, top with 10-15 buttered phyllo sheets. Cut into diamond pattern. Bake 45-50 min until golden. Make syrup: boil 1 cup honey, 1/2 cup water, 1/2 cup sugar, 1 tbsp lemon juice, splash rose water 5 min. Pour cooled syrup over hot baklava. Let soak several hours or overnight."
+  },
+    {
+    "name": "Zucchini Fritters",
+    "ingredients": ["zucchini", "flour", "egg", "feta cheese", "dill", "mint", "green onion", "baking powder", "salt", "pepper", "olive oil", "Greek yogurt for serving"],
+    "instructions": "Grate 2 medium zucchini onto clean kitchen towel, sprinkle with salt, let sit 10 minutes, then squeeze out as much liquid as possible. In large bowl, whisk 1 egg, then mix in 1/2 cup crumbled feta, 2 tbsp chopped dill, 1 tbsp chopped mint, 2 chopped green onions, 1/4 tsp baking powder, salt, pepper. Stir in drained zucchini and 1/3 cup flour until just combined. Heat olive oil in skillet over medium heat. Drop heaping spoonfuls of batter, flatten slightly, fry 3-4 minutes per side until golden and crisp. Drain on paper towels. Serve hot with dollop of Greek yogurt."
+  },
+  {
+    "name": "Goulash",
+    "ingredients": ["beef chuck", "onion", "garlic", "caraway seeds", "sweet paprika", "hot paprika", "tomato paste", "beef broth", "bell pepper", "potato", "bay leaf", "marjoram", "salt", "pepper", "sour cream"],
+    "instructions": "Cut 1kg beef chuck into 2-inch cubes, season with salt and pepper. In large Dutch oven, sauté 2 diced onions in oil until golden. Add 4 minced garlic cloves and 2 tbsp sweet paprika, 1 tsp hot paprika, 1 tsp caraway seeds, cook 1 minute (do not burn paprika). Add beef and 2 tbsp tomato paste, stir to coat. Pour in 4 cups beef broth, add 2 bay leaves, bring to simmer. Cover and cook on low heat 1.5 hours. Add 2 diced bell peppers and 2 cubed potatoes, cook additional 30-40 minutes until beef tender and potatoes cooked. Stir in 1 tsp dried marjoram. Serve in bowls with dollop of sour cream and crusty bread."
+  },
+  {
+    "name": "Samosas",
+    "ingredients": ["flour", "salt", "oil", "water", "potato", "peas", "onion", "ginger", "green chili", "cumin seeds", "coriander", "garam masala", "amchur powder", "oil for frying"],
+    "instructions": "Make dough: mix 1.5 cups flour, 1/2 tsp salt, 3 tbsp oil, rub to breadcrumb texture. Add water gradually to form stiff dough, rest 30 min. For filling: boil and mash 2 potatoes. Sauté 1 chopped onion, 1 tsp cumin seeds, minced ginger and green chili. Add 1/2 cup peas, spices (1 tsp coriander, 1/2 tsp garam masala, 1/2 tsp amchur), salt. Mix in mashed potatoes, cool. Divide dough into balls, roll into thin circles, cut in half. Form cone, fill with potato mixture, seal edges with water. Deep fry at 180°C (350°F) until golden and crisp. Serve with mint chutney or tamarind sauce."
+  },
+  {
+    "name": "Clam Chowder",
+    "ingredients": ["clams", "bacon", "onion", "celery", "potato", "garlic", "flour", "clam juice", "heavy cream", "milk", "thyme", "bay leaf", "salt", "pepper", "oyster crackers"],
+    "instructions": "Render 4 strips diced bacon in pot until crisp, remove bacon, leave fat. Sauté 1 diced onion, 2 celery stalks, and 2 minced garlic cloves in bacon fat until soft. Sprinkle 1/4 cup flour, cook 1 minute. Gradually whisk in 2 cups clam juice and 1 cup milk. Add 2 diced potatoes, 1 bay leaf, few thyme sprigs, simmer 15-20 min until potatoes tender. Add 2 cups chopped fresh or canned clams (with their juice), 1 cup heavy cream. Simmer gently 5 min (do not boil). Season with salt and pepper. Serve topped with reserved bacon crumbles and oyster crackers."
+  },
+  {
+    "name": "Bibimbap",
+    "ingredients": ["rice", "beef bulgogi", "spinach", "bean sprouts", "carrot", "zucchini", "mushrooms", "egg", "gochujang", "sesame oil", "soy sauce", "garlic", "green onion", "sesame seeds"],
+    "instructions": "Cook 2 cups short-grain rice. Prepare vegetables separately: blanch spinach, squeeze, season with sesame oil, garlic, salt. Blanch bean sprouts, season similarly. Julienne carrot and zucchini, sauté briefly with salt. Sauté sliced mushrooms. Prepare beef bulgogi (marinated thinly sliced beef) and cook quickly. Fry eggs sunny-side up. To serve: place rice in bowl, arrange vegetables and beef in sections on top. Place egg in center. Add dollop of gochujang. Sprinkle with sesame seeds and chopped green onion. Drizzle with sesame oil. Mix everything together before eating."
+  },
+  {
+    "name": "Pierogi",
+    "ingredients": ["flour", "egg", "water", "salt", "potato", "cheese", "onion", "butter", "sour cream"],
+    "instructions": "Make dough: mix 2 cups flour, 1/2 tsp salt, 1 egg, 1/2 cup warm water, knead until smooth. Rest 30 min. For filling: boil and mash 2 potatoes. Sauté 1 finely chopped onion in butter until golden, mix half into potatoes with 1/2 cup farmer's cheese or ricotta, salt, pepper. Roll dough thin, cut circles with glass. Place spoonful filling on each, fold into half-moon, seal edges firmly. Boil pierogi in salted water until they float, then 2-3 min more. Drain. Sauté in butter with remaining caramelized onions until lightly crisp. Serve with sour cream."
+  },
+  {
+    "name": "Cobb Salad",
+    "ingredients": ["romaine lettuce", "chicken breast", "bacon", "hard-boiled eggs", "avocado", "tomato", "blue cheese", "red onion", "red wine vinaigrette"],
+    "instructions": "Grill or poach 1 chicken breast, cool, dice. Cook 4 bacon strips until crisp, crumble. Hard-boil 2 eggs, chop. Dice 1 avocado and 1 tomato, thinly slice 1/4 red onion. Arrange chopped romaine lettuce on large platter. Create neat rows of chicken, bacon, egg, avocado, tomato, and crumbled blue cheese over lettuce. Drizzle with red wine vinaigrette. Serve immediately, toss at table."
+  },
+  {
+    "name": "Tom Kha Gai",
+    "ingredients": ["chicken breast", "coconut milk", "chicken broth", "lemongrass", "galangal", "kaffir lime leaves", "mushrooms", "thai chilies", "fish sauce", "lime juice", "sugar", "cilantro"],
+    "instructions": "In pot, bring 2 cups coconut milk and 2 cups chicken broth to gentle simmer. Add 2 bruised lemongrass stalks, 5 slices galangal, 5 torn kaffir lime leaves, 2 smashed chilies. Simmer 10 minutes. Add 200g sliced chicken breast and 1 cup sliced mushrooms, cook until chicken done, 5-7 min. Season with 3 tbsp fish sauce, 2 tbsp lime juice, 1 tsp sugar. Taste and adjust. Remove aromatics or leave for presentation. Garnish with fresh cilantro. Serve hot."
+  },
+  {
+    "name": "Beef Empanadas",
+    "ingredients": ["flour", "butter", "egg", "water", "vinegar", "ground beef", "onion", "bell pepper", "olives", "hard-boiled egg", "cumin", "paprika", "oregano", "egg wash"],
+    "instructions": "Make pastry: cut 1/2 cup cold butter into 2.5 cups flour with salt. Mix 1 egg, 1/3 cup cold water, 1 tbsp vinegar, add to flour mixture, knead briefly. Chill 1 hour. For filling: brown 500g ground beef with 1 chopped onion, 1 diced bell pepper. Drain fat. Add 2 tsp cumin, 1 tsp paprika, 1 tsp oregano, salt, pepper. Stir in 1/4 cup chopped green olives and 1 chopped hard-boiled egg. Roll dough thin, cut circles. Fill with meat mixture, fold over, seal with fork. Brush with egg wash. Bake at 200°C (400°F) 20-25 min until golden. Serve warm or room temp."
+  },
+  {
+    "name": "Tonkatsu",
+    "ingredients": ["pork loin chops", "flour", "eggs", "panko breadcrumbs", "salt", "pepper", "oil for frying", "tonkatsu sauce", "cabbage", "rice"],
+    "instructions": "Pound 2 pork chops to 1/2-inch thickness. Season with salt and pepper. Dredge in flour, then beaten egg, then press into panko breadcrumbs, ensuring full coverage. Let rest 10 min. Heat 1/2 inch oil in skillet to 170°C (340°F). Fry cutlets 3-4 min per side until deep golden and cooked through. Drain on wire rack. Slice into strips. Serve with finely shredded cabbage, steamed rice, and tonkatsu sauce for dipping."
+  },
+  {
+    "name": "Baba Ganoush",
+    "ingredients": ["eggplant", "tahini", "lemon juice", "garlic", "olive oil", "parsley", "cumin", "salt", "smoked paprika"],
+    "instructions": "Pierce 2 large eggplants with fork, char over gas flame, grill, or under broiler until skin blackened and flesh soft, turning occasionally. Place in bowl, cover, steam 10 min. Peel off charred skin, drain flesh in colander 10 min. Mash or pulse eggplant in food processor. Add 1/4 cup tahini, juice of 1 lemon, 1 minced garlic clove, 1/2 tsp cumin, salt. Blend until smooth. Spread on plate, drizzle with olive oil, sprinkle with chopped parsley and smoked paprika. Serve with pita bread."
+  },
+  {
+    "name": "Lobster Bisque",
+    "ingredients": ["lobster shells", "lobster meat", "butter", "onion", "carrot", "celery", "garlic", "tomato paste", "brandy", "white wine", "fish stock", "heavy cream", "thyme", "bay leaf", "cayenne", "salt"],
+    "instructions": "If using live lobsters, steam and remove meat, reserve shells. Sauté chopped shells in butter until red. Add diced onion, carrot, celery, garlic, cook until soft. Add 2 tbsp tomato paste, cook 1 min. Deglaze with 1/4 cup brandy and 1/2 cup white wine, reduce. Add 6 cups fish stock, thyme, bay leaf, simmer 45 min. Strain, pressing on solids, return liquid to pot. Reduce slightly. Stir in 1 cup heavy cream, pinch cayenne, salt. Gently reheat, add chopped cooked lobster meat just before serving. Garnish with fresh chives."
+  },
+  {
+    "name": "Flan",
+    "ingredients": ["sugar", "water", "eggs", "sweetened condensed milk", "evaporated milk", "vanilla extract", "cream cheese (optional for creaminess)"],
+    "instructions": "Preheat oven to 175°C (350°F). Make caramel: in saucepan, melt 1 cup sugar with 1/4 cup water over medium heat, swirling occasionally, until deep amber. Quickly pour into 8-inch round pan, tilting to coat bottom. Blend 4 eggs, 1 can sweetened condensed milk, 1 can evaporated milk, 1 tsp vanilla, and 4 oz cream cheese if using. Pour over caramel. Place pan in water bath, bake 50-60 min until set but slightly jiggly. Cool, refrigerate 4+ hours. Invert onto plate to serve."
+  },
+  {
+    "name": "Jambalaya",
+    "ingredients": ["chicken thighs", "andouille sausage", "shrimp", "rice", "onion", "bell pepper", "celery", "garlic", "canned tomatoes", "chicken broth", "cajun seasoning", "thyme", "bay leaf", "green onions"],
+    "instructions": "Season 400g chicken thighs with Cajun seasoning. In large Dutch oven, brown chicken and sliced andouille sausage, remove. Sauté diced onion, bell pepper, celery in drippings until soft. Add minced garlic, cook 1 min. Stir in 1.5 cups long-grain rice to coat. Add 1 can diced tomatoes, 3 cups chicken broth, thyme, bay leaf, more Cajun seasoning. Bring to boil, reduce heat, cover, simmer 20 min. Return chicken and sausage, add 300g shrimp, cook 5-7 min more until rice done and shrimp pink. Let stand 10 min. Fluff with fork, top with green onions."
+  },
+  {
+    "name": "Pasta e Fagioli",
+    "ingredients": ["cannellini beans", "ditalini pasta", "pancetta", "onion", "carrot", "celery", "garlic", "tomato paste", "canned tomatoes", "chicken broth", "rosemary", "parmesan rind", "olive oil", "parsley"],
+    "instructions": "Sauté diced pancetta in olive oil until crisp. Add diced onion, carrot, celery, cook until soft. Add minced garlic and 2 tbsp tomato paste, cook 1 min. Add 1 can crushed tomatoes, 6 cups chicken broth, 2 cans drained cannellini beans, 1 sprig rosemary, parmesan rind. Simmer 20 min. Remove rosemary and rind. Blend about 1 cup of soup to thicken, return to pot. Add 1 cup ditalini pasta, cook until al dente. Season with salt, pepper. Serve drizzled with olive oil and chopped parsley, with crusty bread."
+  },
+  {
+    "name": "Chicken Quesadilla",
+    "ingredients": ["flour tortillas", "cooked chicken", "monterey jack cheese", "cheddar cheese", "bell pepper", "onion", "jalapeño", "cumin", "chili powder", "sour cream", "salsa", "guacamole"],
+    "instructions": "Sauté sliced bell pepper and onion with jalapeño until soft, season with cumin and chili powder. Shred or slice cooked chicken. Heat large skillet over medium heat. Place one tortilla, sprinkle with mixture of shredded Monterey Jack and cheddar, add chicken, sautéed vegetables, more cheese. Top with second tortilla. Cook until bottom golden and crisp, 2-3 min. Carefully flip, cook other side. Remove, cut into wedges. Serve with sour cream, salsa, and guacamole."
+  },
+  {
+    "name": "Nasi Goreng",
+    "ingredients": ["cooked rice", "chicken", "shrimp", "egg", "shallots", "garlic", "chili", "kecap manis", "soy sauce", "shrimp paste", "green onions", "cucumber", "tomato", "fried shallots"],
+    "instructions": "Blend 2 shallots, 2 garlic cloves, 1 red chili, 1 tsp shrimp paste into paste. Heat oil in wok, sauté paste until fragrant. Add diced chicken and shrimp, cook until done. Push aside, scramble 1 egg. Add 3 cups cold cooked rice, stir-fry breaking clumps. Add 2 tbsp kecap manis, 1 tbsp soy sauce. Toss well. Serve topped with fried egg sunny-side up, sliced cucumber and tomato, sprinkle of fried shallots, and prawn crackers."
+  },
+  {
+    "name": "Moussaka",
+    "ingredients": ["eggplant", "potato", "ground lamb or beef", "onion", "garlic", "canned tomatoes", "red wine", "cinnamon", "allspice", "oregano", "butter", "flour", "milk", "parmesan", "nutmeg", "egg yolks"],
+    "instructions": "Slice 2 eggplants and 2 potatoes, salt eggplant, rinse and pat dry. Fry or brush with oil and bake until soft. Brown 500g ground lamb with chopped onion and garlic. Add 1/2 cup red wine, reduce. Add 1 can crushed tomatoes, 1/2 tsp cinnamon, pinch allspice, oregano, simmer 20 min. Make béchamel: melt 50g butter, whisk in 50g flour, gradually add 500ml milk, cook until thick. Remove from heat, stir in 2 egg yolks, 1/4 cup parmesan, nutmeg. Layer potatoes, eggplant, meat sauce, repeat, top with béchamel. Bake at 180°C (350°F) 45-50 min until golden. Rest 15 min before serving."
+  },
+  {
+    "name": "Cornbread",
+    "ingredients": ["cornmeal", "flour", "sugar", "baking powder", "baking soda", "salt", "buttermilk", "eggs", "butter", "honey"],
+    "instructions": "Preheat oven to 200°C (400°F). Place 10-inch cast iron skillet in oven with 2 tbsp butter to melt. In bowl, mix 1 cup cornmeal, 1 cup flour, 1/4 cup sugar, 1 tbsp baking powder, 1/2 tsp baking soda, 1/2 tsp salt. In another bowl, whisk 1.25 cups buttermilk, 2 eggs, 1/4 cup melted butter, 2 tbsp honey. Combine wet and dry, stir until just mixed. Pour batter into hot skillet with melted butter. Bake 20-25 min until golden and toothpick clean. Serve warm with butter."
+  },
+  {
+    "name": "Tandoori Chicken",
+    "ingredients": ["chicken legs", "yogurt", "lemon juice", "garlic", "ginger", "garam masala", "cumin", "coriander", "turmeric", "kashmiri chili powder", "paprika", "salt", "butter", "cilantro", "onion rings"],
+    "instructions": "Make deep slashes in chicken legs. Mix marinade: 1 cup yogurt, 2 tbsp lemon juice, 1 tbsp each minced garlic and ginger, 1 tbsp garam masala, 1 tsp cumin, 1 tsp coriander, 1/2 tsp turmeric, 2 tsp Kashmiri chili powder, 1 tsp paprika, salt. Coat chicken well, marinate overnight. Preheat oven to highest setting or use grill. Place chicken on rack over tray, roast 25-35 min until charred and cooked through, basting with butter halfway. Serve with sliced onion rings, lemon wedges, cilantro, and mint chutney."
+  },
+  {
+    "name": "Ramen",
+    "ingredients": ["ramen noodles", "pork belly", "chicken broth", "soy sauce", "mirin", "sake", "miso paste", "garlic", "ginger", "green onions", "nori", "soft-boiled egg", "menma", "corn", "sesame seeds"],
+    "instructions": "Make chashu pork: roll pork belly, tie, sear, then braise in mixture of soy sauce, mirin, sake, sugar, garlic, ginger, water for 2-3 hours. Cool, slice. Make broth: combine chicken stock with dashi, miso, soy, mirin to taste. Cook fresh ramen noodles according to package. In serving bowl, place hot broth, add noodles. Arrange sliced chashu, halved soft-boiled egg, menma (fermented bamboo shoots), corn, nori sheet, chopped green onions. Sprinkle with sesame seeds. Serve immediately."
+  },
+  {
+    "name": "Pissaladière",
+    "ingredients": ["pizza dough", "onions", "olive oil", "anchovy fillets", "niçoise olives", "thyme", "rosemary", "salt", "pepper"],
+    "instructions": "Thinly slice 1kg onions. Cook slowly in generous olive oil with thyme and rosemary sprigs over low heat, stirring occasionally, until deeply caramelized and sweet, 45-60 minutes. Season with salt and pepper. Roll out pizza dough into rectangle. Spread onion mixture evenly over dough, leaving small border. Arrange anchovy fillets in diamond pattern, place niçoise olives in centers. Bake at 220°C (425°F) 15-20 min until crust golden and crisp. Serve warm or at room temperature."
+  },
+  {
+    "name": "Scones",
+    "ingredients": ["flour", "sugar", "baking powder", "salt", "cold butter", "heavy cream", "egg", "vanilla", "currants or raisins (optional)", "clotted cream", "jam"],
+    "instructions": "Preheat oven to 200°C (400°F). Whisk 2 cups flour, 1/3 cup sugar, 1 tbsp baking powder, 1/2 tsp salt. Cut in 1/2 cup cold butter until pea-sized. Add 1/2 cup currants if using. Mix 1/2 cup heavy cream, 1 egg, 1 tsp vanilla. Add to dry, stir until just combined. Turn onto floured surface, knead gently 3-4 times. Pat into 3/4-inch thick round. Cut into wedges or use round cutter. Place on baking sheet, brush tops with cream. Bake 12-15 min until golden. Serve warm with clotted cream and strawberry jam."
+  },
+  {
+    "name": "Katsu Curry",
+    "ingredients": ["pork cutlet (tonkatsu)", "onion", "carrot", "potato", "curry roux blocks", "water", "rice", "fukujinzuke pickles"],
+    "instructions": "Prepare tonkatsu as in previous recipe. For curry: sauté 1 sliced onion in oil, add 1 chopped carrot and 1 diced potato. Add 3 cups water, bring to boil, simmer until vegetables tender. Break 4 blocks Japanese curry roux into pot, stir until dissolved, simmer 5 min until thickened. Serve curry sauce over steamed rice, top with sliced tonkatsu. Accompany with fukujinzuke pickles on side."
+  },
+  {
+    "name": "Avgolemono Soup",
+    "ingredients": ["chicken broth", "rice or orzo", "eggs", "lemon juice", "shredded chicken", "salt", "white pepper", "dill"],
+    "instructions": "Bring 6 cups chicken broth to boil, add 1/2 cup rice or orzo, cook until tender. Add 1 cup shredded cooked chicken, reduce heat to low. In bowl, whisk 3 eggs with 1/3 cup lemon juice until frothy. Slowly ladle hot broth into egg mixture, whisking constantly to temper. Pour egg mixture back into soup pot, stirring gently over low heat until soup thickens slightly, about 5 minutes. Do not boil or eggs will curdle. Season with salt and white pepper. Serve garnished with fresh dill."
+  },
+    {
+    "name": "Olivier Salad",
+    "ingredients": ["potato", "carrot", "eggs", "pickles", "canned peas", "bologna or ham", "mayonnaise", "salt", "dill"],
+    "instructions": "Boil 3 potatoes and 2 carrots in skins until tender. Hard-boil 4 eggs. Cool, peel, and dice all into small uniform cubes. Finely dice 4 dill pickles and 200g bologna or cooked ham. Drain 1 can sweet peas. Combine all ingredients in large bowl, add 3-4 tbsp mayonnaise, salt to taste, and chopped fresh dill. Mix gently. Refrigerate at least 1 hour before serving. Garnish with dill sprigs."
+  },
+  {
+    "name": "Plov (Uzbek Pilaf)",
+    "ingredients": ["lamb", "rice", "carrot", "onion", "garlic", "cumin", "coriander", "barberries", "salt", "pepper", "vegetable oil", "water"],
+    "instructions": "Rinse 500g long-grain rice until water runs clear, soak in warm salted water 30 min. Cut 500g lamb into chunks. Slice 3 onions into half-rings, julienne 4 carrots into thin strips. Heat 1/2 cup oil in kazan or heavy pot, fry onions until golden. Add lamb, brown well. Add carrots, cook until soft. Add 2 tsp cumin, 1 tsp coriander, salt, pepper. Pour 4 cups hot water, bring to boil, simmer 30 min (this is zirvak). Drain rice, layer evenly over meat. Add whole head of garlic (unpeeled, top cut off), scatter barberries. Gently pour boiling water over rice until just covered. Cook uncovered over medium heat until water absorbed. Make holes in rice with chopstick for steam, reduce heat to low, cover tightly, steam 20-25 min. Fluff rice with slotted spoon before serving, arranging meat and garlic on top."
+  },
+  {
+    "name": "Syrniki",
+    "ingredients": ["farmer's cheese (tvorog)", "egg", "sugar", "flour", "vanilla", "salt", "oil for frying", "sour cream", "jam or honey"],
+    "instructions": "In bowl, mix 500g well-drained farmer's cheese with 1 egg, 2 tbsp sugar, pinch salt, 1/2 tsp vanilla. Add 4-5 tbsp flour, mix until dough comes together but remains soft and slightly sticky. Flour work surface and hands. Form mixture into small patties about 1.5 cm thick. Heat oil in skillet over medium heat. Fry syrniki 3-4 min per side until golden brown. Serve warm with sour cream and berry jam or honey."
+  },
+  {
+    "name": "Blinis",
+    "ingredients": ["milk", "eggs", "flour", "sugar", "salt", "baking soda", "vegetable oil", "butter for serving", "caviar", "sour cream", "smoked salmon"],
+    "instructions": "Whisk 2 eggs with 2 tbsp sugar and 1/2 tsp salt. Add 2 cups warm milk, 1.5 cups flour, 1/2 tsp baking soda, and 2 tbsp oil. Whisk until smooth batter (consistency of thin cream). Let rest 15 min. Heat non-stick pan, lightly grease. Pour thin layer of batter, swirl to coat. Cook until edges brown and bubbles appear, flip and cook other side briefly. Stack blinis, brushing each with melted butter. Serve with sour cream, caviar, smoked salmon, or sweet fillings like jam."
+  },
+  {
+    "name": "Vareniki",
+    "ingredients": ["flour", "water", "egg", "salt", "potato", "onion", "butter", "farmer's cheese or cherries for filling", "sour cream"],
+    "instructions": "Make dough: mix 2.5 cups flour, 1/2 cup warm water, 1 egg, pinch salt. Knead until smooth, rest 30 min. For potato filling: boil and mash 3 potatoes, mix with sautéed onion in butter, salt, pepper. For sweet filling: mix farmer's cheese with sugar and egg, or use pitted cherries with sugar. Roll dough thin, cut circles. Place 1 tsp filling on each, fold into half-moon, seal edges firmly. Boil in salted water until they float, then 3-4 min more. Drain, toss with butter. Serve with sour cream. Sweet vareniki can be served with sour cream and honey."
+  },
+  {
+    "name": "Khachapuri (Adjarian Style)",
+    "ingredients": ["flour", "yogurt or kefir", "yeast", "sugar", "salt", "butter", "suluguni cheese", "feta cheese", "eggs", "milk"],
+    "instructions": "Make dough: dissolve 1 tsp yeast and 1 tsp sugar in 1/2 cup warm milk, let foam. Mix with 2 cups flour, 1/2 cup yogurt, 1 egg, 1 tsp salt, 2 tbsp soft butter. Knead until smooth, let rise 1 hour. Mix 200g grated suluguni, 100g crumbled feta, 1 egg. Divide dough, roll into oval boat shapes, pinch ends to create walls. Fill center with cheese mixture. Bake at 220°C (430°F) 12-15 min. Remove from oven, crack an egg into center of each, bake additional 3-4 min until egg white set but yolk runny. Place pat of butter on top, stir egg into hot cheese before eating, tearing off bread sides."
+  },
+  {
+    "name": "Solyanka",
+    "ingredients": ["beef", "ham", "sausages", "onion", "pickles", "tomato paste", "olives", "capers", "lemon", "sour cream", "dill", "beef broth", "bay leaf", "peppercorns"],
+    "instructions": "Prepare rich beef broth (1.5L) with beef on bone, bay leaf, peppercorns. Strain, shred meat. Slice 1 onion, sauté in oil, add 2 tbsp tomato paste, cook 2 min. Add 1/2 cup pickle brine and sliced pickles. Bring broth to boil, add sautéed onion mixture, 100g chopped ham, 100g smoked sausages, shredded beef, olives, capers. Simmer 15 min. Season with salt, pepper, pinch sugar. Serve in bowls with slice of lemon, dollop of sour cream, and fresh dill."
+  },
+  {
+    "name": "Golubtsy",
+    "ingredients": ["cabbage", "ground beef", "ground pork", "rice", "onion", "carrot", "tomato paste", "sour cream", "dill", "salt", "pepper", "broth"],
+    "instructions": "Remove core from whole cabbage, boil in salted water 10-15 min, carefully peel off softened leaves. Trim thick veins. Mix 300g ground beef, 200g ground pork, 1/2 cup cooked rice, sautéed chopped onion, salt, pepper. Place spoonful on each leaf, roll up tucking sides. Line pot with leftover cabbage leaves, arrange golubtsy seam down. Mix 1 cup broth, 2 tbsp tomato paste, pour over. Cover, simmer 40 min. Remove golubtsy. To sauce in pot, add 2 tbsp sour cream, stir, pour over golubtsy. Serve with dill and extra sour cream."
+  },
+  {
+    "name": "Pelmeni",
+    "ingredients": ["flour", "water", "egg", "salt", "ground beef", "ground pork", "onion", "garlic", "black pepper", "butter", "sour cream", "vinegar", "dill"],
+    "instructions": "Make dough: 3 cups flour, 1 cup warm water, 1 egg, pinch salt. Knead stiff dough, rest 30 min. For filling: mix 300g ground beef, 200g ground pork, 1 grated onion, 1 minced garlic clove, salt, generous black pepper. Roll dough very thin, cut circles. Place small amount filling, fold into half-moon, pinch edges, then bring corners together to form 'ear' shape. Freeze or cook immediately. Boil in salted water with bay leaf until they float, then 5-7 min more. Drain, toss with butter. Serve with sour cream mixed with vinegar and fresh dill."
+  },
+  {
+    "name": "Herring Under Fur Coat (Shuba)",
+    "ingredients": ["salted herring fillets", "potato", "carrot", "beet", "onion", "eggs", "mayonnaise", "apple (optional)", "dill"],
+    "instructions": "Boil 3 potatoes, 2 carrots, 2 beets, 3 eggs in skins. Cool, peel, grate separately on coarse grater. Finely chop 1 onion. Dice 2 herring fillets into small cubes. On serving platter, layer in order: herring, onion, potato, mayonnaise, carrot, mayonnaise, grated apple (optional), beet, mayonnaise. Cover with plastic wrap, refrigerate at least 4 hours, preferably overnight. Garnish with grated egg and dill before serving."
+  },
+  {
+    "name": "Shashlik",
+    "ingredients": ["lamb or pork", "onion", "lemon", "vinegar or white wine", "bay leaf", "black pepper", "salt", "fresh herbs", "pomegranate molasses (optional)"],
+    "instructions": "Cut 1kg lamb neck or pork shoulder into 3-4 cm cubes. Slice 3 onions into rings, sprinkle with salt, massage to release juice. Mix meat with onion, 2 bay leaves, generous black pepper, juice of 1/2 lemon, 2 tbsp vinegar or wine. Marinate at least 6 hours, preferably overnight. Thread meat onto skewers, leaving small gaps between pieces. Grill over hot coals, turning frequently, until charred outside and juicy inside, about 10-15 min. Remove from skewers, sprinkle with sumac or pomegranate molasses, serve with fresh herbs, onion rings, and lavash bread."
+  },
+  {
+    "name": "Chebureki",
+    "ingredients": ["flour", "water", "salt", "oil", "ground lamb or beef", "onion", "dill", "parsley", "black pepper", "broth or water", "oil for frying"],
+    "instructions": "Make dough: 3 cups flour, 1 cup warm water, 1 tsp salt, 2 tbsp oil. Knead elastic dough, rest 1 hour. For filling: mix 400g ground lamb with 1 finely chopped onion, generous amount of chopped dill and parsley, salt, black pepper, and 3-4 tbsp cold water or broth to make juicy. Roll dough into thin circles. Place filling on half, fold over, seal edges with fork. Deep fry in hot oil (180°C) until golden and bubbly, 2-3 min per side. Drain on paper towels. Serve hot."
+  },
+  {
+    "name": "Vinaigrette",
+    "ingredients": ["beet", "potato", "carrot", "pickles", "sauerkraut", "canned peas", "onion", "sunflower oil", "salt", "pepper", "dill"],
+    "instructions": "Boil 2 beets, 3 potatoes, 2 carrots in skins until tender. Cool, peel, dice into small cubes. Finely chop 3 dill pickles and 1 small onion. Rinse 1/2 cup sauerkraut if too sour, squeeze. Drain 1 can peas. Combine all vegetables in bowl. Dress with 3-4 tbsp sunflower oil, salt, pepper, and chopped dill. Toss gently. Let stand 30 min before serving for flavors to meld."
+  },
+  {
+    "name": "Kulebyaka",
+    "ingredients": ["yeast dough", "salmon fillet", "rice", "mushrooms", "onion", "eggs", "dill", "butter", "salt", "pepper", "egg wash"],
+    "instructions": "Prepare yeast dough from 3 cups flour, 1 cup milk, 1 egg, 2 tbsp butter, 1 tsp yeast, salt, sugar. Let rise. For filling: cook 1/2 cup rice. Sauté sliced mushrooms and onion in butter. Hard-boil 2 eggs, chop. Season salmon fillet with salt, pepper, dill. Roll dough into large oval. Layer rice, mushrooms, salmon, eggs, dill in center. Fold dough over, seal edges, place seam down on baking sheet. Decorate with dough strips. Let rise 20 min. Brush with egg wash, poke steam vents. Bake at 180°C (350°F) 35-40 min until golden. Serve hot or cold, with melted butter."
+  },
+  {
+    "name": "Ukha",
+    "ingredients": ["fish heads and tails", "whole fish", "potato", "carrot", "onion", "parsley root", "bay leaf", "peppercorns", "vodka (optional)", "dill", "green onions"],
+    "instructions": "Place fish trimmings (heads, tails, bones) in pot with 2L cold water, bring to boil, skim foam. Add 1 onion, 1 carrot, parsley root, bay leaf, peppercorns. Simmer 30 min. Strain broth, discard solids. Return clear broth to pot, add diced potatoes and sliced carrot, cook 10 min. Add chunks of firm white fish (pike perch, cod), simmer 8-10 min until fish cooked. At very end, add shot of vodka (optional) and turn off heat. Let stand covered 5 min. Serve with chopped dill and green onions, and slice of lemon."
+  },
+  {
+    "name": "Manti",
+    "ingredients": ["flour", "water", "egg", "salt", "lamb", "onion", "tail fat or butter", "cumin", "black pepper", "sour cream or yogurt sauce"],
+    "instructions": "Make dough: 3 cups flour, 1 cup water, 1 egg, salt. Knead stiff, rest. For filling: finely chop or mince 500g fatty lamb and 3 onions (do not grind!). Mix with salt, cumin, black pepper, and small pieces of fat tail or butter. Roll dough very thin, cut into 10cm squares. Place 1 tbsp filling in center, pinch opposite corners, then side corners to form parcel. Steam in manti steamer (mantovarka) for 40-45 min. Serve hot with sour cream mixed with crushed garlic, or yogurt sauce with herbs."
+  },
+  {
+    "name": "Chak-Chak",
+    "ingredients": ["flour", "eggs", "salt", "vodka or water", "honey", "sugar", "oil for frying", "nuts (optional)"],
+    "instructions": "Whisk 3 eggs with pinch salt, 1 tbsp vodka, and enough flour (about 2.5 cups) to make stiff noodle dough. Rest 30 min. Roll thin, cut into thin strips like matchsticks, or small squares. Deep fry in batches at 180°C until golden, drain on paper towels. In separate pot, heat 1 cup honey with 2 tbsp sugar until syrup forms (soft ball stage). Pour syrup over fried dough sticks, mix well. Press into greased mold or shape into mound on plate. Let cool completely. Garnish with chopped nuts if desired."
+  },
+  {
+    "name": "Draniki",
+    "ingredients": ["potato", "onion", "egg", "flour", "salt", "pepper", "oil for frying", "sour cream"],
+    "instructions": "Grate 1kg peeled potatoes and 1 onion on fine grater or in food processor. Drain excess liquid, but keep starch that settles. Add 1 egg, 2-3 tbsp flour, salt, pepper. Mix well. Heat oil in skillet. Drop spoonfuls of potato mixture, flatten into thin pancakes. Fry over medium heat 3-4 min per side until golden and crisp. Serve hot with sour cream. Traditional Belarusian draniki are best eaten immediately."
+  },
+  {
+    "name": "Belgian Waffles",
+    "ingredients": ["flour", "baking powder", "sugar", "salt", "eggs", "milk", "butter", "vanilla", "yeast (optional)", "pearl sugar", "strawberries", "whipped cream"],
+    "instructions": "For Liege waffles: make yeast dough with flour, eggs, milk, butter, let rise. Knead in pearl sugar before cooking in waffle iron. For Brussels waffles: separate 2 eggs, whip whites stiff. Whisk yolks with 1/4 cup sugar, 1/3 cup melted butter, 1 cup milk, 1 tsp vanilla. Mix 1.5 cups flour, 2 tsp baking powder, pinch salt. Combine with yolk mixture, fold in egg whites. Cook in greased waffle iron until golden and crisp. Serve with fresh strawberries and whipped cream."
+  },
+  {
+    "name": "Irish Stew",
+    "ingredients": ["lamb neck or shoulder", "potato", "carrot", "onion", "pearl barley (optional)", "thyme", "rosemary", "bay leaf", "beef or lamb broth", "parsley", "salt", "pepper"],
+    "instructions": "Cut 1kg lamb into chunks, trim excess fat. Season with salt, pepper. In heavy pot, brown lamb in batches. Remove meat. Sauté sliced onions and carrots in same pot. Return lamb, add 4 cups broth, thyme, rosemary, bay leaf. Bring to simmer, cover, cook 1 hour. Add 4-5 thickly sliced potatoes and pearl barley, continue cooking 30-40 min until potatoes and lamb tender. Season, sprinkle with fresh parsley. Serve with crusty bread."
+  },
+  {
+    "name": "Fondue Savoyarde",
+    "ingredients": ["gruyère cheese", "emmental cheese", "appenzeller or comté", "garlic", "dry white wine", "kirsch", "cornstarch", "nutmeg", "pepper", "baguette cubes"],
+    "instructions": "Rub inside of fondue pot with cut garlic clove. Grate 400g total mixed cheeses (gruyère, emmental, etc.). Toss cheese with 1 tbsp cornstarch. Bring 1.5 cups dry white wine to simmer in pot, add lemon juice. Gradually add cheese handful by handful, stirring constantly in figure-eight motion until melted and smooth. Add 1 tbsp kirsch, pinch nutmeg, black pepper. Keep warm over fondue burner. Serve with cubes of day-old baguette for dipping. Stir occasionally to prevent separation."
+  },
+  {
+    "name": "Pierogi Ruskie",
+    "ingredients": ["flour", "water", "egg", "salt", "potato", "farmer's cheese", "onion", "butter", "bacon", "sour cream"],
+    "instructions": "Make pierogi dough as in vareniki. For filling: boil and mash 3 potatoes. Mix with 250g farmer's cheese (twaróg), sautéed chopped onion in butter, salt, pepper. Roll dough, cut circles, fill, seal. Boil pierogi until they float, then 3 min. Drain. Fry diced bacon until crisp, pour over pierogi with bacon fat. Serve with sour cream and extra fried onion."
+  },
+  {
+    "name": "Bigos",
+    "ingredients": ["sauerkraut", "fresh cabbage", "pork shoulder", "kielbasa", "bacon", "onion", "mushrooms", "prunes", "tomato paste", "red wine", "bay leaf", "allspice", "juniper berries"],
+    "instructions": "Drain and rinse 1kg sauerkraut, shred 1/2 head fresh cabbage. Brown cubed pork shoulder and bacon in large pot, remove. Sauté onion and mushrooms. Return meat, add both cabbages, sliced kielbasa, 1/2 cup chopped prunes, 2 tbsp tomato paste, 1/2 cup red wine, bay leaf, allspice, juniper. Add water to just cover. Simmer covered for 2-3 hours, stirring occasionally. Cool, then refrigerate overnight. Reheat next day for best flavor. Serve with rye bread."
+  },
+  {
+    "name": "Halušky",
+    "ingredients": ["potato", "flour", "egg", "salt", "bryndza cheese", "bacon", "sour cream", "chives"],
+    "instructions": "Grate 4 large raw potatoes. Mix with 2 cups flour, 1 egg, salt to form soft sticky dough. Bring salted water to boil. Using halušky maker or cutting small pieces from board, drop dough into boiling water. Cook until they float, then 2-3 min more. Drain. Fry diced bacon until crisp. Toss halušky with crumbled bryndza (sheep cheese) and bacon with fat. Top with dollop of sour cream and chives. National dish of Slovakia."
+  },
+  {
+    "name": "Semlor",
+    "ingredients": ["cardamom buns", "almond paste", "whipped cream", "powdered sugar", "milk", "butter", "yeast", "flour", "sugar", "cardamom", "egg"],
+    "instructions": "Make cardamom-scented yeast dough, shape into round buns, bake until golden. Cool. Cut off tops (lids). Scoop out some crumb from center. Mix crumbs with almond paste and splash of milk to make soft filling. Fill buns with almond mixture. Pipe generous whipped cream on top, place lid over cream, dust with powdered sugar. Traditional Swedish Lent bun served in bowl of warm milk (hetvägg)."
+  },
+    {
+    "name": "Zrazy",
+    "ingredients": ["beef", "onion", "carrot", "pickles", "bacon", "breadcrumbs", "flour", "egg", "salt", "pepper", "oil for frying", "mashed potatoes for serving"],
+    "instructions": "Slice 500g beef into thin steaks, pound to very thin. Season with salt and pepper. For filling: sauté finely chopped onion and carrot until soft, mix with chopped pickles and fried bacon bits. Place spoonful of filling on each beef slice, roll up tightly, secure with toothpick. Dredge zrazy in flour, then beaten egg, then breadcrumbs. Fry in hot oil until golden all over. Transfer to baking dish, add splash of broth, bake covered at 180°C (350°F) for 30-40 min until tender. Serve with mashed potatoes, removing toothpicks first."
+  },
+  {
+    "name": "Solyanka (Meat Version)",
+    "ingredients": ["beef", "ham", "smoked sausage", "frankfurters", "onion", "pickles", "tomato paste", "capers", "olives", "lemon", "sour cream", "dill", "broth"],
+    "instructions": "Cook rich beef broth with beef on bone, strain, shred meat. Slice 2 onions, sauté in oil, add 3 tbsp tomato paste, cook 2 min. Add 1/2 cup pickle brine and 3 sliced pickles. Bring broth to boil, add sautéed mixture, 100g each diced ham, smoked sausage, frankfurters, shredded beef, 2 tbsp capers, 1/2 cup olives. Simmer 20 min. Adjust seasoning. Serve with lemon slice, sour cream, and chopped dill. Hearty Russian soup."
+  },
+  {
+    "name": "Mimosa Salad",
+    "ingredients": ["canned fish", "potato", "carrot", "eggs", "onion", "mayonnaise", "cheese", "dill", "butter"],
+    "instructions": "Boil 3 potatoes, 2 carrots, 4 eggs. Cool, peel, grate separately. Drain 1 can tuna or pink salmon, mash with fork. Finely chop 1 small onion. Grate 100g hard cheese. Freeze 50g butter, then grate on coarse side. Layer on serving dish in order: grated potato (half), mayonnaise, fish, onion, remaining potato, mayonnaise, carrot, mayonnaise, grated egg whites, cheese, mayonnaise, grated egg yolks. Top with frozen grated butter for 'mimosa flower' effect. Refrigerate 2 hours. Garnish with dill."
+  },
+  {
+    "name": "Kvass",
+    "ingredients": ["rye bread", "water", "sugar", "yeast", "raisins", "mint (optional)"],
+    "instructions": "Toast 500g rye bread slices until dark brown (almost burnt). Pour 5L boiling water over bread in large pot. Add handful raisins and fresh mint sprigs. Let cool to lukewarm. Strain, press liquid from bread. Dissolve 1 cup sugar and 1 tsp yeast in small amount of warm water, add to bread liquid. Cover with cloth, ferment 1-2 days at room temp until slightly sour and fizzy. Strain again, bottle with 2 raisins per bottle, seal. Refrigerate. Serve cold. Traditional Russian fermented beverage."
+  },
+  {
+    "name": "Kholodets",
+    "ingredients": ["pork knuckles", "beef shank", "chicken legs", "onion", "carrot", "garlic", "bay leaf", "peppercorns", "salt", "parsley", "horseradish"],
+    "instructions": "Place 2 pork knuckles, 500g beef shank, 2 chicken legs in large pot, cover with cold water. Bring to boil, skim foam thoroughly. Add 1 onion, 1 carrot, bay leaf, peppercorns, salt. Simmer on lowest heat for 5-6 hours. Remove meat, strain broth through cheesecloth. Shred meat discarding bones and skin, place in deep dish or molds. Add crushed garlic and chopped parsley. Pour clear broth over, refrigerate until firmly set (overnight). Serve cold with horseradish or mustard."
+  },
+  {
+    "name": "Adjarian Khachapuri",
+    "ingredients": ["yeast dough", "imeretian cheese", "suluguni", "feta", "eggs", "butter", "milk", "flour"],
+    "instructions": "Prepare yeast dough as before. Mix grated imeretian and suluguni cheeses with crumbled feta (or use mozzarella-feta mix). Divide dough into 4, shape into oval boats with raised edges. Fill with cheese mixture. Bake at 230°C (450°F) 12-14 min until edges golden. Remove, crack an egg into center of each, return to oven 3-4 min until white set. Top with pat of butter, stir into hot cheese before eating. Traditional Georgian cheese bread."
+  },
+  {
+    "name": "Satsivi",
+    "ingredients": ["chicken", "walnuts", "onion", "garlic", "coriander", "fenugreek", "marigold", "cinnamon", "cloves", "vinegar", "pomegranate seeds", "cilantro"],
+    "instructions": "Boil whole chicken with onion, bay leaf, salt. Strain broth, reserve. Shred meat, discard skin and bones. For sauce: finely grind 300g walnuts. Sauté finely chopped onion in oil until golden. Mix ground walnuts with onion, crushed garlic, 1 tsp each ground coriander, fenugreek, pinch cinnamon and cloves, salt. Gradually thin with 2-3 cups warm chicken broth to creamy consistency. Add 2 tbsp vinegar, simmer gently 10 min (do not boil). Pour over chicken, cool, refrigerate overnight. Serve cold, garnished with pomegranate seeds and cilantro."
+  },
+  {
+    "name": "Chanakhi",
+    "ingredients": ["lamb", "potato", "eggplant", "tomato", "onion", "garlic", "bell pepper", "cilantro", "basil", "salt", "pepper"],
+    "instructions": "Cut 500g lamb into chunks. In clay pots or deep casserole, layer: lamb, sliced onion, garlic, diced potatoes, cubed eggplant, bell pepper strips, sliced tomatoes. Season each layer with salt, pepper, chopped herbs. Add 2 tbsp water per pot, cover. Bake at 180°C (350°F) for 1.5-2 hours until lamb tender. Serve in pots, sprinkled with fresh cilantro. Traditional Georgian stew."
+  },
+  {
+    "name": "Kutia",
+    "ingredients": ["wheat berries", "poppy seeds", "honey", "walnuts", "raisins", "dried apricots", "milk or water"],
+    "instructions": "Soak 1 cup wheat berries overnight, then boil until tender but not mushy, about 1-1.5 hours. Drain. Soak 1/2 cup poppy seeds in hot water, then grind with sugar in mortar. Chop walnuts and dried fruit. Mix cooked wheat with poppy seed paste, 3-4 tbsp honey, walnuts, raisins, chopped apricots. Add enough warm milk or poppy seed soaking water to make moist. Serve chilled. Traditional Ukrainian Christmas dish."
+  },
+  {
+    "name": "Lecsó",
+    "ingredients": ["bell peppers", "tomato", "onion", "paprika", "smoked sausage or bacon", "eggs (optional)", "salt", "pepper", "lard or oil"],
+    "instructions": "Slice 2 large onions into rings, sauté in lard until translucent. Add 6-8 sliced bell peppers (mix of colors), cook stirring 10 min. Add 4-5 chopped tomatoes, 1 tbsp sweet paprika, salt. Simmer uncovered 20-30 min until peppers soft and liquid reduced. Add sliced smoked sausage or crispy bacon. For egg version, make wells in mixture, crack eggs, cover and cook until eggs set. Hungarian pepper stew served with crusty bread."
+  },
+  {
+    "name": "Trdelník",
+    "ingredients": ["flour", "yeast", "milk", "sugar", "butter", "egg yolks", "cinnamon", "walnuts", "vanilla"],
+    "instructions": "Make yeast dough: 3 cups flour, 1/4 cup sugar, pinch salt, 1 packet yeast dissolved in 1/2 cup warm milk, 2 egg yolks, 50g soft butter. Knead until smooth, rise 1 hour. Divide dough, roll into long ropes. Wrap around trdelník wooden cylinders or metal tubes. Roll in mixture of sugar, cinnamon, crushed walnuts. Bake over open flame or in oven rotating until golden and caramelized, about 15 min. Slip off cylinder, serve warm. Czech pastry."
+  },
+  {
+    "name": "Käsespätzle",
+    "ingredients": ["flour", "eggs", "water", "salt", "nutmeg", "emmental cheese", "gruyère", "onion", "butter", "chives"],
+    "instructions": "Make spätzle batter: mix 2 cups flour, 4 eggs, 1/2 cup water, pinch salt and nutmeg until smooth and elastic. Let rest 10 min. Press batter through spätzle maker or colander into boiling salted water. Cook until they float, drain. Layer spätzle in baking dish with generous grated cheese (emmental, gruyère) and caramelized onions. Repeat layers. Bake at 200°C (400°F) 15 min until cheese melted and bubbly. Top with crispy fried onions and chives. Austrian/German comfort food."
+  },
+  {
+    "name": "Šaltibarščiai",
+    "ingredients": ["beets", "kefir or buttermilk", "cucumber", "dill", "green onions", "hard-boiled eggs", "potato", "salt", "sour cream"],
+    "instructions": "Boil 2-3 beets, peel, grate or julienne. Finely chop 1 cucumber, bunch of dill, green onions. Mix 1L cold kefir with 1 cup cold water. Add beets, cucumber, herbs, salt. Chill thoroughly. Serve in bowls with halved hard-boiled egg and hot boiled potatoes on side. Dollop of sour cream optional. Traditional Lithuanian cold beet soup, bright pink and refreshing."
+  },
+  {
+    "name": "Fasolada",
+    "ingredients": ["white beans", "carrot", "celery", "onion", "garlic", "tomato paste", "canned tomatoes", "olive oil", "oregano", "bay leaf", "paprika", "parsley", "lemon"],
+    "instructions": "Soak 500g white beans overnight, drain. In large pot, sauté chopped onion, carrot, celery in olive oil until soft. Add minced garlic, 2 tbsp tomato paste, cook 1 min. Add soaked beans, 1 can crushed tomatoes, 2 bay leaves, oregano, paprika, enough water to cover. Simmer gently 1.5-2 hours until beans creamy and tender, adding water as needed. Season with salt, pepper. Serve with drizzle of olive oil, squeeze of lemon, and crusty bread. Greek national bean soup."
+  },
+  {
+    "name": "Sklandrausis",
+    "ingredients": ["rye flour", "butter", "water", "salt", "potato", "carrot", "egg", "sour cream", "sugar", "caraway seeds"],
+    "instructions": "Make rye dough: mix 2 cups rye flour, pinch salt, 100g butter, cold water to form firm dough. Roll thin, cut circles, line muffin tins to form tart shells. For filling: boil and mash 2 potatoes, season. Boil and mash 2 carrots, mix with egg, sugar, sour cream. Layer potato base, then carrot layer in each shell. Sprinkle caraway seeds. Bake at 200°C (400°F) 20-25 min. Latvian traditional vegetable tart."
+  },
+  {
+    "name": "Ciorbă de Burtă",
+    "ingredients": ["beef tripe", "beef bone", "carrot", "onion", "celery", "garlic", "sour cream", "egg yolks", "vinegar", "lovage", "parsley"],
+    "instructions": "Thoroughly clean 1kg beef tripe, boil 10 min, discard water. Cut tripe into thin strips. In fresh water, simmer tripe with beef bone, carrot, onion, celery, bay leaf for 3-4 hours until tender. Remove bone and vegetables, strain broth. Return tripe and broth to pot, add julienned carrot. Whisk 2 egg yolks with 1 cup sour cream. Slowly temper with hot broth, then stir into soup. Add 2 tbsp vinegar, crushed garlic, chopped lovage and parsley. Do not boil after adding sour cream. Serve hot with extra sour cream and hot peppers. Romanian tripe soup."
+  },
+  {
+    "name": "Börek",
+    "ingredients": ["phyllo dough", "feta cheese", "parsley", "dill", "eggs", "milk", "olive oil", "sesame seeds", "nigella seeds"],
+    "instructions": "Mix 300g crumbled feta with 2 beaten eggs, 1/4 cup chopped parsley and dill. Brush baking dish with oil. Layer 3 phyllo sheets brushing each with oil mixture. Spread half cheese filling. Repeat layers, ending with phyllo. Cut into squares or triangles. Brush top with egg yolk mixed with milk. Sprinkle sesame and nigella seeds. Bake at 180°C (350°F) 35-40 min until golden and crisp. Turkish/Balkan cheese pie, served warm or at room temp."
+  },
+  {
+    "name": "Ajvar",
+    "ingredients": ["red bell peppers", "eggplant", "garlic", "vinegar", "sugar", "salt", "olive oil", "chili (optional)"],
+    "instructions": "Roast 2kg red bell peppers and 1 large eggplant until skins blackened. Peel, deseed peppers, scoop eggplant flesh. Drain in colander 30 min. Finely chop or coarsely blend vegetables. In large pot, cook mixture with 2 minced garlic cloves, 2 tbsp vinegar, 1 tsp sugar, salt, and 1/2 cup olive oil over low heat, stirring frequently, until thickened and spreadable, about 1-1.5 hours. Add chopped chili for spicy version. Jar and seal, or refrigerate. Serbian roasted pepper relish."
+  },
+  {
+    "name": "Knedlíky",
+    "ingredients": ["flour", "milk", "yeast", "egg", "salt", "bread cubes", "parsley"],
+    "instructions": "Make yeast dough: dissolve 1 packet yeast in 1/2 cup warm milk with pinch sugar. Mix 3 cups flour, 1 tsp salt, 1 egg, yeasted milk, enough additional milk to make soft dough. Knead until smooth. Let rise 1 hour. Punch down, knead in 1 cup toasted bread cubes and chopped parsley. Shape into 2 logs. Boil large pot salted water, carefully add dumplings, simmer covered 20-25 min. Remove, slice with thread or sharp knife. Serve as side with goulash or roast pork. Czech bread dumplings."
+  },
+  {
+    "name": "Flaki",
+    "ingredients": ["beef tripe", "beef broth", "carrot", "parsley root", "celery", "onion", "marjoram", "paprika", "ginger", "nutmeg", "parsley", "pepper"],
+    "instructions": "Clean and precook tripe as for ciorbă. Cut into thin strips. In beef broth, cook tripe with julienned carrot, parsley root, celery, sautéed onion until tripe tender, 2-3 hours. Season generously with marjoram, sweet paprika, pinch ginger and nutmeg, salt and pepper. Thicken with roux if desired. Serve hot with fresh parsley and bread. Traditional Polish tripe soup."
+  },
+  {
+    "name": "Sarmale",
+    "ingredients": ["sour cabbage leaves", "ground pork", "ground beef", "rice", "onion", "tomato paste", "smoked bacon", "thyme", "dill", "bay leaf", "sour cream", "polenta"],
+    "instructions": "Rinse sour cabbage leaves if too salty. Mix 300g ground pork, 200g ground beef, 1/2 cup uncooked rice, sautéed onion, chopped dill, thyme, salt, pepper. Place spoonful on each leaf, roll tightly tucking ends. Line pot with chopped cabbage and smoked bacon. Pack sarmale tightly. Mix 2 cups water with 2 tbsp tomato paste, pour over. Top with more bacon and bay leaves. Cover, simmer 2-2.5 hours. Serve hot with sour cream and polenta (mămăligă). Romanian stuffed cabbage rolls."
+  },
+  {
+    "name": "Zapiekanka",
+    "ingredients": ["baguette", "mushrooms", "onion", "cheese", "ham (optional)", "ketchup", "mayonnaise", "chives", "salt", "pepper"],
+    "instructions": "Slice baguette lengthwise, toast lightly. Sauté sliced mushrooms and onion until soft, season. Spread toasted bread with ketchup. Top with mushroom mixture, diced ham if using, generous grated cheese (gouda or mozzarella). Bake at 200°C (400°F) until cheese melted and bubbly, 8-10 min. Remove, drizzle with mayonnaise, sprinkle with chopped chives. Polish street food open-faced sandwich."
+  },
+  {
+    "name": "Kibinai",
+    "ingredients": ["flour", "butter", "sour cream", "egg", "salt", "lamb", "onion", "pork", "broth", "caraway", "black pepper"],
+    "instructions": "Make pastry: cut 200g cold butter into 3 cups flour with salt. Add 1/2 cup sour cream, 1 egg, knead until smooth. Chill. For filling: finely chop 300g lamb and 200g pork (or use ground), mix with 1 finely chopped onion, 2-3 tbsp broth, salt, pepper, caraway seeds. Roll dough, cut circles. Place filling, fold into half-moon, crimp edges decoratively. Bake at 200°C (400°F) 20-25 min until golden. Lithuanian Karaite meat pastries."
+  },
+  {
+    "name": "Mămăligă",
+    "ingredients": ["cornmeal", "water", "salt", "butter", "sour cream", "cheese", "fried eggs (optional)"],
+    "instructions": "Bring 4 cups water to boil with 1 tsp salt. Slowly pour 1.5 cups coarse cornmeal in thin stream, whisking constantly to prevent lumps. Reduce heat to low, cook stirring frequently with wooden spoon until very thick and pulls away from sides, about 20-25 min. Turn out onto wooden board. Slice with string. Serve hot with butter, sour cream, grated cheese, and fried eggs. Romanian polenta, staple side dish."
+  },
+  {
+    "name": "Sild Med Karrysalat",
+    "ingredients": ["pickled herring", "onion", "apple", "mayonnaise", "yogurt", "curry powder", "turmeric", "lemon juice", "chives", "rye bread"],
+    "instructions": "Drain pickled herring fillets, cut into bite-sized pieces. Finely dice 1 onion and 1 crisp apple. Mix 3 tbsp mayonnaise, 2 tbsp yogurt, 1 tsp curry powder, pinch turmeric, lemon juice, salt, pepper. Fold in herring, onion, apple. Let marinate 1 hour. Serve on buttered dark rye bread, topped with chives. Danish curried herring salad."
+  },
+    {
+    "name": "Okroshka",
+    "ingredients": ["potato", "eggs", "cucumber", "radish", "green onion", "dill", "kefir or kvass", "sour cream", "mustard", "salt", "cooked sausage or ham"],
+    "instructions": "Boil 3 potatoes and 3 eggs, cool, peel, dice. Finely chop 2 cucumbers, 5 radishes, bunch green onions, and fresh dill. Dice 200g cooked sausage or ham. Mix all in large bowl. For dressing: whisk 1L kefir (or kvass) with 2 tbsp sour cream, 1 tsp mustard, salt. Pour over vegetables, stir. Chill thoroughly. Serve cold, garnished with extra dill and halved boiled egg. Russian summer cold soup."
+  },
+  {
+    "name": "Pirozhki",
+    "ingredients": ["yeast dough", "ground beef", "onion", "rice or cabbage", "hard-boiled eggs", "dill", "butter", "salt", "pepper", "egg wash", "oil for frying"],
+    "instructions": "Prepare yeast dough: 3 cups flour, 1 cup warm milk, 1 egg, 2 tbsp butter, 1 tsp yeast, sugar, salt. Let rise 1 hour. For filling: sauté onion, add ground beef, cook until done. Mix with cooked rice, chopped hard-boiled egg, dill, salt, pepper. Or make cabbage filling with sautéed shredded cabbage and onion. Roll dough, cut circles, place filling, seal into oval shape. Let rise 20 min. Brush with egg wash, bake at 180°C (350°F) 20-25 min until golden, or fry in oil. Russian hand pies."
+  },
+  {
+    "name": "Sbiten",
+    "ingredients": ["honey", "water", "jam", "cinnamon", "cloves", "cardamom", "ginger", "mint", "lemon"],
+    "instructions": "Dissolve 1/2 cup honey in 4 cups hot water. Add 3 tbsp berry jam (raspberry or cherry), 1 cinnamon stick, 3 cloves, 2 cardamom pods, slice of fresh ginger. Simmer gently 15-20 min, do not boil. Turn off heat, add fresh mint leaves and slice of lemon. Let steep 10 min. Strain, serve hot. Traditional Russian honey-based winter drink, often with medicinal herbs."
+  },
+  {
+    "name": "Pampushky",
+    "ingredients": ["flour", "yeast", "milk", "egg", "sugar", "butter", "garlic", "dill", "parsley", "oil", "salt"],
+    "instructions": "Make yeast dough: 2.5 cups flour, 1/2 cup warm milk, 1 egg, 2 tbsp sugar, pinch salt, 1 tsp yeast, 30g melted butter. Knead, rise 1 hour. Form small round buns, place in greased pan close together. Let rise 20 min. Bake at 180°C (350°F) 20 min. Meanwhile, mix 2 tbsp oil, 2 crushed garlic cloves, chopped dill and parsley. Brush hot pampushky with garlic mixture. Serve with borscht. Ukrainian garlic rolls."
+  },
+  {
+    "name": "Lazy Cabbage Rolls",
+    "ingredients": ["cabbage", "ground beef", "rice", "onion", "carrot", "tomato paste", "sour cream", "dill", "broth", "salt", "pepper"],
+    "instructions": "Finely shred 1/2 head cabbage, blanch 5 min, drain. Sauté chopped onion and grated carrot. Mix 500g ground beef with 1/2 cup cooked rice, cabbage, sautéed vegetables, salt, pepper. Form into oval patties. Brown in skillet. Place in pot, pour mixture of 1 cup broth, 2 tbsp tomato paste, 2 tbsp sour cream. Simmer covered 30 min. Serve with sour cream and dill. Easier version of golubtsy."
+  },
+  {
+    "name": "Kasha",
+    "ingredients": ["buckwheat groats", "water or milk", "butter", "salt", "mushrooms", "onion", "eggs (optional)"],
+    "instructions": "Rinse 1 cup buckwheat. Bring 2 cups water to boil with pinch salt, add buckwheat, reduce heat to low, cover, cook 15-20 min until liquid absorbed. Turn off heat, let stand covered 10 min. Fluff with fork, add butter. For savory version: sauté sliced mushrooms and onion in butter, mix with cooked kasha. For breakfast: serve with milk, butter, and sugar. Traditional Russian porridge, staple food."
+  },
+  {
+    "name": "Tvorog Zapekanka",
+    "ingredients": ["farmer's cheese", "eggs", "sugar", "semolina", "sour cream", "vanilla", "raisins", "butter", "breadcrumbs"],
+    "instructions": "Mix 500g farmer's cheese with 2 eggs, 1/3 cup sugar, 3 tbsp semolina, 2 tbsp sour cream, 1 tsp vanilla, and handful raisins. Let stand 15 min for semolina to swell. Grease baking dish with butter, sprinkle with breadcrumbs. Pour mixture, smooth top. Dot with small butter pieces. Bake at 180°C (350°F) 35-40 min until golden and set. Serve warm with sour cream, jam, or honey. Russian cheese pudding/casserole."
+  },
+  {
+    "name": "Rassolnik",
+    "ingredients": ["beef or chicken broth", "pickles", "pickle brine", "potato", "carrot", "onion", "pearl barley", "tomato paste", "bay leaf", "dill", "sour cream"],
+    "instructions": "Cook 1/4 cup pearl barley separately. Sauté diced onion and carrot, add 1 tbsp tomato paste. Bring 2L broth to boil, add diced potatoes, cook 10 min. Add sautéed vegetables, barley, 2 sliced pickles, 1/2 cup pickle brine, bay leaf. Simmer 15 min. Season with salt if needed. Serve with sour cream and fresh dill. Traditional Russian soup with pickles."
+  },
+  {
+    "name": "Medovik",
+    "ingredients": ["honey", "sugar", "butter", "eggs", "flour", "baking soda", "sour cream", "heavy cream", "powdered sugar"],
+    "instructions": "For cake layers: melt 100g butter with 1/2 cup honey and 1/2 cup sugar over double boiler. Add 1 tsp baking soda, mixture will foam. Remove from heat, cool slightly, add 3 eggs, then 2.5-3 cups flour. Knead soft dough. Divide into 8-10 pieces, roll very thin, bake at 180°C (350°F) 3-4 min each until golden. Trim edges, save crumbs. For cream: whip 500g sour cream with 1 cup powdered sugar and 1 cup heavy cream until thick. Layer cakes with cream, covering entire cake. Sprinkle with reserved cake crumbs. Refrigerate overnight. Russian honey cake."
+  },
+  {
+    "name": "Pryaniki",
+    "ingredients": ["flour", "honey", "sugar", "butter", "eggs", "spices", "baking powder", "glaze"],
+    "instructions": "Heat 1/2 cup honey with 1/2 cup sugar and 100g butter until dissolved, cool. Add 2 eggs, 1 tsp spice mix (cinnamon, ginger, cardamom, cloves), 2.5 cups flour, 1 tsp baking powder. Knead dough, rest 1 hour. Roll out 1 cm thick, cut shapes. Bake at 180°C (350°F) 12-15 min. Make glaze: mix powdered sugar with lemon juice or milk. Glaze warm cookies. Let dry. Russian spice cookies."
+  },
+  {
+    "name": "Holodnik",
+    "ingredients": ["beet tops or sorrel", "cucumber", "radish", "green onion", "dill", "kefir", "sour cream", "hard-boiled eggs", "potato", "salt"],
+    "instructions": "Boil beet tops or sorrel in small amount water until wilted, cool in broth. Grate 2 cucumbers, slice radishes, chop green onions and dill. Mix with 1L cold kefir, add cooled beet broth for pink color. Season with salt. Serve with halved hard-boiled egg and hot boiled potato on side. Belarusian cold summer soup, similar to šaltibarščiai but with sorrel."
+  },
+  {
+    "name": "Mochi",
+    "ingredients": ["sticky rice flour", "water", "sugar", "cornstarch", "red bean paste or ice cream filling"],
+    "instructions": "Mix 1 cup glutinous rice flour with 1/4 cup sugar and 1 cup water. Steam or microwave covered until translucent and stretchy. Dust surface with cornstarch, turn out hot dough, knead briefly with cornstarch to prevent sticking. Divide into portions, flatten, wrap around filling (sweet red bean paste or small scoop ice cream). Seal well. For ice cream mochi, freeze until firm. Japanese confection, included for variety while staying in Asia/Europe theme."
+  },
+  {
+    "name": "Hünkar Beğendi",
+    "ingredients": ["lamb stew meat", "onion", "tomato", "tomato paste", "bell pepper", "eggplant", "milk", "flour", "butter", "cheese", "salt", "pepper"],
+    "instructions": "Make lamb stew: brown cubed lamb, sauté onion, pepper, tomato, tomato paste, add water, simmer until tender. For beğendi: roast 2 eggplants until soft, peel, mash. Melt 3 tbsp butter, add 3 tbsp flour, cook 1 min. Gradually whisk in 2 cups warm milk until smooth. Add mashed eggplant, salt, pepper, grated cheese. Cook until thick. Serve lamb stew over eggplant puree. Turkish 'Sultan's Delight'."
+  },
+  {
+    "name": "Manti (Turkish)",
+    "ingredients": ["flour", "water", "egg", "salt", "ground lamb", "onion", "black pepper", "yogurt", "garlic", "paprika butter", "sumac", "mint"],
+    "instructions": "Make dough as for pelmeni, rest. Finely chop onion, mix with ground lamb, salt, pepper. Roll dough very thin, cut into small squares (2-3 cm). Place tiny amount filling, fold into small manti shapes (Turkish style are tiny). Boil in salted water or steam. For sauce: mix yogurt with crushed garlic and salt. Make paprika butter by melting butter with paprika. Serve manti topped with yogurt sauce, drizzle of paprika butter, sprinkle sumac and dried mint. Turkish dumplings."
+  },
+  {
+    "name": "Fasulye",
+    "ingredients": ["green beans", "onion", "garlic", "tomato", "tomato paste", "olive oil", "sugar", "salt", "lemon"],
+    "instructions": "Sauté 1 chopped onion in olive oil until soft. Add minced garlic, cook 1 min. Add 500g trimmed green beans, 2 chopped tomatoes, 1 tbsp tomato paste, pinch sugar, salt, 1/2 cup water. Cover and simmer until beans tender, 30-40 min. Serve warm or cold with squeeze of lemon. Turkish olive oil braised green beans."
+  },
+  {
+    "name": "Cacik",
+    "ingredients": ["yogurt", "cucumber", "garlic", "dill", "mint", "olive oil", "salt", "water"],
+    "instructions": "Grate 1 cucumber, squeeze out excess liquid. Mix 2 cups thick yogurt with 1/2 cup cold water, whisk until smooth. Add cucumber, 1-2 crushed garlic cloves, chopped dill and mint, salt, drizzle of olive oil. Chill. Serve as cold soup or dip. Turkish cucumber yogurt."
+  },
+  {
+    "name": "Gözleme",
+    "ingredients": ["flour", "water", "yeast", "salt", "olive oil", "spinach", "feta", "onion", "minced meat (optional)"],
+    "instructions": "Make soft dough: 2 cups flour, 1/2 cup warm water, pinch yeast, salt, oil. Knead, rest 30 min. Divide into balls, roll very thin into circles. For filling: mix chopped spinach with crumbled feta and sautéed onion (or use seasoned minced meat). Place filling on half, fold over, seal edges. Cook on hot griddle without oil, flipping until golden spots appear and filling hot. Brush with butter before serving. Turkish flatbread."
+  },
+  {
+    "name": "Kunefe",
+    "ingredients": ["kadayif (shredded phyllo)", "butter", "unsalted cheese", "sugar", "water", "lemon juice", "pistachios"],
+    "instructions": "Make syrup: boil 1.5 cups sugar with 1 cup water and squeeze lemon, simmer 10 min, cool. Shred kadayif, mix with melted butter. Press half into pan, layer with cheese (like mozzarella or akkawi), top with remaining kadayif. Cook over medium heat until bottom golden, flip using plate, cook other side. Pour cooled syrup over hot künefe. Top with ground pistachios. Serve warm. Turkish cheese dessert."
+  },
+  {
+    "name": "Imam Bayildi",
+    "ingredients": ["eggplant", "onion", "garlic", "tomato", "bell pepper", "olive oil", "parsley", "sugar", "salt"],
+    "instructions": "Cut slits in small eggplants, soak in salt water, pat dry. Sauté sliced onions and peppers in generous olive oil. Add chopped tomato, garlic, parsley, sugar, salt. Stuff mixture into eggplant slits. Place in baking dish, drizzle with olive oil and little water. Cover, bake at 180°C (350°F) 45-50 min until eggplant soft. Serve warm or room temp. Turkish stuffed eggplant, 'the imam fainted'."
+  },
+  {
+    "name": "Bulgarian Shopska Salad",
+    "ingredients": ["tomato", "cucumber", "bell pepper", "onion", "parsley", "sirene cheese", "olive oil", "vinegar", "salt"],
+    "instructions": "Dice 2 tomatoes, 1 cucumber, 1 bell pepper. Thinly slice 1 small onion. Chop parsley. Toss vegetables with olive oil, vinegar, salt. Generously grate sirene cheese over top. Do not mix cheese in. Serve as starter. Traditional Bulgarian salad."
+  },
+  {
+    "name": "Banitsa",
+    "ingredients": ["phyllo dough", "eggs", "yogurt", "sirene cheese", "butter", "baking soda", "sunflower oil"],
+    "instructions": "Mix 4 eggs, 1 cup yogurt, 200g crumbled sirene cheese, 1/2 tsp baking soda, 1/4 cup oil. Layer 5 phyllo sheets in greased pan, brushing each with butter. Spread some filling. Repeat layers, ending with phyllo. Cut into squares. Bake at 180°C (350°F) 40-45 min until golden and puffed. Let cool slightly. Bulgarian cheese pie, often eaten for breakfast."
+  },
+  {
+    "name": "Tarator",
+    "ingredients": ["yogurt", "cucumber", "garlic", "dill", "walnuts", "water", "olive oil", "salt"],
+    "instructions": "Whisk 2 cups yogurt with 2 cups cold water. Grate 1 cucumber, squeeze. Add cucumber, 1 crushed garlic clove, chopped dill, 1/4 cup chopped walnuts, salt, olive oil. Chill well. Serve as cold soup in summer. Bulgarian version of cacik, with walnuts."
+  },
+  {
+    "name": "Kiflice",
+    "ingredients": ["flour", "yeast", "milk", "butter", "egg", "sugar", "salt", "jam or cheese for filling"],
+    "instructions": "Make yeast dough as for rolls. Roll thin, cut into triangles. Place small spoonful jam or cheese at wide end, roll toward point to form crescent. Curve slightly. Brush with egg wash, sprinkle with sesame seeds. Bake at 180°C (350°F) 15-20 min until golden. Serbian crescent rolls."
+  },
+  {
+    "name": "Prebranac",
+    "ingredients": ["white beans", "onion", "paprika", "bay leaf", "garlic", "olive oil", "salt", "pepper"],
+    "instructions": "Soak 500g white beans overnight. Drain, boil with bay leaf until just tender. Drain, reserve liquid. Caramelize 3 sliced onions in oil until deep golden. Mix beans with onions, sweet paprika, crushed garlic, salt, pepper. Place in baking dish, add enough bean liquid to just cover. Bake at 180°C (350°F) 45-60 min until top browned and creamy. Serbian baked beans."
+  },
+  {
+    "name": "Kohuke",
+    "ingredients": ["farmer's cheese", "butter", "sugar", "vanilla", "chocolate for coating", "jam or caramel filling"],
+    "instructions": "Mix 250g farmer's cheese with 2 tbsp softened butter, 2 tbsp sugar, vanilla until smooth. Form into small bars, making indentation for filling. Add teaspoon jam or dulce de leche, cover with cheese mixture. Chill. Melt chocolate, coat each bar. Refrigerate until set. Estonian glazed cheese curd snack."
+  },
+    {
+    "name": "Ćevapi",
+    "ingredients": ["ground beef", "ground lamb", "onion", "garlic", "baking soda", "paprika", "salt", "pepper", "somun bread", "ajvar", "kajmak", "chopped onion"],
+    "instructions": "Mix 300g ground beef and 200g ground lamb with 1 finely grated onion, 2 minced garlic cloves, 1/2 tsp baking soda, 1 tsp paprika, salt, pepper. Knead thoroughly, cover and refrigerate overnight. Shape into small finger-sized sausages. Grill over hot coals or in cast iron pan until charred and cooked through, about 6-8 min. Serve tucked into warm somun flatbread with chopped raw onion, ajvar, and kajmak (clotted cream). Traditional Balkan skinless sausages."
+  },
+  {
+    "name": "Pljeskavica",
+    "ingredients": ["ground beef", "ground pork", "onion", "garlic", "paprika", "baking soda", "mineral water", "salt", "pepper", "lepinja bread", "urnebes salad", "kajmak"],
+    "instructions": "Combine 400g ground beef and 100g ground pork with 1 finely chopped onion, 2 minced garlic cloves, 1 tsp paprika, 1/2 tsp baking soda, salt, pepper. Add splash of carbonated mineral water for juiciness. Knead well, refrigerate 2 hours. Form into large thin patties (1.5 cm thick). Grill over high heat until charred outside, juicy inside, 4-5 min per side. Serve in warm lepinja bread with kajmak and urnebes (spicy cheese salad). Serbian style burger patty."
+  },
+  {
+    "name": "Khinkali",
+    "ingredients": ["flour", "water", "salt", "ground beef", "ground pork", "onion", "cilantro", "cumin", "chili flakes", "broth", "black pepper"],
+    "instructions": "Make stiff dough from 3 cups flour, 1 cup water, pinch salt. Knead well, rest 1 hour. Mix 300g ground beef, 200g ground pork, 1 finely chopped onion, 1/4 cup chopped cilantro, 1 tsp cumin, chili flakes, salt, generous black pepper. Add 1/4 cup cold broth or water to make juicy filling. Roll dough thin, cut 10cm circles. Place spoonful filling, pleat edges gathering upwards to form pouch with top knot (traditionally 18-28 pleats). Pinch firmly. Boil in salted water until they float, then 7-8 min more. Serve hot, sprinkled with black pepper. Eat by holding knot, biting small hole, sipping broth, then eating rest. Georgian dumplings."
+  },
+  {
+    "name": "Chakhokhbili",
+    "ingredients": ["chicken pieces", "onion", "tomato", "garlic", "cilantro", "basil", "parsley", "khmeli suneli", "coriander", "chili pepper", "butter", "lemon juice"],
+    "instructions": "Brown chicken pieces in butter until golden, remove. Sauté 3 sliced onions in same pot until soft and golden. Add 4-5 chopped fresh tomatoes (or 1 can tomatoes), cook 10 min until saucy. Return chicken, add 1 tbsp khmeli suneli (Georgian spice blend), 1 tsp ground coriander, minced garlic, chopped chili. Simmer covered 30-35 min until chicken tender and sauce thickened. At end, stir in generous amounts of chopped cilantro, basil, parsley, and squeeze of lemon juice. Serve with fresh bread or potatoes. Georgian chicken stew with herbs."
+  },
+  {
+    "name": "Lobio",
+    "ingredients": ["red kidney beans", "onion", "garlic", "walnuts", "cilantro", "coriander", "fenugreek", "blue fenugreek (utskho suneli)", "vinegar", "pomegranate seeds", "chili"],
+    "instructions": "Soak 300g red beans overnight, boil until tender. Drain, reserve liquid. Sauté finely chopped onion until golden. Crush 1/2 cup walnuts with garlic, coriander, fenugreek, chili, salt. Mix beans with onion, walnut paste, chopped cilantro. Add enough bean liquid to make thick stew. Simmer 10 min, add splash of vinegar. Serve warm or cold, garnished with pomegranate seeds and fresh cilantro. Georgian bean dish."
+  },
+  {
+    "name": "Chkmeruli",
+    "ingredients": ["whole chicken", "garlic", "milk", "water", "butter", "salt", "pepper", "coriander", "chili flakes"],
+    "instructions": "Butterfly whole chicken, season with salt, pepper, coriander. Pan-fry skin side down in butter until golden and crisp, flip and cook other side. Meanwhile, make garlic sauce: crush 6-8 garlic cloves, mix with 1/2 cup milk and 1/2 cup water, pinch salt. When chicken is almost done, pour garlic sauce into pan around chicken. Bring to simmer, cover and cook 10 min until chicken cooked and sauce creamy. Sprinkle with chili flakes. Serve with bread to soak up sauce. Georgian garlic chicken."
+  },
+  {
+    "name": "Ajapsandali",
+    "ingredients": ["eggplant", "potato", "bell pepper", "onion", "garlic", "tomato", "cilantro", "basil", "parsley", "khmeli suneli", "chili", "olive oil"],
+    "instructions": "Cube eggplant, salt, let drain. Cube potatoes, parboil. Sauté onion, garlic, bell pepper in oil. Add eggplant, cook until soft. Add tomatoes, potatoes, khmeli suneli, chili, salt. Simmer until vegetables tender and stew thick, about 20 min. Stir in loads of fresh herbs: cilantro, basil, parsley. Serve warm or room temp as side or main. Georgian vegetable stew."
+  },
+  {
+    "name": "Lagman",
+    "ingredients": ["flour", "water", "egg", "salt", "lamb or beef", "onion", "carrot", "bell pepper", "tomato", "garlic", "potato", "radish", "star anise", "cumin", "paprika", "noodles"],
+    "instructions": "Make dough from 3 cups flour, 1 cup water, 1 egg, salt. Knead, rest, roll and cut into thick noodles or pull into long strands. For sauce: brown meat chunks, add sliced onion, carrot, bell pepper, tomato, garlic, spices, cook 5 min. Add water to cover, simmer 1.5 hours until meat tender. Add diced potato and radish, cook until soft. Boil noodles separately. Serve noodles in bowl, topped with meat and vegetable sauce, sprinkle with cilantro. Central Asian hand-pulled noodle soup."
+  },
+  {
+    "name": "Shurpa",
+    "ingredients": ["lamb on bone", "onion", "carrot", "potato", "turnip", "bell pepper", "tomato", "chickpeas", "cumin", "coriander", "bay leaf", "dill", "parsley", "cilantro"],
+    "instructions": "In large pot, brown lamb chunks with bone. Cover with cold water, bring to boil, skim foam. Add whole onion, carrot, bay leaf, simmer 1.5 hours. Add soaked chickpeas, cook 30 min. Add diced potatoes, turnip, bell pepper, tomatoes, cumin, coriander. Simmer until vegetables tender. Season with salt. Serve in bowls, sprinkle with fresh dill, parsley, cilantro. Hearty Central Asian soup."
+  },
+  {
+    "name": "Dolma",
+    "ingredients": ["grape leaves", "ground lamb", "rice", "onion", "dill", "mint", "parsley", "cumin", "cinnamon", "lemon", "yogurt", "garlic"],
+    "instructions": "Rinse preserved grape leaves, blanch if fresh. Mix 300g ground lamb, 1/2 cup uncooked rice, 1 finely chopped onion, 1/4 cup each chopped dill, mint, parsley, 1 tsp cumin, 1/2 tsp cinnamon, salt, pepper. Place spoonful on leaf, roll tightly tucking sides. Line pot with extra leaves, pack dolma snugly. Add water to just cover, weight with plate. Simmer gently 45-50 min until rice cooked. Serve warm or room temp with yogurt garlic sauce and lemon wedges. Stuffed grape leaves."
+  },
+  {
+    "name": "Svíčková",
+    "ingredients": ["beef sirloin", "root vegetables", "onion", "bacon", "lemon", "cranberries", "heavy cream", "flour", "vinegar", "sugar", "bay leaf", "allspice", "thyme", "bread dumplings"],
+    "instructions": "Lard beef roast with bacon strips, sear on all sides. Remove, sauté diced onion, carrot, celery root, parsley root. Add roast back, cover with water, add lemon zest, bay leaf, allspice, thyme. Braise in oven at 160°C (320°F) for 2-2.5 hours until tender. Remove roast, strain and puree vegetables with some liquid. Return puree to pot, thicken with roux or heavy cream, add splash vinegar and sugar to balance. Slice beef, serve with creamy vegetable sauce, cranberry preserve, lemon slice, and bread dumplings (knedlíky). Czech national dish."
+  },
+  {
+    "name": "Žurek",
+    "ingredients": ["rye flour", "water", "garlic", "bay leaf", "allspice", "white sausage", "bacon", "onion", "potato", "marjoram", "sour cream", "hard-boiled egg"],
+    "instructions": "Make sour rye starter: mix 1/2 cup rye flour with 1 cup water, add crust of rye bread, garlic clove. Let ferment 3-5 days. For soup: sauté chopped bacon and onion. Add 6 cups water or broth, diced potatoes, bay leaf, allspice. When potatoes tender, whisk in 1-2 cups rye starter, simmer 10 min. Add sliced white sausage, marjoram, salt, pepper. Finish with sour cream off heat. Serve in bread bowl or with hard-boiled egg. Polish sour rye soup."
+  },
+  {
+    "name": "Kopytka",
+    "ingredients": ["potato", "flour", "egg", "salt", "butter", "breadcrumbs", "bacon", "onion"],
+    "instructions": "Boil 1kg potatoes in skins, peel while warm, mash or rice. Cool slightly. Mix with 1 egg, pinch salt, and about 1.5-2 cups flour to form soft dough. Roll into ropes, flatten slightly, cut diagonally into 'hoof' shapes. Boil in salted water until they float, then 2-3 min more. Drain. Sauté breadcrumbs in butter, toss kopytka in mixture. Alternatively, serve with fried bacon and caramelized onion. Polish potato dumplings."
+  },
+  {
+    "name": "Lángos",
+    "ingredients": ["flour", "yeast", "milk", "potato", "salt", "oil for frying", "garlic", "sour cream", "grated cheese"],
+    "instructions": "Make yeast dough with 2 cups flour, 1/2 cup mashed potato, 1/2 cup milk, 1 tsp yeast, salt. Knead, rise 1 hour. Divide dough, stretch into flat rounds. Deep fry in hot oil until puffed and golden. Rub hot lángos with cut garlic clove. Top with sour cream and grated cheese (trappista). Also popular with garlic oil only. Hungarian fried bread."
+  },
+  {
+    "name": "Paprikás Csirke",
+    "ingredients": ["chicken pieces", "onion", "paprika", "tomato", "bell pepper", "sour cream", "flour", "salt", "lard", "nokedli dumplings"],
+    "instructions": "Sauté chopped onion in lard until translucent. Remove from heat, stir in 2 tbsp sweet Hungarian paprika (to prevent burning). Return to heat, add chicken pieces, brown. Add chopped tomato and bell pepper, salt, small amount water. Cover, simmer until chicken tender, about 40 min. Remove chicken, whisk 1/2 cup sour cream with 1 tbsp flour, stir into sauce. Return chicken, warm through. Serve with nokedli (small egg dumplings) or pasta. Hungarian chicken paprikash."
+  },
+  {
+    "name": "Töltött Káposzta",
+    "ingredients": ["sour cabbage leaves", "ground pork", "rice", "onion", "paprika", "smoked sausage", "tomato paste", "sour cream", "dill", "bay leaf"],
+    "instructions": "Mix 500g ground pork with 1/2 cup cooked rice, sautéed onion, 1 tsp paprika, salt, pepper. Rinse sour cabbage leaves, reserve juice. Roll filling in leaves, tuck ends. Line pot with chopped cabbage and smoked sausage slices. Arrange rolls, add bay leaf, tomato paste mixed with water and some cabbage juice. Simmer covered 2 hours. Thicken sauce with roux if desired. Serve with sour cream. Hungarian stuffed cabbage."
+  },
+  {
+    "name": "Vanilkové Rohlíčky",
+    "ingredients": ["flour", "butter", "ground walnuts", "sugar", "vanilla sugar", "egg yolks", "powdered sugar for coating"],
+    "instructions": "Mix 2 cups flour, 1 cup cold butter, 1/2 cup ground walnuts, 1/2 cup sugar, 1 packet vanilla sugar, 2 egg yolks into dough. Chill 1 hour. Form small crescent shapes. Bake at 180°C (350°F) 12-15 min until lightly golden. While warm, roll in powdered sugar mixed with vanilla sugar. Czech vanilla crescents, traditional Christmas cookie."
+  },
+  {
+    "name": "Burek sa Mesom",
+    "ingredients": ["phyllo dough", "ground beef", "onion", "garlic", "paprika", "salt", "pepper", "oil", "sparkling water", "yogurt for serving"],
+    "instructions": "Sauté finely chopped onion and garlic, add ground beef, brown. Season with paprika, salt, pepper. Drain excess fat. Grease round baking pan. Layer phyllo sheets, brushing each with oil mixture, occasionally sprinkling with meat mixture. When half sheets used, add more meat, then remaining phyllo. Cut into spiral or slices before baking. Mix oil with sparkling water, pour over top. Bake at 200°C (400°F) 35-40 min until golden. Let rest, serve with yogurt. Bosnian meat pie."
+  },
+  {
+    "name": "Ikra (Baklazhannaya)",
+    "ingredients": ["eggplant", "bell pepper", "onion", "garlic", "tomato", "carrot", "tomato paste", "vinegar", "sugar", "salt", "pepper", "oil", "parsley"],
+    "instructions": "Roast 2 eggplants and 2 bell peppers until skins charred, peel, chop. Sauté finely chopped onion and grated carrot until soft. Add chopped tomatoes, cook 10 min. Add chopped roasted vegetables, minced garlic, 1 tbsp tomato paste, splash vinegar, pinch sugar, salt, pepper. Simmer 20-30 min until thick, stirring often. Cool. Serve as spread on bread. Russian/Eastern European eggplant 'caviar'."
+  },
+  {
+    "name": "Ostri (Moravian Sparrow)",
+    "ingredients": ["pork shoulder", "onion", "garlic", "caraway seeds", "paprika", "beef broth", "flour", "bread dumplings", "sauerkraut"],
+    "instructions": "Cut pork into cubes, season. Brown in batches, remove. Sauté chopped onion with caraway seeds, add minced garlic and paprika. Return meat, add broth to almost cover, simmer covered 1.5 hours until tender. Thicken juices with flour slurry. Serve with bread dumplings and stewed sauerkraut. Czech 'Moravian Sparrow' (pork stew)."
+  },
+  {
+    "name": "Käsekrainer",
+    "ingredients": ["sausages with cheese filling", "mustard", "horseradish", "curry powder", "bread roll"],
+    "instructions": "Prick cheese-filled sausages (Käsekrainer) to prevent bursting. Grill or pan-fry until crisp and cheese melting inside. Slice diagonally. Serve in sliced bread roll with mustard, horseradish, and sprinkle of curry powder. Popular Austrian street food sausage."
+  },
+  {
+    "name": "Frikadeller",
+    "ingredients": ["ground pork", "ground veal", "onion", "egg", "milk", "breadcrumbs", "flour", "salt", "pepper", "butter", "potato", "gravy", "lingonberry jam"],
+    "instructions": "Mix 300g ground pork, 200g ground veal, 1 grated onion, 1 egg, 1/2 cup milk, 1/2 cup breadcrumbs, salt, pepper. Form into oval patties. Pan-fry in butter until golden and cooked through. Serve with boiled potatoes, brown gravy, and lingonberry jam. Danish meatballs."
+  },
+  {
+    "name": "Smørrebrød",
+    "ingredients": ["dense rye bread", "butter", "pickled herring", "curry salad", "roast beef", "remoulade", "fried onions", "shrimp", "lemon", "dill"],
+    "instructions": "Slice dense Danish rye bread (rugbrød), spread generously with butter. Create open-faced sandwiches with various toppings. Classic combinations: pickled herring with onion rings and dill; roast beef with remoulade, crispy fried onions, and horseradish; shrimp with lemon, mayo, and dill; liver pâté with bacon and pickled beets. Arrange artfully. Danish open sandwich."
+  },
+  {
+    "name": "Gravlax",
+    "ingredients": ["salmon fillet", "salt", "sugar", "dill", "white pepper", "mustard sauce"],
+    "instructions": "Mix equal parts salt and sugar (about 1/4 cup each) with 1 tbsp crushed white pepper. Place salmon fillet skin-side down on plastic wrap. Generously coat flesh with mixture, top with lots of fresh dill. Wrap tightly, place in dish, weight with cans. Refrigerate 2-3 days, turning every 12 hours. Unwrap, scrape off salt mixture, pat dry. Slice thinly. Serve with mustard dill sauce (hovmästarsås) on rye bread or with boiled potatoes. Swedish cured salmon."
+  },
+  {
+    "name": "Köttbullar",
+    "ingredients": ["ground beef", "ground pork", "onion", "breadcrumbs", "milk", "egg", "allspice", "nutmeg", "butter", "cream sauce", "lingonberry jam", "mashed potato"],
+    "instructions": "Mix 250g ground beef, 250g ground pork, 1 finely chopped sautéed onion, 1/2 cup breadcrumbs soaked in 1/4 cup milk, 1 egg, 1/2 tsp allspice, pinch nutmeg, salt, pepper. Form small round meatballs. Fry in butter until browned and cooked. Make cream sauce in same pan with flour, beef broth, and cream. Serve meatballs with sauce, mashed potatoes, lingonberry jam, and pickled cucumber. Swedish meatballs."
+  },
+    {
+    "name": "Túrós Csusza",
+    "ingredients": ["pasta squares", "bacon", "farmer's cheese", "sour cream", "salt", "pepper", "chives"],
+    "instructions": "Cook 300g square pasta (csusza) in salted water until al dente. Meanwhile, dice 150g bacon and fry until crisp. Drain pasta, toss with half the bacon fat. In serving dish, layer hot pasta with crumbled farmer's cheese (túró), crispy bacon bits, and generous dollops of sour cream. Season with salt and pepper, sprinkle with chopped chives. Serve immediately. Traditional Hungarian pasta dish."
+  },
+  {
+    "name": "Halászlé",
+    "ingredients": ["carp", "catfish", "onion", "paprika", "tomato", "green pepper", "salt", "hot paprika", "water", "white bread"],
+    "instructions": "Make fish broth: simmer fish heads, tails, and bones with 2 sliced onions, salt, and water for 1 hour. Strain. Sauté finely chopped onion in oil, add 3 tbsp sweet paprika and 1 tsp hot paprika, immediately add strained broth to prevent burning. Add chopped tomato and green pepper, bring to boil. Add carp and catfish chunks, simmer 15-20 min until fish cooked. Serve hot in bowls with fresh white bread. Hungarian fisherman's soup."
+  },
+  {
+    "name": "Somlói Galuska",
+    "ingredients": ["sponge cake", "chocolate sauce", "vanilla custard", "rum", "walnuts", "raisins", "whipped cream", "cocoa powder"],
+    "instructions": "Cut three types of sponge cake (plain, chocolate, walnut) into small cubes. Sprinkle with rum and soak with vanilla custard. Layer in glass bowl: cake mixture, chocolate sauce, whipped cream, repeat. Top with whipped cream, dust with cocoa powder, and sprinkle with chopped walnuts and rum-soaked raisins. Chill before serving. Hungarian trifle dessert."
+  },
+  {
+    "name": "Pörkölt",
+    "ingredients": ["beef", "onion", "paprika", "tomato", "green pepper", "garlic", "caraway", "salt", "lard", "water"],
+    "instructions": "Sauté 3 chopped onions in lard until golden. Remove from heat, stir in 2 tbsp sweet paprika, then add 1kg cubed beef. Return to heat, sear meat. Add chopped tomato and pepper, crushed garlic, pinch caraway seeds, salt. Add just enough water to cover. Simmer covered 2 hours until meat tender, adding water if needed. Uncover at end to thicken sauce. Serve with nokedli or bread. Hungarian beef stew, base for goulash."
+  },
+  {
+    "name": "Gundel Palacsinta",
+    "ingredients": ["crepes", "walnuts", "raisins", "rum", "sugar", "milk", "cream", "egg yolks", "chocolate sauce", "orange zest"],
+    "instructions": "Make thin crepes. For filling: grind 200g walnuts, mix with 1/2 cup sugar, 1/4 cup rum-soaked raisins, orange zest, enough milk to make spreadable paste. Spread on crepes, fold into quarters. Place in buttered dish, warm in oven. Serve topped with warm chocolate sauce and whipped cream. Famous Gundel restaurant dessert."
+  },
+  {
+    "name": "Rakott Krumpli",
+    "ingredients": ["potato", "eggs", "smoked sausage", "sour cream", "butter", "breadcrumbs", "salt", "pepper"],
+    "instructions": "Boil 1kg potatoes in skins, peel and slice. Hard-boil 4 eggs, slice. Slice 200g smoked sausage. Butter baking dish, sprinkle with breadcrumbs. Layer: potato slices, sausage, egg slices, salt, pepper, sour cream. Repeat layers, end with potato. Dot with butter, top with sour cream, sprinkle breadcrumbs. Bake at 180°C (350°F) 30-35 min until golden. Hungarian layered potato casserole."
+  },
+  {
+    "name": "Vepřo Knedlo Zelo",
+    "ingredients": ["pork shoulder", "onion", "caraway", "salt", "water", "bread dumplings", "sauerkraut", "butter", "flour", "sugar"],
+    "instructions": "Roast seasoned pork shoulder with onion, caraway seeds, and water until tender and golden. Slice meat. Make gravy from pan drippings with flour and water. Stew sauerkraut with butter, pinch sugar, and caraway. Serve sliced pork with bread dumplings, sauerkraut, and gravy. Iconic Czech meal."
+  },
+  {
+    "name": "Kulajda",
+    "ingredients": ["potato", "mushrooms", "cream", "dill", "vinegar", "egg", "flour", "bay leaf", "allspice", "salt", "sour cream"],
+    "instructions": "Sauté sliced mushrooms and diced potatoes. Add water, bay leaf, allspice, salt, boil until tender. Make slurry of cream and flour, whisk into soup, simmer. Add chopped dill and splash vinegar for sour note. Serve with poached or hard-boiled egg and dollop of sour cream. Czech creamy dill mushroom soup."
+  },
+  {
+    "name": "Škubánky",
+    "ingredients": ["potato", "flour", "salt", "butter", "poppy seeds", "sugar", "milk"],
+    "instructions": "Boil potatoes, mash or rice. While warm, mix with flour (about 1/3 flour to potato ratio) and salt to make soft dough. Roll into small dumplings, boil in salted water until they float. Drain, toss with melted butter. Serve with ground poppy seeds mixed with sugar, and warm milk poured over. Czech sweet potato dumplings."
+  },
+  {
+    "name": "Bramboráky",
+    "ingredients": ["potato", "garlic", "marjoram", "flour", "egg", "milk", "salt", "pepper", "oil for frying"],
+    "instructions": "Grate 500g potatoes, drain some liquid but keep starch. Add crushed garlic, 1 tsp marjoram, salt, pepper, 1 egg, 2-3 tbsp flour, splash milk to make thick batter. Fry spoonfuls in hot oil as thin pancakes until golden and crisp both sides. Serve hot as side or main. Czech potato pancakes."
+  },
+  {
+    "name": "Smažený Sýr",
+    "ingredients": ["edam or gouda cheese", "flour", "egg", "breadcrumbs", "oil for frying", "tartar sauce", "lemon", "fries"],
+    "instructions": "Cut cheese into 1.5 cm thick slabs. Dredge in flour, then beaten egg, then breadcrumbs, repeat egg and breadcrumbs for double coating. Fry in hot oil until golden and cheese begins to melt. Serve immediately with tartar sauce, lemon wedge, and fries. Czech fried cheese."
+  },
+  {
+    "name": "Kalduny",
+    "ingredients": ["flour", "water", "egg", "salt", "ground beef", "pork", "onion", "marjoram", "black pepper", "broth", "butter"],
+    "instructions": "Make dough as for pelmeni. Filling: mix ground meat with grated onion, marjoram, salt, pepper, splash of broth. Roll dough, cut circles, fill, seal in half-moon or pouch shapes. Boil in salted water. Serve with melted butter or in broth. Belarusian/Lithuanian dumplings."
+  },
+  {
+    "name": "Vereshchaka",
+    "ingredients": ["pork ribs", "beet kvass", "onion", "garlic", "bay leaf", "peppercorns", "salt", "flour", "rye bread"],
+    "instructions": "Marinate pork ribs in beet kvass overnight with onion, garlic, bay leaf, peppercorns. Drain, reserve marinade. Brown ribs, add reserved marinade, simmer until tender. Thicken sauce with flour paste. Serve with rye bread to soak up tangy gravy. Ancient Belarusian dish."
+  },
+  {
+    "name": "Machanka",
+    "ingredients": ["pork", "sausage", "onion", "flour", "sour cream", "water", "salt", "pepper", "blini"],
+    "instructions": "Fry pork pieces and sliced sausage. Sauté onion, sprinkle flour, add water to make gravy. Stir in sour cream, season. Serve thick meat gravy in bowl, with blini for dipping. Belarusian dipping stew served with pancakes."
+  },
+  {
+    "name": "Bulviniai Blynai",
+    "ingredients": ["potato", "onion", "egg", "flour", "salt", "oil", "sour cream"],
+    "instructions": "Grate potatoes and onion, squeeze liquid. Mix with egg, flour, salt. Fry spoonfuls in oil until golden and crisp. Serve hot with sour cream. Lithuanian potato pancakes (similar to draniki but often thicker)."
+  },
+  {
+    "name": "Vėdarai",
+    "ingredients": ["potato", "pork intestines", "onion", "bacon", "milk", "salt", "pepper", "marjoram"],
+    "instructions": "Grate raw potatoes, squeeze slightly. Mix with fried bacon bits, sautéed onion, salt, pepper, marjoram, and splash milk. Stuff mixture loosely into cleaned pork casings. Prick with needle, bake in oven with some fat until browned and cooked through. Slice and serve. Lithuanian potato sausage."
+  },
+  {
+    "name": "Skilandinys",
+    "ingredients": ["pork", "bacon", "garlic", "salt", "pepper", "coriander", "pork stomach casing"],
+    "instructions": "Cut pork and bacon into chunks, mix with crushed garlic, salt, pepper, coriander. Stuff into cleaned pig stomach, sew closed. Press between boards under weight, cold smoke, then dry age for several weeks. Slice thinly as cold cut. Lithuanian smoked meat delicacy."
+  },
+  {
+    "name": "Cepelinai",
+    "ingredients": ["potato", "ground pork", "onion", "salt", "pepper", "marjoram", "sour cream", "bacon", "butter"],
+    "instructions": "Grate half potatoes raw, squeeze. Boil other half, mash. Combine both with salt to make dough. Form oval shape (zeppelin), stuff with seasoned ground pork and onion mixture. Boil gently until they float, then 15-20 min. Serve with sour cream and bacon-onion sauce. Lithuanian national dish."
+  },
+  {
+    "name": "Borscht with Vushka",
+    "ingredients": ["beet", "onion", "carrot", "parsley root", "garlic", "vinegar", "sugar", "dried mushrooms", "flour", "water", "salt", "pepper", "sour cream"],
+    "instructions": "Make clear beet broth: boil beets with onion, carrot, parsley root, strain, season with vinegar, sugar, salt. For vushka (little ears): make dough, fill with mixture of cooked chopped mushrooms, onion, breadcrumbs. Form small dumplings, boil. Serve clear borscht with vushka floating, dollop sour cream. Ukrainian Christmas Eve version."
+  },
+  {
+    "name": "Nalisniki",
+    "ingredients": ["milk", "eggs", "flour", "sugar", "salt", "oil", "farmer's cheese", "butter", "sour cream", "berries"],
+    "instructions": "Make thin crepe batter. Fry crepes. For filling: mix farmer's cheese with sugar, egg yolk, vanilla. Spread on crepes, roll up. Place in buttered dish, dot with butter, bake 15 min. Serve with sour cream and berry sauce. Ukrainian cheese-filled crepes."
+  },
+  {
+    "name": "Deruny",
+    "ingredients": ["potato", "onion", "egg", "flour", "salt", "sour cream", "oil"],
+    "instructions": "Same as draniki but often with more flour and egg for fluffier interior. Grate potatoes and onion, mix with egg, flour, salt. Fry in oil. Serve with sour cream. Ukrainian potato pancakes."
+  },
+  {
+    "name": "Kartoplia Solomkoiu",
+    "ingredients": ["potato", "oil", "salt", "paprika", "garlic powder"],
+    "instructions": "Cut potatoes into matchstick strips. Soak in cold water, drain and dry thoroughly. Deep fry in hot oil until golden and crisp. Toss with salt, paprika, garlic powder. Serve as snack. Ukrainian potato straws."
+  },
+  {
+    "name": "Lviv Syrnyk",
+    "ingredients": ["farmer's cheese", "butter", "sugar", "eggs", "lemon zest", "vanilla", "potato starch", "chocolate glaze"],
+    "instructions": "Blend 1kg farmer's cheese until smooth. Mix with 200g softened butter, 1 cup sugar, 4 egg yolks, lemon zest, vanilla, 3 tbsp potato starch. Fold in whipped egg whites. Bake in water bath at 160°C (320°F) 1 hour until set. Cool completely, cover with chocolate glaze. Refrigerate. Lviv cheesecake."
+  },
+  {
+    "name": "Tsimes",
+    "ingredients": ["carrot", "honey", "prunes", "dried apricots", "raisins", "butter", "cinnamon", "orange juice"],
+    "instructions": "Slice carrots, simmer with butter, honey, orange juice, and dried fruits until carrots tender and liquid syrupy. Add cinnamon. Serve warm or cold. Sweet carrot stew, traditional Ashkenazi dish."
+  },
+  {
+    "name": "Gefilte Fish",
+    "ingredients": ["carp", "whitefish", "pike", "onion", "matzo meal", "eggs", "salt", "sugar", "pepper", "carrot", "horseradish"],
+    "instructions": "Grind fish fillets with onion. Mix with matzo meal, eggs, salt, sugar, pepper. Form oval patties. Simmer in fish broth with carrot slices, bay leaf for 1.5 hours. Cool in broth. Serve with jellied broth and beet horseradish. Traditional Jewish poached fish patties."
   }
 ]
