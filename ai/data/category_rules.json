@@ -1,0 +1,44 @@
+{
+  "protein": {
+    "required_per_meal": true,
+    "min_calorie_share": 0.2,
+    "target_calorie_share": [
+      0.25,
+      0.35
+    ],
+    "max_calorie_share": 0.45,
+    "priority": 1.0,
+    "scoring": "calorie_share"
+  },
+  "carbs": {
+    "required_per_meal": false,
+    "min_calorie_share": 0.2,
+    "target_calorie_share": [
+      0.35,
+      0.5
+    ],
+    "max_calorie_share": 0.55,
+    "priority": 0.8,
+    "scoring": "calorie_share"
+  },
+  "fat": {
+    "required_per_meal": false,
+    "target_calorie_share": [
+      0.2,
+      0.3
+    ],
+    "max_calorie_share": 0.35,
+    "priority": 0.7,
+    "scoring": "calorie_share"
+  },
+  "vegetable": {
+    "required_per_meal": false,
+    "min_weight_share": 0.15,
+    "target_weight_share": [
+      0.2,
+      0.35
+    ],
+    "priority": 0.7,
+    "scoring": "weight_share"
+  }
+}

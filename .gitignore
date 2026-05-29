@@ -17,3 +17,26 @@ datasets/
 
 # python cache
 *.pyc
+
+# weights
+weights/
+
+# скрины
+скрины/
+
+# /ai/yolo/results
+ai/yolo/results
+
+# AI / ML artifacts
+runs/
+
+# tests media
+tests/
+
+# embeddings / indexes
+*_embeddings.*
+*_index.*
+
+# logs / results
+*.csv
+*.yaml

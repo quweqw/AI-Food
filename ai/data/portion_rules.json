@@ -1,0 +1,4484 @@
+{
+  "chicken": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "rice": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "egg": {
+    "typical_g": 50,
+    "min_g": 40,
+    "max_g": 100,
+    "state": "raw"
+  },
+  "beef": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "potato": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "shrimp": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "pasta": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "cooked"
+  },
+  "noodles": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "cooked"
+  },
+  "salmon": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "tuna": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "turkey": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "pork": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "lamb": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "cottage_cheese_5": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 250,
+    "state": "ready_to_eat"
+  },
+  "milk_2_5": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "yogurt_natural_2": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 300,
+    "state": "ready_to_eat"
+  },
+  "kefir_1": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 300,
+    "state": "ready_to_eat"
+  },
+  "cheese_russian": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "broccoli": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "spinach": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "tomato": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "cucumber": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "carrot": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "onion": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "garlic": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 15,
+    "state": "raw"
+  },
+  "bell_pepper": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "mushroom": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "cabbage": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "apple": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "banana": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "raw"
+  },
+  "orange": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "strawberry": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "avocado": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "grapes": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "oat_flakes_raw": {
+    "typical_g": 220,
+    "min_g": 120,
+    "max_g": 400,
+    "state": "cooked"
+  },
+  "buckwheat_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "bread_white": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "lentils_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "chickpeas_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "beans_red_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "peas_green": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "corn_sweet": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "sweet_potato": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "almonds": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "peanuts": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "walnuts": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "sunflower_seeds": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "honey": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "sugar": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "dry"
+  },
+  "butter": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "sunflower_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "olive_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "mayonnaise": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "sour_cream_20": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "cream_cheese": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "mozzarella": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "parmesan": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "feta": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "tofu": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 250,
+    "state": "ready_to_eat"
+  },
+  "soy_milk": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "cod": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "pollock": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "trout": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "mackerel": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "squid": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "mussels": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "crab": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "lobster": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "beets": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "radish": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "eggplant": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "zucchini": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "cauliflower": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "brussels_sprouts": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "asparagus": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "celery": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "leek": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "pumpkin": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "pear": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "peach": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "plum": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "apricot": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "cherry": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "kiwi": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "mango": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "raw"
+  },
+  "pineapple": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "raw"
+  },
+  "watermelon": {
+    "typical_g": 250,
+    "min_g": 120,
+    "max_g": 500,
+    "state": "raw"
+  },
+  "melon": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "raw"
+  },
+  "lemon": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 50,
+    "state": "raw"
+  },
+  "lime": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 50,
+    "state": "raw"
+  },
+  "grapefruit": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "pomegranate": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "persimmon": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "figs": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "coconut": {
+    "typical_g": 50,
+    "min_g": 25,
+    "max_g": 100,
+    "state": "raw"
+  },
+  "raisins": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "prunes": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "dried_apricots": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "millet_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "barley_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "corn_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "flaxseed_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "sesame_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "ketchup": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "mustard": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "soy_sauce": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "vinegar": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "chicken_thigh": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "duck": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "bacon": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "cooked"
+  },
+  "sausage": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "veal": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "rabbit": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "herring": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "sardine": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "flounder": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "halibut": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "octopus": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "oysters": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "scallops": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "quinoa_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "bulgur_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "couscous_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "brown_rice_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "wild_rice_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "cashew": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "pistachios": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "hazelnuts": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "pecan": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "macadamia": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "brazil_nuts": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "sesame_seeds": {
+    "typical_g": 15,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "ready_to_eat"
+  },
+  "flax_seeds": {
+    "typical_g": 15,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "ready_to_eat"
+  },
+  "chia_seeds": {
+    "typical_g": 15,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "ready_to_eat"
+  },
+  "poppy_seeds": {
+    "typical_g": 15,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "ready_to_eat"
+  },
+  "pumpkin_seeds": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "green_beans": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "artichoke": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "kohlrabi": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "fennel": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "parsnip": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "turnip": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "rutabaga": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "arugula": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "dill": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "parsley": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "cilantro": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "basil": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "mint": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "green_onion": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "peanut_butter": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "nutella": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "jam": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "marmalade": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "marshmallow": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "halva": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 140,
+    "state": "ready_to_eat"
+  },
+  "dark_chocolate": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "milk_chocolate": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "white_chocolate": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "cocoa_powder": {
+    "typical_g": 15,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "dry"
+  },
+  "coconut_milk": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_use"
+  },
+  "coconut_cream": {
+    "typical_g": 50,
+    "min_g": 25,
+    "max_g": 100,
+    "state": "ready_to_use"
+  },
+  "coconut_water": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "maple_syrup": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "agave_syrup": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "molasses": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "fish_sauce": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "oyster_sauce": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "worcestershire_sauce": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "bbq_sauce": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "salsa": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 100,
+    "state": "ready_to_eat"
+  },
+  "guacamole": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "hummus": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "pesto": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "tahini": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "almond_milk": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "oat_milk": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "rice_milk": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "coconut_milk_beverage": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "coconut_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "palm_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "canola_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "peanut_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "grapeseed_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "avocado_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "walnut_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "hazelnut_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "wheat_germ": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "dry"
+  },
+  "wheat_bran": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "dry"
+  },
+  "oat_bran": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "dry"
+  },
+  "rice_bran": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "dry"
+  },
+  "corn_bran": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "dry"
+  },
+  "psyllium_husk": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "gelatin": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "agar_agar": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "yeast_nutritional": {
+    "typical_g": 15,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "dry"
+  },
+  "turkey_breast_skinless": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "salmon_atlantic_farmed": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "tuna_canned_in_water": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "ready_to_eat"
+  },
+  "pork_tenderloin_lean": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "lamb_leg_lean": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "cottage_cheese_lowfat_2": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 250,
+    "state": "ready_to_eat"
+  },
+  "mozzarella_whole_milk": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "cheddar_cheese": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "parmesan_cheese": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "feta_cheese": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "ricotta_whole_milk": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "cream_cheese_regular": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "tofu_firm": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 250,
+    "state": "ready_to_eat"
+  },
+  "cod_atlantic_raw": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "trout_rainbow_farmed": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "mackerel_atlantic_raw": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "sardine_atlantic_canned_oil": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "ready_to_eat"
+  },
+  "herring_atlantic_raw": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "tilapia_raw": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "shrimp_mixed_species_raw": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "lobster_northern_raw": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "crab_blue_raw": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "mussel_blue_raw": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "oyster_eastern_raw": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "scallop_mixed_species_raw": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "broccoli_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "spinach_raw": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "kale_raw": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "arugula_raw": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "cucumber_raw": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "zucchini_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "eggplant_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "bell_pepper_green_raw": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "tomato_red_raw": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "onion_raw": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "garlic_raw": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 15,
+    "state": "raw"
+  },
+  "carrot_raw": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "potato_russet_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "sweet_potato_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "corn_sweet_yellow_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "peas_green_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "green_beans_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "asparagus_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "mushroom_white_raw": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "cauliflower_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "brussels_sprouts_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "cabbage_green_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "beetroot_raw": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "radish_raw": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "celery_raw": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "beef_liver": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "chicken_liver": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "pork_liver": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "beef_heart": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "chicken_heart": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "pork_heart": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "beef_tongue": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "pork_tongue": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "beef_kidney": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "pork_kidney": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "chicken_gizzards": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "cooked"
+  },
+  "goose": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "quail": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "venison": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "elk": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "bison": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "catfish": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "carp": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "pike": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "perch": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "zander": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "sturgeon": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "beluga": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "sea_bass": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "sea_bream": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "monkfish": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "swordfish": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "caviar_red": {
+    "typical_g": 30,
+    "min_g": 10,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "caviar_black": {
+    "typical_g": 30,
+    "min_g": 10,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "pollock_roe": {
+    "typical_g": 30,
+    "min_g": 10,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "cod_roe": {
+    "typical_g": 30,
+    "min_g": 10,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "surimi": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "ready_to_eat"
+  },
+  "seaweed_kelp": {
+    "typical_g": 40,
+    "min_g": 15,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "nori": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 15,
+    "state": "ready_to_eat"
+  },
+  "spirulina_dried": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 10,
+    "state": "dry"
+  },
+  "chlorella_dried": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 10,
+    "state": "dry"
+  },
+  "wheat_flour_white": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "wheat_flour_whole": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "rye_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "corn_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "rice_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "coconut_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "almond_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "chickpea_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "soy_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "baking_powder": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "baking_soda": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "yeast_dried": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "cornstarch": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "jerusalem_artichoke": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "chard": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "collard_greens": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "watercress": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "endive": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "radicchio": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "bamboo_shoots": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "lotus_root": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "taro": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "yuca": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "jicama": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "daikon": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "burdock": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "okra": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "salsify": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "black_salsify": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "sea_buckthorn": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "cloudberry": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "lingonberry": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "gooseberry": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "elderberry": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "quince": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "lychee": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "rambutan": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "longan": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "durian": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "jackfruit": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "passion_fruit": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "dragon_fruit": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "raw"
+  },
+  "star_fruit": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "guava": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "papaya": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "raw"
+  },
+  "kumquat": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "tamarind": {
+    "typical_g": 30,
+    "min_g": 10,
+    "max_g": 60,
+    "state": "raw"
+  },
+  "dates": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "figs_dried": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "cranberry_dried": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "goji_berries_dried": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "mung_beans_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "adzuki_beans_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "black_beans_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "pinto_beans_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "lima_beans_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "fava_beans_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "soybeans_raw": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "edamame": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "tempeh": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "seitan": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "turkey_leg": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "duck_breast": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "pheasant": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "ostrich": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "frog_legs": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "crayfish": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "langoustine": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "sea_urchin": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 100,
+    "state": "ready_to_eat"
+  },
+  "abalone": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "whelk": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "conch": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "geoduck": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "smelt": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "mullet": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "grouper": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "snapper": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "mahi_mahi": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "pompano": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "bluefish": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "burbot": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "grayling": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "vendace": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "whitefish": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "eel": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "lamprey": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "spelt_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "amaranth_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "teff_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "sorghum_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "triticale_raw": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "hominy": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "popcorn_air_popped": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "pine_nuts": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "chestnuts": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "acorn_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "carob_powder": {
+    "typical_g": 15,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "dry"
+  },
+  "matcha_powder": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 10,
+    "state": "dry"
+  },
+  "coffee_brewed": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "tea_black_brewed": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "tea_green_brewed": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "kombucha": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "kvass": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "cider_alcoholic": {
+    "typical_g": 330,
+    "min_g": 150,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "beer_lager": {
+    "typical_g": 330,
+    "min_g": 150,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "wine_red": {
+    "typical_g": 150,
+    "min_g": 75,
+    "max_g": 250,
+    "state": "ready_to_drink"
+  },
+  "wine_white": {
+    "typical_g": 150,
+    "min_g": 75,
+    "max_g": 250,
+    "state": "ready_to_drink"
+  },
+  "vodka": {
+    "typical_g": 45,
+    "min_g": 25,
+    "max_g": 90,
+    "state": "ready_to_drink"
+  },
+  "whiskey": {
+    "typical_g": 45,
+    "min_g": 25,
+    "max_g": 90,
+    "state": "ready_to_drink"
+  },
+  "rum": {
+    "typical_g": 45,
+    "min_g": 25,
+    "max_g": 90,
+    "state": "ready_to_drink"
+  },
+  "gin": {
+    "typical_g": 45,
+    "min_g": 25,
+    "max_g": 90,
+    "state": "ready_to_drink"
+  },
+  "sauerkraut": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "kimchi": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "pickles_cucumber": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "olives_green": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "olives_black": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "capers": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_eat"
+  },
+  "sun_dried_tomatoes": {
+    "typical_g": 25,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "anchovy_canned_oil": {
+    "typical_g": 25,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "mackerel_canned_oil": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 180,
+    "state": "ready_to_eat"
+  },
+  "corned_beef": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "spam": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "liverwurst": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "mortadella": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "chorizo": {
+    "typical_g": 50,
+    "min_g": 25,
+    "max_g": 100,
+    "state": "ready_to_eat"
+  },
+  "salami": {
+    "typical_g": 50,
+    "min_g": 25,
+    "max_g": 100,
+    "state": "ready_to_eat"
+  },
+  "pepperoni": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "prosciutto": {
+    "typical_g": 50,
+    "min_g": 25,
+    "max_g": 100,
+    "state": "ready_to_eat"
+  },
+  "pancetta": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "guanciale": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "lard": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "suet": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "tallow": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "schmaltz": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "ghee": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "margarine": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "shortening": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "heavy_cream": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "half_and_half": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "evaporated_milk": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "condensed_milk": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "powdered_milk": {
+    "typical_g": 25,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "dry"
+  },
+  "whey_powder": {
+    "typical_g": 30,
+    "min_g": 20,
+    "max_g": 50,
+    "state": "dry"
+  },
+  "casein_powder": {
+    "typical_g": 30,
+    "min_g": 20,
+    "max_g": 50,
+    "state": "dry"
+  },
+  "soy_protein_powder": {
+    "typical_g": 30,
+    "min_g": 20,
+    "max_g": 50,
+    "state": "dry"
+  },
+  "pea_protein_powder": {
+    "typical_g": 30,
+    "min_g": 20,
+    "max_g": 50,
+    "state": "dry"
+  },
+  "hemp_protein_powder": {
+    "typical_g": 30,
+    "min_g": 20,
+    "max_g": 50,
+    "state": "dry"
+  },
+  "egg_white_powder": {
+    "typical_g": 30,
+    "min_g": 20,
+    "max_g": 50,
+    "state": "dry"
+  },
+  "gelatin_powder": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "pectin": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "xanthan_gum": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "guar_gum": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "carrageenan": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "tapioca_starch": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "arrowroot_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "potato_starch": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "sweet_rice_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "semolina": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 320,
+    "state": "cooked"
+  },
+  "vital_wheat_gluten": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "oat_fiber": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "inulin": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "brie_cheese": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "camembert": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "gouda": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "edam": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "emmental": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "gruyere": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "manchego": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "pecorino": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "asiago": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "fontina": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "taleggio": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "mascarpone": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "ricotta_salata": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "paneer": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "halloumi": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "feta_greek": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "queso_fresco": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "granola": {
+    "typical_g": 45,
+    "min_g": 25,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "muesli": {
+    "typical_g": 50,
+    "min_g": 30,
+    "max_g": 90,
+    "state": "ready_to_eat"
+  },
+  "corn_flakes": {
+    "typical_g": 35,
+    "min_g": 20,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "bran_flakes": {
+    "typical_g": 35,
+    "min_g": 20,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "rice_krispies": {
+    "typical_g": 35,
+    "min_g": 20,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "oatmeal_instant": {
+    "typical_g": 35,
+    "min_g": 20,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "cream_of_wheat": {
+    "typical_g": 220,
+    "min_g": 120,
+    "max_g": 400,
+    "state": "cooked"
+  },
+  "grits": {
+    "typical_g": 220,
+    "min_g": 120,
+    "max_g": 400,
+    "state": "cooked"
+  },
+  "polenta": {
+    "typical_g": 220,
+    "min_g": 120,
+    "max_g": 400,
+    "state": "cooked"
+  },
+  "biscuit": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "croissant": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "bagel": {
+    "typical_g": 90,
+    "min_g": 50,
+    "max_g": 140,
+    "state": "ready_to_eat"
+  },
+  "english_muffin": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "pita_bread": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "tortilla_corn": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "tortilla_flour": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "naan": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "chapati": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "sourdough_bread": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "rye_bread": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "pumpernickel": {
+    "typical_g": 60,
+    "min_g": 30,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "focaccia": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "ciabatta": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "brioche": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "challah": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "cornbread": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "pretzel_soft": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "cracker_saltine": {
+    "typical_g": 35,
+    "min_g": 20,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "rice_cake": {
+    "typical_g": 35,
+    "min_g": 20,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "popcorn_microwave": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "potato_chips": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "tortilla_chips": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "pretzel_hard": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "ginger_root": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 15,
+    "state": "raw"
+  },
+  "turmeric": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 15,
+    "state": "raw"
+  },
+  "cinnamon": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "cloves": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "nutmeg": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "cardamom": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "coriander_seeds": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "cumin": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "fennel_seeds": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "mustard_seeds": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "caraway_seeds": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "anise_seeds": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "vanilla_extract": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 10,
+    "state": "ready_to_use"
+  },
+  "saffron": {
+    "typical_g": 0.1,
+    "min_g": 0.05,
+    "max_g": 0.5,
+    "state": "dry"
+  },
+  "paprika": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "chili_powder": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "cayenne_pepper": {
+    "typical_g": 1,
+    "min_g": 0.3,
+    "max_g": 5,
+    "state": "dry"
+  },
+  "black_pepper": {
+    "typical_g": 1,
+    "min_g": 0.3,
+    "max_g": 5,
+    "state": "dry"
+  },
+  "white_pepper": {
+    "typical_g": 1,
+    "min_g": 0.3,
+    "max_g": 5,
+    "state": "dry"
+  },
+  "allspice": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "bay_leaf": {
+    "typical_g": 1,
+    "min_g": 0.2,
+    "max_g": 3,
+    "state": "dry"
+  },
+  "oregano_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "thyme_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "rosemary_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "sage_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "marjoram_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "tarragon_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "chives_dried": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "chervil_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "savory_dried": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "peas_canned": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "corn_canned": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "beans_canned": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "chickpeas_canned": {
+    "typical_g": 170,
+    "min_g": 90,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "mushrooms_canned": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "tomatoes_canned": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "tomato_paste": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_use"
+  },
+  "tomato_sauce": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "applesauce": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 200,
+    "state": "ready_to_eat"
+  },
+  "cranberry_sauce": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "soy_sprouts": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 100,
+    "state": "raw"
+  },
+  "alfalfa_sprouts": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 100,
+    "state": "raw"
+  },
+  "mung_bean_sprouts": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 100,
+    "state": "raw"
+  },
+  "broccoli_sprouts": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 100,
+    "state": "raw"
+  },
+  "radish_sprouts": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "raw"
+  },
+  "wheatgrass": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "barley_green": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "moringa_powder": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 10,
+    "state": "dry"
+  },
+  "maca_powder": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 10,
+    "state": "dry"
+  },
+  "ashwagandha_powder": {
+    "typical_g": 5,
+    "min_g": 2,
+    "max_g": 10,
+    "state": "dry"
+  },
+  "aloe_vera_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "carrot_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "beetroot_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "celery_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "cucumber_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "wheatgrass_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "pomegranate_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "cranberry_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "grapefruit_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "prune_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "tomato_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "clamato_juice": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "energy_drink": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "sports_drink": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "tonic_water": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "club_soda": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "ginger_ale": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "root_beer": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "cream_soda": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "horchata": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "rice_pudding": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "tapioca_pudding": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "bread_pudding": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "flan": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "panna_cotta": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "tiramisu": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 140,
+    "state": "ready_to_eat"
+  },
+  "cheesecake": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 140,
+    "state": "ready_to_eat"
+  },
+  "brownie": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "muffin_blueberry": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "scone": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "danish_pastry": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "cannoli": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "baklava": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 140,
+    "state": "ready_to_eat"
+  },
+  "macaron": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "meringue": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "marzipan": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "nougat": {
+    "typical_g": 70,
+    "min_g": 35,
+    "max_g": 120,
+    "state": "ready_to_eat"
+  },
+  "caramel_sauce": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "chocolate_sauce": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "butterscotch_sauce": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "fruit_syrup": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "grenadine": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "orgeat_syrup": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "falernum": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "vermouth_dry": {
+    "typical_g": 150,
+    "min_g": 75,
+    "max_g": 250,
+    "state": "ready_to_drink"
+  },
+  "vermouth_sweet": {
+    "typical_g": 150,
+    "min_g": 75,
+    "max_g": 250,
+    "state": "ready_to_drink"
+  },
+  "campari": {
+    "typical_g": 150,
+    "min_g": 75,
+    "max_g": 250,
+    "state": "ready_to_drink"
+  },
+  "aperol": {
+    "typical_g": 150,
+    "min_g": 75,
+    "max_g": 250,
+    "state": "ready_to_drink"
+  },
+  "amaretto": {
+    "typical_g": 150,
+    "min_g": 75,
+    "max_g": 250,
+    "state": "ready_to_drink"
+  },
+  "all-purpose_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "almond_extract": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 10,
+    "state": "ready_to_use"
+  },
+  "almond_paste": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "barbecue_sauce": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "barley_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "beef_broth": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "beef_tallow": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "black_tea": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "blackberries": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "blueberries": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "bluefin": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "bok_choy": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "bread_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "brisket": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "brown_sugar": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "dry"
+  },
+  "buttermilk": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "ready_to_drink"
+  },
+  "button_mushroom": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "cake_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "cantaloupe": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "raw"
+  },
+  "cassava": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "chanterelle": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "cheese": {
+    "typical_g": 40,
+    "min_g": 20,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "chicken_broth": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "chicken_fat": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "chicken_wings": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "chocolate_chips": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 60,
+    "state": "ready_to_eat"
+  },
+  "clams": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "coconut_extract": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 10,
+    "state": "ready_to_use"
+  },
+  "coffee_beans": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 20,
+    "state": "dry"
+  },
+  "crab_legs": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "cranberries": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "cream": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "curry_powder": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dandelion_greens": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "deer": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "dried_allspice": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_basil": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_chives": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_cinnamon": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_cloves": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_dill_weed": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_galangal": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_ginger": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_lemongrass": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_nutmeg": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_oregano": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_parsley": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_rosemary": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_tarragon": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "dried_thyme": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "duck_fat": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "dungeness_crab": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "eels": {
+    "typical_g": 120,
+    "min_g": 70,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "eggs": {
+    "typical_g": 50,
+    "min_g": 40,
+    "max_g": 100,
+    "state": "raw"
+  },
+  "enoki": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "escarole": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "fennel_bulb": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "fillet": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "fish": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "fish_stock": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "garam_masala": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "garlic_powder": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "goji_berries": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "grade_a_maple_syrup": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "green_cabbage": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "green_tea": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "ground_cardamom": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_cayenne_pepper": {
+    "typical_g": 1,
+    "min_g": 0.3,
+    "max_g": 5,
+    "state": "dry"
+  },
+  "ground_cinnamon": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_cloves": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_coriander": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_cumin": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_garlic_powder": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_ginger": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_nutmeg": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_onion_powder": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_paprika": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "ground_turmeric": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "haddock": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "ham": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "hen_of_the_woods": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "herbal_tea": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "honeydew_melon": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "raw"
+  },
+  "hot_sauce": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "kingsnake": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "lemon_zest": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 8,
+    "state": "raw"
+  },
+  "lettuce": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "lobster_tail": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "marinara_sauce": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "meatballs": {
+    "typical_g": 140,
+    "min_g": 80,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "morel": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "mustard_greens": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "napa_cabbage": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "nappa_cabbage": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "nectarines": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "onion_powder": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "orange_zest": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 8,
+    "state": "raw"
+  },
+  "oyster_mushroom": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "pandan_extract": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 10,
+    "state": "ready_to_use"
+  },
+  "pastry_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "peaches": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "pepper": {
+    "typical_g": 1,
+    "min_g": 0.3,
+    "max_g": 5,
+    "state": "dry"
+  },
+  "pizza_sauce": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "plantain": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "plums": {
+    "typical_g": 130,
+    "min_g": 70,
+    "max_g": 250,
+    "state": "raw"
+  },
+  "porcini": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "pork_chops": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "pork_fat": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "portobello": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "prawns": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "rapini": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "raspberries": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "raw_honey": {
+    "typical_g": 20,
+    "min_g": 5,
+    "max_g": 40,
+    "state": "ready_to_eat"
+  },
+  "red_cabbage": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "rhubarb": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "ribs": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "rockmelon": {
+    "typical_g": 200,
+    "min_g": 100,
+    "max_g": 400,
+    "state": "raw"
+  },
+  "rosemary": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "safflower_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "salt": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 6,
+    "state": "dry"
+  },
+  "sausages": {
+    "typical_g": 80,
+    "min_g": 40,
+    "max_g": 150,
+    "state": "ready_to_eat"
+  },
+  "savoy_cabbage": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "self-raising_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "shank": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "shiitake": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "short_ribs": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "sirloin": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "snail": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "snakehead": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "snow_crab": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "sour_cream": {
+    "typical_g": 30,
+    "min_g": 15,
+    "max_g": 80,
+    "state": "ready_to_eat"
+  },
+  "spanish_mackerel": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "spinach_beet": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "star_anise": {
+    "typical_g": 1,
+    "min_g": 0.2,
+    "max_g": 3,
+    "state": "dry"
+  },
+  "steak": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "stone_crab": {
+    "typical_g": 120,
+    "min_g": 60,
+    "max_g": 220,
+    "state": "cooked"
+  },
+  "strawberries": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "raw"
+  },
+  "swiss_chard": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "taco_seasoning": {
+    "typical_g": 2,
+    "min_g": 0.5,
+    "max_g": 8,
+    "state": "dry"
+  },
+  "tea_leaves": {
+    "typical_g": 3,
+    "min_g": 1,
+    "max_g": 6,
+    "state": "dry"
+  },
+  "tenderloin": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  },
+  "teriyaki_sauce": {
+    "typical_g": 20,
+    "min_g": 10,
+    "max_g": 50,
+    "state": "ready_to_eat"
+  },
+  "thyme": {
+    "typical_g": 10,
+    "min_g": 3,
+    "max_g": 25,
+    "state": "raw"
+  },
+  "truffle": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 200,
+    "state": "cooked"
+  },
+  "turbinado_sugar": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "dry"
+  },
+  "turnip_greens": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "raw"
+  },
+  "vegetable_broth": {
+    "typical_g": 250,
+    "min_g": 100,
+    "max_g": 500,
+    "state": "ready_to_drink"
+  },
+  "vegetable_oil": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 25,
+    "state": "ready_to_use"
+  },
+  "vegetables": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 250,
+    "state": "cooked"
+  },
+  "water_chestnut": {
+    "typical_g": 100,
+    "min_g": 50,
+    "max_g": 220,
+    "state": "raw"
+  },
+  "white_sugar": {
+    "typical_g": 10,
+    "min_g": 5,
+    "max_g": 30,
+    "state": "dry"
+  },
+  "whole_wheat_flour": {
+    "typical_g": 50,
+    "min_g": 20,
+    "max_g": 120,
+    "state": "dry"
+  },
+  "yam": {
+    "typical_g": 180,
+    "min_g": 100,
+    "max_g": 350,
+    "state": "cooked"
+  },
+  "yellowfin": {
+    "typical_g": 150,
+    "min_g": 80,
+    "max_g": 300,
+    "state": "cooked"
+  }
+}

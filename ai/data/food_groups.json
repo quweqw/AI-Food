@@ -1,0 +1,3742 @@
+{
+  "chicken": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "rice": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "egg": {
+    "category": "protein",
+    "subcategory": "eggs",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "beef": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "potato": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "low_fat", "fiber"]
+  },
+  "shrimp": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "pasta": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "noodles": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "medium_fat"]
+  },
+  "salmon": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "high_fat", "animal", "omega_3"]
+  },
+  "tuna": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "turkey": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "pork": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "lamb": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "cottage_cheese_5": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "milk_2_5": {
+    "category": "dairy",
+    "subcategory": "milk",
+    "tags": ["medium_fat", "animal"]
+  },
+  "yogurt_natural_2": {
+    "category": "dairy",
+    "subcategory": "yogurt",
+    "tags": ["medium_fat", "animal", "probiotic"]
+  },
+  "kefir_1": {
+    "category": "dairy",
+    "subcategory": "fermented",
+    "tags": ["low_fat", "animal", "probiotic"]
+  },
+  "cheese_russian": {
+    "category": "dairy",
+    "subcategory": "cheese",
+    "tags": ["high_fat", "high_protein", "animal"]
+  },
+  "broccoli": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "spinach": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "fiber", "iron"]
+  },
+  "tomato": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "cucumber": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "water_rich"]
+  },
+  "carrot": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "vitamin_a"]
+  },
+  "onion": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["low_calorie", "flavor"]
+  },
+  "garlic": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["flavor", "antioxidant"]
+  },
+  "bell_pepper": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "vitamin_c"]
+  },
+  "mushroom": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "cabbage": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "apple": {
+    "category": "fruit",
+    "subcategory": "pome",
+    "tags": ["fiber", "vitamin_c"]
+  },
+  "banana": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["high_carb", "potassium"]
+  },
+  "orange": {
+    "category": "fruit",
+    "subcategory": "citrus",
+    "tags": ["vitamin_c", "fiber"]
+  },
+  "strawberry": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["low_calorie", "vitamin_c", "antioxidant"]
+  },
+  "avocado": {
+    "category": "fat",
+    "subcategory": "fruit",
+    "tags": ["high_fat", "fiber", "healthy_fats"]
+  },
+  "grapes": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["antioxidant", "sugar"]
+  },
+  "oat_flakes_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "low_fat"]
+  },
+  "buckwheat_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "low_fat", "fiber"]
+  },
+  "bread_white": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "lentils_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "high_protein", "fiber", "plant"]
+  },
+  "chickpeas_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "medium_protein", "fiber", "plant"]
+  },
+  "beans_red_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "protein", "fiber", "plant"]
+  },
+  "peas_green": {
+    "category": "vegetable",
+    "subcategory": "legumes",
+    "tags": ["fiber", "low_fat", "protein"]
+  },
+  "corn_sweet": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber"]
+  },
+  "sweet_potato": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "fiber", "vitamin_a"]
+  },
+  "almonds": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "high_protein", "fiber", "healthy_fats"]
+  },
+  "peanuts": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "high_protein", "fiber"]
+  },
+  "walnuts": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "high_protein", "omega_3"]
+  },
+  "sunflower_seeds": {
+    "category": "fat",
+    "subcategory": "seeds",
+    "tags": ["high_fat", "high_protein", "fiber"]
+  },
+  "honey": {
+    "category": "sweetener",
+    "subcategory": "natural",
+    "tags": ["high_carb", "sugar"]
+  },
+  "sugar": {
+    "category": "sweetener",
+    "subcategory": "refined",
+    "tags": ["high_carb", "empty_calories"]
+  },
+  "butter": {
+    "category": "fat",
+    "subcategory": "dairy",
+    "tags": ["high_fat", "animal", "energy_dense"]
+  },
+  "sunflower_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "energy_dense", "plant"]
+  },
+  "olive_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "energy_dense", "healthy_fats", "plant"]
+  },
+  "mayonnaise": {
+    "category": "fat",
+    "subcategory": "sauce",
+    "tags": ["high_fat", "energy_dense", "processed"]
+  },
+  "sour_cream_20": {
+    "category": "dairy",
+    "subcategory": "cream",
+    "tags": ["medium_fat", "animal"]
+  },
+  "cream_cheese": {
+    "category": "dairy",
+    "subcategory": "cheese",
+    "tags": ["high_fat", "animal", "processed"]
+  },
+  "mozzarella": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "parmesan": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "feta": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["medium_protein", "high_fat", "animal", "brined"]
+  },
+  "tofu": {
+    "category": "protein",
+    "subcategory": "plant_based",
+    "tags": ["medium_protein", "low_fat", "plant", "vegan"]
+  },
+  "soy_milk": {
+    "category": "dairy",
+    "subcategory": "plant_milk",
+    "tags": ["low_fat", "plant", "vegan"]
+  },
+  "cod": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal", "white_fish"]
+  },
+  "pollock": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal", "white_fish"]
+  },
+  "trout": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal", "omega_3"]
+  },
+  "mackerel": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "high_fat", "animal", "omega_3"]
+  },
+  "squid": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["medium_protein", "low_fat", "animal", "low_carb"]
+  },
+  "mussels": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["low_fat", "medium_protein", "animal", "vitamin_b12"]
+  },
+  "crab": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "lobster": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "beets": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "low_calorie", "antioxidant"]
+  },
+  "radish": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "eggplant": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "zucchini": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "water_rich"]
+  },
+  "cauliflower": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "brussels_sprouts": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["fiber", "vitamin_c", "low_calorie"]
+  },
+  "asparagus": {
+    "category": "vegetable",
+    "subcategory": "stalk",
+    "tags": ["low_calorie", "fiber", "vitamin_k"]
+  },
+  "celery": {
+    "category": "vegetable",
+    "subcategory": "stalk",
+    "tags": ["low_calorie", "water_rich"]
+  },
+  "leek": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["fiber", "low_calorie"]
+  },
+  "pumpkin": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "fiber", "vitamin_a"]
+  },
+  "pear": {
+    "category": "fruit",
+    "subcategory": "pome",
+    "tags": ["fiber", "vitamin_c"]
+  },
+  "peach": {
+    "category": "fruit",
+    "subcategory": "stone_fruit",
+    "tags": ["fiber", "vitamin_c", "low_calorie"]
+  },
+  "plum": {
+    "category": "fruit",
+    "subcategory": "stone_fruit",
+    "tags": ["fiber", "antioxidant"]
+  },
+  "apricot": {
+    "category": "fruit",
+    "subcategory": "stone_fruit",
+    "tags": ["fiber", "vitamin_a"]
+  },
+  "cherry": {
+    "category": "fruit",
+    "subcategory": "stone_fruit",
+    "tags": ["antioxidant", "vitamin_c"]
+  },
+  "kiwi": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "fiber", "low_calorie"]
+  },
+  "mango": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "vitamin_a", "fiber"]
+  },
+  "pineapple": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "bromelain"]
+  },
+  "watermelon": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["low_calorie", "water_rich", "lycopene"]
+  },
+  "melon": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["low_calorie", "vitamin_c"]
+  },
+  "lemon": {
+    "category": "fruit",
+    "subcategory": "citrus",
+    "tags": ["vitamin_c", "flavor"]
+  },
+  "lime": {
+    "category": "fruit",
+    "subcategory": "citrus",
+    "tags": ["vitamin_c", "flavor"]
+  },
+  "grapefruit": {
+    "category": "fruit",
+    "subcategory": "citrus",
+    "tags": ["vitamin_c", "fiber", "antioxidant"]
+  },
+  "pomegranate": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["antioxidant", "fiber"]
+  },
+  "persimmon": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["fiber", "high_carb", "vitamin_a"]
+  },
+  "figs": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["fiber", "sugar"]
+  },
+  "coconut": {
+    "category": "fat",
+    "subcategory": "fruit",
+    "tags": ["high_fat", "fiber", "plant"]
+  },
+  "raisins": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["high_carb", "sugar", "fiber"]
+  },
+  "prunes": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["high_carb", "fiber", "sugar"]
+  },
+  "dried_apricots": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["high_carb", "fiber", "vitamin_a"]
+  },
+  "millet_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "low_fat"]
+  },
+  "barley_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "low_fat"]
+  },
+  "corn_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "energy_dense", "plant"]
+  },
+  "flaxseed_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "energy_dense", "omega_3", "plant"]
+  },
+  "sesame_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "energy_dense", "plant"]
+  },
+  "ketchup": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["low_fat", "sugar", "processed"]
+  },
+  "mustard": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["low_calorie", "low_fat", "flavor"]
+  },
+  "soy_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["high_sodium", "flavor", "fermented"]
+  },
+  "vinegar": {
+    "category": "condiment",
+    "subcategory": "acid",
+    "tags": ["low_calorie", "flavor"]
+  },
+  "chicken_thigh": {
+    "category": "protein",
+    "subcategory": "meat",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "duck": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "bacon": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["high_protein", "high_fat", "high_sodium", "animal"]
+  },
+  "sausage": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["medium_protein", "high_fat", "processed"]
+  },
+  "veal": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "rabbit": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "herring": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal", "omega_3"]
+  },
+  "sardine": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal", "omega_3"]
+  },
+  "flounder": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "halibut": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "octopus": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "oysters": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["low_fat", "zinc", "animal"]
+  },
+  "scallops": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "quinoa_raw": {
+    "category": "carbs",
+    "subcategory": "pseudograin",
+    "tags": ["high_carb", "complete_protein", "fiber", "plant"]
+  },
+  "bulgur_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "low_fat"]
+  },
+  "couscous_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "brown_rice_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "low_fat"]
+  },
+  "wild_rice_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "low_fat"]
+  },
+  "cashew": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "high_protein", "plant"]
+  },
+  "pistachios": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "high_protein", "fiber", "plant"]
+  },
+  "hazelnuts": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "fiber", "plant"]
+  },
+  "pecan": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "fiber", "plant"]
+  },
+  "macadamia": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "plant"]
+  },
+  "brazil_nuts": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "selenium", "plant"]
+  },
+  "sesame_seeds": {
+    "category": "fat",
+    "subcategory": "seeds",
+    "tags": ["high_fat", "fiber", "calcium", "plant"]
+  },
+  "flax_seeds": {
+    "category": "fat",
+    "subcategory": "seeds",
+    "tags": ["high_fat", "fiber", "omega_3", "plant"]
+  },
+  "chia_seeds": {
+    "category": "fat",
+    "subcategory": "seeds",
+    "tags": ["high_fat", "fiber", "omega_3", "plant"]
+  },
+  "poppy_seeds": {
+    "category": "fat",
+    "subcategory": "seeds",
+    "tags": ["high_fat", "fiber", "plant"]
+  },
+  "pumpkin_seeds": {
+    "category": "fat",
+    "subcategory": "seeds",
+    "tags": ["high_fat", "high_protein", "zinc", "plant"]
+  },
+  "green_beans": {
+    "category": "vegetable",
+    "subcategory": "legumes",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "artichoke": {
+    "category": "vegetable",
+    "subcategory": "flower",
+    "tags": ["fiber", "antioxidant", "low_calorie"]
+  },
+  "kohlrabi": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "fennel": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "parsnip": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "vitamin_c", "medium_carb"]
+  },
+  "turnip": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "rutabaga": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "arugula": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "fiber", "vitamin_k"]
+  },
+  "dill": {
+    "category": "herb",
+    "subcategory": "fresh",
+    "tags": ["flavor", "low_calorie", "antioxidant"]
+  },
+  "parsley": {
+    "category": "herb",
+    "subcategory": "fresh",
+    "tags": ["flavor", "low_calorie", "vitamin_k"]
+  },
+  "cilantro": {
+    "category": "herb",
+    "subcategory": "fresh",
+    "tags": ["flavor", "low_calorie", "antioxidant"]
+  },
+  "basil": {
+    "category": "herb",
+    "subcategory": "fresh",
+    "tags": ["flavor", "low_calorie", "antioxidant"]
+  },
+  "mint": {
+    "category": "herb",
+    "subcategory": "fresh",
+    "tags": ["flavor", "low_calorie", "digestive"]
+  },
+  "green_onion": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["low_calorie", "vitamin_c", "flavor"]
+  },
+  "peanut_butter": {
+    "category": "fat",
+    "subcategory": "nut_butter",
+    "tags": ["high_fat", "high_protein", "energy_dense", "plant"]
+  },
+  "nutella": {
+    "category": "sweetener",
+    "subcategory": "spread",
+    "tags": ["high_fat", "high_sugar", "processed"]
+  },
+  "jam": {
+    "category": "sweetener",
+    "subcategory": "spread",
+    "tags": ["high_sugar", "low_fat"]
+  },
+  "marmalade": {
+    "category": "sweetener",
+    "subcategory": "spread",
+    "tags": ["high_sugar", "low_fat"]
+  },
+  "marshmallow": {
+    "category": "sweetener",
+    "subcategory": "confectionery",
+    "tags": ["high_sugar", "low_fat"]
+  },
+  "halva": {
+    "category": "sweetener",
+    "subcategory": "confectionery",
+    "tags": ["high_fat", "high_sugar", "sesame"]
+  },
+  "dark_chocolate": {
+    "category": "sweetener",
+    "subcategory": "chocolate",
+    "tags": ["high_fat", "high_sugar", "antioxidant"]
+  },
+  "milk_chocolate": {
+    "category": "sweetener",
+    "subcategory": "chocolate",
+    "tags": ["high_fat", "high_sugar", "dairy"]
+  },
+  "white_chocolate": {
+    "category": "sweetener",
+    "subcategory": "chocolate",
+    "tags": ["high_fat", "high_sugar", "dairy"]
+  },
+  "cocoa_powder": {
+    "category": "other",
+    "subcategory": "powder",
+    "tags": ["low_fat", "antioxidant", "fiber"]
+  },
+  "coconut_milk": {
+    "category": "fat",
+    "subcategory": "plant_milk",
+    "tags": ["high_fat", "plant", "vegan"]
+  },
+  "coconut_cream": {
+    "category": "fat",
+    "subcategory": "cream",
+    "tags": ["high_fat", "plant", "energy_dense"]
+  },
+  "coconut_water": {
+    "category": "beverage",
+    "subcategory": "plant_water",
+    "tags": ["low_calorie", "electrolytes"]
+  },
+  "maple_syrup": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["high_sugar", "low_fat", "natural"]
+  },
+  "agave_syrup": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["high_sugar", "low_fat", "natural"]
+  },
+  "molasses": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["high_sugar", "minerals", "low_fat"]
+  },
+  "fish_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["high_sodium", "flavor", "fermented"]
+  },
+  "oyster_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["high_sodium", "flavor", "sweet"]
+  },
+  "worcestershire_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["low_calorie", "flavor", "fermented"]
+  },
+  "bbq_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["sugar", "flavor", "processed"]
+  },
+  "salsa": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["low_calorie", "low_fat", "vegetable"]
+  },
+  "guacamole": {
+    "category": "fat",
+    "subcategory": "dip",
+    "tags": ["high_fat", "fiber", "plant"]
+  },
+  "hummus": {
+    "category": "protein",
+    "subcategory": "dip",
+    "tags": ["medium_fat", "fiber", "plant", "chickpea"]
+  },
+  "pesto": {
+    "category": "fat",
+    "subcategory": "sauce",
+    "tags": ["high_fat", "herb", "cheese"]
+  },
+  "tahini": {
+    "category": "fat",
+    "subcategory": "seed_butter",
+    "tags": ["high_fat", "high_protein", "sesame", "plant"]
+  },
+  "almond_milk": {
+    "category": "beverage",
+    "subcategory": "plant_milk",
+    "tags": ["low_calorie", "low_fat", "vegan"]
+  },
+  "oat_milk": {
+    "category": "beverage",
+    "subcategory": "plant_milk",
+    "tags": ["low_fat", "vegan", "carbs"]
+  },
+  "rice_milk": {
+    "category": "beverage",
+    "subcategory": "plant_milk",
+    "tags": ["low_fat", "vegan", "high_carb"]
+  },
+  "coconut_milk_beverage": {
+    "category": "beverage",
+    "subcategory": "plant_milk",
+    "tags": ["low_calorie", "low_carb", "vegan"]
+  },
+  "coconut_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "saturated", "plant"]
+  },
+  "palm_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "saturated", "plant"]
+  },
+  "canola_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "unsaturated", "plant"]
+  },
+  "peanut_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "unsaturated", "plant"]
+  },
+  "grapeseed_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "unsaturated", "plant"]
+  },
+  "avocado_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "unsaturated", "plant"]
+  },
+  "walnut_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "unsaturated", "plant", "omega_3"]
+  },
+  "hazelnut_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "unsaturated", "plant"]
+  },
+  "wheat_germ": {
+    "category": "carbs",
+    "subcategory": "grain_product",
+    "tags": ["high_protein", "fiber", "vitamin_e"]
+  },
+  "wheat_bran": {
+    "category": "carbs",
+    "subcategory": "fiber_source",
+    "tags": ["high_fiber", "low_fat"]
+  },
+  "oat_bran": {
+    "category": "carbs",
+    "subcategory": "fiber_source",
+    "tags": ["high_fiber", "beta_glucan", "low_fat"]
+  },
+  "rice_bran": {
+    "category": "fat",
+    "subcategory": "bran",
+    "tags": ["high_fat", "fiber", "antioxidant"]
+  },
+  "corn_bran": {
+    "category": "carbs",
+    "subcategory": "fiber_source",
+    "tags": ["high_fiber", "low_fat"]
+  },
+  "psyllium_husk": {
+    "category": "carbs",
+    "subcategory": "fiber_source",
+    "tags": ["high_fiber", "soluble_fiber", "low_calorie"]
+  },
+  "gelatin": {
+    "category": "other",
+    "subcategory": "gelling_agent",
+    "tags": ["high_protein", "collagen"]
+  },
+  "agar_agar": {
+    "category": "other",
+    "subcategory": "gelling_agent",
+    "tags": ["fiber", "plant", "vegan"]
+  },
+  "yeast_nutritional": {
+    "category": "other",
+    "subcategory": "supplement",
+    "tags": ["high_protein", "b_vitamins", "savory"]
+  },
+  "turkey_breast_skinless": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "salmon_atlantic_farmed": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "high_fat", "omega_3", "animal"]
+  },
+  "tuna_canned_in_water": {
+    "category": "protein",
+    "subcategory": "canned_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "pork_tenderloin_lean": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "lamb_leg_lean": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "cottage_cheese_lowfat_2": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "mozzarella_whole_milk": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "cheddar_cheese": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "parmesan_cheese": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["high_protein", "high_fat", "aged", "animal"]
+  },
+  "feta_cheese": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["medium_protein", "high_fat", "brined", "animal"]
+  },
+  "ricotta_whole_milk": {
+    "category": "protein",
+    "subcategory": "dairy",
+    "tags": ["medium_fat", "medium_protein", "animal"]
+  },
+  "cream_cheese_regular": {
+    "category": "fat",
+    "subcategory": "dairy",
+    "tags": ["high_fat", "low_protein", "animal"]
+  },
+  "tofu_firm": {
+    "category": "protein",
+    "subcategory": "plant_based",
+    "tags": ["high_protein", "medium_fat", "vegan", "plant"]
+  },
+  "cod_atlantic_raw": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "trout_rainbow_farmed": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "omega_3", "animal"]
+  },
+  "mackerel_atlantic_raw": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "high_fat", "omega_3", "animal"]
+  },
+  "sardine_atlantic_canned_oil": {
+    "category": "protein",
+    "subcategory": "canned_fish",
+    "tags": ["high_protein", "high_fat", "omega_3", "animal"]
+  },
+  "herring_atlantic_raw": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "omega_3", "animal"]
+  },
+  "tilapia_raw": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "shrimp_mixed_species_raw": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "lobster_northern_raw": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "crab_blue_raw": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "mussel_blue_raw": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["medium_protein", "low_fat", "minerals", "animal"]
+  },
+  "oyster_eastern_raw": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["low_fat", "zinc", "animal"]
+  },
+  "scallop_mixed_species_raw": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "broccoli_raw": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "spinach_raw": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "iron", "vitamin_k"]
+  },
+  "kale_raw": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "fiber", "vitamin_k"]
+  },
+  "arugula_raw": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "pepper", "vitamin_k"]
+  },
+  "cucumber_raw": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "water_rich"]
+  },
+  "zucchini_raw": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "water_rich"]
+  },
+  "eggplant_raw": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "bell_pepper_green_raw": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "vitamin_c"]
+  },
+  "tomato_red_raw": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["low_calorie", "lycopene"]
+  },
+  "onion_raw": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["low_calorie", "flavor"]
+  },
+  "garlic_raw": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["flavor", "antioxidant"]
+  },
+  "carrot_raw": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "vitamin_a"]
+  },
+  "potato_russet_raw": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "fiber"]
+  },
+  "sweet_potato_raw": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "fiber", "vitamin_a"]
+  },
+  "corn_sweet_yellow_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber"]
+  },
+  "peas_green_raw": {
+    "category": "vegetable",
+    "subcategory": "legumes",
+    "tags": ["low_fat", "protein", "fiber"]
+  },
+  "green_beans_raw": {
+    "category": "vegetable",
+    "subcategory": "legumes",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "asparagus_raw": {
+    "category": "vegetable",
+    "subcategory": "stalk",
+    "tags": ["low_calorie", "fiber", "vitamin_k"]
+  },
+  "mushroom_white_raw": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "cauliflower_raw": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "brussels_sprouts_raw": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "cabbage_green_raw": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "beetroot_raw": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "folate"]
+  },
+  "radish_raw": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["low_calorie", "vitamin_c"]
+  },
+  "celery_raw": {
+    "category": "vegetable",
+    "subcategory": "stalk",
+    "tags": ["low_calorie", "water_rich"]
+  },
+  "beef_liver": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "low_fat", "iron", "vitamin_a", "animal"]
+  },
+  "chicken_liver": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "medium_fat", "iron", "animal"]
+  },
+  "pork_liver": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "beef_heart": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "low_fat", "coq10", "animal"]
+  },
+  "chicken_heart": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "pork_heart": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "beef_tongue": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["medium_protein", "high_fat", "animal"]
+  },
+  "pork_tongue": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["medium_protein", "high_fat", "animal"]
+  },
+  "beef_kidney": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "pork_kidney": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "chicken_gizzards": {
+    "category": "protein",
+    "subcategory": "organ_meat",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "goose": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat", "animal", "poultry"]
+  },
+  "quail": {
+    "category": "protein",
+    "subcategory": "poultry",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "venison": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "animal", "game"]
+  },
+  "elk": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "animal", "game"]
+  },
+  "bison": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "catfish": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["medium_protein", "low_fat", "animal"]
+  },
+  "carp": {
+    "category": "protein",
+    "subcategory": "freshwater_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "pike": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "perch": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "zander": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "sturgeon": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "beluga": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "sea_bass": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "sea_bream": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "monkfish": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "swordfish": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "caviar_red": {
+    "category": "protein",
+    "subcategory": "fish_roe",
+    "tags": ["high_protein", "high_fat", "animal", "luxury"]
+  },
+  "caviar_black": {
+    "category": "protein",
+    "subcategory": "fish_roe",
+    "tags": ["high_protein", "high_fat", "animal", "luxury"]
+  },
+  "pollock_roe": {
+    "category": "protein",
+    "subcategory": "fish_roe",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "cod_roe": {
+    "category": "protein",
+    "subcategory": "fish_roe",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "surimi": {
+    "category": "protein",
+    "subcategory": "processed_seafood",
+    "tags": ["medium_protein", "low_fat", "processed"]
+  },
+  "seaweed_kelp": {
+    "category": "vegetable",
+    "subcategory": "seaweed",
+    "tags": ["low_calorie", "iodine", "minerals"]
+  },
+  "nori": {
+    "category": "vegetable",
+    "subcategory": "seaweed",
+    "tags": ["low_calorie", "iodine", "vitamin_b12"]
+  },
+  "spirulina_dried": {
+    "category": "other",
+    "subcategory": "algae",
+    "tags": ["high_protein", "antioxidant", "superfood"]
+  },
+  "chlorella_dried": {
+    "category": "other",
+    "subcategory": "algae",
+    "tags": ["high_protein", "antioxidant", "superfood"]
+  },
+  "wheat_flour_white": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "low_fat", "refined"]
+  },
+  "wheat_flour_whole": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "fiber", "whole_grain"]
+  },
+  "rye_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "fiber", "whole_grain"]
+  },
+  "corn_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "gluten_free"]
+  },
+  "rice_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "gluten_free"]
+  },
+  "coconut_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "high_fiber", "gluten_free"]
+  },
+  "almond_flour": {
+    "category": "fat",
+    "subcategory": "nut_flour",
+    "tags": ["high_fat", "high_protein", "gluten_free"]
+  },
+  "chickpea_flour": {
+    "category": "carbs",
+    "subcategory": "legume_flour",
+    "tags": ["high_carb", "high_protein", "gluten_free"]
+  },
+  "soy_flour": {
+    "category": "protein",
+    "subcategory": "legume_flour",
+    "tags": ["high_protein", "low_fat", "gluten_free"]
+  },
+  "baking_powder": {
+    "category": "other",
+    "subcategory": "leavening",
+    "tags": ["low_calorie", "sodium"]
+  },
+  "baking_soda": {
+    "category": "other",
+    "subcategory": "leavening",
+    "tags": ["zero_calorie", "sodium"]
+  },
+  "yeast_dried": {
+    "category": "other",
+    "subcategory": "leavening",
+    "tags": ["protein", "b_vitamins"]
+  },
+  "cornstarch": {
+    "category": "carbs",
+    "subcategory": "thickener",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "jerusalem_artichoke": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "inulin", "low_calorie"]
+  },
+  "chard": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "vitamin_k", "antioxidant"]
+  },
+  "collard_greens": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "fiber", "calcium"]
+  },
+  "watercress": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "vitamin_c", "pepper"]
+  },
+  "endive": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "fiber", "bitter"]
+  },
+  "radicchio": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "fiber", "bitter"]
+  },
+  "bamboo_shoots": {
+    "category": "vegetable",
+    "subcategory": "shoot",
+    "tags": ["low_calorie", "fiber", "low_fat"]
+  },
+  "lotus_root": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "vitamin_c", "low_fat"]
+  },
+  "taro": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "fiber", "gluten_free"]
+  },
+  "yuca": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "gluten_free"]
+  },
+  "jicama": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["low_calorie", "fiber", "vitamin_c"]
+  },
+  "daikon": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["low_calorie", "vitamin_c", "digestive"]
+  },
+  "burdock": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "antioxidant", "low_calorie"]
+  },
+  "okra": {
+    "category": "vegetable",
+    "subcategory": "fruit_vegetable",
+    "tags": ["fiber", "low_calorie", "mucilage"]
+  },
+  "salsify": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "low_fat", "prebiotic"]
+  },
+  "black_salsify": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["fiber", "low_fat", "minerals"]
+  },
+  "sea_buckthorn": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["vitamin_c", "antioxidant", "medium_fat"]
+  },
+  "cloudberry": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["vitamin_c", "antioxidant", "fiber"]
+  },
+  "lingonberry": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["antioxidant", "low_sugar", "fiber"]
+  },
+  "gooseberry": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["vitamin_c", "fiber", "low_calorie"]
+  },
+  "elderberry": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["antioxidant", "immune_support", "fiber"]
+  },
+  "quince": {
+    "category": "fruit",
+    "subcategory": "pome",
+    "tags": ["fiber", "vitamin_c", "pectin"]
+  },
+  "lychee": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "sugar", "antioxidant"]
+  },
+  "rambutan": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "sugar", "fiber"]
+  },
+  "longan": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "sugar", "low_fat"]
+  },
+  "durian": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["high_carb", "high_fat", "energy_dense", "sugar"]
+  },
+  "jackfruit": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["fiber", "vitamin_c", "high_carb"]
+  },
+  "passion_fruit": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["fiber", "vitamin_c", "antioxidant", "seeds"]
+  },
+  "dragon_fruit": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["fiber", "antioxidant", "low_calorie"]
+  },
+  "star_fruit": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "low_calorie", "antioxidant"]
+  },
+  "guava": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "fiber", "antioxidant"]
+  },
+  "papaya": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["vitamin_c", "digestive_enzymes", "low_calorie"]
+  },
+  "kumquat": {
+    "category": "fruit",
+    "subcategory": "citrus",
+    "tags": ["vitamin_c", "fiber", "edible_peel"]
+  },
+  "tamarind": {
+    "category": "fruit",
+    "subcategory": "tropical",
+    "tags": ["high_carb", "sugar", "fiber", "antioxidant"]
+  },
+  "dates": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["high_sugar", "fiber", "minerals", "energy_dense"]
+  },
+  "figs_dried": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["high_sugar", "fiber", "minerals"]
+  },
+  "cranberry_dried": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["high_sugar", "antioxidant", "low_fat"]
+  },
+  "goji_berries_dried": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["high_protein", "antioxidant", "fiber", "vitamin_a"]
+  },
+  "mung_beans_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "high_protein", "fiber", "plant"]
+  },
+  "adzuki_beans_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "protein", "fiber", "plant"]
+  },
+  "black_beans_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "high_protein", "fiber", "plant"]
+  },
+  "pinto_beans_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "high_protein", "fiber", "plant"]
+  },
+  "lima_beans_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "protein", "fiber", "plant"]
+  },
+  "fava_beans_raw": {
+    "category": "carbs",
+    "subcategory": "legumes",
+    "tags": ["high_carb", "high_protein", "fiber", "plant"]
+  },
+  "soybeans_raw": {
+    "category": "protein",
+    "subcategory": "legumes",
+    "tags": ["high_protein", "medium_fat", "fiber", "plant"]
+  },
+  "edamame": {
+    "category": "protein",
+    "subcategory": "legumes",
+    "tags": ["high_protein", "medium_fat", "fiber", "plant", "soy"]
+  },
+  "tempeh": {
+    "category": "protein",
+    "subcategory": "fermented_soy",
+    "tags": ["high_protein", "medium_fat", "fiber", "probiotic", "plant"]
+  },
+  "seitan": {
+    "category": "protein",
+    "subcategory": "wheat_protein",
+    "tags": ["high_protein", "low_fat", "vegan", "wheat"]
+  },
+  "turkey_leg": {
+    "category": "protein",
+    "subcategory": "poultry",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "duck_breast": {
+    "category": "protein",
+    "subcategory": "poultry",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "pheasant": {
+    "category": "protein",
+    "subcategory": "poultry",
+    "tags": ["high_protein", "low_fat", "game"]
+  },
+  "ostrich": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "game"]
+  },
+  "frog_legs": {
+    "category": "protein",
+    "subcategory": "exotic",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "crayfish": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal", "crustacean"]
+  },
+  "langoustine": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat", "animal", "crustacean"]
+  },
+  "sea_urchin": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "medium_fat", "animal", "delicacy"]
+  },
+  "abalone": {
+    "category": "protein",
+    "subcategory": "mollusk",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "whelk": {
+    "category": "protein",
+    "subcategory": "mollusk",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "conch": {
+    "category": "protein",
+    "subcategory": "mollusk",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "geoduck": {
+    "category": "protein",
+    "subcategory": "mollusk",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "smelt": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "mullet": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "grouper": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "snapper": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "mahi_mahi": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "pompano": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "bluefish": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "burbot": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "grayling": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "vendace": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat", "animal"]
+  },
+  "whitefish": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "medium_fat", "animal"]
+  },
+  "eel": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "high_fat", "animal", "omega_3"]
+  },
+  "lamprey": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "spelt_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "low_fat", "ancient_grain"]
+  },
+  "amaranth_raw": {
+    "category": "carbs",
+    "subcategory": "pseudograin",
+    "tags": ["high_carb", "protein", "fiber", "gluten_free"]
+  },
+  "teff_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "gluten_free", "minerals"]
+  },
+  "sorghum_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "fiber", "gluten_free"]
+  },
+  "triticale_raw": {
+    "category": "carbs",
+    "subcategory": "grains",
+    "tags": ["high_carb", "protein", "fiber"]
+  },
+  "hominy": {
+    "category": "carbs",
+    "subcategory": "corn_product",
+    "tags": ["high_carb", "low_fat", "processed"]
+  },
+  "popcorn_air_popped": {
+    "category": "carbs",
+    "subcategory": "snack",
+    "tags": ["high_carb", "fiber", "low_fat", "whole_grain"]
+  },
+  "pine_nuts": {
+    "category": "fat",
+    "subcategory": "nuts",
+    "tags": ["high_fat", "protein", "plant"]
+  },
+  "chestnuts": {
+    "category": "carbs",
+    "subcategory": "nuts",
+    "tags": ["high_carb", "low_fat", "fiber"]
+  },
+  "acorn_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "high_fat", "gluten_free"]
+  },
+  "carob_powder": {
+    "category": "other",
+    "subcategory": "powder",
+    "tags": ["fiber", "antioxidant", "caffeine_free"]
+  },
+  "matcha_powder": {
+    "category": "beverage",
+    "subcategory": "tea",
+    "tags": ["antioxidant", "caffeine", "high_protein"]
+  },
+  "coffee_brewed": {
+    "category": "beverage",
+    "subcategory": "caffeinated",
+    "tags": ["low_calorie", "antioxidant"]
+  },
+  "tea_black_brewed": {
+    "category": "beverage",
+    "subcategory": "tea",
+    "tags": ["low_calorie", "antioxidant", "caffeine"]
+  },
+  "tea_green_brewed": {
+    "category": "beverage",
+    "subcategory": "tea",
+    "tags": ["low_calorie", "antioxidant", "caffeine"]
+  },
+  "kombucha": {
+    "category": "beverage",
+    "subcategory": "fermented",
+    "tags": ["probiotic", "low_calorie", "sugar"]
+  },
+  "kvass": {
+    "category": "beverage",
+    "subcategory": "fermented",
+    "tags": ["probiotic", "low_abv"]
+  },
+  "cider_alcoholic": {
+    "category": "beverage",
+    "subcategory": "alcoholic",
+    "tags": ["sugar", "gluten_free"]
+  },
+  "beer_lager": {
+    "category": "beverage",
+    "subcategory": "alcoholic",
+    "tags": ["carbs", "moderate_calories"]
+  },
+  "wine_red": {
+    "category": "beverage",
+    "subcategory": "alcoholic",
+    "tags": ["antioxidant", "resveratrol", "low_sugar"]
+  },
+  "wine_white": {
+    "category": "beverage",
+    "subcategory": "alcoholic",
+    "tags": ["low_sugar", "antioxidant"]
+  },
+  "vodka": {
+    "category": "beverage",
+    "subcategory": "distilled",
+    "tags": ["low_carb", "alcohol"]
+  },
+  "whiskey": {
+    "category": "beverage",
+    "subcategory": "distilled",
+    "tags": ["low_carb", "alcohol"]
+  },
+  "rum": {
+    "category": "beverage",
+    "subcategory": "distilled",
+    "tags": ["low_carb", "alcohol"]
+  },
+  "gin": {
+    "category": "beverage",
+    "subcategory": "distilled",
+    "tags": ["low_carb", "alcohol"]
+  },
+  "sauerkraut": {
+    "category": "vegetable",
+    "subcategory": "fermented",
+    "tags": ["probiotic", "low_calorie", "fiber"]
+  },
+  "kimchi": {
+    "category": "vegetable",
+    "subcategory": "fermented",
+    "tags": ["probiotic", "spicy", "low_calorie"]
+  },
+  "pickles_cucumber": {
+    "category": "vegetable",
+    "subcategory": "pickled",
+    "tags": ["low_calorie", "sodium", "probiotic"]
+  },
+  "olives_green": {
+    "category": "fat",
+    "subcategory": "pickled",
+    "tags": ["high_fat", "sodium", "plant"]
+  },
+  "olives_black": {
+    "category": "fat",
+    "subcategory": "pickled",
+    "tags": ["high_fat", "sodium", "plant"]
+  },
+  "capers": {
+    "category": "condiment",
+    "subcategory": "pickled",
+    "tags": ["low_calorie", "sodium", "flavor"]
+  },
+  "sun_dried_tomatoes": {
+    "category": "vegetable",
+    "subcategory": "dried",
+    "tags": ["high_carb", "fiber", "lycopene", "intense_flavor"]
+  },
+  "anchovy_canned_oil": {
+    "category": "protein",
+    "subcategory": "canned_fish",
+    "tags": ["high_protein", "high_fat", "animal", "omega_3"]
+  },
+  "mackerel_canned_oil": {
+    "category": "protein",
+    "subcategory": "canned_fish",
+    "tags": ["high_protein", "high_fat", "animal", "omega_3"]
+  },
+  "corned_beef": {
+    "category": "protein",
+    "subcategory": "canned_meat",
+    "tags": ["high_protein", "high_fat", "high_sodium", "processed"]
+  },
+  "spam": {
+    "category": "protein",
+    "subcategory": "canned_meat",
+    "tags": ["medium_protein", "high_fat", "high_sodium", "processed"]
+  },
+  "liverwurst": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["medium_protein", "high_fat", "organ", "spread"]
+  },
+  "mortadella": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["medium_protein", "high_fat", "italian"]
+  },
+  "chorizo": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["high_protein", "high_fat", "spicy"]
+  },
+  "salami": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["high_protein", "high_fat", "fermented"]
+  },
+  "pepperoni": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["high_protein", "high_fat", "spicy"]
+  },
+  "prosciutto": {
+    "category": "protein",
+    "subcategory": "cured_meat",
+    "tags": ["high_protein", "medium_fat", "dry_cured"]
+  },
+  "pancetta": {
+    "category": "protein",
+    "subcategory": "cured_meat",
+    "tags": ["medium_protein", "high_fat", "pork_belly"]
+  },
+  "guanciale": {
+    "category": "protein",
+    "subcategory": "cured_meat",
+    "tags": ["low_protein", "very_high_fat", "pork_jowl"]
+  },
+  "lard": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "energy_dense", "cooking_fat"]
+  },
+  "suet": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "energy_dense", "beef_fat"]
+  },
+  "tallow": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "energy_dense", "rendered"]
+  },
+  "schmaltz": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "energy_dense", "chicken_fat"]
+  },
+  "ghee": {
+    "category": "fat",
+    "subcategory": "clarified_butter",
+    "tags": ["high_fat", "lactose_free", "cooking_fat"]
+  },
+  "margarine": {
+    "category": "fat",
+    "subcategory": "plant_based",
+    "tags": ["high_fat", "processed", "dairy_free"]
+  },
+  "shortening": {
+    "category": "fat",
+    "subcategory": "hydrogenated",
+    "tags": ["high_fat", "processed", "baking"]
+  },
+  "heavy_cream": {
+    "category": "fat",
+    "subcategory": "dairy",
+    "tags": ["high_fat", "dairy", "whipping"]
+  },
+  "half_and_half": {
+    "category": "dairy",
+    "subcategory": "cream",
+    "tags": ["medium_fat", "dairy", "coffee"]
+  },
+  "evaporated_milk": {
+    "category": "dairy",
+    "subcategory": "canned_milk",
+    "tags": ["medium_fat", "dairy", "concentrated"]
+  },
+  "condensed_milk": {
+    "category": "sweetener",
+    "subcategory": "dairy",
+    "tags": ["high_sugar", "medium_fat", "thick"]
+  },
+  "powdered_milk": {
+    "category": "dairy",
+    "subcategory": "dry_milk",
+    "tags": ["high_protein", "high_fat", "shelf_stable"]
+  },
+  "whey_powder": {
+    "category": "protein",
+    "subcategory": "supplement",
+    "tags": ["very_high_protein", "low_fat", "dairy"]
+  },
+  "casein_powder": {
+    "category": "protein",
+    "subcategory": "supplement",
+    "tags": ["very_high_protein", "low_fat", "slow_digesting"]
+  },
+  "soy_protein_powder": {
+    "category": "protein",
+    "subcategory": "supplement",
+    "tags": ["very_high_protein", "low_fat", "plant", "vegan"]
+  },
+  "pea_protein_powder": {
+    "category": "protein",
+    "subcategory": "supplement",
+    "tags": ["very_high_protein", "medium_fat", "plant", "vegan"]
+  },
+  "hemp_protein_powder": {
+    "category": "protein",
+    "subcategory": "supplement",
+    "tags": ["high_protein", "medium_fat", "plant", "fiber", "vegan"]
+  },
+  "egg_white_powder": {
+    "category": "protein",
+    "subcategory": "supplement",
+    "tags": ["very_high_protein", "zero_fat", "animal"]
+  },
+  "gelatin_powder": {
+    "category": "other",
+    "subcategory": "gelling_agent",
+    "tags": ["very_high_protein", "collagen"]
+  },
+  "pectin": {
+    "category": "other",
+    "subcategory": "thickener",
+    "tags": ["fiber", "gelling", "plant"]
+  },
+  "xanthan_gum": {
+    "category": "other",
+    "subcategory": "thickener",
+    "tags": ["fiber", "gluten_free"]
+  },
+  "guar_gum": {
+    "category": "other",
+    "subcategory": "thickener",
+    "tags": ["fiber", "soluble_fiber"]
+  },
+  "carrageenan": {
+    "category": "other",
+    "subcategory": "thickener",
+    "tags": ["fiber", "seaweed"]
+  },
+  "tapioca_starch": {
+    "category": "carbs",
+    "subcategory": "starch",
+    "tags": ["high_carb", "gluten_free", "thickener"]
+  },
+  "arrowroot_flour": {
+    "category": "carbs",
+    "subcategory": "starch",
+    "tags": ["high_carb", "gluten_free", "thickener"]
+  },
+  "potato_starch": {
+    "category": "carbs",
+    "subcategory": "starch",
+    "tags": ["high_carb", "gluten_free", "thickener"]
+  },
+  "sweet_rice_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "glutinous", "gluten_free"]
+  },
+  "semolina": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_carb", "high_protein", "durum_wheat"]
+  },
+  "vital_wheat_gluten": {
+    "category": "protein",
+    "subcategory": "wheat_protein",
+    "tags": ["very_high_protein", "low_fat", "gluten", "meat_alternative"]
+  },
+  "oat_fiber": {
+    "category": "carbs",
+    "subcategory": "fiber_source",
+    "tags": ["very_high_fiber", "low_calorie", "gluten_free"]
+  },
+  "inulin": {
+    "category": "carbs",
+    "subcategory": "fiber_source",
+    "tags": ["soluble_fiber", "prebiotic", "low_calorie"]
+  },
+  "brie_cheese": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "soft_ripened"]
+  },
+  "camembert": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "soft_ripened"]
+  },
+  "gouda": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "semi_hard"]
+  },
+  "edam": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "semi_hard"]
+  },
+  "emmental": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "swiss"]
+  },
+  "gruyere": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "hard"]
+  },
+  "manchego": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "sheep_milk"]
+  },
+  "pecorino": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "sheep_milk"]
+  },
+  "asiago": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "hard"]
+  },
+  "fontina": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "semi_soft"]
+  },
+  "taleggio": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["med_protein", "high_fat", "soft_washed_rind"]
+  },
+  "mascarpone": {
+    "category": "fat",
+    "subcategory": "cream_cheese",
+    "tags": ["high_fat", "low_protein", "soft"]
+  },
+  "ricotta_salata": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["med_protein", "medium_fat", "salted"]
+  },
+  "paneer": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "medium_fat", "indian"]
+  },
+  "halloumi": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "grilling"]
+  },
+  "feta_greek": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "brined"]
+  },
+  "queso_fresco": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["med_protein", "high_fat", "fresh"]
+  },
+  "granola": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "high_fat", "sugar", "fiber"]
+  },
+  "muesli": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "low_fat", "fiber"]
+  },
+  "corn_flakes": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "low_fat", "fortified"]
+  },
+  "bran_flakes": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "high_fiber", "low_fat"]
+  },
+  "rice_krispies": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "oatmeal_instant": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "fiber", "medium_fat"]
+  },
+  "cream_of_wheat": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "grits": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "low_fat", "corn"]
+  },
+  "polenta": {
+    "category": "carbs",
+    "subcategory": "cereal",
+    "tags": ["high_carb", "low_fat", "corn"]
+  },
+  "biscuit": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat"]
+  },
+  "croissant": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "high_fat", "buttery"]
+  },
+  "bagel": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat", "dense"]
+  },
+  "english_muffin": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat"]
+  },
+  "pita_bread": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat", "pocket"]
+  },
+  "tortilla_corn": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat", "gluten_free"]
+  },
+  "tortilla_flour": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat"]
+  },
+  "naan": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat", "leavened"]
+  },
+  "chapati": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat", "whole_wheat"]
+  },
+  "sourdough_bread": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat", "fermented"]
+  },
+  "rye_bread": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat", "rye"]
+  },
+  "pumpernickel": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat", "dark"]
+  },
+  "focaccia": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat", "italian"]
+  },
+  "ciabatta": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat", "italian"]
+  },
+  "brioche": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "high_fat", "rich"]
+  },
+  "challah": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat", "eggy"]
+  },
+  "cornbread": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "medium_fat", "corn"]
+  },
+  "pretzel_soft": {
+    "category": "carbs",
+    "subcategory": "bread",
+    "tags": ["high_carb", "low_fat", "salty"]
+  },
+  "cracker_saltine": {
+    "category": "carbs",
+    "subcategory": "crackers",
+    "tags": ["high_carb", "medium_fat", "salty"]
+  },
+  "rice_cake": {
+    "category": "carbs",
+    "subcategory": "snack",
+    "tags": ["high_carb", "low_fat", "puffed"]
+  },
+  "popcorn_microwave": {
+    "category": "carbs",
+    "subcategory": "snack",
+    "tags": ["high_carb", "high_fat", "buttered"]
+  },
+  "potato_chips": {
+    "category": "fat",
+    "subcategory": "snack",
+    "tags": ["high_fat", "high_carb", "salty"]
+  },
+  "tortilla_chips": {
+    "category": "fat",
+    "subcategory": "snack",
+    "tags": ["high_fat", "high_carb", "salty"]
+  },
+  "pretzel_hard": {
+    "category": "carbs",
+    "subcategory": "snack",
+    "tags": ["high_carb", "low_fat", "salty"]
+  },
+  "ginger_root": {
+    "category": "spice",
+    "subcategory": "fresh",
+    "tags": ["flavor", "anti_inflammatory"]
+  },
+  "turmeric": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["antioxidant", "flavor"]
+  },
+  "cinnamon": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["antioxidant", "sweet_spice"]
+  },
+  "cloves": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["antioxidant", "aromatic"]
+  },
+  "nutmeg": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["warm_spice", "flavor"]
+  },
+  "cardamom": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["aromatic", "flavor"]
+  },
+  "coriander_seeds": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["citrusy", "flavor"]
+  },
+  "cumin": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "antioxidant"]
+  },
+  "fennel_seeds": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "digestive"]
+  },
+  "mustard_seeds": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "pungent"]
+  },
+  "caraway_seeds": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "digestive"]
+  },
+  "anise_seeds": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "sweet"]
+  },
+  "vanilla_extract": {
+    "category": "flavoring",
+    "subcategory": "extract",
+    "tags": ["flavor", "low_calorie"]
+  },
+  "saffron": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["luxury", "antioxidant"]
+  },
+  "paprika": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "colorant"]
+  },
+  "chili_powder": {
+    "category": "spice",
+    "subcategory": "blend",
+    "tags": ["spicy", "flavor"]
+  },
+  "cayenne_pepper": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["spicy", "capsaicin"]
+  },
+  "black_pepper": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["pungent", "flavor"]
+  },
+  "white_pepper": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["mild", "flavor"]
+  },
+  "allspice": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["warm", "flavor"]
+  },
+  "bay_leaf": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["aromatic", "flavor"]
+  },
+  "oregano_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["mediterranean", "flavor"]
+  },
+  "thyme_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["earthy", "flavor"]
+  },
+  "rosemary_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["pine", "flavor"]
+  },
+  "sage_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["savory", "flavor"]
+  },
+  "marjoram_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["sweet", "flavor"]
+  },
+  "tarragon_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["licorice", "flavor"]
+  },
+  "chives_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["onion", "flavor"]
+  },
+  "chervil_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["delicate", "flavor"]
+  },
+  "savory_dried": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["peppery", "flavor"]
+  },
+  "peas_canned": {
+    "category": "vegetable",
+    "subcategory": "canned",
+    "tags": ["low_fat", "fiber"]
+  },
+  "corn_canned": {
+    "category": "vegetable",
+    "subcategory": "canned",
+    "tags": ["carbs", "fiber"]
+  },
+  "beans_canned": {
+    "category": "vegetable",
+    "subcategory": "canned",
+    "tags": ["protein", "fiber"]
+  },
+  "chickpeas_canned": {
+    "category": "vegetable",
+    "subcategory": "canned",
+    "tags": ["protein", "fiber", "plant"]
+  },
+  "mushrooms_canned": {
+    "category": "vegetable",
+    "subcategory": "canned",
+    "tags": ["low_calorie"]
+  },
+  "tomatoes_canned": {
+    "category": "vegetable",
+    "subcategory": "canned",
+    "tags": ["low_calorie"]
+  },
+  "tomato_paste": {
+    "category": "condiment",
+    "subcategory": "paste",
+    "tags": ["concentrated", "lycopene"]
+  },
+  "tomato_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["low_calorie"]
+  },
+  "applesauce": {
+    "category": "fruit",
+    "subcategory": "sauce",
+    "tags": ["low_fat", "sugar"]
+  },
+  "cranberry_sauce": {
+    "category": "fruit",
+    "subcategory": "sauce",
+    "tags": ["sugar", "holiday"]
+  },
+  "soy_sprouts": {
+    "category": "vegetable",
+    "subcategory": "sprouts",
+    "tags": ["protein", "low_carb"]
+  },
+  "alfalfa_sprouts": {
+    "category": "vegetable",
+    "subcategory": "sprouts",
+    "tags": ["low_calorie"]
+  },
+  "mung_bean_sprouts": {
+    "category": "vegetable",
+    "subcategory": "sprouts",
+    "tags": ["low_calorie"]
+  },
+  "broccoli_sprouts": {
+    "category": "vegetable",
+    "subcategory": "sprouts",
+    "tags": ["sulforaphane"]
+  },
+  "radish_sprouts": {
+    "category": "vegetable",
+    "subcategory": "sprouts",
+    "tags": ["peppery"]
+  },
+  "wheatgrass": {
+    "category": "vegetable",
+    "subcategory": "grass",
+    "tags": ["chlorophyll", "nutrient_dense"]
+  },
+  "barley_green": {
+    "category": "superfood",
+    "subcategory": "powder",
+    "tags": ["green", "antioxidant"]
+  },
+  "moringa_powder": {
+    "category": "superfood",
+    "subcategory": "powder",
+    "tags": ["high_protein", "antioxidant"]
+  },
+  "maca_powder": {
+    "category": "superfood",
+    "subcategory": "powder",
+    "tags": ["adaptogen", "energy"]
+  },
+  "ashwagandha_powder": {
+    "category": "herb",
+    "subcategory": "powder",
+    "tags": ["adaptogen", "wellness"]
+  },
+  "aloe_vera_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["digestive"]
+  },
+  "carrot_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["vitamin_a"]
+  },
+  "beetroot_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["nitrates"]
+  },
+  "celery_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["low_calorie"]
+  },
+  "cucumber_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["hydration"]
+  },
+  "wheatgrass_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["chlorophyll"]
+  },
+  "pomegranate_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["antioxidant"]
+  },
+  "cranberry_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["vitamin_c", "antioxidant"]
+  },
+  "grapefruit_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["vitamin_c", "bitter"]
+  },
+  "prune_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["fiber", "digestive"]
+  },
+  "tomato_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["lycopene", "low_calorie"]
+  },
+  "clamato_juice": {
+    "category": "beverage",
+    "subcategory": "juice",
+    "tags": ["savory", "clam"]
+  },
+  "energy_drink": {
+    "category": "beverage",
+    "subcategory": "soft_drink",
+    "tags": ["caffeine", "sugar"]
+  },
+  "sports_drink": {
+    "category": "beverage",
+    "subcategory": "soft_drink",
+    "tags": ["electrolytes", "sugar"]
+  },
+  "tonic_water": {
+    "category": "beverage",
+    "subcategory": "soft_drink",
+    "tags": ["quinine", "sugar"]
+  },
+  "club_soda": {
+    "category": "beverage",
+    "subcategory": "soft_drink",
+    "tags": ["carbonated", "zero_calorie"]
+  },
+  "ginger_ale": {
+    "category": "beverage",
+    "subcategory": "soft_drink",
+    "tags": ["ginger", "sugar"]
+  },
+  "root_beer": {
+    "category": "beverage",
+    "subcategory": "soft_drink",
+    "tags": ["herbal", "sugar"]
+  },
+  "cream_soda": {
+    "category": "beverage",
+    "subcategory": "soft_drink",
+    "tags": ["vanilla", "sugar"]
+  },
+  "horchata": {
+    "category": "beverage",
+    "subcategory": "plant_milk",
+    "tags": ["rice", "cinnamon", "sugar"]
+  },
+  "rice_pudding": {
+    "category": "dessert",
+    "subcategory": "pudding",
+    "tags": ["rice", "dairy"]
+  },
+  "tapioca_pudding": {
+    "category": "dessert",
+    "subcategory": "pudding",
+    "tags": ["tapioca", "dairy"]
+  },
+  "bread_pudding": {
+    "category": "dessert",
+    "subcategory": "pudding",
+    "tags": ["bread", "eggs", "sugar"]
+  },
+  "flan": {
+    "category": "dessert",
+    "subcategory": "custard",
+    "tags": ["caramel", "eggs"]
+  },
+  "panna_cotta": {
+    "category": "dessert",
+    "subcategory": "custard",
+    "tags": ["cream", "gelatin"]
+  },
+  "tiramisu": {
+    "category": "dessert",
+    "subcategory": "cake",
+    "tags": ["coffee", "mascarpone", "cocoa"]
+  },
+  "cheesecake": {
+    "category": "dessert",
+    "subcategory": "cake",
+    "tags": ["cream_cheese", "graham_cracker"]
+  },
+  "brownie": {
+    "category": "dessert",
+    "subcategory": "bar",
+    "tags": ["chocolate", "fudgy"]
+  },
+  "muffin_blueberry": {
+    "category": "baked_good",
+    "subcategory": "muffin",
+    "tags": ["blueberries", "sugar"]
+  },
+  "scone": {
+    "category": "baked_good",
+    "subcategory": "pastry",
+    "tags": ["buttery", "tea"]
+  },
+  "danish_pastry": {
+    "category": "baked_good",
+    "subcategory": "pastry",
+    "tags": ["flaky", "fruit_or_cheese"]
+  },
+  "cannoli": {
+    "category": "dessert",
+    "subcategory": "italian",
+    "tags": ["ricotta", "fried"]
+  },
+  "baklava": {
+    "category": "dessert",
+    "subcategory": "middle_eastern",
+    "tags": ["phyllo", "nuts", "honey"]
+  },
+  "macaron": {
+    "category": "dessert",
+    "subcategory": "cookie",
+    "tags": ["almond", "meringue"]
+  },
+  "meringue": {
+    "category": "dessert",
+    "subcategory": "confection",
+    "tags": ["egg_white", "sugar", "low_fat"]
+  },
+  "marzipan": {
+    "category": "confection",
+    "subcategory": "nut_paste",
+    "tags": ["almond", "sugar"]
+  },
+  "nougat": {
+    "category": "confection",
+    "subcategory": "candy",
+    "tags": ["nuts", "egg_white", "honey"]
+  },
+  "caramel_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["sugar", "butter", "sweet"]
+  },
+  "chocolate_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["chocolate", "sugar", "sweet"]
+  },
+  "butterscotch_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["brown_sugar", "butter", "sweet"]
+  },
+  "fruit_syrup": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["sugar", "fruit_flavor"]
+  },
+  "grenadine": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["pomegranate", "sugar"]
+  },
+  "orgeat_syrup": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["almond", "rose_water"]
+  },
+  "falernum": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["lime", "spice", "cocktail"]
+  },
+  "vermouth_dry": {
+    "category": "beverage",
+    "subcategory": "wine",
+    "tags": ["fortified", "herbal", "dry"]
+  },
+  "vermouth_sweet": {
+    "category": "beverage",
+    "subcategory": "wine",
+    "tags": ["fortified", "sweet", "herbal"]
+  },
+  "campari": {
+    "category": "beverage",
+    "subcategory": "liqueur",
+    "tags": ["bitter", "herbal", "aperitif"]
+  },
+  "aperol": {
+    "category": "beverage",
+    "subcategory": "liqueur",
+    "tags": ["bitter", "orange", "aperitif"]
+  },
+  "amaretto": {
+    "category": "beverage",
+    "subcategory": "liqueur",
+    "tags": ["sweet", "almond"]
+  },
+  "all-purpose flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["wheat", "refined"]
+  },
+  "almond extract": {
+    "category": "flavoring",
+    "subcategory": "extract",
+    "tags": ["almond", "zero_calorie"]
+  },
+  "almond paste": {
+    "category": "confection",
+    "subcategory": "nut_paste",
+    "tags": ["almond", "sugar", "dense"]
+  },
+  "barbecue sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["sweet", "smoky", "sugar"]
+  },
+  "barley flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["barley", "fiber", "whole_grain"]
+  },
+  "beef broth": {
+    "category": "soup_base",
+    "subcategory": "broth",
+    "tags": ["savory", "low_calorie"]
+  },
+  "beef tallow": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "cooking"]
+  },
+  "black tea": {
+    "category": "beverage",
+    "subcategory": "tea",
+    "tags": ["caffeine", "antioxidant", "low_calorie"]
+  },
+  "blackberries": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["fiber", "vitamin_c", "antioxidant"]
+  },
+  "blueberries": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["antioxidant", "fiber", "vitamin_c"]
+  },
+  "bluefin": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_protein", "high_fat", "omega_3"]
+  },
+  "bok choy": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "vitamin_c", "calcium"]
+  },
+  "bread flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["high_protein", "wheat"]
+  },
+  "brisket": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "brown_sugar": {
+    "category": "sweetener",
+    "subcategory": "sugar",
+    "tags": ["high_carb", "molasses"]
+  },
+  "buttermilk": {
+    "category": "dairy",
+    "subcategory": "milk",
+    "tags": ["low_fat", "probiotic", "tangy"]
+  },
+  "button_mushroom": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "vitamin_d"]
+  },
+  "cake_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["low_protein", "refined"]
+  },
+  "cantaloupe": {
+    "category": "fruit",
+    "subcategory": "melon",
+    "tags": ["vitamin_c", "vitamin_a", "low_calorie"]
+  },
+  "cassava": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "gluten_free"]
+  },
+  "chanterelle": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "vitamin_d"]
+  },
+  "cheese": {
+    "category": "protein",
+    "subcategory": "cheese",
+    "tags": ["high_protein", "high_fat", "calcium"]
+  },
+  "chicken_broth": {
+    "category": "soup_base",
+    "subcategory": "broth",
+    "tags": ["low_calorie", "savory"]
+  },
+  "chicken_fat": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "cooking"]
+  },
+  "chicken_wings": {
+    "category": "protein",
+    "subcategory": "poultry",
+    "tags": ["high_protein", "medium_fat"]
+  },
+  "chocolate_chips": {
+    "category": "sweetener",
+    "subcategory": "chocolate",
+    "tags": ["high_sugar", "high_fat"]
+  },
+  "clams": {
+    "category": "protein",
+    "subcategory": "mollusk",
+    "tags": ["high_protein", "low_fat", "vitamin_b12"]
+  },
+  "cocoa_powder": {
+    "category": "other",
+    "subcategory": "powder",
+    "tags": ["antioxidant", "low_fat"]
+  },
+  "coconut_extract": {
+    "category": "flavoring",
+    "subcategory": "extract",
+    "tags": ["zero_calorie", "coconut"]
+  },
+  "coffee_beans": {
+    "category": "beverage",
+    "subcategory": "coffee",
+    "tags": ["caffeine", "antioxidant"]
+  },
+  "crab_legs": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "cranberries": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["vitamin_c", "antioxidant", "tart"]
+  },
+  "cream": {
+    "category": "fat",
+    "subcategory": "dairy",
+    "tags": ["high_fat", "low_carb"]
+  },
+  "curry_powder": {
+    "category": "spice",
+    "subcategory": "blend",
+    "tags": ["flavor", "antioxidant"]
+  },
+  "dandelion_greens": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["bitter", "vitamin_k", "iron"]
+  },
+  "deer": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "game"]
+  },
+  "dried_allspice": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["warm", "aromatic"]
+  },
+  "dried_basil": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["mediterranean", "flavor"]
+  },
+  "dried_chives": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["onion", "flavor"]
+  },
+  "dried_cinnamon": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["sweet", "antioxidant"]
+  },
+  "dried_cloves": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["pungent", "aromatic"]
+  },
+  "dried_dill_weed": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["herbal", "pickling"]
+  },
+  "dried_galangal": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["gingery", "thai"]
+  },
+  "dried_ginger": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["spicy", "warm"]
+  },
+  "dried_lemongrass": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["citrus", "thai"]
+  },
+  "dried_nutmeg": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["warm", "sweet"]
+  },
+  "dried_oregano": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["mediterranean", "pizza"]
+  },
+  "dried_parsley": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["fresh", "garnish"]
+  },
+  "dried_rosemary": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["pine", "woody"]
+  },
+  "dried_tarragon": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["licorice", "french"]
+  },
+  "dried_thyme": {
+    "category": "herb",
+    "subcategory": "dried",
+    "tags": ["earthy", "lemon"]
+  },
+  "duck_fat": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "flavorful"]
+  },
+  "dungeness_crab": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "eels": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["high_fat", "high_protein", "unagi"]
+  },
+  "eggs": {
+    "category": "protein",
+    "subcategory": "eggs",
+    "tags": ["complete_protein", "vitamin_b12"]
+  },
+  "enoki": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "escarole": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["bitter", "fiber"]
+  },
+  "fennel_bulb": {
+    "category": "vegetable",
+    "subcategory": "bulb",
+    "tags": ["anise", "fiber", "low_calorie"]
+  },
+  "fillet": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat", "fish"]
+  },
+  "fish": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "fish_stock": {
+    "category": "soup_base",
+    "subcategory": "broth",
+    "tags": ["low_calorie", "savory"]
+  },
+  "flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["refined", "high_carb"]
+  },
+  "garam_masala": {
+    "category": "spice",
+    "subcategory": "blend",
+    "tags": ["indian", "aromatic"]
+  },
+  "garlic_powder": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "pungent"]
+  },
+  "goji_berries": {
+    "category": "fruit",
+    "subcategory": "dried",
+    "tags": ["antioxidant", "high_protein", "sugar"]
+  },
+  "grade_a_maple_syrup": {
+    "category": "sweetener",
+    "subcategory": "syrup",
+    "tags": ["natural", "sugar"]
+  },
+  "green_cabbage": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["fiber", "low_calorie"]
+  },
+  "green_tea": {
+    "category": "beverage",
+    "subcategory": "tea",
+    "tags": ["antioxidant", "caffeine", "low_calorie"]
+  },
+  "ground_cardamom": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["aromatic", "flavor"]
+  },
+  "ground_cayenne_pepper": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["spicy", "capsaicin"]
+  },
+  "ground_cinnamon": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["sweet", "antioxidant"]
+  },
+  "ground_cloves": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["pungent", "aromatic"]
+  },
+  "ground_coriander": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["citrusy", "flavor"]
+  },
+  "ground_cumin": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["earthy", "warm"]
+  },
+  "ground_garlic_powder": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "pungent"]
+  },
+  "ground_ginger": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["spicy", "warm"]
+  },
+  "ground_nutmeg": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["warm", "sweet"]
+  },
+  "ground_onion_powder": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "savory"]
+  },
+  "ground_paprika": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "colorant"]
+  },
+  "ground_turmeric": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["earthy", "anti-inflammatory"]
+  },
+  "haddock": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "ham": {
+    "category": "protein",
+    "subcategory": "cured_meat",
+    "tags": ["medium_fat", "high_sodium", "pork"]
+  },
+  "hen_of_the_woods": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "umami"]
+  },
+  "herbal_tea": {
+    "category": "beverage",
+    "subcategory": "tea",
+    "tags": ["caffeine_free", "low_calorie"]
+  },
+  "honeydew_melon": {
+    "category": "fruit",
+    "subcategory": "melon",
+    "tags": ["low_calorie", "vitamin_c"]
+  },
+  "hot_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["spicy", "low_calorie"]
+  },
+  "kingsnake": {
+    "category": "protein",
+    "subcategory": "exotic",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "lemon_zest": {
+    "category": "flavoring",
+    "subcategory": "zest",
+    "tags": ["citrus", "flavor"]
+  },
+  "lettuce": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["low_calorie", "water_rich"]
+  },
+  "lobster_tail": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "marinara_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["tomato", "low_fat"]
+  },
+  "meatballs": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["high_fat", "medium_protein"]
+  },
+  "morel": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "earthy"]
+  },
+  "mustard_greens": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["peppery", "vitamin_k"]
+  },
+  "napa_cabbage": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "nappa_cabbage": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["low_calorie", "fiber"]
+  },
+  "nectarines": {
+    "category": "fruit",
+    "subcategory": "stone_fruit",
+    "tags": ["fiber", "vitamin_c"]
+  },
+  "onion_powder": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["flavor", "savory"]
+  },
+  "orange_zest": {
+    "category": "flavoring",
+    "subcategory": "zest",
+    "tags": ["citrus", "flavor"]
+  },
+  "oyster_mushroom": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "umami"]
+  },
+  "pandan_extract": {
+    "category": "flavoring",
+    "subcategory": "extract",
+    "tags": ["zero_calorie", "southeast_asian"]
+  },
+  "pastry_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["low_protein", "baking"]
+  },
+  "peaches": {
+    "category": "fruit",
+    "subcategory": "stone_fruit",
+    "tags": ["fiber", "vitamin_c"]
+  },
+  "pepper": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["pungent", "flavor"]
+  },
+  "pizza_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["tomato", "herbs"]
+  },
+  "plantain": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "fiber"]
+  },
+  "plums": {
+    "category": "fruit",
+    "subcategory": "stone_fruit",
+    "tags": ["fiber", "antioxidant"]
+  },
+  "porcini": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "umami"]
+  },
+  "pork_chops": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat", "animal"]
+  },
+  "pork_fat": {
+    "category": "fat",
+    "subcategory": "animal_fat",
+    "tags": ["high_fat", "energy_dense"]
+  },
+  "portobello": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["low_calorie", "umami"]
+  },
+  "prawns": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "rapini": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["bitter", "fiber"]
+  },
+  "raspberries": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["fiber", "antioxidant", "low_calorie"]
+  },
+  "raw_honey": {
+    "category": "sweetener",
+    "subcategory": "natural",
+    "tags": ["sugar", "antioxidant"]
+  },
+  "red_cabbage": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["fiber", "vitamin_c", "antioxidant"]
+  },
+  "rhubarb": {
+    "category": "vegetable",
+    "subcategory": "stalk",
+    "tags": ["tart", "low_calorie"]
+  },
+  "ribs": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat"]
+  },
+  "rockmelon": {
+    "category": "fruit",
+    "subcategory": "melon",
+    "tags": ["vitamin_c", "low_calorie"]
+  },
+  "rosemary": {
+    "category": "herb",
+    "subcategory": "fresh",
+    "tags": ["flavor", "antioxidant"]
+  },
+  "safflower_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "unsaturated", "plant"]
+  },
+  "salt": {
+    "category": "condiment",
+    "subcategory": "mineral",
+    "tags": ["sodium", "flavor"]
+  },
+  "sausages": {
+    "category": "protein",
+    "subcategory": "processed_meat",
+    "tags": ["high_fat", "medium_protein", "sodium"]
+  },
+  "savoy_cabbage": {
+    "category": "vegetable",
+    "subcategory": "cruciferous",
+    "tags": ["fiber", "low_calorie"]
+  },
+  "self-raising_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["leavening", "refined"]
+  },
+  "shank": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "shiitake": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["umami", "fiber"]
+  },
+  "short_ribs": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_fat", "high_protein"]
+  },
+  "sirloin": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "medium_fat"]
+  },
+  "snail": {
+    "category": "protein",
+    "subcategory": "exotic",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "snakehead": {
+    "category": "protein",
+    "subcategory": "white_fish",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "snow_crab": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "sour_cream": {
+    "category": "fat",
+    "subcategory": "dairy",
+    "tags": ["high_fat", "tangy"]
+  },
+  "spanish_mackerel": {
+    "category": "protein",
+    "subcategory": "fatty_fish",
+    "tags": ["omega_3", "medium_fat"]
+  },
+  "spinach_beet": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["chard", "low_calorie"]
+  },
+  "star_anise": {
+    "category": "spice",
+    "subcategory": "dried",
+    "tags": ["licorice", "aromatic"]
+  },
+  "steak": {
+    "category": "protein",
+    "subcategory": "fatty_meat",
+    "tags": ["high_protein", "high_fat"]
+  },
+  "stone_crab": {
+    "category": "protein",
+    "subcategory": "seafood",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "strawberries": {
+    "category": "fruit",
+    "subcategory": "berries",
+    "tags": ["vitamin_c", "antioxidant"]
+  },
+  "swiss_chard": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["vitamin_k", "low_calorie"]
+  },
+  "taco_seasoning": {
+    "category": "spice",
+    "subcategory": "blend",
+    "tags": ["flavor", "cumin", "chili"]
+  },
+  "tea_leaves": {
+    "category": "beverage",
+    "subcategory": "tea",
+    "tags": ["caffeine", "antioxidant"]
+  },
+  "tenderloin": {
+    "category": "protein",
+    "subcategory": "lean_meat",
+    "tags": ["high_protein", "low_fat"]
+  },
+  "teriyaki_sauce": {
+    "category": "condiment",
+    "subcategory": "sauce",
+    "tags": ["sweet", "savory", "soy"]
+  },
+  "thyme": {
+    "category": "herb",
+    "subcategory": "fresh",
+    "tags": ["flavor", "antioxidant"]
+  },
+  "truffle": {
+    "category": "vegetable",
+    "subcategory": "fungi",
+    "tags": ["aromatic", "luxury"]
+  },
+  "turbinado_sugar": {
+    "category": "sweetener",
+    "subcategory": "sugar",
+    "tags": ["raw", "high_carb"]
+  },
+  "turnip_greens": {
+    "category": "vegetable",
+    "subcategory": "leafy_green",
+    "tags": ["fiber", "vitamin_k"]
+  },
+  "vegetable_broth": {
+    "category": "soup_base",
+    "subcategory": "broth",
+    "tags": ["low_calorie", "savory"]
+  },
+  "vegetable_oil": {
+    "category": "fat",
+    "subcategory": "oil",
+    "tags": ["high_fat", "blend"]
+  },
+  "vegetables": {
+    "category": "vegetable",
+    "subcategory": "mixed",
+    "tags": ["fiber", "nutrients"]
+  },
+  "water_chestnut": {
+    "category": "vegetable",
+    "subcategory": "root",
+    "tags": ["crunchy", "low_fat"]
+  },
+  "white_sugar": {
+    "category": "sweetener",
+    "subcategory": "sugar",
+    "tags": ["high_carb", "refined"]
+  },
+  "whole_wheat_flour": {
+    "category": "carbs",
+    "subcategory": "flour",
+    "tags": ["fiber", "whole_grain"]
+  },
+  "yam": {
+    "category": "carbs",
+    "subcategory": "starchy_vegetables",
+    "tags": ["high_carb", "fiber"]
+  },
+  "yellowfin": {
+    "category": "protein",
+    "subcategory": "tuna",
+    "tags": ["high_protein", "low_fat", "animal"]
+  }
+}

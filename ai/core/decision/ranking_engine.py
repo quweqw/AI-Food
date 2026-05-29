@@ -1,29 +1,25 @@
+# ranking_engine.py
 from typing import Optional
 
-
+# Ранжирование рецептов
 class RankingEngine:
     def __init__(self):
-        """
-        Веса компонентов (можешь тюнить под задачу)
-        Сумма ≈ 1.0
-        """
+        # Веса компонентов (можно изменять коэф. под задачу)
+        # Сумма должна быть ≈ 1.0
+        
         self.weights = {
             "preference": 0.5,
             "diversity": 0.3,
             "nutrition": 0.2
         }
 
+    # Комбирование нескольких баллов в один итоговый (Значения в пределах от 0 до 1)
     def combine(
         self,
         pref_score: Optional[float] = None,
         diversity_score: Optional[float] = None,
         nutrition_score: Optional[float] = None
     ) -> float:
-        """
-        Комбинирует несколько score в один итоговый
-
-        Все значения должны быть в диапазоне [0, 1]
-        """
 
         scores = {
             "preference": pref_score,
@@ -51,18 +47,11 @@ class RankingEngine:
         return self._clamp(final_score)
 
     # ==============================
-    # OPTIONAL: nutrition scoring
+    # Оценка питания
     # ==============================
+    
+    # Простая оценка БЖУ под цели
     def score_nutrition(self, nutrition: dict, goal: str = "balanced") -> float:
-        """
-        Простая оценка БЖУ под цель
-        nutrition = {
-            "calories": int,
-            "protein": float,
-            "fat": float,
-            "carbs": float
-        }
-        """
 
         if not nutrition:
             return 0.5  # нейтрально
@@ -98,7 +87,7 @@ class RankingEngine:
         return self._clamp(score)
 
     # ==============================
-    # INTERNAL
+    # Внутренее ранжирование
     # ==============================
     def _clamp(self, value: float) -> float:
         return max(0.0, min(value, 1.0))

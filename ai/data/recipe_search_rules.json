@@ -1,0 +1,145 @@
+{
+  "version": 1,
+
+  "normalization": {
+    "noise_phrases": [
+      "optional",
+      "to taste",
+      "for serving",
+      "for garnish",
+      "for topping",
+      "for frying",
+      "for filling",
+      "for sauce"
+    ]
+  },
+
+  "ingredients": {
+    "stop_ingredients": [
+      "salt",
+      "pepper",
+      "black_pepper",
+      "white_pepper",
+
+      "water",
+
+      "oil",
+      "vegetable_oil",
+      "olive_oil",
+      "butter",
+
+      "sugar",
+      "flour",
+      "all_purpose_flour",
+      "baking_powder",
+      "baking_soda",
+      "cornstarch",
+
+      "vanilla",
+      "vanilla_extract",
+
+      "spices",
+      "seasoning",
+
+      "cumin",
+      "paprika",
+      "thyme",
+      "bay_leaf",
+
+      "parsley",
+      "dill",
+      "cilantro",
+
+      "garlic",
+      "onion"
+    ]
+  },
+
+  "query": {
+    "goal_words": [
+      "balanced",
+      "balance",
+
+      "weight",
+      "loss",
+      "weight_loss",
+      "diet",
+      "cut",
+      "sushka",
+
+      "muscle",
+      "gain",
+      "muscle_gain",
+      "bulk",
+
+      "high",
+      "protein",
+
+      "dinner",
+      "lunch",
+      "breakfast",
+      "snack",
+
+      "healthy",
+      "low",
+      "calorie",
+      "calories"
+    ]
+  },
+
+  "recipe_types": {
+    "dessert_words": [
+      "cake",
+      "cakes",
+      "cookie",
+      "cookies",
+      "brownie",
+      "brownies",
+
+      "pancake",
+      "pancakes",
+      "crepe",
+      "crepes",
+
+      "mochi",
+      "medovik",
+      "pryaniki",
+
+      "chocolate",
+      "mousse",
+      "dessert",
+
+      "bread",
+      "banana_bread"
+    ],
+
+    "dessert_context_words": [
+      "dinner",
+      "lunch",
+      "weight loss",
+      "high protein",
+      "muscle gain"
+    ]
+  },
+
+  "indexing": {
+    "max_key_ingredients": 28,
+    "max_all_ingredients": 40,
+    "max_tags": 10
+  },
+
+  "rerank": {
+    "weights": {
+      "retrieval": 0.45,
+      "ingredient_match": 0.35,
+      "name_match": 0.10,
+      "meal_structure": 0.10
+    },
+
+    "penalties": {
+      "dessert_penalty_strict": 0.25,
+      "dessert_penalty_soft": 0.08,
+      "missing_food_penalty": 0.18
+    }
+  }
+}

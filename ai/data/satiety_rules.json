@@ -1,0 +1,8 @@
+{
+  "weights": {
+    "protein": 2.0,
+    "fiber": 1.5,
+    "fat": -0.5,
+    "energy_density": -1.0
+  }
+}

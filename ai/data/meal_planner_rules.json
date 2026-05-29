@@ -1,0 +1,814 @@
+{
+  "schema_version": "1.3.0",
+  "description": "Production rules for AI Food MealPlanner: slot search, rerank, meal type fit, carb diversity, recipe quality, macro pressure, cooldown and staged quality selection.",
+  "main_carb_groups": {
+    "rice": [
+      "rice",
+      "white_rice",
+      "brown_rice",
+      "basmati_rice",
+      "jasmine_rice",
+      "cooked_rice",
+      "sushi_rice",
+      "arborio_rice",
+      "bomba_rice",
+      "rice_or_orzo"
+    ],
+    "potato": [
+      "potato",
+      "potatoes",
+      "russet_potato",
+      "russet_potatoes",
+      "sweet_potato",
+      "sweet_potatoes",
+      "mashed_potato",
+      "mashed_potatoes"
+    ],
+    "pasta": [
+      "pasta",
+      "spaghetti",
+      "fettuccine",
+      "linguine",
+      "penne",
+      "ditalini_pasta",
+      "small_pasta",
+      "lasagna_noodles",
+      "lasagna_sheets",
+      "macaroni"
+    ],
+    "noodles": [
+      "noodles",
+      "egg_noodles",
+      "rice_noodles",
+      "ramen_noodles",
+      "soba_noodles",
+      "udon_noodles",
+      "glass_noodles"
+    ],
+    "bread": [
+      "bread",
+      "bread_white",
+      "whole_wheat_bread",
+      "sourdough_bread",
+      "burger_bun",
+      "burger_buns",
+      "baguette",
+      "pita_bread",
+      "tortilla",
+      "tortilla_flour",
+      "tortilla_wraps",
+      "wrap",
+      "lavash",
+      "naan",
+      "toast"
+    ],
+    "oats": [
+      "oats",
+      "rolled_oats",
+      "oatmeal",
+      "porridge_oats"
+    ],
+    "buckwheat": [
+      "buckwheat",
+      "buckwheat_groats",
+      "buckwheat_raw",
+      "soba"
+    ],
+    "quinoa": [
+      "quinoa",
+      "quinoa_raw",
+      "cooked_quinoa"
+    ],
+    "couscous": [
+      "couscous",
+      "couscous_raw"
+    ],
+    "bulgur": [
+      "bulgur",
+      "bulgur_raw",
+      "cooked_bulgur"
+    ],
+    "barley": [
+      "barley",
+      "barley_raw",
+      "pearl_barley",
+      "pearl_barley_optional"
+    ],
+    "corn": [
+      "corn",
+      "corn_sweet",
+      "cornmeal",
+      "polenta",
+      "tortilla_corn",
+      "corn_tortilla",
+      "corn_tortillas"
+    ],
+    "legumes": [
+      "beans",
+      "bean",
+      "black_beans",
+      "black_beans_raw",
+      "beans_red",
+      "beans_red_raw",
+      "kidney_beans",
+      "red_beans",
+      "white_beans",
+      "beans_canned",
+      "chickpeas",
+      "lentils",
+      "peas",
+      "peas_green"
+    ]
+  },
+  "main_carb_repeat_policy": {
+    "enabled": true,
+    "allow_same_carb_per_day": 1,
+    "same_carb_first_repeat_penalty": 0.16,
+    "same_carb_additional_repeat_penalty": 0.08,
+    "max_penalty": 0.35,
+    "hard_block_after_repeats": 3
+  },
+  "low_score_rescue_policy": {
+    "enabled": true,
+    "threshold": 0.35,
+    "critical_threshold": 0.2,
+    "score_ceiling": 0.349,
+    "max_boost": 0.24,
+    "relax_history_penalty": 0.75,
+    "relax_recipe_cooldown_penalty": 0.75,
+    "relax_main_carb_repeat_penalty": 0.55,
+    "relax_day_macro_pressure_penalty": 0.0,
+    "diversity_floor": 0.35,
+    "diversity_restore_weight": 0.1,
+    "block_if_day_fat_after_ratio_above": 1.12,
+    "block_if_day_calories_after_ratio_above": 1.12,
+    "block_if_day_macro_pressure_penalty_above": 0.22,
+    "debug": true
+  },
+  "meal_type_rules": {
+    "breakfast": {
+      "positive_keywords": [
+        "breakfast",
+        "morning",
+        "egg",
+        "eggs",
+        "omelette",
+        "scrambled",
+        "oats",
+        "oatmeal",
+        "porridge",
+        "toast",
+        "cottage cheese",
+        "cottage_cheese",
+        "yogurt",
+        "greek_yogurt",
+        "wrap",
+        "breakfast wrap",
+        "banana",
+        "berries",
+        "avocado toast"
+      ],
+      "negative_keywords": [
+        "chili",
+        "stew",
+        "soup",
+        "curry",
+        "bolognese",
+        "lasagna",
+        "stroganoff",
+        "pilaf",
+        "meatballs",
+        "goulash",
+        "taco",
+        "tacos",
+        "quesadilla",
+        "fried rice",
+        "rice bowl",
+        "pot pie",
+        "noodle soup",
+        "dessert",
+        "cake",
+        "cheesecake",
+        "cookies",
+        "cookie",
+        "brownies",
+        "brownie",
+        "ice cream",
+        "mousse",
+        "sweet",
+        "candy",
+        "chocolate dessert",
+        "chak-chak",
+        "pryaniki",
+        "medovik",
+        "mochi",
+        "trdelnik"
+      ],
+      "max_positive_bonus": 0.16,
+      "max_penalty": 0.35,
+      "base_fit": 0.5,
+      "positive_bonus_per_hit": 0.04,
+      "negative_penalty_per_hit": 0.18
+    },
+    "lunch": {
+      "positive_keywords": [
+        "lunch",
+        "main meal",
+        "bowl",
+        "rice bowl",
+        "pasta",
+        "noodles",
+        "sandwich",
+        "wrap",
+        "soup",
+        "stew",
+        "chili",
+        "curry",
+        "salad",
+        "potato",
+        "pilaf",
+        "tacos",
+        "meatballs"
+      ],
+      "negative_keywords": [
+        "dessert",
+        "cake",
+        "cheesecake",
+        "cookies",
+        "brownies",
+        "pancakes",
+        "waffles",
+        "sweet",
+        "ice cream",
+        "mousse",
+        "crepes",
+        "chak-chak",
+        "pryaniki",
+        "medovik",
+        "mochi",
+        "trdelnik",
+        "banana bread"
+      ],
+      "max_positive_bonus": 0.09,
+      "max_penalty": 0.28,
+      "base_fit": 0.5,
+      "positive_bonus_per_hit": 0.03,
+      "negative_penalty_per_hit": 0.14
+    },
+    "dinner": {
+      "positive_keywords": [
+        "dinner",
+        "evening meal",
+        "main meal",
+        "bowl",
+        "rice bowl",
+        "pasta",
+        "noodles",
+        "soup",
+        "stew",
+        "chili",
+        "curry",
+        "roasted",
+        "baked",
+        "potato",
+        "pilaf",
+        "fish",
+        "cod",
+        "salmon",
+        "beef",
+        "chicken",
+        "turkey"
+      ],
+      "negative_keywords": [
+        "dessert",
+        "cake",
+        "cheesecake",
+        "cookies",
+        "brownies",
+        "pancakes",
+        "waffles",
+        "sweet",
+        "ice cream",
+        "mousse",
+        "crepes",
+        "chak-chak",
+        "pryaniki",
+        "medovik",
+        "mochi",
+        "trdelnik",
+        "banana bread"
+      ],
+      "max_positive_bonus": 0.09,
+      "max_penalty": 0.28,
+      "base_fit": 0.5,
+      "positive_bonus_per_hit": 0.03,
+      "negative_penalty_per_hit": 0.14
+    },
+    "snack": {
+      "positive_keywords": [
+        "snack",
+        "yogurt",
+        "fruit",
+        "apple",
+        "banana",
+        "berries",
+        "nuts",
+        "cottage cheese",
+        "cottage_cheese",
+        "toast",
+        "smoothie",
+        "protein shake"
+      ],
+      "negative_keywords": [
+        "stew",
+        "soup",
+        "chili",
+        "curry",
+        "lasagna",
+        "bolognese",
+        "pilaf",
+        "rice bowl",
+        "meatballs"
+      ],
+      "max_positive_bonus": 0.12,
+      "max_penalty": 0.3,
+      "base_fit": 0.5,
+      "positive_bonus_per_hit": 0.04,
+      "negative_penalty_per_hit": 0.16
+    },
+    "snack2": {
+      "positive_keywords": [
+        "snack",
+        "yogurt",
+        "fruit",
+        "apple",
+        "banana",
+        "berries",
+        "nuts",
+        "cottage cheese",
+        "cottage_cheese",
+        "toast",
+        "smoothie",
+        "protein shake"
+      ],
+      "negative_keywords": [
+        "stew",
+        "soup",
+        "chili",
+        "curry",
+        "lasagna",
+        "bolognese",
+        "pilaf",
+        "rice bowl",
+        "meatballs"
+      ],
+      "max_positive_bonus": 0.12,
+      "max_penalty": 0.3,
+      "base_fit": 0.5,
+      "positive_bonus_per_hit": 0.04,
+      "negative_penalty_per_hit": 0.16
+    }
+  },
+  "recipe_quality_rules": {
+    "meal_type_groups": {
+      "main_meals": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "strict_main_meals": [
+        "lunch",
+        "dinner"
+      ],
+      "snack_meals": [
+        "snack",
+        "snack2"
+      ]
+    },
+    "dessert_detection": {
+      "enabled": true,
+      "name_keywords": [
+        "banana bread",
+        "brownie",
+        "brownies",
+        "cake",
+        "chak-chak",
+        "cheesecake",
+        "chocolate",
+        "cookie",
+        "cookies",
+        "cornbread",
+        "crepe",
+        "crepes",
+        "dessert",
+        "glaze",
+        "honey dessert",
+        "ice cream",
+        "medovik",
+        "mochi",
+        "mousse",
+        "pancake",
+        "pancakes",
+        "pie",
+        "pryaniki",
+        "sweet",
+        "syrup",
+        "toast only",
+        "trdelnik",
+        "trdelník"
+      ],
+      "savory_name_exceptions": [
+        "pot pie",
+        "shepherd pie",
+        "cottage pie",
+        "fish pie",
+        "meat pie",
+        "pork pie",
+        "chicken pot pie"
+      ],
+      "ingredient_keywords": [
+        "sugar",
+        "brown_sugar",
+        "white_sugar",
+        "powdered_sugar",
+        "honey",
+        "maple_syrup",
+        "chocolate",
+        "dark_chocolate",
+        "milk_chocolate",
+        "vanilla",
+        "vanilla_extract",
+        "sweetened_condensed_milk",
+        "jam",
+        "glaze",
+        "syrup"
+      ],
+      "flour_like_ingredients": [
+        "flour",
+        "wheat_flour",
+        "all_purpose_flour",
+        "all-purpose_flour",
+        "cornstarch",
+        "pastry_flour"
+      ],
+      "min_sweet_hits_with_flour": 2,
+      "penalties": {
+        "breakfast": 0.3,
+        "lunch": 0.45,
+        "dinner": 0.45,
+        "snack": 0.0,
+        "snack2": 0.0,
+        "default": 0.35
+      },
+      "negative_hits": {
+        "breakfast": 2,
+        "lunch": 3,
+        "dinner": 3,
+        "snack": 0,
+        "snack2": 0,
+        "default": 2
+      }
+    },
+    "missing_main_carb": {
+      "enabled": true,
+      "applies_to_meal_types": [
+        "lunch",
+        "dinner"
+      ],
+      "penalties": {
+        "balanced": 0.16,
+        "muscle_gain": 0.14,
+        "weight_loss": 0.08,
+        "default": 0.16
+      },
+      "negative_hits": 1
+    },
+    "cheap_scoring": {
+      "embedding_weight": 0.35,
+      "preference_weight": 0.2,
+      "fallback_preference_score": 0.1,
+      "meal_type_fit_weight": 0.3,
+      "main_carb_repeat_penalty": 0.25,
+      "dessert_main_meal_penalty": 0.65,
+      "breakfast_in_strict_main_meal_penalty": 0.7,
+      "breakfast_heavy_negative_penalty": 0.85,
+      "breakfast_signal_keywords": [
+        "breakfast",
+        "morning",
+        "omelette",
+        "scrambled",
+        "oatmeal",
+        "pancake",
+        "crepe",
+        "toast"
+      ]
+    },
+    "keyword_sets": {
+      "weak_main_meal_keywords": [
+        "pancakes",
+        "crepes",
+        "toast only",
+        "cookies",
+        "brownies",
+        "mochi",
+        "cornbread",
+        "chak-chak",
+        "cheesecake"
+      ],
+      "rich_fat_keywords": [
+        "heavy_cream",
+        "cream",
+        "cream_cheese",
+        "butter",
+        "sour_cream",
+        "mayonnaise",
+        "cheddar_cheese",
+        "mozzarella",
+        "parmesan",
+        "bacon",
+        "pastry_flour",
+        "puff_pastry",
+        "guacamole"
+      ],
+      "starch_flour_keywords": [
+        "flour",
+        "bread_white",
+        "breadcrumbs",
+        "panko_breadcrumbs",
+        "puff_pastry",
+        "pastry_flour",
+        "yeast_dough"
+      ],
+      "true_main_protein_keywords": [
+        "chicken",
+        "chicken_breast",
+        "chicken_thighs",
+        "turkey",
+        "beef",
+        "ground_beef",
+        "pork",
+        "cod",
+        "salmon",
+        "tuna",
+        "shrimp",
+        "egg",
+        "eggs",
+        "tofu",
+        "tofu_firm",
+        "cottage_cheese",
+        "greek_yogurt",
+        "beans",
+        "lentils",
+        "chickpeas"
+      ],
+      "real_vegetable_keywords": [
+        "lettuce",
+        "tomato",
+        "cucumber",
+        "carrot",
+        "bell_pepper",
+        "broccoli",
+        "green_beans",
+        "spinach",
+        "zucchini",
+        "cabbage",
+        "celery",
+        "onion",
+        "mushroom",
+        "asparagus",
+        "peas_green",
+        "eggplant"
+      ]
+    },
+    "max_count_per_plan": {
+      "bread": 4,
+      "rice": 5,
+      "potato": 5,
+      "pasta": 5,
+      "noodles": 5,
+      "corn": 4,
+      "flour": 2,
+      "default": 6
+    }
+  },
+  "meal_structure_rules": {
+    "min_recipe_db_coverage": 0.55,
+    "prefer_complete_meal": true,
+    "complete_meal": {
+      "protein_required": true,
+      "main_carb_required_for_lunch_dinner": true,
+      "vegetable_preferred": true
+    },
+    "day_macro_pressure_policy": {
+      "enabled": true,
+      "fat_hard_block_ratio": 1.22,
+      "calorie_hard_block_ratio": 1.15,
+      "hard_block_min_slot_idx": 1,
+      "fat_soft_ratio": 1.02,
+      "fat_hard_ratio": 1.12,
+      "fat_max_penalty": 0.34,
+      "fat_addition_when_budget_low_weight": 0.16,
+      "calorie_soft_ratio": 1.04,
+      "calorie_hard_ratio": 1.12,
+      "calorie_max_penalty": 0.1,
+      "carbs_soft_ratio": 1.18,
+      "carbs_hard_ratio": 1.35,
+      "carbs_max_penalty": 0.08,
+      "protein_soft_ratio": 1.45,
+      "protein_hard_ratio": 1.75,
+      "protein_max_penalty": 0.05,
+      "max_total_penalty": 0.38
+    },
+    "selection_quality_policy": {
+      "enabled": true,
+      "normal_min_final_score": 0.5,
+      "relaxed_min_final_score": 0.34,
+      "emergency_min_final_score": -0.1,
+      "normal_high_quality_rescue_enabled": true,
+      "normal_high_quality_min_final_score": 0.45,
+      "normal_high_quality_min_portion_score": 0.82,
+      "normal_high_quality_min_slot_macro_fit": 0.74,
+      "normal_high_quality_max_recipe_repeat_count": 1,
+      "normal_high_quality_reason": "normal_high_quality_rescue",
+      "relaxed_high_quality_min_final_score": 0.28,
+      "relaxed_high_quality_min_portion_score": 0.85,
+      "relaxed_high_quality_min_slot_macro_fit": 0.75,
+      "relaxed_high_quality_max_recipe_repeat_count": 1,
+      "block_zero_score_in_normal_mode": true,
+      "allow_zero_score_in_emergency": true,
+      "normal_max_history_penalty": 0.2,
+      "relaxed_max_history_penalty": 0.35,
+      "emergency_max_history_penalty": 0.6,
+      "normal_max_recipe_cooldown_penalty": 0.32,
+      "relaxed_max_recipe_cooldown_penalty": 0.48,
+      "emergency_max_recipe_cooldown_penalty": 0.75,
+      "normal_min_diversity": 0.05,
+      "relaxed_min_diversity": 0.0,
+      "emergency_min_portion_score": 0.72,
+      "emergency_min_retrieval": 0.25,
+      "emergency_min_slot_macro_fit": 0.35,
+      "emergency_never_allow_safety_issues": true,
+      "emergency_mark_component": true,
+      "normal_min_portion_score": 0.65,
+      "relaxed_min_portion_score": 0.55,
+      "normal_min_slot_macro_fit": 0.62,
+      "relaxed_min_slot_macro_fit": 0.5,
+      "normal_max_recipe_repeat_count": 0,
+      "relaxed_max_recipe_repeat_count": 1,
+      "emergency_max_recipe_repeat_count": 2
+    },
+    "recipe_cooldown_policy": {
+      "enabled": true,
+      "history_window_meals": 18,
+      "first_repeat_penalty": 0.34,
+      "additional_repeat_penalty": 0.18,
+      "max_penalty": 0.72,
+      "hard_block_after_repeats": 2,
+      "hard_block_penalty": 0.65
+    },
+    "penalties": {
+      "low_db_coverage": 0.12,
+      "dessert_as_main_meal": 0.35,
+      "weak_main_meal": 0.12,
+      "rich_fat_for_weight_loss": 0.12,
+      "too_much_starch_flour": 0.08,
+      "missing_true_main_protein": 0.18
+    },
+    "bonuses": {
+      "has_true_main_protein": 0.1,
+      "has_real_vegetable": 0.08,
+      "complete_meal": 0.1,
+      "good_db_coverage": 0.08
+    },
+    "low_score_policy": {
+      "enabled": false,
+      "threshold": 0.35,
+      "score_ceiling": 0.349,
+      "apply_only_to_relaxed": true,
+      "reason": "low_score_ceiling"
+    }
+  },
+  "goal_rules": {
+    "balanced": {
+      "protein_priority": 1.0,
+      "carb_priority": 1.0,
+      "fat_priority": 1.0,
+      "avoid_desserts_as_main": true
+    },
+    "weight_loss": {
+      "protein_priority": 1.2,
+      "carb_priority": 0.85,
+      "fat_priority": 0.8,
+      "prefer_high_satiety": true,
+      "avoid_rich_fat": true,
+      "avoid_desserts_as_main": true
+    },
+    "muscle_gain": {
+      "protein_priority": 1.25,
+      "carb_priority": 1.15,
+      "fat_priority": 1.0,
+      "prefer_energy_dense": true,
+      "avoid_desserts_as_main": true
+    }
+  },
+  "slot_query_rules": {
+    "base_terms": {
+      "breakfast": "main meal breakfast morning meal",
+      "lunch": "main meal lunch balanced complete meal",
+      "dinner": "main meal dinner evening meal balanced complete meal",
+      "snack": "snack light meal",
+      "snack2": "snack light meal"
+    },
+    "nutrition_terms": {
+      "balanced": "high protein balanced carbs moderate fat vegetables",
+      "weight_loss": "high protein high satiety lower calorie vegetables lean protein",
+      "muscle_gain": "high protein energy dense balanced carbs main meal"
+    },
+    "macro_terms": {
+      "high_protein_min_g": 30,
+      "protein_min_g": 20,
+      "balanced_carbs_min_g": 50,
+      "low_carb_max_g": 30,
+      "moderate_fat_max_g": 20
+    },
+    "macro_term_text": {
+      "high_protein": [
+        "high protein",
+        "lean protein"
+      ],
+      "protein": [
+        "protein"
+      ],
+      "balanced_carbs": [
+        "balanced carbs",
+        "main carb"
+      ],
+      "low_carb": [
+        "low carb",
+        "vegetables"
+      ],
+      "moderate_fat": [
+        "moderate fat"
+      ]
+    },
+    "carb_diversity_terms": "varied carbs different carb source",
+    "preferred_ingredients_limit": 3
+  },
+  "debug": {
+    "store_rerank_components": true,
+    "store_main_carb": true,
+    "store_embedding_score": true
+  },
+  "meal_type_by_meals_per_day": {
+    "1": [
+      "lunch"
+    ],
+    "2": [
+      "lunch",
+      "dinner"
+    ],
+    "3": [
+      "breakfast",
+      "lunch",
+      "dinner"
+    ],
+    "4": [
+      "breakfast",
+      "lunch",
+      "snack",
+      "dinner"
+    ],
+    "5": [
+      "breakfast",
+      "snack",
+      "lunch",
+      "snack",
+      "dinner"
+    ],
+    "6": [
+      "breakfast",
+      "snack",
+      "lunch",
+      "snack",
+      "snack2",
+      "dinner"
+    ]
+  },
+  "goal_quality_rules": {
+    "balanced": {
+      "protein_gap_penalty_enabled": true,
+      "min_slot_protein_ratio": 0.78,
+      "protein_gap_penalty_weight": 0.18
+    },
+    "weight_loss": {
+      "protein_gap_penalty_enabled": true,
+      "min_slot_protein_ratio": 0.88,
+      "protein_gap_penalty_weight": 0.28
+    },
+    "muscle_gain": {
+      "protein_gap_penalty_enabled": true,
+      "min_slot_protein_ratio": 0.90,
+      "protein_gap_penalty_weight": 0.30
+    }
+  }
+}

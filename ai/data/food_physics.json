@@ -1,0 +1,2994 @@
+{
+  "chicken": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "rice": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "egg": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "beef": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "potato": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "shrimp": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "pasta": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "noodles": {
+    "density": 0.88,
+    "volume_per_100g_ml": 114
+  },
+  "salmon": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "tuna": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "turkey": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "pork": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "lamb": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "cottage_cheese_5": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "milk_2_5": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "yogurt_natural_2": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "kefir_1": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "cheese_russian": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "broccoli": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "spinach": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "tomato": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "cucumber": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "carrot": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "onion": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "garlic": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "bell_pepper": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "mushroom": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "cabbage": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "apple": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "banana": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "orange": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "strawberry": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "avocado": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "grapes": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "oat_flakes_raw": {
+    "density": 0.43,
+    "volume_per_100g_ml": 233
+  },
+  "buckwheat_raw": {
+    "density": 0.83,
+    "volume_per_100g_ml": 120
+  },
+  "bread_white": {
+    "density": 0.28,
+    "volume_per_100g_ml": 357
+  },
+  "lentils_raw": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "chickpeas_raw": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "beans_red_raw": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "peas_green": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "corn_sweet": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "sweet_potato": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "almonds": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "peanuts": {
+    "density": 0.63,
+    "volume_per_100g_ml": 159
+  },
+  "walnuts": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "sunflower_seeds": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "honey": {
+    "density": 1.42,
+    "volume_per_100g_ml": 70
+  },
+  "sugar": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "butter": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "sunflower_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "olive_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "mayonnaise": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "sour_cream_20": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "cream_cheese": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "mozzarella": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "parmesan": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "feta": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "tofu": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "soy_milk": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "cod": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "pollock": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "trout": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "mackerel": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "squid": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "mussels": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "crab": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "lobster": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "beets": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "radish": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "eggplant": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "zucchini": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "cauliflower": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "brussels_sprouts": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "asparagus": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "celery": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "leek": {
+    "density": 0.93,
+    "volume_per_100g_ml": 108
+  },
+  "pumpkin": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "pear": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "peach": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "plum": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "apricot": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "cherry": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "kiwi": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "mango": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "pineapple": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "watermelon": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "melon": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "lemon": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "lime": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "grapefruit": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "pomegranate": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "persimmon": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "figs": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "coconut": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "raisins": {
+    "density": 0.88,
+    "volume_per_100g_ml": 114
+  },
+  "prunes": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "dried_apricots": {
+    "density": 0.86,
+    "volume_per_100g_ml": 116
+  },
+  "millet_raw": {
+    "density": 0.84,
+    "volume_per_100g_ml": 119
+  },
+  "barley_raw": {
+    "density": 0.82,
+    "volume_per_100g_ml": 122
+  },
+  "corn_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "flaxseed_oil": {
+    "density": 0.93,
+    "volume_per_100g_ml": 108
+  },
+  "sesame_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "ketchup": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "mustard": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "soy_sauce": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "vinegar": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "chicken_thigh": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "duck": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "bacon": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "sausage": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "veal": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "rabbit": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "herring": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "sardine": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "flounder": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "halibut": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "octopus": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "oysters": {
+    "density": 1.09,
+    "volume_per_100g_ml": 92
+  },
+  "scallops": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "quinoa_raw": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "bulgur_raw": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "couscous_raw": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "brown_rice_raw": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "wild_rice_raw": {
+    "density": 0.75,
+    "volume_per_100g_ml": 133
+  },
+  "cashew": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "pistachios": {
+    "density": 0.67,
+    "volume_per_100g_ml": 149
+  },
+  "hazelnuts": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "pecan": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "macadamia": {
+    "density": 0.68,
+    "volume_per_100g_ml": 147
+  },
+  "brazil_nuts": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "sesame_seeds": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "flax_seeds": {
+    "density": 0.66,
+    "volume_per_100g_ml": 152
+  },
+  "chia_seeds": {
+    "density": 0.67,
+    "volume_per_100g_ml": 149
+  },
+  "poppy_seeds": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "pumpkin_seeds": {
+    "density": 0.63,
+    "volume_per_100g_ml": 159
+  },
+  "green_beans": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "artichoke": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "kohlrabi": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "fennel": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "parsnip": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "turnip": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "rutabaga": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "arugula": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "dill": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "parsley": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "cilantro": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "basil": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "mint": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "green_onion": {
+    "density": 0.82,
+    "volume_per_100g_ml": 122
+  },
+  "peanut_butter": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "nutella": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "jam": {
+    "density": 1.23,
+    "volume_per_100g_ml": 81
+  },
+  "marmalade": {
+    "density": 1.23,
+    "volume_per_100g_ml": 81
+  },
+  "marshmallow": {
+    "density": 0.45,
+    "volume_per_100g_ml": 222
+  },
+  "halva": {
+    "density": 1.15,
+    "volume_per_100g_ml": 87
+  },
+  "dark_chocolate": {
+    "density": 1.25,
+    "volume_per_100g_ml": 80
+  },
+  "milk_chocolate": {
+    "density": 1.28,
+    "volume_per_100g_ml": 78
+  },
+  "white_chocolate": {
+    "density": 1.26,
+    "volume_per_100g_ml": 79
+  },
+  "cocoa_powder": {
+    "density": 0.49,
+    "volume_per_100g_ml": 204
+  },
+  "coconut_milk": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "coconut_cream": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "coconut_water": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "maple_syrup": {
+    "density": 1.33,
+    "volume_per_100g_ml": 75
+  },
+  "agave_syrup": {
+    "density": 1.37,
+    "volume_per_100g_ml": 73
+  },
+  "molasses": {
+    "density": 1.41,
+    "volume_per_100g_ml": 71
+  },
+  "fish_sauce": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "oyster_sauce": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "worcestershire_sauce": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "bbq_sauce": {
+    "density": 1.12,
+    "volume_per_100g_ml": 89
+  },
+  "salsa": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "guacamole": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "hummus": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "pesto": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "tahini": {
+    "density": 1.15,
+    "volume_per_100g_ml": 87
+  },
+  "almond_milk": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "oat_milk": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "rice_milk": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "coconut_milk_beverage": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "coconut_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "palm_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "canola_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "peanut_oil": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "grapeseed_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "avocado_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "walnut_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "hazelnut_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "wheat_germ": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "wheat_bran": {
+    "density": 0.35,
+    "volume_per_100g_ml": 286
+  },
+  "oat_bran": {
+    "density": 0.37,
+    "volume_per_100g_ml": 270
+  },
+  "rice_bran": {
+    "density": 0.41,
+    "volume_per_100g_ml": 244
+  },
+  "corn_bran": {
+    "density": 0.38,
+    "volume_per_100g_ml": 263
+  },
+  "psyllium_husk": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "gelatin": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "agar_agar": {
+    "density": 0.35,
+    "volume_per_100g_ml": 286
+  },
+  "yeast_nutritional": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "turkey_breast_skinless": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "salmon_atlantic_farmed": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "tuna_canned_in_water": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "pork_tenderloin_lean": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "lamb_leg_lean": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "cottage_cheese_lowfat_2": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "mozzarella_whole_milk": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "cheddar_cheese": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "parmesan_cheese": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "feta_cheese": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "ricotta_whole_milk": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "cream_cheese_regular": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "tofu_firm": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "cod_atlantic_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "trout_rainbow_farmed": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "mackerel_atlantic_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "sardine_atlantic_canned_oil": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "herring_atlantic_raw": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "tilapia_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "shrimp_mixed_species_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "lobster_northern_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "crab_blue_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "mussel_blue_raw": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "oyster_eastern_raw": {
+    "density": 1.09,
+    "volume_per_100g_ml": 92
+  },
+  "scallop_mixed_species_raw": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "broccoli_raw": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "spinach_raw": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "kale_raw": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "arugula_raw": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "cucumber_raw": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "zucchini_raw": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "eggplant_raw": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "bell_pepper_green_raw": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "tomato_red_raw": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "onion_raw": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "garlic_raw": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "carrot_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "potato_russet_raw": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "sweet_potato_raw": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "corn_sweet_yellow_raw": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "peas_green_raw": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "green_beans_raw": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "asparagus_raw": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "mushroom_white_raw": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "cauliflower_raw": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "brussels_sprouts_raw": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "cabbage_green_raw": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "beetroot_raw": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "radish_raw": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "celery_raw": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "beef_liver": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "chicken_liver": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "pork_liver": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "beef_heart": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "chicken_heart": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "pork_heart": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "beef_tongue": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "pork_tongue": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "beef_kidney": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "pork_kidney": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "chicken_gizzards": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "goose": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "quail": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "venison": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "elk": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "bison": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "catfish": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "carp": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "pike": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "perch": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "zander": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "sturgeon": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "beluga": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "sea_bass": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "sea_bream": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "monkfish": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "swordfish": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "caviar_red": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "caviar_black": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "pollock_roe": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "cod_roe": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "surimi": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "seaweed_kelp": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "nori": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "spirulina_dried": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "chlorella_dried": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "wheat_flour_white": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "wheat_flour_whole": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "rye_flour": {
+    "density": 0.54,
+    "volume_per_100g_ml": 185
+  },
+  "corn_flour": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "rice_flour": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "coconut_flour": {
+    "density": 0.45,
+    "volume_per_100g_ml": 222
+  },
+  "almond_flour": {
+    "density": 0.52,
+    "volume_per_100g_ml": 192
+  },
+  "chickpea_flour": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "soy_flour": {
+    "density": 0.63,
+    "volume_per_100g_ml": 159
+  },
+  "baking_powder": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "baking_soda": {
+    "density": 2.20,
+    "volume_per_100g_ml": 45
+  },
+  "yeast_dried": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "cornstarch": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "jerusalem_artichoke": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "chard": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "collard_greens": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "watercress": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "endive": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "radicchio": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "bamboo_shoots": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "lotus_root": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "taro": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "yuca": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "jicama": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "daikon": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "burdock": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "okra": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "salsify": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "black_salsify": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "sea_buckthorn": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "cloudberry": {
+    "density": 0.93,
+    "volume_per_100g_ml": 108
+  },
+  "lingonberry": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "gooseberry": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "elderberry": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "quince": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "lychee": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "rambutan": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "longan": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "durian": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "jackfruit": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "passion_fruit": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "dragon_fruit": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "star_fruit": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "guava": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "papaya": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "kumquat": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "tamarind": {
+    "density": 1.15,
+    "volume_per_100g_ml": 87
+  },
+  "dates": {
+    "density": 1.25,
+    "volume_per_100g_ml": 80
+  },
+  "figs_dried": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "cranberry_dried": {
+    "density": 0.88,
+    "volume_per_100g_ml": 114
+  },
+  "goji_berries_dried": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "mung_beans_raw": {
+    "density": 0.82,
+    "volume_per_100g_ml": 122
+  },
+  "adzuki_beans_raw": {
+    "density": 0.81,
+    "volume_per_100g_ml": 123
+  },
+  "black_beans_raw": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "pinto_beans_raw": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "lima_beans_raw": {
+    "density": 0.79,
+    "volume_per_100g_ml": 127
+  },
+  "fava_beans_raw": {
+    "density": 0.82,
+    "volume_per_100g_ml": 122
+  },
+  "soybeans_raw": {
+    "density": 0.78,
+    "volume_per_100g_ml": 128
+  },
+  "edamame": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "tempeh": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "seitan": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "turkey_leg": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "duck_breast": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "pheasant": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "ostrich": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "frog_legs": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "crayfish": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "langoustine": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "sea_urchin": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "abalone": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "whelk": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "conch": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "geoduck": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "smelt": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "mullet": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "grouper": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "snapper": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "mahi_mahi": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "pompano": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "bluefish": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "burbot": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "grayling": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "vendace": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "whitefish": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "eel": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "lamprey": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "spelt_raw": {
+    "density": 0.82,
+    "volume_per_100g_ml": 122
+  },
+  "amaranth_raw": {
+    "density": 0.77,
+    "volume_per_100g_ml": 130
+  },
+  "teff_raw": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "sorghum_raw": {
+    "density": 0.82,
+    "volume_per_100g_ml": 122
+  },
+  "triticale_raw": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "hominy": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "popcorn_air_popped": {
+    "density": 0.08,
+    "volume_per_100g_ml": 1250
+  },
+  "pine_nuts": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "chestnuts": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "acorn_flour": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "carob_powder": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "matcha_powder": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "coffee_brewed": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "tea_black_brewed": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "tea_green_brewed": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "kombucha": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "kvass": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "cider_alcoholic": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "beer_lager": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "wine_red": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "wine_white": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "vodka": {
+    "density": 0.93,
+    "volume_per_100g_ml": 108
+  },
+  "whiskey": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "rum": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "gin": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "sauerkraut": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "kimchi": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "pickles_cucumber": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "olives_green": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "olives_black": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "capers": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "sun_dried_tomatoes": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "anchovy_canned_oil": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "mackerel_canned_oil": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "corned_beef": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "spam": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "liverwurst": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "mortadella": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "chorizo": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "salami": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "pepperoni": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "prosciutto": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "pancetta": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "guanciale": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "lard": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "suet": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "tallow": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "schmaltz": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "ghee": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "margarine": {
+    "density": 0.93,
+    "volume_per_100g_ml": 108
+  },
+  "shortening": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "heavy_cream": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "half_and_half": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "evaporated_milk": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "condensed_milk": {
+    "density": 1.30,
+    "volume_per_100g_ml": 77
+  },
+  "powdered_milk": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "whey_powder": {
+    "density": 0.52,
+    "volume_per_100g_ml": 192
+  },
+  "casein_powder": {
+    "density": 0.50,
+    "volume_per_100g_ml": 200
+  },
+  "soy_protein_powder": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "pea_protein_powder": {
+    "density": 0.53,
+    "volume_per_100g_ml": 189
+  },
+  "hemp_protein_powder": {
+    "density": 0.56,
+    "volume_per_100g_ml": 179
+  },
+  "egg_white_powder": {
+    "density": 0.48,
+    "volume_per_100g_ml": 208
+  },
+  "gelatin_powder": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "pectin": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "xanthan_gum": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "guar_gum": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "carrageenan": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "tapioca_starch": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "arrowroot_flour": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "potato_starch": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "sweet_rice_flour": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "semolina": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "vital_wheat_gluten": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "oat_fiber": {
+    "density": 0.35,
+    "volume_per_100g_ml": 286
+  },
+  "inulin": {
+    "density": 0.45,
+    "volume_per_100g_ml": 222
+  },
+  "brie_cheese": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "camembert": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "gouda": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "edam": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "emmental": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "gruyere": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "manchego": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "pecorino": {
+    "density": 1.20,
+    "volume_per_100g_ml": 83
+  },
+  "asiago": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "fontina": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "taleggio": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "mascarpone": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "ricotta_salata": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "paneer": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "halloumi": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "feta_greek": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "queso_fresco": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "granola": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "muesli": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "corn_flakes": {
+    "density": 0.12,
+    "volume_per_100g_ml": 833
+  },
+  "bran_flakes": {
+    "density": 0.14,
+    "volume_per_100g_ml": 714
+  },
+  "rice_krispies": {
+    "density": 0.07,
+    "volume_per_100g_ml": 1429
+  },
+  "oatmeal_instant": {
+    "density": 0.45,
+    "volume_per_100g_ml": 222
+  },
+  "cream_of_wheat": {
+    "density": 0.63,
+    "volume_per_100g_ml": 159
+  },
+  "grits": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "polenta": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "biscuit": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "croissant": {
+    "density": 0.45,
+    "volume_per_100g_ml": 222
+  },
+  "bagel": {
+    "density": 0.52,
+    "volume_per_100g_ml": 192
+  },
+  "english_muffin": {
+    "density": 0.50,
+    "volume_per_100g_ml": 200
+  },
+  "pita_bread": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "tortilla_corn": {
+    "density": 0.58,
+    "volume_per_100g_ml": 172
+  },
+  "tortilla_flour": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "naan": {
+    "density": 0.52,
+    "volume_per_100g_ml": 192
+  },
+  "chapati": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "sourdough_bread": {
+    "density": 0.45,
+    "volume_per_100g_ml": 222
+  },
+  "rye_bread": {
+    "density": 0.44,
+    "volume_per_100g_ml": 227
+  },
+  "pumpernickel": {
+    "density": 0.48,
+    "volume_per_100g_ml": 208
+  },
+  "focaccia": {
+    "density": 0.50,
+    "volume_per_100g_ml": 200
+  },
+  "ciabatta": {
+    "density": 0.48,
+    "volume_per_100g_ml": 208
+  },
+  "brioche": {
+    "density": 0.47,
+    "volume_per_100g_ml": 213
+  },
+  "challah": {
+    "density": 0.50,
+    "volume_per_100g_ml": 200
+  },
+  "cornbread": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "pretzel_soft": {
+    "density": 0.52,
+    "volume_per_100g_ml": 192
+  },
+  "cracker_saltine": {
+    "density": 0.40,
+    "volume_per_100g_ml": 250
+  },
+  "rice_cake": {
+    "density": 0.12,
+    "volume_per_100g_ml": 833
+  },
+  "popcorn_microwave": {
+    "density": 0.10,
+    "volume_per_100g_ml": 1000
+  },
+  "potato_chips": {
+    "density": 0.35,
+    "volume_per_100g_ml": 286
+  },
+  "tortilla_chips": {
+    "density": 0.38,
+    "volume_per_100g_ml": 263
+  },
+  "pretzel_hard": {
+    "density": 0.42,
+    "volume_per_100g_ml": 238
+  },
+  "ginger_root": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "turmeric": {
+    "density": 0.75,
+    "volume_per_100g_ml": 133
+  },
+  "cinnamon": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "cloves": {
+    "density": 0.50,
+    "volume_per_100g_ml": 200
+  },
+  "nutmeg": {
+    "density": 0.59,
+    "volume_per_100g_ml": 169
+  },
+  "cardamom": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "coriander_seeds": {
+    "density": 0.53,
+    "volume_per_100g_ml": 189
+  },
+  "cumin": {
+    "density": 0.53,
+    "volume_per_100g_ml": 189
+  },
+  "fennel_seeds": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "mustard_seeds": {
+    "density": 0.58,
+    "volume_per_100g_ml": 172
+  },
+  "caraway_seeds": {
+    "density": 0.54,
+    "volume_per_100g_ml": 185
+  },
+  "anise_seeds": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "vanilla_extract": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "saffron": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "paprika": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "chili_powder": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "cayenne_pepper": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "black_pepper": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "white_pepper": {
+    "density": 0.56,
+    "volume_per_100g_ml": 179
+  },
+  "allspice": {
+    "density": 0.52,
+    "volume_per_100g_ml": 192
+  },
+  "bay_leaf": {
+    "density": 0.35,
+    "volume_per_100g_ml": 286
+  },
+  "oregano_dried": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "thyme_dried": {
+    "density": 0.32,
+    "volume_per_100g_ml": 313
+  },
+  "rosemary_dried": {
+    "density": 0.28,
+    "volume_per_100g_ml": 357
+  },
+  "sage_dried": {
+    "density": 0.33,
+    "volume_per_100g_ml": 303
+  },
+  "marjoram_dried": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "tarragon_dried": {
+    "density": 0.31,
+    "volume_per_100g_ml": 323
+  },
+  "chives_dried": {
+    "density": 0.28,
+    "volume_per_100g_ml": 357
+  },
+  "chervil_dried": {
+    "density": 0.29,
+    "volume_per_100g_ml": 345
+  },
+  "savory_dried": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "peas_canned": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "corn_canned": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "beans_canned": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "chickpeas_canned": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "mushrooms_canned": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "tomatoes_canned": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "tomato_paste": {
+    "density": 1.15,
+    "volume_per_100g_ml": 87
+  },
+  "tomato_sauce": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "applesauce": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "cranberry_sauce": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "soy_sprouts": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "alfalfa_sprouts": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "mung_bean_sprouts": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "broccoli_sprouts": {
+    "density": 0.88,
+    "volume_per_100g_ml": 114
+  },
+  "radish_sprouts": {
+    "density": 0.86,
+    "volume_per_100g_ml": 116
+  },
+  "wheatgrass": {
+    "density": 0.50,
+    "volume_per_100g_ml": 200
+  },
+  "barley_green": {
+    "density": 0.52,
+    "volume_per_100g_ml": 192
+  },
+  "moringa_powder": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "maca_powder": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "ashwagandha_powder": {
+    "density": 0.58,
+    "volume_per_100g_ml": 172
+  },
+  "aloe_vera_juice": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "carrot_juice": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "beetroot_juice": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "celery_juice": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "cucumber_juice": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "wheatgrass_juice": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "pomegranate_juice": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "cranberry_juice": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "grapefruit_juice": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "prune_juice": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "tomato_juice": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "clamato_juice": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "energy_drink": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "sports_drink": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "tonic_water": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "club_soda": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "ginger_ale": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "root_beer": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "cream_soda": {
+    "density": 1.01,
+    "volume_per_100g_ml": 99
+  },
+  "horchata": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "rice_pudding": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "tapioca_pudding": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "bread_pudding": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "flan": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "panna_cotta": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "tiramisu": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "cheesecake": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "brownie": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "muffin_blueberry": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "scone": {
+    "density": 0.75,
+    "volume_per_100g_ml": 133
+  },
+  "danish_pastry": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "cannoli": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "baklava": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "macaron": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "meringue": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "marzipan": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "nougat": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "caramel_sauce": {
+    "density": 1.30,
+    "volume_per_100g_ml": 77
+  },
+  "chocolate_sauce": {
+    "density": 1.25,
+    "volume_per_100g_ml": 80
+  },
+  "butterscotch_sauce": {
+    "density": 1.28,
+    "volume_per_100g_ml": 78
+  },
+  "fruit_syrup": {
+    "density": 1.33,
+    "volume_per_100g_ml": 75
+  },
+  "grenadine": {
+    "density": 1.30,
+    "volume_per_100g_ml": 77
+  },
+  "orgeat_syrup": {
+    "density": 1.28,
+    "volume_per_100g_ml": 78
+  },
+  "falernum": {
+    "density": 1.25,
+    "volume_per_100g_ml": 80
+  },
+  "vermouth_dry": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "vermouth_sweet": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "campari": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "aperol": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "amaretto": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "all-purpose_flour": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "almond_extract": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "almond_paste": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "barbecue_sauce": {
+    "density": 1.12,
+    "volume_per_100g_ml": 89
+  },
+  "barley_flour": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "beef_broth": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "beef_tallow": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "black_tea": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "blackberries": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "blueberries": {
+    "density": 0.93,
+    "volume_per_100g_ml": 108
+  },
+  "bluefin": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "bok_choy": {
+    "density": 0.94,
+    "volume_per_100g_ml": 106
+  },
+  "bread_flour": {
+    "density": 0.62,
+    "volume_per_100g_ml": 161
+  },
+  "brisket": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "brown_sugar": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "buttermilk": {
+    "density": 1.03,
+    "volume_per_100g_ml": 97
+  },
+  "button_mushroom": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "cake_flour": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "cantaloupe": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "cassava": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "chanterelle": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "cheese": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "chicken_broth": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "chicken_fat": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "chicken_wings": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "chocolate_chips": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "clams": {
+    "density": 1.08,
+    "volume_per_100g_ml": 93
+  },
+  "cocoa_powder": {
+    "density": 0.49,
+    "volume_per_100g_ml": 204
+  },
+  "coconut_extract": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "coffee_beans": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "crab_legs": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "cranberries": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "cream": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "curry_powder": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "dandelion_greens": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "deer": {
+    "density": 1.07,
+    "volume_per_100g_ml": 93
+  },
+  "dried_allspice": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "dried_basil": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "dried_chives": {
+    "density": 0.28,
+    "volume_per_100g_ml": 357
+  },
+  "dried_cinnamon": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "dried_cloves": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "dried_dill_weed": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "dried_galangal": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "dried_ginger": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "dried_lemongrass": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "dried_nutmeg": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "dried_oregano": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "dried_parsley": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "dried_rosemary": {
+    "density": 0.28,
+    "volume_per_100g_ml": 357
+  },
+  "dried_tarragon": {
+    "density": 0.30,
+    "volume_per_100g_ml": 333
+  },
+  "dried_thyme": {
+    "density": 0.32,
+    "volume_per_100g_ml": 313
+  },
+  "duck_fat": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "dungeness_crab": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "eels": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "eggs": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "enoki": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "escarole": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "fennel_bulb": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "fillet": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "fish": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "fish_stock": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "flour": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "garam_masala": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "garlic_powder": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "goji_berries": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "grade_a_maple_syrup": {
+    "density": 1.33,
+    "volume_per_100g_ml": 75
+  },
+  "green_cabbage": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "green_tea": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "ground_cardamom": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "ground_cayenne_pepper": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "ground_cinnamon": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "ground_cloves": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "ground_coriander": {
+    "density": 0.53,
+    "volume_per_100g_ml": 189
+  },
+  "ground_cumin": {
+    "density": 0.53,
+    "volume_per_100g_ml": 189
+  },
+  "ground_garlic_powder": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "ground_ginger": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "ground_nutmeg": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "ground_onion_powder": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "ground_paprika": {
+    "density": 0.65,
+    "volume_per_100g_ml": 154
+  },
+  "ground_turmeric": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "haddock": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "ham": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "hen_of_the_woods": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "herbal_tea": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "honeydew_melon": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "hot_sauce": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "kingsnake": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "lemon_zest": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "lettuce": {
+    "density": 0.80,
+    "volume_per_100g_ml": 125
+  },
+  "lobster_tail": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "marinara_sauce": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "meatballs": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "morel": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "mustard_greens": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "napa_cabbage": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "nappa_cabbage": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "nectarines": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "onion_powder": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "orange_zest": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "oyster_mushroom": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "pandan_extract": {
+    "density": 0.99,
+    "volume_per_100g_ml": 101
+  },
+  "pastry_flour": {
+    "density": 0.58,
+    "volume_per_100g_ml": 172
+  },
+  "peaches": {
+    "density": 0.98,
+    "volume_per_100g_ml": 102
+  },
+  "pepper": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "pizza_sauce": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "plantain": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "plums": {
+    "density": 0.97,
+    "volume_per_100g_ml": 103
+  },
+  "porcini": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "pork_chops": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "pork_fat": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "portobello": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "prawns": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "rapini": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "raspberries": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "raw_honey": {
+    "density": 1.42,
+    "volume_per_100g_ml": 70
+  },
+  "red_cabbage": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "rhubarb": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "ribs": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  },
+  "rockmelon": {
+    "density": 0.96,
+    "volume_per_100g_ml": 104
+  },
+  "rosemary": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "safflower_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "salt": {
+    "density": 1.28,
+    "volume_per_100g_ml": 78
+  },
+  "sausages": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "savoy_cabbage": {
+    "density": 0.91,
+    "volume_per_100g_ml": 110
+  },
+  "self-raising_flour": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "shank": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "shiitake": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "short_ribs": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "sirloin": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "snail": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "snakehead": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "snow_crab": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "sour_cream": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "spanish_mackerel": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "spinach_beet": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "star_anise": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "steak": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "stone_crab": {
+    "density": 1.05,
+    "volume_per_100g_ml": 95
+  },
+  "strawberries": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "swiss_chard": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "taco_seasoning": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "tea_leaves": {
+    "density": 0.60,
+    "volume_per_100g_ml": 167
+  },
+  "tenderloin": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "teriyaki_sauce": {
+    "density": 1.10,
+    "volume_per_100g_ml": 91
+  },
+  "thyme": {
+    "density": 0.70,
+    "volume_per_100g_ml": 143
+  },
+  "truffle": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "turbinado_sugar": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "turnip_greens": {
+    "density": 0.90,
+    "volume_per_100g_ml": 111
+  },
+  "vegetable_broth": {
+    "density": 1.00,
+    "volume_per_100g_ml": 100
+  },
+  "vegetable_oil": {
+    "density": 0.92,
+    "volume_per_100g_ml": 109
+  },
+  "vegetables": {
+    "density": 0.95,
+    "volume_per_100g_ml": 105
+  },
+  "water_chestnut": {
+    "density": 1.02,
+    "volume_per_100g_ml": 98
+  },
+  "white_sugar": {
+    "density": 0.85,
+    "volume_per_100g_ml": 118
+  },
+  "whole_wheat_flour": {
+    "density": 0.55,
+    "volume_per_100g_ml": 182
+  },
+  "yam": {
+    "density": 1.06,
+    "volume_per_100g_ml": 94
+  },
+  "yellowfin": {
+    "density": 1.04,
+    "volume_per_100g_ml": 96
+  }
+}

@@ -1,17 +1,14 @@
+# ingredient_scorer.py
 import logging
 from collections import defaultdict
 
 logger = logging.getLogger("IngredientScorer")
 
-
+# Объединение баллов YOLO и CLIP. Формирование общей оценки уверенности
 class IngredientScorer:
-    """
-    Combines YOLO labels + CLIP/normalizer outputs into unified ingredient list.
-    Also assigns confidence scores per ingredient.
-    """
 
     def __init__(self, synonym_map=None, min_score=0.3):
-        # базовые синонимы (можешь расширять)
+        # базовые синонимы (потом вынести в /data/synonims.json)
         self.synonym_map = synonym_map or {
             "fries": "potato",
             "french fries": "potato",
@@ -26,7 +23,7 @@ class IngredientScorer:
         self.min_score = min_score
 
     # ==========================
-    # NORMALIZATION
+    # Нормализация
     # ==========================
     def _normalize_label(self, label: str) -> str:
         if not label:
@@ -36,7 +33,7 @@ class IngredientScorer:
         return self.synonym_map.get(label, label)
 
     # ==========================
-    # MAIN COMBINE FUNCTION
+    # Основная функция общей уверенности
     # ==========================
     def combine(self, yolo_labels, clip_normalized):
         """
@@ -47,14 +44,14 @@ class IngredientScorer:
         scores = defaultdict(float)
 
         # ==========================
-        # YOLO CONTRIBUTION
+        # Оценки YOLO
         # ==========================
         for label in yolo_labels:
             norm = self._normalize_label(label)
-            scores[norm] += 0.6  # YOLO weight
+            scores[norm] += 0.6  # Вес YOLO в общей оценке
 
         # ==========================
-        # CLIP CONTRIBUTION
+        # Оценки CLIP
         # ==========================
         for item in clip_normalized:
             if not isinstance(item, dict):
@@ -67,10 +64,10 @@ class IngredientScorer:
                 continue
 
             norm = self._normalize_label(name)
-            scores[norm] += float(score) * 1.0  # CLIP weight
+            scores[norm] += float(score) * 1.0  # Вес CLIP в общей оценке
 
         # ==========================
-        # POST-PROCESSING
+        # Подсчет
         # ==========================
         results = []
 
@@ -81,7 +78,7 @@ class IngredientScorer:
                     "score": round(score, 4)
                 })
 
-        # sort by confidence
+        # Сортировка по уверенности
         results.sort(key=lambda x: x["score"], reverse=True)
 
         logger.info(f"Scored ingredients: {results}")
@@ -89,7 +86,7 @@ class IngredientScorer:
         return results
 
     # ==========================
-    # OPTIONAL: STRICT FILTERING
+    # Строгое фильтрование (k - кол-во ближайших образцов к исходному)
     # ==========================
     def filter_top_k(self, ingredients, k=5):
         return sorted(
