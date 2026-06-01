@@ -18,7 +18,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   int _currentIndex = 0;
   String _displayedText = '';
-  bool _isTyping = true;
   Timer? _timer;
 
   @override
@@ -30,7 +29,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   void _startTyping() {
     final phrase = _phrases[_currentIndex];
     int charIndex = 0;
-    _isTyping = true;
 
     _timer = Timer.periodic(const Duration(milliseconds: 60), (timer) {
       if (charIndex < phrase.length) {

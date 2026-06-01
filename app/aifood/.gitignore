@@ -33,7 +33,6 @@ migrate_working_dir/
 .build/
 /coverage/
 .packages
-pubspec.lock
 
 # Symbolication related
 app.*.symbols
@@ -45,3 +44,80 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+
+
+
+# --- React Native ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.yarn/
+.pnp.*
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Metro bundler
+.metro-health-check*
+
+# --- iOS ---
+ios/Pods/
+ios/build/
+ios/*.xcworkspace/xcuserdata/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+*.ipa
+*.dSYM.zip
+*.dSYM
+DerivedData/
+
+# CocoaPods
+ios/Podfile.lock
+
+# --- Android ---
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# --- Environment & Secrets ---
+.env
+.env.*
+!.env.example
+google-services.json
+GoogleService-Info.plist
+
+# --- IDEs & Editors ---
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# --- Testing & Coverage ---
+coverage/
+.nyc_output/
+jest-results/
+
+# --- Build outputs ---
+build/
+dist/
+out/
+
+# --- Logs ---
+logs/
+*.log

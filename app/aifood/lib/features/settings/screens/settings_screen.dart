@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ai_food/core/services/api_service.dart';
 import 'package:ai_food/core/providers/settings_provider.dart';
 import 'package:ai_food/core/data/products_data.dart';
 import 'package:ai_food/shared/widgets/product_selector.dart';
 
 class SettingsScreen extends ConsumerStatefulWidget {
-  const SettingsScreen({super.key});
+  final bool openChatOnSave;
+
+  const SettingsScreen({
+    super.key,
+    this.openChatOnSave = false,
+  });
 
   @override
   ConsumerState<SettingsScreen> createState() => _SettingsScreenState();
@@ -38,16 +44,98 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     super.dispose();
   }
 
-  void _save() {
+  Future<void> _save({bool openChatAfterSave = false}) async {
     final notifier = ref.read(settingsProvider.notifier);
     notifier.updateAge(int.tryParse(_ageController.text) ?? 25);
     notifier.updateHeight(int.tryParse(_heightController.text) ?? 175);
     notifier.updateWeight(double.tryParse(_weightController.text) ?? 70);
-    notifier.updateDailyCalories(
-        int.tryParse(_caloriesController.text) ?? 2000);
+    notifier
+        .updateDailyCalories(int.tryParse(_caloriesController.text) ?? 2000);
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Сохранено')),
+    try {
+      await apiService.saveSettings(ref.read(settingsProvider));
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Сохранено')),
+        );
+        if (openChatAfterSave) {
+          context.go('/chat');
+        }
+      }
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Не удалось сохранить профиль: $error')),
+        );
+      }
+    }
+  }
+
+  Future<void> _calculateCalories() async {
+    final notifier = ref.read(settingsProvider.notifier);
+    notifier.updateAge(int.tryParse(_ageController.text) ?? 25);
+    notifier.updateHeight(int.tryParse(_heightController.text) ?? 175);
+    notifier.updateWeight(double.tryParse(_weightController.text) ?? 70);
+    late final Map<String, dynamic> result;
+    try {
+      result = await apiService.calculateCalories(ref.read(settingsProvider));
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Не удалось рассчитать калории: $error')),
+        );
+      }
+      return;
+    }
+    if (!mounted) return;
+    final rawTarget = result['target_calories'];
+    final target = rawTarget is num ? rawTarget.toInt() : 2000;
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: const Color(0xFF2A2A2A),
+      builder: (_) => Padding(
+        padding: const EdgeInsets.fromLTRB(24, 22, 24, 32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Рекомендуемая калорийность: $target ккал',
+              style: const TextStyle(
+                fontFamily: 'Idiqlat',
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              result['explanation']?.toString() ?? '',
+              style: TextStyle(
+                fontFamily: 'Idiqlat',
+                fontSize: 14,
+                color: Colors.white.withValues(alpha: 0.72),
+              ),
+            ),
+            const SizedBox(height: 18),
+            _buildActionButton(
+              label: 'Применить к профилю',
+              onTap: () async {
+                notifier.updateDailyCalories(target);
+                _caloriesController.text = target.toString();
+                Navigator.pop(context);
+                await _save();
+              },
+              filled: true,
+            ),
+            const SizedBox(height: 10),
+            _buildActionButton(
+              label: 'Отмена',
+              onTap: () => Navigator.pop(context),
+              filled: false,
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -90,7 +178,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Settings',
+                    'Профиль',
                     style: TextStyle(
                       fontFamily: 'Idiqlat',
                       fontSize: 22,
@@ -99,7 +187,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () => context.pop(),
+                    onTap: () => context.go('/chat'),
                     child: const Text(
                       'Чат',
                       style: TextStyle(
@@ -172,6 +260,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         _buildDivider(),
                         _buildGenderRow(settings, notifier),
                         _buildDivider(),
+                        _buildActivityRow(settings, notifier),
+                        _buildDivider(),
                         _buildInputRow(
                           label: 'Рост',
                           controller: _heightController,
@@ -181,8 +271,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         _buildInputRow(
                           label: 'Вес',
                           controller: _weightController,
-                          keyboardType: const TextInputType
-                              .numberWithOptions(decimal: true),
+                          keyboardType: const TextInputType.numberWithOptions(
+                              decimal: true),
                         ),
                       ],
                     ),
@@ -196,6 +286,25 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           label: 'Калорий в день',
                           controller: _caloriesController,
                           keyboardType: TextInputType.number,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 12),
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: GestureDetector(
+                              onTap: _calculateCalories,
+                              child: const Text(
+                                'Рассчитать количество калорий?',
+                                style: TextStyle(
+                                  fontFamily: 'Idiqlat',
+                                  fontSize: 13,
+                                  color: Colors.white,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                         _buildDivider(),
                         _buildDietRow(settings, notifier),
@@ -230,6 +339,17 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         ),
                         _buildDivider(),
                         _buildProductRow(
+                          label: 'Нелюбимые продукты',
+                          selected: settings.dislikedProducts,
+                          onTap: () => _openProductSelector(
+                            title: 'Нелюбимые продукты',
+                            allProducts: kProducts,
+                            selected: settings.dislikedProducts,
+                            onSave: notifier.updateDislikedProducts,
+                          ),
+                        ),
+                        _buildDivider(),
+                        _buildProductRow(
                           label: 'Исключить продукты',
                           selected: settings.excludedProducts,
                           onTap: () => _openProductSelector(
@@ -244,7 +364,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     const SizedBox(height: 24),
 
                     // Кнопка Сохранить
-                    _buildSaveButton(_save),
+                    _buildSaveButton(
+                      () => _save(openChatAfterSave: widget.openChatOnSave),
+                    ),
                     const SizedBox(height: 32),
                   ],
                 ),
@@ -286,7 +408,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   Widget _buildDivider() {
     return Divider(
-      color: Colors.white.withOpacity(0.08),
+      color: Colors.white.withValues(alpha: 0.08),
       height: 1,
     );
   }
@@ -367,6 +489,50 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     );
   }
 
+  Widget _buildActivityRow(UserSettings s, SettingsNotifier n) {
+    final items = const [
+      ('sedentary', 'Низкая'),
+      ('light', 'Лёгкая'),
+      ('moderate', 'Средняя'),
+      ('active', 'Высокая'),
+    ];
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text(
+            'Активность',
+            style: TextStyle(
+              fontFamily: 'Idiqlat',
+              fontSize: 16,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Wrap(
+                alignment: WrapAlignment.end,
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final item in items)
+                    _buildSelectButton(
+                      label: item.$2,
+                      isSelected: s.activityLevel == item.$1,
+                      onTap: () => n.updateActivityLevel(item.$1),
+                    ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildDietRow(UserSettings s, SettingsNotifier n) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
@@ -403,9 +569,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         decoration: BoxDecoration(
-          color: isSelected
-              ? const Color(0xFF404040)
-              : const Color(0xFF262626),
+          color: isSelected ? const Color(0xFF404040) : const Color(0xFF262626),
           borderRadius: BorderRadius.circular(45),
         ),
         child: Text(
@@ -416,7 +580,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             fontWeight: FontWeight.w900,
             color: isSelected
                 ? Colors.white
-                : Colors.white.withOpacity(0.19),
+                : Colors.white.withValues(alpha: 0.19),
           ),
         ),
       ),
@@ -451,7 +615,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   style: TextStyle(
                     fontFamily: 'Idiqlat',
                     fontSize: 12,
-                    color: Colors.white.withOpacity(0.5),
+                    color: Colors.white.withValues(alpha: 0.5),
                   ),
                 ),
             ],
@@ -473,6 +637,37 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildActionButton({
+    required String label,
+    required VoidCallback onTap,
+    required bool filled,
+  }) {
+    return SizedBox(
+      width: double.infinity,
+      height: 48,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          decoration: BoxDecoration(
+            color: filled ? const Color(0xFF303030) : Colors.transparent,
+            borderRadius: BorderRadius.circular(33),
+            border: Border.all(color: const Color(0xFF969696)),
+          ),
+          child: Center(
+            child: Text(
+              label,
+              style: const TextStyle(
+                fontFamily: 'Idiqlat',
+                fontSize: 17,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

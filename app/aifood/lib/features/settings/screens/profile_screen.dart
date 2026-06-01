@@ -1,3 +1,4 @@
+import 'package:ai_food/core/services/api_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -11,41 +12,123 @@ class ProfileScreen extends ConsumerStatefulWidget {
 }
 
 class _ProfileScreenState extends ConsumerState<ProfileScreen> {
-  late TextEditingController _emailController;
-  late TextEditingController _passwordController;
+  late TextEditingController _currentPasswordController;
+  late TextEditingController _newPasswordController;
+  late TextEditingController _confirmPasswordController;
   bool _pushNotifications = true;
-  bool _obscurePassword = true;
+  bool _obscureCurrentPassword = true;
+  bool _obscureNewPassword = true;
+  bool _obscureConfirmPassword = true;
 
   @override
   void initState() {
     super.initState();
     final s = ref.read(settingsProvider);
-    _emailController = TextEditingController(text: s.email);
-    _passwordController = TextEditingController();
+    _currentPasswordController = TextEditingController();
+    _newPasswordController = TextEditingController();
+    _confirmPasswordController = TextEditingController();
     _pushNotifications = s.pushNotifications;
   }
 
   @override
   void dispose() {
-    _emailController.dispose();
-    _passwordController.dispose();
+    _currentPasswordController.dispose();
+    _newPasswordController.dispose();
+    _confirmPasswordController.dispose();
     super.dispose();
   }
 
-  void _save() {
+  Future<void> _save() async {
     final notifier = ref.read(settingsProvider.notifier);
-    notifier.updateEmail(_emailController.text.trim());
-    notifier.updatePushNotifications(_pushNotifications);
-    if (_passwordController.text.isNotEmpty) {
-      notifier.updatePassword(_passwordController.text);
+    final currentPassword = _currentPasswordController.text;
+    final newPassword = _newPasswordController.text;
+    final confirmPassword = _confirmPasswordController.text;
+    final wantsPasswordChange = currentPassword.isNotEmpty ||
+        newPassword.isNotEmpty ||
+        confirmPassword.isNotEmpty;
+
+    if (wantsPasswordChange) {
+      if (currentPassword.isEmpty ||
+          newPassword.isEmpty ||
+          confirmPassword.isEmpty) {
+        _showMessage(
+          'Заполните текущий пароль, новый пароль и повтор нового пароля',
+        );
+        return;
+      }
+      if (newPassword != confirmPassword) {
+        _showMessage('Новые пароли не совпадают');
+        return;
+      }
+      final passwordError = _passwordValidationError(newPassword);
+      if (passwordError != null) {
+        _showMessage(passwordError);
+        return;
+      }
     }
+
+    notifier.updatePushNotifications(_pushNotifications);
+
+    try {
+      await apiService.saveSettings(ref.read(settingsProvider));
+      if (wantsPasswordChange) {
+        await apiService.changePassword(
+          currentPassword: currentPassword,
+          newPassword: newPassword,
+          confirmPassword: confirmPassword,
+        );
+        _currentPasswordController.clear();
+        _newPasswordController.clear();
+        _confirmPasswordController.clear();
+      }
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              wantsPasswordChange ? 'Профиль и пароль сохранены' : 'Сохранено',
+            ),
+          ),
+        );
+      }
+    } catch (error) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Не удалось сохранить профиль: $error')),
+        );
+      }
+    }
+  }
+
+  void _showMessage(String message) {
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Сохранено')),
+      SnackBar(content: Text(message)),
     );
   }
 
-  void _logout() {
-    context.go('/');
+  String? _passwordValidationError(String password) {
+    if (password.length < 8) return 'Пароль должен быть не короче 8 символов';
+    if (!password.contains(RegExp(r'[A-Za-zА-Яа-я]'))) {
+      return 'Пароль должен содержать букву';
+    }
+    if (!password.contains(RegExp(r'\d'))) {
+      return 'Пароль должен содержать цифру';
+    }
+    if (!password.contains(RegExp(r'[A-ZА-Я]'))) {
+      return 'Пароль должен содержать заглавную букву';
+    }
+    if (!password.contains(RegExp(r'[a-zа-я]'))) {
+      return 'Пароль должен содержать строчную букву';
+    }
+    if (!password.contains(RegExp(r'[^A-Za-zА-Яа-я0-9]'))) {
+      return 'Пароль должен содержать специальный символ';
+    }
+    return null;
+  }
+
+  void _logout() async {
+    await apiService.logout();
+    if (mounted) context.go('/');
   }
 
   @override
@@ -67,7 +150,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Settings',
+                    'Профиль',
                     style: TextStyle(
                       fontFamily: 'Idiqlat',
                       fontSize: 22,
@@ -76,7 +159,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () => context.pop(),
+                    onTap: () => context.go('/chat'),
                     child: const Text(
                       'Чат',
                       style: TextStyle(
@@ -129,9 +212,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     const SizedBox(height: 24),
 
                     // АККАУНТ
-                    Align(
+                    const Align(
                       alignment: Alignment.centerLeft,
-                      child: const Text(
+                      child: Text(
                         'АККАУНТ',
                         style: TextStyle(
                           fontFamily: 'Idiqlat',
@@ -165,19 +248,15 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                                 ),
                                 const SizedBox(width: 16),
                                 Expanded(
-                                  child: TextField(
-                                    controller: _emailController,
-                                    keyboardType: TextInputType.emailAddress,
+                                  child: Text(
+                                    settings.email,
                                     textAlign: TextAlign.right,
-                                    style: const TextStyle(
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
                                       fontFamily: 'Idiqlat',
                                       fontSize: 14,
                                       fontWeight: FontWeight.w900,
-                                      color: Colors.white,
-                                    ),
-                                    decoration: const InputDecoration(
-                                      border: InputBorder.none,
-                                      contentPadding: EdgeInsets.zero,
+                                      color: Colors.white.withValues(alpha: 0.72),
                                     ),
                                   ),
                                 ),
@@ -185,73 +264,53 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                             ),
                           ),
                           Divider(
-                              color: Colors.white.withOpacity(0.08),
+                              color: Colors.white.withValues(alpha: 0.08),
                               height: 1),
 
-                          // Пароль
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4),
-                            child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text(
-                                  'Пароль',
-                                  style: TextStyle(
-                                    fontFamily: 'Idiqlat',
-                                    fontSize: 16,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 180,
-                                  child: TextField(
-                                    controller: _passwordController,
-                                    obscureText: _obscurePassword,
-                                    textAlign: TextAlign.right,
-                                    style: const TextStyle(
-                                      fontFamily: 'Idiqlat',
-                                      fontSize: 14,
-                                      color: Colors.white,
-                                    ),
-                                    decoration: InputDecoration(
-                                      border: InputBorder.none,
-                                      contentPadding: EdgeInsets.zero,
-                                      hintText: 'Изменить пароль',
-                                      hintStyle: TextStyle(
-                                        fontFamily: 'Idiqlat',
-                                        fontSize: 14,
-                                        color: Colors.white.withOpacity(0.5),
-                                      ),
-                                      suffixIcon: GestureDetector(
-                                        onTap: () => setState(() =>
-                                            _obscurePassword =
-                                                !_obscurePassword),
-                                        child: Icon(
-                                          _obscurePassword
-                                              ? Icons.visibility_off
-                                              : Icons.visibility,
-                                          color: Colors.white54,
-                                          size: 18,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                          _buildPasswordField(
+                            label: 'Используемый пароль',
+                            controller: _currentPasswordController,
+                            obscure: _obscureCurrentPassword,
+                            onToggle: () => setState(
+                              () => _obscureCurrentPassword =
+                                  !_obscureCurrentPassword,
                             ),
                           ),
                           Divider(
-                              color: Colors.white.withOpacity(0.08),
-                              height: 1),
+                            color: Colors.white.withValues(alpha: 0.08),
+                            height: 1,
+                          ),
+                          _buildPasswordField(
+                            label: 'Новый пароль',
+                            controller: _newPasswordController,
+                            obscure: _obscureNewPassword,
+                            onToggle: () => setState(
+                              () => _obscureNewPassword = !_obscureNewPassword,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white.withValues(alpha: 0.08),
+                            height: 1,
+                          ),
+                          _buildPasswordField(
+                            label: 'Новый пароль повторно',
+                            controller: _confirmPasswordController,
+                            obscure: _obscureConfirmPassword,
+                            onToggle: () => setState(
+                              () => _obscureConfirmPassword =
+                                  !_obscureConfirmPassword,
+                            ),
+                          ),
+                          Divider(
+                            color: Colors.white.withValues(alpha: 0.08),
+                            height: 1,
+                          ),
 
                           // Push уведомления
                           Padding(
-                            padding:
-                                const EdgeInsets.symmetric(vertical: 12),
+                            padding: const EdgeInsets.symmetric(vertical: 12),
                             child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 const Text(
                                   'Push-уведомления',
@@ -264,9 +323,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                                 Switch(
                                   value: _pushNotifications,
                                   onChanged: (val) =>
-                                      setState(() =>
-                                          _pushNotifications = val),
-                                  activeColor: Colors.green,
+                                      setState(() => _pushNotifications = val),
+                                  activeThumbColor: Colors.green,
                                 ),
                               ],
                             ),
@@ -279,7 +337,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     // Сохранить
                     _buildActionButton(
                       label: 'Сохранить',
-                      onTap: _save,
+                      onTap: () => _save(),
                       filled: true,
                     ),
                     const SizedBox(height: 12),
@@ -328,6 +386,58 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildPasswordField({
+    required String label,
+    required TextEditingController controller,
+    required bool obscure,
+    required VoidCallback onToggle,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label,
+            style: const TextStyle(
+              fontFamily: 'Idiqlat',
+              fontSize: 16,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 4),
+          TextField(
+            controller: controller,
+            obscureText: obscure,
+            style: const TextStyle(
+              fontFamily: 'Idiqlat',
+              fontSize: 14,
+              color: Colors.white,
+            ),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.zero,
+              hintText: 'Не менять',
+              hintStyle: TextStyle(
+                fontFamily: 'Idiqlat',
+                fontSize: 14,
+                color: Colors.white.withValues(alpha: 0.5),
+              ),
+              suffixIcon: IconButton(
+                onPressed: onToggle,
+                icon: Icon(
+                  obscure ? Icons.visibility_off : Icons.visibility,
+                  color: Colors.white54,
+                  size: 18,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

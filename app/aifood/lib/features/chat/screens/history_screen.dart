@@ -3,11 +3,23 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ai_food/core/providers/chat_provider.dart';
 
-class HistoryScreen extends ConsumerWidget {
+class HistoryScreen extends ConsumerStatefulWidget {
   const HistoryScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HistoryScreen> createState() => _HistoryScreenState();
+}
+
+class _HistoryScreenState extends ConsumerState<HistoryScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(() => ref.read(chatProvider.notifier).loadHistory());
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    ref.watch(chatProvider);
     final notifier = ref.read(chatProvider.notifier);
     final history = notifier.history;
 
@@ -27,25 +39,28 @@ class HistoryScreen extends ConsumerWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          children: const [
-                            Icon(Icons.circle,
-                                size: 12, color: Color(0xFFB4B4B4)),
-                            SizedBox(width: 8),
-                            Text(
-                              'AI Food',
-                              style: TextStyle(
-                                fontFamily: 'Idiqlat',
-                                fontSize: 22,
-                                color: Color(0xFFB4B4B4),
+                        GestureDetector(
+                          onTap: () => context.go('/chat'),
+                          child: const Row(
+                            children: [
+                              Icon(Icons.circle,
+                                  size: 12, color: Color(0xFFB4B4B4)),
+                              SizedBox(width: 8),
+                              Text(
+                                'AI Food',
+                                style: TextStyle(
+                                  fontFamily: 'Idiqlat',
+                                  fontSize: 22,
+                                  color: Color(0xFFB4B4B4),
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         GestureDetector(
                           onTap: () => context.push('/settings'),
                           child: const Text(
-                            'Settings',
+                            'Профиль',
                             style: TextStyle(
                               fontFamily: 'Idiqlat',
                               fontSize: 22,
@@ -87,9 +102,12 @@ class HistoryScreen extends ConsumerWidget {
                             itemBuilder: (context, index) {
                               final chat = history[index];
                               return GestureDetector(
-                                onTap: () => context.push(
-                                  '/chat?id=${chat.id}',
-                                ),
+                                onTap: () {
+                                  ref
+                                      .read(chatProvider.notifier)
+                                      .openChat(chat.id);
+                                  context.go('/chat?id=${chat.id}');
+                                },
                                 child: Padding(
                                   padding: const EdgeInsets.only(bottom: 20),
                                   child: Text(

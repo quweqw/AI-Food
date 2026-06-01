@@ -91,7 +91,7 @@ class _ProductSelectorSheetState extends State<ProductSelectorSheet> {
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                          color: Colors.white.withOpacity(0.08),
+                          color: Colors.white.withValues(alpha: 0.08),
                         ),
                       ),
                     ),

@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ai_food/core/services/api_service.dart';
+import 'package:ai_food/core/providers/settings_provider.dart';
 
-class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+class RegisterScreen extends ConsumerStatefulWidget {
+  final String? initialEmail;
+  final bool verifyOnly;
+
+  const RegisterScreen({
+    super.key,
+    this.initialEmail,
+    this.verifyOnly = false,
+  });
 
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
+  ConsumerState<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {
+class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
@@ -19,6 +29,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
   bool _showVerification = false;
 
   @override
+  void initState() {
+    super.initState();
+    _emailController.text = widget.initialEmail ?? '';
+    _showVerification = widget.verifyOnly && _emailController.text.isNotEmpty;
+    if (_emailController.text.isEmpty) {
+      Future.microtask(_loadPendingVerification);
+    }
+  }
+
+  @override
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
@@ -27,7 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     super.dispose();
   }
 
-  void _register() {
+  void _register() async {
     final email = _emailController.text.trim();
     final password = _passwordController.text;
     final confirm = _confirmPasswordController.text;
@@ -46,33 +66,153 @@ class _RegisterScreenState extends State<RegisterScreen> {
       return;
     }
 
-    // TODO: отправить запрос на backend для отправки кода
-    setState(() => _showVerification = true);
+    final passwordError = _passwordValidationError(password);
+    if (passwordError != null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(passwordError)),
+      );
+      return;
+    }
+
+    try {
+      await apiService.register(email, password);
+      await apiService.savePendingVerificationEmail(email);
+      setState(() => _showVerification = true);
+    } catch (e) {
+      if (mounted) {
+        final code = apiService.errorCode(e);
+        if (code == 'EMAIL_NOT_VERIFIED') {
+          final emailForVerification =
+              apiService.errorDetails(e)['email']?.toString() ?? email;
+          await apiService.savePendingVerificationEmail(emailForVerification);
+          setState(() {
+            _emailController.text = emailForVerification;
+            _showVerification = true;
+          });
+          return;
+        }
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Ошибка: $e')),
+        );
+      }
+    }
   }
 
-  void _verifyCode() {
+  void _verifyCode() async {
     final code = _codeController.text.trim();
-
     if (code.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Введите код')),
       );
       return;
     }
+    if (!RegExp(r'^\d{6}$').hasMatch(code)) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Код подтверждения должен состоять из 6 цифр')),
+      );
+      return;
+    }
 
-    // TODO: проверить код на backend
-    context.go('/chat');
+    try {
+      final token = await apiService.verifyCode(
+        _emailController.text.trim(), code,
+      );
+      await apiService.saveToken(token);
+
+      final settingsData = await apiService.getSettings();
+      if (mounted) {
+        await ref.read(settingsProvider.notifier).loadFromBackend(settingsData);
+        await apiService.clearPendingVerificationEmail();
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Заполните параметры профиля')),
+        );
+        context.go('/settings?onboarding=1');
+      }
+    } catch (e) {
+      if (mounted) {
+        final code = apiService.errorCode(e);
+        if (code == 'EMAIL_VERIFICATION_EXPIRED') {
+          await apiService.clearPendingVerificationEmail();
+          setState(() => _showVerification = false);
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text(
+                'Срок подтверждения истёк. Зарегистрируйтесь заново.',
+              ),
+            ),
+          );
+          return;
+        }
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Неверный код')),
+        );
+      }
+    }
   }
 
-  void _resendCode() {
-    // TODO: повторная отправка кода
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Код отправлен повторно')),
-    );
+  void _resendCode() async {
+    try {
+      await apiService.resendVerificationCode(_emailController.text.trim());
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Код отправлен повторно')),
+        );
+      }
+    } catch (error) {
+      if (mounted) {
+        final code = apiService.errorCode(error);
+        if (code == 'EMAIL_VERIFICATION_EXPIRED') {
+          await apiService.clearPendingVerificationEmail();
+          setState(() => _showVerification = false);
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text(
+                'Срок подтверждения истёк. Зарегистрируйтесь заново.',
+              ),
+            ),
+          );
+          return;
+        }
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Не удалось отправить код: $error')),
+        );
+      }
+    }
+  }
+
+  Future<void> _loadPendingVerification() async {
+    final email = await apiService.getPendingVerificationEmail();
+    if (!mounted || email == null) return;
+    setState(() {
+      _emailController.text = email;
+      _showVerification = true;
+    });
+  }
+
+  String? _passwordValidationError(String password) {
+    if (password.length < 8) return 'Пароль должен быть не короче 8 символов';
+    if (!password.contains(RegExp(r'[A-Za-zА-Яа-я]'))) {
+      return 'В пароле должна быть хотя бы одна буква';
+    }
+    if (!password.contains(RegExp(r'\d'))) {
+      return 'В пароле должна быть хотя бы одна цифра';
+    }
+    if (!password.contains(RegExp(r'[A-ZА-Я]'))) {
+      return 'Добавьте заглавную букву';
+    }
+    if (!password.contains(RegExp(r'[a-zа-я]'))) {
+      return 'Добавьте строчную букву';
+    }
+    if (!password.contains(RegExp(r'[^A-Za-zА-Яа-я0-9]'))) {
+      return 'Добавьте специальный символ';
+    }
+    return null;
   }
 
   @override
   Widget build(BuildContext context) {
+    final title = _showVerification ? 'Подтверждение' : 'Регистрация';
+
     return Scaffold(
       backgroundColor: const Color(0xFF151515),
       resizeToAvoidBottomInset: true,
@@ -85,7 +225,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               left: 24,
               child: GestureDetector(
                 onTap: () => _showVerification
-                    ? setState(() => _showVerification = false)
+                    ? context.go('/login')
                     : context.go('/'),
                 child: const Text(
                   'AI Food',
@@ -99,14 +239,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
 
             // Заголовок
-            const Positioned(
+            Positioned(
               top: 80,
               left: 0,
               right: 0,
               child: Center(
                 child: Text(
-                  'Регистрация',
-                  style: TextStyle(
+                  title,
+                  style: const TextStyle(
                     fontFamily: 'Idiqlat',
                     fontSize: 36,
                     fontWeight: FontWeight.w900,
@@ -225,7 +365,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         // Поле кода
         _buildFilledField(
           controller: _codeController,
-          hint: 'Введите проверочный код',
+          hint: '6-значный код из письма',
           keyboardType: TextInputType.number,
         ),
         const SizedBox(height: 16),
