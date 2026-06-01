@@ -4,7 +4,7 @@ import os
 import json
 import logging
 from copy import deepcopy
-from math import exp
+from math import exp, isfinite
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 from ai.core.decision.portion_optimizer import PortionOptimizer
@@ -249,6 +249,29 @@ class MealPlanner:
         )
         return policy if isinstance(policy, dict) else {}
 
+    def _policy_with_goal_overrides(
+        self,
+        policy: Dict[str, Any],
+        goal: Optional[str],
+    ) -> Dict[str, Any]:
+        if not isinstance(policy, dict):
+            return {}
+
+        goal_key = self._normalize_goal(goal)
+        merged = dict(policy)
+        overrides = policy.get("goal_overrides")
+
+        if isinstance(overrides, dict):
+            default_override = overrides.get("default")
+            if isinstance(default_override, dict):
+                merged.update(default_override)
+
+            goal_override = overrides.get(goal_key)
+            if isinstance(goal_override, dict):
+                merged.update(goal_override)
+
+        return merged
+
     def _day_macro_pressure_policy(self) -> Dict[str, Any]:
         policy = self._rules_get(
             "meal_structure_rules",
@@ -408,6 +431,7 @@ class MealPlanner:
         simulated_profile = deepcopy(user_profile)
         full_plan: List[Dict[str, Any]] = []
         recent_recipe_names = self._recent_recipe_names_from_profile(simulated_profile)
+        plan_main_carbs: List[str] = []
 
         for day_idx in range(max(1, int(days))):
             day_result = self._build_day(
@@ -418,6 +442,7 @@ class MealPlanner:
                 macro_targets=macro_targets,
                 meals_per_day=meals_per_day,
                 recent_recipe_names=recent_recipe_names,
+                plan_main_carbs=plan_main_carbs,
             )
             full_plan.append(day_result)
 
@@ -632,6 +657,7 @@ class MealPlanner:
         slot_target_calories: float,
         slot_target_macros: Dict[str, float],
         used_main_carbs: Optional[List[str]] = None,
+        plan_main_carbs: Optional[List[str]] = None,
     ) -> str:
         """
         PROD slot query builder.
@@ -689,7 +715,7 @@ class MealPlanner:
         if fat_target <= float(macro_rules.get("moderate_fat_max_g", 20) or 20):
             add_terms("moderate_fat")
 
-        if used_main_carbs:
+        if used_main_carbs or plan_main_carbs:
             diversity_terms = rules.get("carb_diversity_terms", "")
             if isinstance(diversity_terms, list):
                 parts.extend(str(x) for x in diversity_terms if str(x).strip())
@@ -767,6 +793,7 @@ class MealPlanner:
         slot_target_macros: Optional[Dict[str, float]] = None,
         candidate_limit: int = 80,
         used_main_carbs: Optional[List[str]] = None,
+        plan_main_carbs: Optional[List[str]] = None,
     ) -> List[Dict[str, Any]]:
         """
         PROD slot-aware candidate fetch.
@@ -781,6 +808,7 @@ class MealPlanner:
         goal = self._normalize_goal(goal)
         self._current_goal = goal
         used_main_carbs = used_main_carbs or []
+        plan_main_carbs = plan_main_carbs or []
 
         # Backward compatibility:
         # _fetch_slot_candidates(profile, goal, meal_type, slot_kcal, candidate_limit)
@@ -829,6 +857,7 @@ class MealPlanner:
             slot_target_calories=float(slot_target_calories),
             slot_target_macros=slot_target_macros,
             used_main_carbs=used_main_carbs,
+            plan_main_carbs=plan_main_carbs,
         )
 
         search_limit = max(candidate_limit * 3, 240)
@@ -861,6 +890,7 @@ class MealPlanner:
             candidates=candidates,
             meal_type=meal_type,
             used_main_carbs=used_main_carbs,
+            plan_main_carbs=plan_main_carbs,
             candidate_limit=candidate_limit,
         )
 
@@ -1374,7 +1404,10 @@ class MealPlanner:
         выбранным блюдам день может улететь по жирам/калориям. Этот штраф давит
         именно на кандидата, который ломает дневной баланс.
         """
-        policy = self._day_macro_pressure_policy()
+        policy = self._policy_with_goal_overrides(
+            self._day_macro_pressure_policy(),
+            goal,
+        )
 
         if not policy.get("enabled", True):
             return {
@@ -1446,7 +1479,8 @@ class MealPlanner:
         meal_fat = float(meal_nutrition.get("fat", 0.0) or 0.0)
         if fat_target > 0 and current_fat >= fat_target * 0.90:
             add_weight = float(policy.get("fat_addition_when_budget_low_weight", 0.16))
-            fat_penalty += min(0.14, (meal_fat / max(fat_target, 1.0)) * add_weight)
+            add_cap = float(policy.get("fat_addition_when_budget_low_cap", 0.14) or 0.14)
+            fat_penalty += min(add_cap, (meal_fat / max(fat_target, 1.0)) * add_weight)
 
         calorie_penalty = over_penalty(
             calories_ratio,
@@ -1474,6 +1508,22 @@ class MealPlanner:
         elif goal == "weight_loss":
             fat_penalty *= 1.15
             calorie_penalty *= 1.15
+
+        fat_pressure_max = policy.get("fat_pressure_max_penalty")
+        if fat_pressure_max is not None:
+            fat_penalty = min(fat_penalty, float(fat_pressure_max))
+
+        calorie_pressure_max = policy.get("calorie_pressure_max_penalty")
+        if calorie_pressure_max is not None:
+            calorie_penalty = min(calorie_penalty, float(calorie_pressure_max))
+
+        carbs_pressure_max = policy.get("carbs_pressure_max_penalty")
+        if carbs_pressure_max is not None:
+            carbs_penalty = min(carbs_penalty, float(carbs_pressure_max))
+
+        protein_pressure_max = policy.get("protein_pressure_max_penalty")
+        if protein_pressure_max is not None:
+            protein_penalty = min(protein_penalty, float(protein_pressure_max))
 
         total_penalty = clamp(
             fat_penalty + calorie_penalty + carbs_penalty + protein_penalty,
@@ -1706,6 +1756,138 @@ class MealPlanner:
         )
         day_macro_pressure_penalty = float(day_pressure.get("day_macro_pressure_penalty", 0.0))
 
+        macro_policy = self._policy_with_goal_overrides(
+            self._day_macro_pressure_policy(),
+            goal,
+        )
+
+        calories = float(nutrition.get("calories", 0.0) or 0.0)
+        fat_g = float(nutrition.get("fat", 0.0) or 0.0)
+        carbs_g = float(nutrition.get("carbs", 0.0) or 0.0)
+
+        fat_kcal_share = (fat_g * 9.0 / calories) if calories > 0 else 0.0
+        slot_fat_target = float(
+            slot_macro_targets.get(
+                "fat_g",
+                slot_macro_targets.get("fat", 0.0),
+            )
+            or 0.0
+        )
+        slot_carbs_target = float(
+            slot_macro_targets.get(
+                "carbs_g",
+                slot_macro_targets.get("carbs", 0.0),
+            )
+            or 0.0
+        )
+        slot_fat_ratio = fat_g / max(slot_fat_target, 1.0)
+        slot_carbs_ratio = carbs_g / max(slot_carbs_target, 1.0)
+        main_carb_for_recovery = self._detect_main_carb(ingredients)
+
+        low_fat_recovery_bonus = 0.0
+        carb_recovery_bonus = 0.0
+        slot_fat_over_penalty = 0.0
+
+        if bool(macro_policy.get("slot_fat_over_penalty_enabled", False)):
+            slot_fat_soft = float(
+                macro_policy.get("slot_fat_soft_ratio", 1.08)
+                or 1.08
+            )
+            slot_fat_hard = float(
+                macro_policy.get("slot_fat_hard_ratio", 1.45)
+                or 1.45
+            )
+            slot_fat_max_penalty = float(
+                macro_policy.get("slot_fat_max_penalty", 0.0)
+                or 0.0
+            )
+
+            if slot_fat_ratio > slot_fat_soft and slot_fat_max_penalty > 0:
+                if slot_fat_hard <= slot_fat_soft:
+                    slot_fat_over_penalty = slot_fat_max_penalty
+                else:
+                    slot_fat_over_penalty = (
+                        clamp(
+                            (slot_fat_ratio - slot_fat_soft)
+                            / (slot_fat_hard - slot_fat_soft)
+                        )
+                        * slot_fat_max_penalty
+                    )
+
+        if bool(macro_policy.get("low_fat_recovery_bonus_enabled", False)):
+            day_fat_after_ratio = float(
+                day_pressure.get("day_fat_after_ratio", 0.0)
+                or 0.0
+            )
+            trigger_ratio = float(
+                macro_policy.get("low_fat_recovery_trigger_ratio", 1.08)
+                or 1.08
+            )
+            min_slot_macro_fit = float(
+                macro_policy.get("low_fat_recovery_min_slot_macro_fit", 0.70)
+                or 0.70
+            )
+            min_portion_score = float(
+                macro_policy.get("low_fat_recovery_min_portion_score", 0.70)
+                or 0.70
+            )
+            fat_share_max = float(
+                macro_policy.get("low_fat_recovery_fat_kcal_share_max", 0.28)
+                or 0.28
+            )
+            slot_fat_ratio_max = float(
+                macro_policy.get("low_fat_recovery_slot_fat_ratio_max", 1.05)
+                or 1.05
+            )
+
+            if (
+                day_fat_after_ratio > trigger_ratio
+                and slot_macro_fit >= min_slot_macro_fit
+                and portion_score >= min_portion_score
+                and (
+                    fat_kcal_share <= fat_share_max
+                    or slot_fat_ratio <= slot_fat_ratio_max
+                )
+            ):
+                low_fat_recovery_bonus = float(
+                    macro_policy.get("low_fat_recovery_bonus", 0.0)
+                    or 0.0
+                )
+
+        if bool(macro_policy.get("carb_recovery_bonus_enabled", False)):
+            day_carbs_after_ratio = float(
+                day_pressure.get("day_carbs_after_ratio", 0.0)
+                or 0.0
+            )
+            carb_trigger_ratio = float(
+                macro_policy.get("carb_recovery_trigger_ratio", 0.88)
+                or 0.88
+            )
+            min_slot_carbs_ratio = float(
+                macro_policy.get("carb_recovery_min_slot_carbs_ratio", 0.80)
+                or 0.80
+            )
+            min_slot_macro_fit = float(
+                macro_policy.get("carb_recovery_min_slot_macro_fit", 0.70)
+                or 0.70
+            )
+            min_portion_score = float(
+                macro_policy.get("carb_recovery_min_portion_score", 0.70)
+                or 0.70
+            )
+
+            if (
+                day_carbs_after_ratio < carb_trigger_ratio
+                and main_carb_for_recovery is not None
+                and slot_carbs_ratio >= min_slot_carbs_ratio
+                and slot_macro_fit >= min_slot_macro_fit
+                and portion_score >= min_portion_score
+            ):
+                carb_recovery_bonus = float(
+                    macro_policy.get("carb_recovery_bonus", 0.0)
+                    or 0.0
+                )
+
         recipe_cooldown = self._recipe_cooldown_penalty(
             recipe=recipe,
             recent_recipe_names=recent_recipe_names,
@@ -1731,7 +1913,10 @@ class MealPlanner:
             - ingredient_penalty
             - substitution_penalty
             - day_macro_pressure_penalty
+            - slot_fat_over_penalty
             - recipe_cooldown_penalty
+            + low_fat_recovery_bonus
+            + carb_recovery_bonus
         )
 
         final_score = clamp(final_score, 0.0, 1.0)
@@ -1759,6 +1944,13 @@ class MealPlanner:
                 "ingredient_penalty": round(ingredient_penalty, 3),
                 "substitution_penalty": round(substitution_penalty, 3),
                 "day_macro_pressure_penalty": round(day_macro_pressure_penalty, 3),
+                "slot_fat_ratio": round(slot_fat_ratio, 3),
+                "slot_carbs_ratio": round(slot_carbs_ratio, 3),
+                "fat_kcal_share": round(fat_kcal_share, 3),
+                "slot_fat_over_penalty": round(slot_fat_over_penalty, 4),
+                "low_fat_recovery_bonus": round(low_fat_recovery_bonus, 4),
+                "carb_recovery_bonus": round(carb_recovery_bonus, 4),
+                "main_carb_for_recovery": main_carb_for_recovery,
                 "recipe_cooldown_penalty": round(recipe_cooldown_penalty, 3),
                 "recipe_repeat_count": recipe_cooldown.get("recipe_repeat_count", 0),
                 "recipe_cooldown_hard_block": recipe_cooldown.get("recipe_cooldown_hard_block", False),
@@ -1945,6 +2137,7 @@ class MealPlanner:
         self,
         recipe: Dict[str, Any],
         used_main_carbs: Optional[List[str]] = None,
+        plan_main_carbs: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """
         Dict-версия проверки повтора основного источника углеводов.
@@ -1952,6 +2145,7 @@ class MealPlanner:
         Старый _main_carb_repeat_penalty оставляем как float-версию.
         """
         used_main_carbs = used_main_carbs or []
+        plan_main_carbs = plan_main_carbs if plan_main_carbs is not None else used_main_carbs
 
         policy = self.meal_planner_rules.get("main_carb_repeat_policy", {})
         main_carb = self._detect_main_carb(recipe.get("ingredients", []))
@@ -1960,6 +2154,7 @@ class MealPlanner:
             return {
                 "main_carb": main_carb,
                 "main_carb_repeat_count": 0,
+                "main_carb_plan_count": 0,
                 "main_carb_repeat_penalty": 0.0,
                 "main_carb_hard_block": False,
             }
@@ -1968,11 +2163,13 @@ class MealPlanner:
             return {
                 "main_carb": None,
                 "main_carb_repeat_count": 0,
+                "main_carb_plan_count": 0,
                 "main_carb_repeat_penalty": 0.0,
                 "main_carb_hard_block": False,
             }
 
         repeat_count = used_main_carbs.count(main_carb)
+        plan_count = plan_main_carbs.count(main_carb)
 
         max_count_per_plan = self._rules_get(
             "recipe_quality_rules",
@@ -1990,10 +2187,12 @@ class MealPlanner:
                 or 999
             )
 
-            if repeat_count >= max_allowed:
+            if plan_count >= max_allowed:
                 return {
                     "main_carb": main_carb,
                     "main_carb_repeat_count": repeat_count,
+                    "main_carb_plan_count": plan_count,
+                    "main_carb_plan_limit": max_allowed,
                     "main_carb_repeat_penalty": 0.55,
                     "main_carb_hard_block": True,
                     "main_carb_hard_block_reason": "main_carb_plan_limit",
@@ -2022,6 +2221,7 @@ class MealPlanner:
         return {
             "main_carb": main_carb,
             "main_carb_repeat_count": repeat_count,
+            "main_carb_plan_count": plan_count,
             "main_carb_repeat_penalty": round(penalty, 4),
             "main_carb_hard_block": hard_block,
         }
@@ -2192,6 +2392,7 @@ class MealPlanner:
         candidates: List[Dict[str, Any]],
         meal_type: str,
         used_main_carbs: Optional[List[str]] = None,
+        plan_main_carbs: Optional[List[str]] = None,
         candidate_limit: int = 80,
     ) -> List[Dict[str, Any]]:
         """
@@ -2204,6 +2405,7 @@ class MealPlanner:
 
         meal_type_key = self._normalize_rule_token(meal_type)
         used_main_carbs = list(used_main_carbs or [])
+        plan_main_carbs = list(plan_main_carbs or [])
         goal = self._normalize_goal(getattr(self, "_current_goal", "balanced"))
 
         for recipe in candidates:
@@ -2212,7 +2414,11 @@ class MealPlanner:
             original_score = float(item.get("score", 0.0) or 0.0)
 
             meal_type_rule = self._meal_type_rule_score(item, meal_type_key)
-            carb_rule = self._main_carb_repeat_rule(item, used_main_carbs)
+            carb_rule = self._main_carb_repeat_rule(
+                item,
+                used_main_carbs,
+                plan_main_carbs=plan_main_carbs,
+            )
 
             meal_type_bonus = float(meal_type_rule.get("meal_type_bonus", 0.0) or 0.0)
             meal_type_penalty = float(meal_type_rule.get("meal_type_penalty", 0.0) or 0.0)
@@ -2230,6 +2436,7 @@ class MealPlanner:
                 main_carb = self._normalize_rule_token(main_carb) or None
 
             main_carb_repeat_count = int(carb_rule.get("main_carb_repeat_count", 0) or 0)
+            main_carb_plan_count = int(carb_rule.get("main_carb_plan_count", 0) or 0)
             main_carb_repeat_penalty = float(carb_rule.get("main_carb_repeat_penalty", 0.0) or 0.0)
             main_carb_hard_block = bool(carb_rule.get("main_carb_hard_block", False))
             main_carb_hard_block_penalty = (
@@ -2290,8 +2497,11 @@ class MealPlanner:
 
                 "main_carb": main_carb,
                 "main_carb_repeat_count": main_carb_repeat_count,
+                "main_carb_plan_count": main_carb_plan_count,
+                "main_carb_plan_limit": carb_rule.get("main_carb_plan_limit"),
                 "main_carb_repeat_penalty": round(main_carb_repeat_penalty, 4),
                 "main_carb_hard_block": main_carb_hard_block,
+                "main_carb_hard_block_reason": carb_rule.get("main_carb_hard_block_reason"),
                 "main_carb_hard_block_penalty": round(main_carb_hard_block_penalty, 4),
 
                 "missing_main_carb_penalty": round(missing_main_carb_penalty, 4),
@@ -2565,6 +2775,182 @@ class MealPlanner:
         """
         return self._detect_main_carb(ingredients or [])
 
+    def _candidate_has_real_hard_block(self, scored: Dict[str, Any]) -> bool:
+        components = scored.get("components", {}) or {}
+
+        if scored.get("reject"):
+            return True
+
+        if scored.get("issues"):
+            return True
+
+        safety = scored.get("safety")
+        if isinstance(safety, dict) and not safety.get("is_safe", True):
+            return True
+
+        return any(
+            bool(components.get(key, False))
+            for key in (
+                "allergy_hard_block",
+                "restriction_hard_block",
+                "invalid_nutrition",
+                "invalid_portion",
+            )
+        )
+
+    def _candidate_has_valid_nutrition(self, scored: Dict[str, Any]) -> bool:
+        nutrition = scored.get("nutrition", {}) or {}
+        if not isinstance(nutrition, dict):
+            return False
+
+        values: Dict[str, float] = {}
+        for key in ("calories", "protein", "fat", "carbs"):
+            try:
+                value = float(nutrition.get(key, 0.0) or 0.0)
+            except Exception:
+                return False
+
+            if not isfinite(value):
+                return False
+
+            values[key] = value
+
+        if values["calories"] <= 0:
+            return False
+
+        return all(values[key] >= 0 for key in ("protein", "fat", "carbs"))
+
+    def _is_last_safe_fallback_candidate(self, scored: Dict[str, Any]) -> bool:
+        if self._candidate_has_real_hard_block(scored):
+            return False
+
+        if not self._candidate_has_valid_nutrition(scored):
+            scored.setdefault("components", {})["invalid_nutrition"] = True
+            return False
+
+        components = scored.get("components", {}) or {}
+        policy = self._policy_with_goal_overrides(
+            self._selection_quality_policy(),
+            getattr(self, "_current_goal", "balanced"),
+        )
+
+        min_portion = float(policy.get("last_safe_min_portion_score", 0.01) or 0.01)
+        min_slot_macro = float(policy.get("last_safe_min_slot_macro_fit", 0.0) or 0.0)
+
+        portion_score = float(components.get("portion_score", 0.0) or 0.0)
+        slot_macro_fit = float(components.get("slot_macro_fit", 0.0) or 0.0)
+
+        if portion_score < min_portion:
+            components["invalid_portion"] = True
+            return False
+
+        if slot_macro_fit < min_slot_macro:
+            return False
+
+        return True
+
+    def _last_safe_fallback_rank(self, meal: Dict[str, Any]) -> float:
+        components = meal.get("components", {}) or {}
+
+        score = float(meal.get("score", 0.0) or 0.0)
+        portion_score = float(components.get("portion_score", 0.0) or 0.0)
+        slot_macro_fit = float(components.get("slot_macro_fit", 0.0) or 0.0)
+        retrieval = float(components.get("retrieval", 0.0) or 0.0)
+
+        soft_block_penalty = 0.0
+        if components.get("macro_hard_block"):
+            soft_block_penalty += 0.05
+        if components.get("recipe_cooldown_hard_block"):
+            soft_block_penalty += 0.04
+        if components.get("main_carb_hard_block"):
+            soft_block_penalty += 0.04
+
+        return (
+            score
+            + 0.35 * portion_score
+            + 0.25 * slot_macro_fit
+            + 0.10 * retrieval
+            - soft_block_penalty
+        )
+
+    def _apply_rescue_score_floor(
+        self,
+        meal: Dict[str, Any],
+        goal: str,
+    ) -> None:
+        components = meal.setdefault("components", {})
+        policy = self._policy_with_goal_overrides(
+            self._selection_quality_policy(),
+            goal,
+        )
+        floor_cfg = policy.get("rescue_score_floor", {})
+
+        if not isinstance(floor_cfg, dict) or not floor_cfg.get("enabled", True):
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        selected_tier = str(
+            meal.get("selection_tier")
+            or components.get("selection_quality_tier")
+            or components.get("selected_quality_tier")
+            or ""
+        )
+        selected_pool = str(components.get("selected_pool_name", "") or "")
+
+        if selected_tier != "relaxed" and selected_pool != "last_safe_candidate":
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        if self._candidate_has_real_hard_block(meal):
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        if not self._candidate_has_valid_nutrition(meal):
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        if components.get("recipe_cooldown_hard_block") or components.get("main_carb_hard_block"):
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        portion_score = float(components.get("portion_score", 0.0) or 0.0)
+        slot_macro_fit = float(components.get("slot_macro_fit", 0.0) or 0.0)
+
+        min_portion = float(floor_cfg.get("min_portion_score", 0.80) or 0.80)
+        min_macro_fit = float(floor_cfg.get("min_slot_macro_fit", 0.80) or 0.80)
+
+        if portion_score < min_portion or slot_macro_fit < min_macro_fit:
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        goal_key = self._normalize_goal(goal)
+        floor = float(
+            floor_cfg.get(
+                goal_key,
+                floor_cfg.get("default", 0.0),
+            )
+            or 0.0
+        )
+
+        if floor <= 0:
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        current_score = float(meal.get("score", 0.0) or 0.0)
+        if current_score >= floor:
+            components.setdefault("rescue_score_floor_applied", False)
+            return
+
+        meal["score"] = clamp(floor, 0.0, 1.0)
+        components["rescue_score_floor_applied"] = True
+        components["rescue_score_before_floor"] = round(current_score, 4)
+        components["rescue_score_after_floor"] = round(float(meal["score"]), 4)
+        components["rescue_score_floor"] = round(floor, 4)
+        components["rescue_score_floor_reason"] = str(
+            floor_cfg.get("reason", "safe_high_quality_rescue_floor")
+            or "safe_high_quality_rescue_floor"
+        )
+
     def _candidate_quality_tier(self, scored: dict, slot_idx: int) -> tuple[str, str]:
         """
         PROD staged quality gate.
@@ -2575,7 +2961,10 @@ class MealPlanner:
         - "emergency" — крайний fallback, чтобы не оставить слот пустым
         - "blocked"   — нельзя брать вообще
         """
-        policy = self._selection_quality_policy()
+        policy = self._policy_with_goal_overrides(
+            self._selection_quality_policy(),
+            getattr(self, "_current_goal", "balanced"),
+        )
 
         if not isinstance(policy, dict) or not policy.get("enabled", True):
             return "normal", ""
@@ -2598,6 +2987,20 @@ class MealPlanner:
         history_penalty = float(components.get("history_penalty", 0.0) or 0.0)
         cooldown_penalty = float(components.get("recipe_cooldown_penalty", 0.0) or 0.0)
         diversity = float(components.get("diversity", 1.0) or 0.0)
+        ingredient_penalty = float(components.get("ingredient_penalty", 0.0) or 0.0)
+        restriction_penalty = float(components.get("restriction_penalty", 0.0) or 0.0)
+        day_fat_after_ratio = float(components.get("day_fat_after_ratio", 0.0) or 0.0)
+        normal_max_day_fat_after_ratio = float(
+            policy.get("normal_max_day_fat_after_ratio", 999.0)
+            or 999.0
+        )
+        normal_day_pressure_ok = day_fat_after_ratio <= normal_max_day_fat_after_ratio
+        if not normal_day_pressure_ok:
+            components["normal_blocked_by_day_fat_after_ratio"] = True
+            components["normal_day_fat_after_ratio_limit"] = round(
+                normal_max_day_fat_after_ratio,
+                3,
+            )
 
         issues = scored.get("issues", []) or []
         if policy.get("emergency_never_allow_safety_issues", True) and issues:
@@ -2631,6 +3034,16 @@ class MealPlanner:
         emergency_max_repeat = int(policy.get("emergency_max_recipe_repeat_count", 2))
 
         emergency_min_retrieval = float(policy.get("emergency_min_retrieval", 0.25))
+        has_real_hard_block = self._candidate_has_real_hard_block(scored)
+        has_soft_quality_hard_block = any(
+            bool(components.get(key, False))
+            for key in (
+                "macro_hard_block",
+                "recipe_cooldown_hard_block",
+                "main_carb_hard_block",
+            )
+        )
+        has_quality_hard_block = has_real_hard_block or has_soft_quality_hard_block
 
         if (
             final_score >= normal_min_final_score
@@ -2640,6 +3053,8 @@ class MealPlanner:
             and portion_score >= normal_min_portion
             and slot_macro_fit >= normal_min_slot_macro
             and recipe_repeat_count <= normal_max_repeat
+            and not has_quality_hard_block
+            and normal_day_pressure_ok
         ):
             return "normal", ""
 
@@ -2672,6 +3087,7 @@ class MealPlanner:
             and not bool(components.get("recipe_cooldown_hard_block", False))
             and not bool(components.get("macro_hard_block", False))
             and not bool(components.get("main_carb_hard_block", False))
+            and normal_day_pressure_ok
         ):
             return "normal", normal_high_quality_reason
 
@@ -2683,6 +3099,7 @@ class MealPlanner:
             and portion_score >= relaxed_min_portion
             and slot_macro_fit >= relaxed_min_slot_macro
             and recipe_repeat_count <= relaxed_max_repeat
+            and not has_quality_hard_block
         ):
             return "relaxed", "relaxed_quality"
 
@@ -2708,6 +3125,62 @@ class MealPlanner:
             and not bool(components.get("macro_hard_block", False))
         ):
             return "relaxed", "relaxed_high_quality_low_score_rescue"
+
+        emergency_to_relaxed_enabled = bool(
+            policy.get("emergency_to_relaxed_rescue_enabled", True)
+        )
+        emergency_to_relaxed_min_final = float(
+            policy.get("emergency_to_relaxed_min_final_score", 0.0)
+        )
+        emergency_to_relaxed_min_portion = float(
+            policy.get("emergency_to_relaxed_min_portion_score", 0.80)
+            or 0.80
+        )
+        emergency_to_relaxed_min_macro = float(
+            policy.get("emergency_to_relaxed_min_slot_macro_fit", 0.75)
+        )
+        emergency_to_relaxed_min_retrieval = float(
+            policy.get("emergency_to_relaxed_min_retrieval", emergency_min_retrieval)
+        )
+        emergency_to_relaxed_max_ingredient = float(
+            policy.get("emergency_to_relaxed_max_ingredient_penalty", 0.44)
+        )
+        emergency_to_relaxed_max_restriction = float(
+            policy.get("emergency_to_relaxed_max_restriction_penalty", 0.0)
+        )
+        emergency_to_relaxed_reason = str(
+            policy.get(
+                "emergency_to_relaxed_reason",
+                "relaxed_emergency_quality_rescue",
+            )
+        )
+
+        if (
+            emergency_to_relaxed_enabled
+            and final_score >= emergency_to_relaxed_min_final
+            and portion_score >= emergency_to_relaxed_min_portion
+            and slot_macro_fit >= emergency_to_relaxed_min_macro
+            and retrieval >= emergency_to_relaxed_min_retrieval
+            and recipe_repeat_count <= emergency_max_repeat
+            and ingredient_penalty <= emergency_to_relaxed_max_ingredient
+            and restriction_penalty <= emergency_to_relaxed_max_restriction
+            and not has_real_hard_block
+            and self._candidate_has_valid_nutrition(scored)
+        ):
+            if has_soft_quality_hard_block:
+                components["soft_quality_block_overridden_for_relaxed"] = True
+            return "relaxed", emergency_to_relaxed_reason
+
+        if has_quality_hard_block:
+            return (
+                "blocked",
+                str(
+                    components.get("main_carb_hard_block_reason")
+                    or components.get("recipe_cooldown_hard_block_reason")
+                    or components.get("macro_hard_block_reason")
+                    or "quality_hard_block"
+                ),
+            )
 
         if recipe_repeat_count > emergency_max_repeat:
             return "blocked", "recipe_repeat_limit"
@@ -2752,7 +3225,7 @@ class MealPlanner:
             "reason": str(cfg.get("reason", "low_score_ceiling") or "low_score_ceiling"),
         }
 
-    def _low_score_rescue_policy(self) -> Dict[str, Any]:
+    def _low_score_rescue_policy(self, goal: Optional[str] = None) -> Dict[str, Any]:
         """
         PROD rescue-policy для низких score на длинном плане.
 
@@ -2776,6 +3249,11 @@ class MealPlanner:
 
         if not isinstance(cfg, dict):
             cfg = {}
+
+        cfg = self._policy_with_goal_overrides(
+            cfg,
+            goal or getattr(self, "_current_goal", "balanced"),
+        )
 
         low_score_policy = self._low_score_policy()
 
@@ -2830,6 +3308,7 @@ class MealPlanner:
         meal_type: str,
         day_number: int,
         slot_idx: int,
+        goal: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Rescue mode для длинных планов.
@@ -2841,7 +3320,7 @@ class MealPlanner:
           зажала history/cooldown/diversity/main_carb/macro-pressure штрафами.
         """
 
-        policy = self._low_score_rescue_policy()
+        policy = self._low_score_rescue_policy(goal)
 
         if not policy["enabled"]:
             return scored
@@ -2857,24 +3336,47 @@ class MealPlanner:
         day_fat_after_ratio = float(components.get("day_fat_after_ratio", 0.0) or 0.0)
         day_calories_after_ratio = float(components.get("day_calories_after_ratio", 0.0) or 0.0)
         day_macro_pressure_penalty = float(components.get("day_macro_pressure_penalty", 0.0) or 0.0)
+        portion_score = float(components.get("portion_score", 0.0) or 0.0)
+        slot_macro_fit = float(components.get("slot_macro_fit", 0.0) or 0.0)
+        high_quality_pressure_rescue = (
+            bool(policy.get("allow_high_quality_day_pressure_rescue", False))
+            and portion_score >= float(policy.get("high_quality_min_portion_score", 0.80) or 0.80)
+            and slot_macro_fit >= float(policy.get("high_quality_min_slot_macro_fit", 0.80) or 0.80)
+            and self._candidate_has_valid_nutrition(scored)
+            and not self._candidate_has_real_hard_block(scored)
+            and not bool(components.get("recipe_cooldown_hard_block", False))
+            and not bool(components.get("main_carb_hard_block", False))
+        )
 
         if day_fat_after_ratio > policy["block_if_day_fat_after_ratio_above"]:
-            components["low_score_rescue_applied"] = False
-            components["low_score_rescue_blocked_reason"] = "day_fat_after_ratio"
-            components["low_score_rescue_blocked_value"] = round(day_fat_after_ratio, 3)
-            return scored
+            if high_quality_pressure_rescue:
+                components["low_score_rescue_pressure_block_overridden"] = True
+                components["low_score_rescue_overridden_block_reason"] = "day_fat_after_ratio"
+            else:
+                components["low_score_rescue_applied"] = False
+                components["low_score_rescue_blocked_reason"] = "day_fat_after_ratio"
+                components["low_score_rescue_blocked_value"] = round(day_fat_after_ratio, 3)
+                return scored
 
         if day_calories_after_ratio > policy["block_if_day_calories_after_ratio_above"]:
-            components["low_score_rescue_applied"] = False
-            components["low_score_rescue_blocked_reason"] = "day_calories_after_ratio"
-            components["low_score_rescue_blocked_value"] = round(day_calories_after_ratio, 3)
-            return scored
+            if high_quality_pressure_rescue:
+                components["low_score_rescue_pressure_block_overridden"] = True
+                components["low_score_rescue_overridden_block_reason"] = "day_calories_after_ratio"
+            else:
+                components["low_score_rescue_applied"] = False
+                components["low_score_rescue_blocked_reason"] = "day_calories_after_ratio"
+                components["low_score_rescue_blocked_value"] = round(day_calories_after_ratio, 3)
+                return scored
 
         if day_macro_pressure_penalty > policy["block_if_day_macro_pressure_penalty_above"]:
-            components["low_score_rescue_applied"] = False
-            components["low_score_rescue_blocked_reason"] = "day_macro_pressure_penalty"
-            components["low_score_rescue_blocked_value"] = round(day_macro_pressure_penalty, 3)
-            return scored
+            if high_quality_pressure_rescue:
+                components["low_score_rescue_pressure_block_overridden"] = True
+                components["low_score_rescue_overridden_block_reason"] = "day_macro_pressure_penalty"
+            else:
+                components["low_score_rescue_applied"] = False
+                components["low_score_rescue_blocked_reason"] = "day_macro_pressure_penalty"
+                components["low_score_rescue_blocked_value"] = round(day_macro_pressure_penalty, 3)
+                return scored
 
         if original_score >= threshold:
             components.setdefault("low_score_rescue_applied", False)
@@ -2935,8 +3437,16 @@ class MealPlanner:
         # Debug для случаев, когда много блюд получают ровно 0.349.
         # Теперь видно не только capped score, но и честный score до ceiling.
         components["low_score_policy_applied"] = bool(ceiling_applied)
-        components["low_score_policy_reason"] = str(policy.get("reason", "low_score_ceiling"))
-        components["low_score_policy_score_ceiling"] = round(score_ceiling, 4)
+        components["low_score_policy_reason"] = (
+            str(policy.get("reason", "low_score_ceiling"))
+            if ceiling_applied
+            else ""
+        )
+        components["low_score_policy_score_ceiling"] = (
+            round(score_ceiling, 4)
+            if ceiling_applied
+            else None
+        )
         if ceiling_applied:
             components["score_before_low_score_ceiling"] = round(raw_rescued_score, 4)
 
@@ -2961,17 +3471,21 @@ class MealPlanner:
         macro_targets: Dict[str, float],
         meals_per_day: int,
         recent_recipe_names: Optional[List[str]] = None,
+        plan_main_carbs: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         goal = self._normalize_goal(getattr(user_profile, "goal", "balanced"))
         weights = self._meal_weights(meals_per_day, goal)
 
         selected_signatures = set()
         used_main_carbs: List[str] = []
+        if plan_main_carbs is None:
+            plan_main_carbs = []
         if recent_recipe_names is None:
             recent_recipe_names = self._recent_recipe_names_from_profile(user_profile)
 
         meals: List[Dict[str, Any]] = []
         day_totals = self._empty_day_totals()
+        slot_diagnostics: List[Dict[str, Any]] = []
 
         base_candidates = list(candidates)
 
@@ -2994,6 +3508,7 @@ class MealPlanner:
                 slot_target_macros=slot_target_macros,
                 candidate_limit=max(len(base_candidates), 20),
                 used_main_carbs=used_main_carbs,
+                plan_main_carbs=plan_main_carbs,
             )
 
             # Fallback: если slot search ничего не вернул, не ломаем день.
@@ -3005,7 +3520,7 @@ class MealPlanner:
                 meal_type=meal_type,
                 user_profile=user_profile,
                 selected_signatures=selected_signatures,
-                used_main_carbs=set(used_main_carbs),
+                used_main_carbs=set(used_main_carbs) | set(plan_main_carbs),
                 limit=self.max_optimized_candidates_per_slot,
             )
 
@@ -3015,6 +3530,9 @@ class MealPlanner:
                 "emergency": [],
             }
             blocked_candidates_debug: List[Dict[str, Any]] = []
+            last_safe_candidate: Optional[Dict[str, Any]] = None
+            last_safe_score = -1.0
+            last_safe_candidate_count = 0
 
             for recipe in optimized_candidates:
                 ingredients = list(recipe.get("ingredients", []))
@@ -3061,6 +3579,11 @@ class MealPlanner:
 
                 protein_gap_penalty = 0.0
                 protein_ratio = 0.0
+                protein_bonus = 0.0
+                components["score_before_protein_gap_penalty"] = round(
+                    float(scored.get("score", 0.0) or 0.0),
+                    4,
+                )
 
                 if bool(goal_quality.get("protein_gap_penalty_enabled", True)):
                     nutrition_for_protein = scored.get("nutrition", {}) or {}
@@ -3095,10 +3618,14 @@ class MealPlanner:
                             goal_quality.get("protein_gap_penalty_weight", 0.20)
                             or 0.20
                         )
+                        max_protein_gap_penalty = float(
+                            goal_quality.get("max_protein_gap_penalty", 0.22)
+                            or 0.22
+                        )
 
                         if protein_ratio < min_ratio:
                             protein_gap_penalty = min(
-                                0.22,
+                                max_protein_gap_penalty,
                                 (min_ratio - protein_ratio) * penalty_weight,
                             )
 
@@ -3107,9 +3634,52 @@ class MealPlanner:
                                 0.0,
                                 1.0,
                             )
+                        elif bool(goal_quality.get("protein_bonus_enabled", False)):
+                            bonus_min_ratio = float(
+                                goal_quality.get("protein_bonus_min_ratio", min_ratio)
+                                or min_ratio
+                            )
+                            bonus_weight = float(
+                                goal_quality.get("protein_bonus_weight", 0.04)
+                                or 0.04
+                            )
+                            max_protein_bonus = float(
+                                goal_quality.get("max_protein_bonus", 0.04)
+                                or 0.04
+                            )
+                            max_day_protein_after_ratio = float(
+                                goal_quality.get(
+                                    "protein_bonus_max_day_protein_after_ratio",
+                                    99.0,
+                                )
+                                or 99.0
+                            )
+                            day_protein_after_ratio = float(
+                                components.get("day_protein_after_ratio", 0.0)
+                                or 0.0
+                            )
+
+                            if (
+                                protein_ratio >= bonus_min_ratio
+                                and day_protein_after_ratio <= max_day_protein_after_ratio
+                            ):
+                                protein_bonus = min(
+                                    max_protein_bonus,
+                                    (protein_ratio - bonus_min_ratio) * bonus_weight,
+                                )
+                                scored["score"] = clamp(
+                                    float(scored.get("score", 0.0) or 0.0) + protein_bonus,
+                                    0.0,
+                                    1.0,
+                                )
 
                 components["protein_ratio"] = round(protein_ratio, 4)
                 components["protein_gap_penalty"] = round(protein_gap_penalty, 4)
+                components["protein_bonus"] = round(protein_bonus, 4)
+                components["score_after_protein_gap_penalty"] = round(
+                    float(scored.get("score", 0.0) or 0.0),
+                    4,
+                )
 
                 if scored.get("reject"):
                     components["selection_quality_tier"] = "blocked"
@@ -3123,38 +3693,51 @@ class MealPlanner:
                 day_fat_after_ratio = float(components.get("day_fat_after_ratio", 0.0) or 0.0)
                 day_calories_after_ratio = float(components.get("day_calories_after_ratio", 0.0) or 0.0)
 
-                macro_policy = self._day_macro_pressure_policy()
+                macro_policy = self._policy_with_goal_overrides(
+                    self._day_macro_pressure_policy(),
+                    goal,
+                )
 
                 fat_hard_block_ratio = float(macro_policy.get("fat_hard_block_ratio", 1.22))
                 calorie_hard_block_ratio = float(macro_policy.get("calorie_hard_block_ratio", 1.15))
                 hard_block_min_slot_idx = int(macro_policy.get("hard_block_min_slot_idx", 1))
+                fat_hard_block_enabled = bool(
+                    macro_policy.get("day_fat_pressure_hard_block_enabled", True)
+                )
+                calorie_hard_block_enabled = bool(
+                    macro_policy.get("day_calorie_pressure_hard_block_enabled", True)
+                )
 
                 if slot_idx >= hard_block_min_slot_idx:
                     if day_fat_after_ratio > fat_hard_block_ratio:
-                        components["macro_hard_block"] = True
-                        components["macro_hard_block_reason"] = "day_fat_after_ratio"
-                        components["macro_hard_block_value"] = round(day_fat_after_ratio, 3)
-                        components["selection_quality_tier"] = "blocked"
-                        components["selection_quality_reason"] = "macro_hard_block_day_fat_after_ratio"
-                        blocked_candidates_debug.append({
-                            "name": temp_recipe.get("name"),
-                            "reason": "macro_hard_block_day_fat_after_ratio",
-                            "value": round(day_fat_after_ratio, 3),
-                        })
-                        continue
+                        components["day_fat_pressure_soft_block"] = True
+                        components["day_fat_pressure_hard_block_enabled"] = fat_hard_block_enabled
+                        if fat_hard_block_enabled:
+                            components["macro_hard_block"] = True
+                            components["macro_hard_block_reason"] = "day_fat_after_ratio"
+                            components["macro_hard_block_value"] = round(day_fat_after_ratio, 3)
+                            components["selection_quality_tier"] = "blocked"
+                            components["selection_quality_reason"] = "macro_hard_block_day_fat_after_ratio"
+                            blocked_candidates_debug.append({
+                                "name": temp_recipe.get("name"),
+                                "reason": "macro_hard_block_day_fat_after_ratio",
+                                "value": round(day_fat_after_ratio, 3),
+                            })
 
                     if day_calories_after_ratio > calorie_hard_block_ratio:
-                        components["macro_hard_block"] = True
-                        components["macro_hard_block_reason"] = "day_calories_after_ratio"
-                        components["macro_hard_block_value"] = round(day_calories_after_ratio, 3)
-                        components["selection_quality_tier"] = "blocked"
-                        components["selection_quality_reason"] = "macro_hard_block_day_calories_after_ratio"
-                        blocked_candidates_debug.append({
-                            "name": temp_recipe.get("name"),
-                            "reason": "macro_hard_block_day_calories_after_ratio",
-                            "value": round(day_calories_after_ratio, 3),
-                        })
-                        continue
+                        components["day_calorie_pressure_soft_block"] = True
+                        components["day_calorie_pressure_hard_block_enabled"] = calorie_hard_block_enabled
+                        if calorie_hard_block_enabled:
+                            components["macro_hard_block"] = True
+                            components["macro_hard_block_reason"] = "day_calories_after_ratio"
+                            components["macro_hard_block_value"] = round(day_calories_after_ratio, 3)
+                            components["selection_quality_tier"] = "blocked"
+                            components["selection_quality_reason"] = "macro_hard_block_day_calories_after_ratio"
+                            blocked_candidates_debug.append({
+                                "name": temp_recipe.get("name"),
+                                "reason": "macro_hard_block_day_calories_after_ratio",
+                                "value": round(day_calories_after_ratio, 3),
+                            })
 
                 optimized_ingredients_for_penalty = scored.get(
                     "optimized_ingredients",
@@ -3163,9 +3746,19 @@ class MealPlanner:
 
                 main_carb = self._detect_main_carb(optimized_ingredients_for_penalty)
 
-                carb_repeat_penalty = self._main_carb_repeat_penalty(
-                    optimized_ingredients_for_penalty,
+                carb_repeat_rule = self._main_carb_repeat_rule(
+                    {"ingredients": optimized_ingredients_for_penalty},
                     used_main_carbs,
+                    plan_main_carbs=plan_main_carbs,
+                )
+                carb_repeat_penalty = float(
+                    carb_repeat_rule.get("main_carb_repeat_penalty", 0.0) or 0.0
+                )
+
+                components = scored.setdefault("components", {})
+                components["score_before_main_carb_repeat_penalty"] = round(
+                    float(scored.get("score", 0.0) or 0.0),
+                    4,
                 )
 
                 if carb_repeat_penalty > 0:
@@ -3175,11 +3768,31 @@ class MealPlanner:
                         1.0,
                     )
 
-                components = scored.setdefault("components", {})
                 components["main_carb"] = main_carb
+                components["main_carb_repeat_count"] = int(
+                    carb_repeat_rule.get("main_carb_repeat_count", 0) or 0
+                )
+                components["main_carb_plan_count"] = int(
+                    carb_repeat_rule.get("main_carb_plan_count", 0) or 0
+                )
+                if carb_repeat_rule.get("main_carb_plan_limit") is not None:
+                    components["main_carb_plan_limit"] = carb_repeat_rule.get(
+                        "main_carb_plan_limit"
+                    )
+                components["main_carb_hard_block"] = bool(
+                    carb_repeat_rule.get("main_carb_hard_block", False)
+                )
+                if carb_repeat_rule.get("main_carb_hard_block_reason"):
+                    components["main_carb_hard_block_reason"] = carb_repeat_rule.get(
+                        "main_carb_hard_block_reason"
+                    )
                 components["main_carb_repeat_penalty"] = round(
                     carb_repeat_penalty,
                     3,
+                )
+                components["score_after_main_carb_repeat_penalty"] = round(
+                    float(scored.get("score", 0.0) or 0.0),
+                    4,
                 )
 
                 missing_main_carb_penalty, missing_main_carb_negative_hits = (
@@ -3192,6 +3805,10 @@ class MealPlanner:
                 )
 
                 if missing_main_carb_penalty > 0:
+                    components["score_before_missing_main_carb_penalty"] = round(
+                        float(scored.get("score", 0.0) or 0.0),
+                        4,
+                    )
                     scored["score"] = clamp(
                         float(scored["score"]) - missing_main_carb_penalty,
                         0.0,
@@ -3203,6 +3820,10 @@ class MealPlanner:
                     3,
                 )
                 components["missing_main_carb_negative_hits"] = missing_main_carb_negative_hits
+                components["score_after_missing_main_carb_penalty"] = round(
+                    float(scored.get("score", 0.0) or 0.0),
+                    4,
+                )
 
                 # PROD: rescue mode для длинных планов.
                 # Включается только если score стал слишком низким из-за soft-penalties.
@@ -3211,6 +3832,7 @@ class MealPlanner:
                     meal_type=meal_type,
                     day_number=day_number,
                     slot_idx=slot_idx,
+                    goal=goal,
                 )
 
                 components = scored.setdefault("components", {})
@@ -3226,15 +3848,6 @@ class MealPlanner:
                 # не зависел от внутренней структуры components.
                 scored["selection_tier"] = tier
                 scored["selection_tier_reason"] = reason
-
-                if tier == "blocked":
-                    components["selection_quality_block"] = True
-                    blocked_candidates_debug.append({
-                        "name": temp_recipe.get("name"),
-                        "reason": reason,
-                        "score": round(float(scored.get("score", 0.0) or 0.0), 4),
-                    })
-                    continue
 
                 policy = self._selection_quality_policy()
                 if tier == "emergency" and policy.get("emergency_mark_component", True):
@@ -3281,12 +3894,29 @@ class MealPlanner:
                     "cuisine": temp_recipe.get("cuisine"),
                 }
 
+                if self._is_last_safe_fallback_candidate(scored):
+                    last_safe_candidate_count += 1
+                    fallback_rank = self._last_safe_fallback_rank(meal_candidate)
+                    components["last_safe_candidate_rank"] = round(fallback_rank, 4)
+                    if fallback_rank > last_safe_score:
+                        last_safe_candidate = meal_candidate
+                        last_safe_score = fallback_rank
+
+                if tier == "blocked":
+                    components["selection_quality_block"] = True
+                    blocked_candidates_debug.append({
+                        "name": temp_recipe.get("name"),
+                        "reason": reason,
+                        "score": round(float(scored.get("score", 0.0) or 0.0), 4),
+                    })
+                    continue
+
                 candidate_pools[tier].append(meal_candidate)
 
             best = None
             selected_quality_tier = None
 
-            for tier_name in ("normal", "relaxed", "emergency"):
+            for tier_name in ("normal", "relaxed"):
                 pool = candidate_pools.get(tier_name, [])
                 if not pool:
                     continue
@@ -3299,17 +3929,88 @@ class MealPlanner:
                 selected_quality_tier = tier_name
                 break
 
+            if best is None and last_safe_candidate is not None:
+                best = last_safe_candidate
+                selected_quality_tier = "last_safe_candidate"
+
+                components = best.setdefault("components", {})
+                original_tier = str(
+                    best.get("selection_tier")
+                    or components.get("selection_quality_tier")
+                    or "unknown"
+                )
+
+                components["last_safe_candidate_fallback"] = True
+                components["last_safe_candidate_original_tier"] = original_tier
+                components["selection_quality_tier"] = "relaxed"
+                components["selection_quality_reason"] = "last_safe_candidate_fallback"
+                components["selected_quality_tier"] = "relaxed"
+                components["selected_pool_name"] = "last_safe_candidate"
+
+                if components.get("macro_hard_block_reason") == "day_fat_after_ratio":
+                    components["day_fat_pressure_overridden_for_completeness"] = True
+
+                if components.get("macro_hard_block_reason") == "day_calories_after_ratio":
+                    components["day_calorie_pressure_overridden_for_completeness"] = True
+
+                if components.get("main_carb_hard_block"):
+                    components["main_carb_limit_overridden_for_completeness"] = True
+
+                if components.get("recipe_cooldown_hard_block"):
+                    components["recipe_cooldown_overridden_for_completeness"] = True
+
+                best["selection_tier"] = "relaxed"
+                best["selection_tier_reason"] = "last_safe_candidate_fallback"
+
             if best is not None:
                 components = best.setdefault("components", {})
-                components["selected_quality_tier"] = selected_quality_tier
+                selected_tier_for_report = (
+                    "relaxed"
+                    if selected_quality_tier == "last_safe_candidate"
+                    else selected_quality_tier
+                )
+                components["selected_quality_tier"] = selected_tier_for_report
+                components["selected_pool_name"] = selected_quality_tier
                 components["quality_pool_sizes"] = {
                     "normal": len(candidate_pools.get("normal", [])),
                     "relaxed": len(candidate_pools.get("relaxed", [])),
                     "emergency": len(candidate_pools.get("emergency", [])),
                     "blocked": len(blocked_candidates_debug),
                 }
+                components["candidate_pool_counts"] = {
+                    "normal_candidates": len(candidate_pools.get("normal", [])),
+                    "relaxed_candidates": len(candidate_pools.get("relaxed", [])),
+                    "rescue_candidates": last_safe_candidate_count,
+                    "emergency_candidates": len(candidate_pools.get("emergency", [])),
+                    "blocked_candidates": len(blocked_candidates_debug),
+                }
+                self._apply_rescue_score_floor(best, goal)
 
             if best is None:
+                pool_counts = {
+                    "normal_candidates": len(candidate_pools.get("normal", [])),
+                    "relaxed_candidates": len(candidate_pools.get("relaxed", [])),
+                    "rescue_candidates": last_safe_candidate_count,
+                    "emergency_candidates": len(candidate_pools.get("emergency", [])),
+                    "blocked_candidates": len(blocked_candidates_debug),
+                }
+                best_rejected_candidate = None
+                if blocked_candidates_debug:
+                    best_rejected_candidate = max(
+                        blocked_candidates_debug,
+                        key=lambda item: float(item.get("score", 0.0) or 0.0),
+                    )
+                slot_diagnostics.append({
+                    "day": day_number,
+                    "slot": slot_idx + 1,
+                    "meal_type": meal_type,
+                    "no_selection_reason": "no_safe_candidate_available",
+                    "fetched_candidates": len(slot_candidates),
+                    "optimized_candidates": len(optimized_candidates),
+                    "candidate_pool_counts": pool_counts,
+                    "blocked_candidates": blocked_candidates_debug[:12],
+                    "best_rejected_candidate": best_rejected_candidate,
+                })
                 logger.warning(
                     f"No meal selected for day={day_number}, slot={slot_idx + 1}, meal_type={meal_type}"
                 )
@@ -3320,6 +4021,7 @@ class MealPlanner:
             best_main_carb = self._detect_main_carb(best.get("ingredients", []))
             if best_main_carb:
                 used_main_carbs.append(best_main_carb)
+                plan_main_carbs.append(best_main_carb)
 
             meals.append(best)
 
@@ -3356,6 +4058,7 @@ class MealPlanner:
             },
             "day_score": round(day_score, 3),
             "warnings": day_warnings,
+            "slot_diagnostics": slot_diagnostics,
         }
 
     def _check_meal_balance(self, meals: list, macro_targets: dict) -> list:

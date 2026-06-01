@@ -1,42 +1,74 @@
+# --- Local environment and secrets ---
+.env
+.env.*
+!.env.example
+!backend/.env.example
 venv/
-__pycache__/
+.venv/
+env/
 
-# AI models
+# --- Python cache and test output ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- Local databases ---
+*.db
+*.sqlite
+*.sqlite3
+backend/*.db
+
+# --- Logs and temporary files ---
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+run_scripts.txt
+
+# --- AI / ML generated artifacts ---
+*.npy
+*.faiss
 *.pt
+*.pth
 *.onnx
 *.weights
-
-# datasets
-datasets/
-
-# environment variables
-.env
-
-# macOS
-.DS_Store
-
-# python cache
-*.pyc
-
-# weights
+*.pkl
+*.pickle
 weights/
-
-# скрины
-скрины/
-
-# /ai/yolo/results
-ai/yolo/results
-
-# AI / ML artifacts
 runs/
+datasets/
+recipe_embeddings.npy
+recipe_index.faiss
+ai/clip/embeddings/*.npy
+ai/clip/index/*.faiss
+ai/food_normalizer/*.npy
+ai/recipes/*_embeddings.npy
+ai/recipes/*_index.faiss
+ai/recipes/recipe_index_meta.json
+ai/recipes/recipe_index_report.json
+ai/core/reports/
+ai/yolo/results/
+backend/ai/yolo/results/
 
-# tests media
+# Local GPU/training experiments. Keep production tests near their packages:
+# ai/core/test_*.py and app/aifood/test/.
 tests/
 
-# embeddings / indexes
-*_embeddings.*
-*_index.*
+# --- Flutter / frontend generated files ---
+app/aifood/.metadata
+app/aifood/.dart_tool/
+app/aifood/build/
+app/aifood/flutter_*.log
 
-# logs / results
-*.csv
-*.yaml
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

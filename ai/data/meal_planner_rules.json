@@ -132,17 +132,27 @@
     "enabled": true,
     "threshold": 0.35,
     "critical_threshold": 0.2,
-    "score_ceiling": 0.349,
-    "max_boost": 0.24,
+    "score_ceiling": 1.0,
+    "max_boost": 0.45,
     "relax_history_penalty": 0.75,
     "relax_recipe_cooldown_penalty": 0.75,
     "relax_main_carb_repeat_penalty": 0.55,
     "relax_day_macro_pressure_penalty": 0.0,
     "diversity_floor": 0.35,
     "diversity_restore_weight": 0.1,
-    "block_if_day_fat_after_ratio_above": 1.12,
+    "block_if_day_fat_after_ratio_above": 1.18,
     "block_if_day_calories_after_ratio_above": 1.12,
-    "block_if_day_macro_pressure_penalty_above": 0.22,
+    "block_if_day_macro_pressure_penalty_above": 0.38,
+    "goal_overrides": {
+      "balanced": {
+        "block_if_day_fat_after_ratio_above": 1.18,
+        "block_if_day_macro_pressure_penalty_above": 0.38,
+        "relax_day_macro_pressure_penalty": 0.35,
+        "allow_high_quality_day_pressure_rescue": true,
+        "high_quality_min_portion_score": 0.8,
+        "high_quality_min_slot_macro_fit": 0.8
+      }
+    },
     "debug": true
   },
   "meal_type_rules": {
@@ -617,13 +627,59 @@
       "protein_soft_ratio": 1.45,
       "protein_hard_ratio": 1.75,
       "protein_max_penalty": 0.05,
-      "max_total_penalty": 0.38
+      "max_total_penalty": 0.38,
+      "goal_overrides": {
+        "balanced": {
+          "day_fat_pressure_hard_block_enabled": false,
+          "fat_soft_ratio": 1.0,
+          "fat_hard_ratio": 1.14,
+          "fat_max_penalty": 0.18,
+          "fat_pressure_max_penalty": 0.18,
+          "fat_addition_when_budget_low_weight": 0.1,
+          "fat_addition_when_budget_low_cap": 0.05,
+          "slot_fat_over_penalty_enabled": true,
+          "slot_fat_soft_ratio": 1.1,
+          "slot_fat_hard_ratio": 1.55,
+          "slot_fat_max_penalty": 0.045,
+          "low_fat_recovery_bonus_enabled": true,
+          "low_fat_recovery_trigger_ratio": 1.08,
+          "low_fat_recovery_bonus": 0.04,
+          "low_fat_recovery_fat_kcal_share_max": 0.28,
+          "low_fat_recovery_slot_fat_ratio_max": 1.05,
+          "low_fat_recovery_min_slot_macro_fit": 0.7,
+          "low_fat_recovery_min_portion_score": 0.7,
+          "carbs_soft_ratio": 1.12,
+          "carbs_hard_ratio": 1.28,
+          "carbs_max_penalty": 0.08,
+          "carbs_pressure_max_penalty": 0.08,
+          "carb_recovery_bonus_enabled": true,
+          "carb_recovery_trigger_ratio": 0.88,
+          "carb_recovery_bonus": 0.025,
+          "carb_recovery_min_slot_carbs_ratio": 0.8,
+          "carb_recovery_min_slot_macro_fit": 0.7,
+          "carb_recovery_min_portion_score": 0.7,
+          "protein_soft_ratio": 1.18,
+          "protein_hard_ratio": 1.45,
+          "protein_max_penalty": 0.08,
+          "protein_pressure_max_penalty": 0.1,
+          "max_total_penalty": 0.3
+        },
+        "weight_loss": {
+          "day_fat_pressure_hard_block_enabled": true,
+          "fat_pressure_max_penalty": 0.42
+        }
+      }
     },
     "selection_quality_policy": {
       "enabled": true,
       "normal_min_final_score": 0.5,
       "relaxed_min_final_score": 0.34,
       "emergency_min_final_score": -0.1,
+      "goal_overrides": {
+        "balanced": {
+          "normal_max_day_fat_after_ratio": 999.0
+        }
+      },
       "normal_high_quality_rescue_enabled": true,
       "normal_high_quality_min_final_score": 0.45,
       "normal_high_quality_min_portion_score": 0.82,
@@ -634,10 +690,29 @@
       "relaxed_high_quality_min_portion_score": 0.85,
       "relaxed_high_quality_min_slot_macro_fit": 0.75,
       "relaxed_high_quality_max_recipe_repeat_count": 1,
+      "emergency_to_relaxed_rescue_enabled": true,
+      "emergency_to_relaxed_min_final_score": 0.0,
+      "emergency_to_relaxed_min_portion_score": 0.8,
+      "emergency_to_relaxed_min_slot_macro_fit": 0.75,
+      "emergency_to_relaxed_min_retrieval": 0.25,
+      "emergency_to_relaxed_max_ingredient_penalty": 0.44,
+      "emergency_to_relaxed_max_restriction_penalty": 0.0,
+      "emergency_to_relaxed_reason": "relaxed_emergency_quality_rescue",
+      "last_safe_min_portion_score": 0.01,
+      "last_safe_min_slot_macro_fit": 0.0,
+      "rescue_score_floor": {
+        "enabled": true,
+        "balanced": 0.42,
+        "weight_loss": 0.4,
+        "default": 0.38,
+        "min_portion_score": 0.8,
+        "min_slot_macro_fit": 0.8,
+        "reason": "safe_high_quality_rescue_floor"
+      },
       "block_zero_score_in_normal_mode": true,
       "allow_zero_score_in_emergency": true,
       "normal_max_history_penalty": 0.2,
-      "relaxed_max_history_penalty": 0.35,
+      "relaxed_max_history_penalty": 0.4,
       "emergency_max_history_penalty": 0.6,
       "normal_max_recipe_cooldown_penalty": 0.32,
       "relaxed_max_recipe_cooldown_penalty": 0.48,
@@ -797,18 +872,26 @@
   "goal_quality_rules": {
     "balanced": {
       "protein_gap_penalty_enabled": true,
-      "min_slot_protein_ratio": 0.78,
-      "protein_gap_penalty_weight": 0.18
+      "min_slot_protein_ratio": 0.75,
+      "protein_gap_penalty_weight": 0.12,
+      "max_protein_gap_penalty": 0.1,
+      "protein_bonus_enabled": true,
+      "protein_bonus_min_ratio": 0.95,
+      "protein_bonus_weight": 0.04,
+      "max_protein_bonus": 0.025,
+      "protein_bonus_max_day_protein_after_ratio": 1.05
     },
     "weight_loss": {
       "protein_gap_penalty_enabled": true,
       "min_slot_protein_ratio": 0.88,
-      "protein_gap_penalty_weight": 0.28
+      "protein_gap_penalty_weight": 0.28,
+      "max_protein_gap_penalty": 0.14
     },
     "muscle_gain": {
       "protein_gap_penalty_enabled": true,
       "min_slot_protein_ratio": 0.90,
-      "protein_gap_penalty_weight": 0.30
+      "protein_gap_penalty_weight": 0.30,
+      "max_protein_gap_penalty": 0.16
     }
   }
 }

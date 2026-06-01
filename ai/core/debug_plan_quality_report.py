@@ -875,6 +875,15 @@ def analyze_plan(
     cuisine_counter: Counter = Counter()
     ingredient_counter: Counter = Counter()
     quality_pool_totals: Counter = Counter()
+    selected_pool_counter: Counter = Counter()
+    rescue_score_floor_applied_count = 0
+    macro_hard_block_selected_count = 0
+    day_fat_after_ratio_rescue_count = 0
+    last_safe_candidate_fallback_count = 0
+    fat_pressure_penalty_applied_count = 0
+    slot_fat_over_penalty_applied_count = 0
+    low_fat_recovery_bonus_applied_count = 0
+    carb_recovery_bonus_applied_count = 0
 
     day_scores: List[float] = []
     meal_scores: List[float] = []
@@ -887,6 +896,8 @@ def analyze_plan(
     satiety_scores: List[float] = []
     eaten_weights: List[float] = []
     energy_densities: List[float] = []
+    protein_gap_penalties: List[float] = []
+    selected_day_fat_after_ratios: List[float] = []
 
     day_reports: List[Dict[str, Any]] = []
     meal_reports: List[Dict[str, Any]] = []
@@ -926,6 +937,7 @@ def analyze_plan(
             "day": day.get("day", day_index),
             "day_score": safe_round(day_score, 3),
             "meals_count": len(meals),
+            "slot_diagnostics": get_list(day.get("slot_diagnostics")),
             "target_calories": safe_round(targets.get("calories", 0.0), 1),
             "day_total": {
                 "calories": safe_round(day_total.get("calories"), 1),
@@ -949,6 +961,7 @@ def analyze_plan(
                     "type": "wrong_meals_per_day",
                     "day": day_index,
                     "message": f"Expected {meals_per_day} meals, got {len(meals)}",
+                    "slot_diagnostics": get_list(day.get("slot_diagnostics")),
                 }
             )
 
@@ -1079,6 +1092,95 @@ def analyze_plan(
                 or components.get("low_score_rescue_boost")
             )
 
+            protein_ratio = safe_float(components.get("protein_ratio", 0.0))
+            protein_gap_penalty = safe_float(components.get("protein_gap_penalty", 0.0))
+            day_fat_after_ratio = safe_float(components.get("day_fat_after_ratio", 0.0))
+            fat_pressure_penalty = safe_float(
+                components.get("day_fat_pressure_penalty", 0.0)
+            )
+            slot_fat_over_penalty = safe_float(
+                components.get("slot_fat_over_penalty", 0.0)
+            )
+            low_fat_recovery_bonus = safe_float(
+                components.get("low_fat_recovery_bonus", 0.0)
+            )
+            carb_recovery_bonus = safe_float(
+                components.get("carb_recovery_bonus", 0.0)
+            )
+            recipe_repeat_count = safe_int(components.get("recipe_repeat_count", 0))
+            recipe_cooldown_penalty = safe_float(
+                components.get("recipe_cooldown_penalty", 0.0)
+            )
+            main_carb_repeat_penalty = safe_float(
+                components.get("main_carb_repeat_penalty", 0.0)
+            )
+            macro_hard_block = bool(components.get("macro_hard_block", False))
+            recipe_cooldown_hard_block = bool(
+                components.get("recipe_cooldown_hard_block", False)
+            )
+            main_carb_hard_block = bool(components.get("main_carb_hard_block", False))
+            emergency_fallback_candidate = bool(
+                components.get("emergency_fallback_candidate", False)
+            )
+            low_score_rescue_blocked_reason = str(
+                components.get("low_score_rescue_blocked_reason", "") or ""
+            )
+            rescue_score_floor_applied = bool(
+                components.get("rescue_score_floor_applied", False)
+            )
+            rescue_score_before_floor = components.get("rescue_score_before_floor")
+            rescue_score_after_floor = components.get("rescue_score_after_floor")
+            rescue_score_floor_reason = str(
+                components.get("rescue_score_floor_reason", "") or ""
+            )
+            selected_pool_name = str(
+                meal.get("selected_pool_name")
+                or components.get("selected_pool_name")
+                or components.get("selected_quality_tier")
+                or tier
+                or ""
+            )
+            candidate_pool_counts = components.get("candidate_pool_counts")
+            if not isinstance(candidate_pool_counts, dict):
+                quality_sizes = extract_quality_pool_sizes(meal)
+                candidate_pool_counts = {
+                    "normal_candidates": safe_int(quality_sizes.get("normal")),
+                    "relaxed_candidates": safe_int(quality_sizes.get("relaxed")),
+                    "rescue_candidates": safe_int(quality_sizes.get("rescue")),
+                    "emergency_candidates": safe_int(quality_sizes.get("emergency")),
+                    "blocked_candidates": safe_int(quality_sizes.get("blocked")),
+                }
+            else:
+                candidate_pool_counts = {
+                    str(k): safe_int(v)
+                    for k, v in candidate_pool_counts.items()
+                }
+
+            selected_pool_counter[selected_pool_name or "unknown"] += 1
+            protein_gap_penalties.append(protein_gap_penalty)
+            if day_fat_after_ratio > 0:
+                selected_day_fat_after_ratios.append(day_fat_after_ratio)
+            if fat_pressure_penalty > 0:
+                fat_pressure_penalty_applied_count += 1
+            if slot_fat_over_penalty > 0:
+                slot_fat_over_penalty_applied_count += 1
+            if low_fat_recovery_bonus > 0:
+                low_fat_recovery_bonus_applied_count += 1
+            if carb_recovery_bonus > 0:
+                carb_recovery_bonus_applied_count += 1
+            if rescue_score_floor_applied:
+                rescue_score_floor_applied_count += 1
+            if macro_hard_block:
+                macro_hard_block_selected_count += 1
+            if (
+                components.get("macro_hard_block_reason") == "day_fat_after_ratio"
+                or components.get("low_score_rescue_overridden_block_reason") == "day_fat_after_ratio"
+                or low_score_rescue_blocked_reason == "day_fat_after_ratio"
+            ):
+                day_fat_after_ratio_rescue_count += 1
+            if bool(components.get("last_safe_candidate_fallback", False)):
+                last_safe_candidate_fallback_count += 1
+
             meal_report = {
                 "day": day_index,
                 "slot": slot_index,
@@ -1103,6 +1205,8 @@ def analyze_plan(
                 "eaten_weight_g": safe_round(eaten_weight, 1),
                 "energy_density_kcal_per_g": safe_round(energy_density, 3),
                 "quality_pool_sizes": extract_quality_pool_sizes(meal),
+                "selected_pool_name": selected_pool_name,
+                "candidate_pool_counts": candidate_pool_counts,
                 "issues": get_list(meal.get("issues")),
                 "warnings": get_list(meal.get("warnings")),
 
@@ -1118,6 +1222,26 @@ def analyze_plan(
                 "low_score_before_rescue": low_score_before_rescue,
                 "low_score_after_rescue": low_score_after_rescue,
                 "low_score_rescue_boost": low_score_rescue_boost,
+                "low_score_rescue_blocked_reason": low_score_rescue_blocked_reason,
+                "rescue_score_floor_applied": rescue_score_floor_applied,
+                "rescue_score_before_floor": rescue_score_before_floor,
+                "rescue_score_after_floor": rescue_score_after_floor,
+                "rescue_score_floor_reason": rescue_score_floor_reason,
+
+                "protein_ratio": safe_round(protein_ratio, 4),
+                "protein_gap_penalty": safe_round(protein_gap_penalty, 4),
+                "day_fat_after_ratio": safe_round(day_fat_after_ratio, 4),
+                "fat_pressure_penalty": safe_round(fat_pressure_penalty, 4),
+                "slot_fat_over_penalty": safe_round(slot_fat_over_penalty, 4),
+                "low_fat_recovery_bonus": safe_round(low_fat_recovery_bonus, 4),
+                "carb_recovery_bonus": safe_round(carb_recovery_bonus, 4),
+                "recipe_repeat_count": recipe_repeat_count,
+                "recipe_cooldown_penalty": safe_round(recipe_cooldown_penalty, 4),
+                "recipe_cooldown_hard_block": recipe_cooldown_hard_block,
+                "main_carb_repeat_penalty": safe_round(main_carb_repeat_penalty, 4),
+                "main_carb_hard_block": main_carb_hard_block,
+                "macro_hard_block": macro_hard_block,
+                "emergency_fallback_candidate": emergency_fallback_candidate,
 
                 "components": components,
             }
@@ -1306,6 +1430,17 @@ def analyze_plan(
             "carbs": round(mean(daily_abs_errors["carbs"]), 4),
         },
         "tier_counts": dict(tier_counter),
+        "selected_pool_counts": dict(selected_pool_counter),
+        "rescue_score_floor_applied_count": rescue_score_floor_applied_count,
+        "macro_hard_block_selected_count": macro_hard_block_selected_count,
+        "day_fat_after_ratio_rescue_count": day_fat_after_ratio_rescue_count,
+        "last_safe_candidate_fallback_count": last_safe_candidate_fallback_count,
+        "fat_pressure_penalty_applied_count": fat_pressure_penalty_applied_count,
+        "slot_fat_over_penalty_applied_count": slot_fat_over_penalty_applied_count,
+        "low_fat_recovery_bonus_applied_count": low_fat_recovery_bonus_applied_count,
+        "carb_recovery_bonus_applied_count": carb_recovery_bonus_applied_count,
+        "avg_protein_gap_penalty": round(mean(protein_gap_penalties), 4),
+        "avg_selected_day_fat_after_ratio": round(mean(selected_day_fat_after_ratios), 4),
         "quality_pool_totals": dict(quality_pool_totals),
         "recipe_counts": dict(recipe_counter),
         "main_carb_counts": dict(main_carb_counter),
@@ -1440,6 +1575,19 @@ def print_profile_report(report: Dict[str, Any], top_n: int = 15) -> None:
         print_metric(key, pct(safe_float(macro_errors.get(key))))
 
     print_counter("SELECTION TIERS", Counter(summary.get("tier_counts", {})), top_n=10)
+    print_counter("SELECTED POOLS", Counter(summary.get("selected_pool_counts", {})), top_n=10)
+    print_subheader("RESCUE / FLOOR")
+    print_metric("rescue_score_floor_applied", summary.get("rescue_score_floor_applied_count"))
+    print_metric("macro_hard_block_selected", summary.get("macro_hard_block_selected_count"))
+    print_metric("day_fat_after_ratio_rescue", summary.get("day_fat_after_ratio_rescue_count"))
+    print_metric("last_safe_candidate_fallback", summary.get("last_safe_candidate_fallback_count"))
+    print_subheader("MACRO ADJUSTMENTS")
+    print_metric("avg_protein_gap_penalty", summary.get("avg_protein_gap_penalty"))
+    print_metric("avg_selected_day_fat_after_ratio", summary.get("avg_selected_day_fat_after_ratio"))
+    print_metric("fat_pressure_penalty_applied", summary.get("fat_pressure_penalty_applied_count"))
+    print_metric("slot_fat_over_penalty_applied", summary.get("slot_fat_over_penalty_applied_count"))
+    print_metric("low_fat_recovery_bonus_applied", summary.get("low_fat_recovery_bonus_applied_count"))
+    print_metric("carb_recovery_bonus_applied", summary.get("carb_recovery_bonus_applied_count"))
     print_counter("MAIN CARBS", Counter(summary.get("main_carb_counts", {})), top_n=top_n)
     print_counter("MAIN PROTEINS", Counter(summary.get("main_protein_counts", {})), top_n=top_n)
     print_counter("RECIPES", Counter(summary.get("recipe_counts", {})), top_n=top_n)
@@ -1552,6 +1700,108 @@ def print_profile_report(report: Dict[str, Any], top_n: int = 15) -> None:
             or "None"
         )
 
+        protein_ratio = safe_float(
+            m.get("protein_ratio", components.get("protein_ratio", 0.0))
+        )
+        protein_gap_penalty = safe_float(
+            m.get("protein_gap_penalty", components.get("protein_gap_penalty", 0.0))
+        )
+        fat_pressure_penalty = safe_float(
+            m.get(
+                "fat_pressure_penalty",
+                components.get("day_fat_pressure_penalty", 0.0),
+            )
+        )
+        slot_fat_over_penalty = safe_float(
+            m.get(
+                "slot_fat_over_penalty",
+                components.get("slot_fat_over_penalty", 0.0),
+            )
+        )
+        low_fat_recovery_bonus = safe_float(
+            m.get(
+                "low_fat_recovery_bonus",
+                components.get("low_fat_recovery_bonus", 0.0),
+            )
+        )
+        carb_recovery_bonus = safe_float(
+            m.get(
+                "carb_recovery_bonus",
+                components.get("carb_recovery_bonus", 0.0),
+            )
+        )
+        recipe_repeat_count = safe_int(
+            m.get("recipe_repeat_count", components.get("recipe_repeat_count", 0))
+        )
+        recipe_cooldown_penalty = safe_float(
+            m.get(
+                "recipe_cooldown_penalty",
+                components.get("recipe_cooldown_penalty", 0.0),
+            )
+        )
+        main_carb_repeat_penalty = safe_float(
+            m.get(
+                "main_carb_repeat_penalty",
+                components.get("main_carb_repeat_penalty", 0.0),
+            )
+        )
+        macro_hard_block = bool(
+            m.get("macro_hard_block", components.get("macro_hard_block", False))
+        )
+        recipe_cooldown_hard_block = bool(
+            m.get(
+                "recipe_cooldown_hard_block",
+                components.get("recipe_cooldown_hard_block", False),
+            )
+        )
+        main_carb_hard_block = bool(
+            m.get("main_carb_hard_block", components.get("main_carb_hard_block", False))
+        )
+        emergency_fallback_candidate = bool(
+            m.get(
+                "emergency_fallback_candidate",
+                components.get("emergency_fallback_candidate", False),
+            )
+        )
+        low_score_rescue_blocked_reason = str(
+            m.get(
+                "low_score_rescue_blocked_reason",
+                components.get("low_score_rescue_blocked_reason", ""),
+            )
+            or ""
+        )
+        rescue_score_floor_applied = bool(
+            m.get(
+                "rescue_score_floor_applied",
+                components.get("rescue_score_floor_applied", False),
+            )
+        )
+        rescue_score_before_floor = (
+            m.get("rescue_score_before_floor")
+            or components.get("rescue_score_before_floor")
+        )
+        rescue_score_after_floor = (
+            m.get("rescue_score_after_floor")
+            or components.get("rescue_score_after_floor")
+        )
+        selected_pool_name = str(
+            m.get("selected_pool_name")
+            or components.get("selected_pool_name")
+            or "-"
+        )
+        candidate_pool_counts = m.get("candidate_pool_counts")
+        if not isinstance(candidate_pool_counts, dict):
+            candidate_pool_counts = components.get("candidate_pool_counts")
+        if not isinstance(candidate_pool_counts, dict):
+            candidate_pool_counts = {}
+        pool_text = (
+            f"normal={safe_int(candidate_pool_counts.get('normal_candidates'))},"
+            f"relaxed={safe_int(candidate_pool_counts.get('relaxed_candidates'))},"
+            f"rescue={safe_int(candidate_pool_counts.get('rescue_candidates'))},"
+            f"emergency={safe_int(candidate_pool_counts.get('emergency_candidates'))},"
+            f"blocked={safe_int(candidate_pool_counts.get('blocked_candidates'))}"
+        )
+
         name = str(m.get("name", "unknown") or "unknown")
 
         print(
@@ -1568,6 +1818,58 @@ def print_profile_report(report: Dict[str, Any], top_n: int = 15) -> None:
             f"carb={str(main_carb):<12s} "
             f"| {name}"
         )
+        print(
+            f"    protein_ratio={protein_ratio:.4f} "
+            f"protein_gap_penalty={protein_gap_penalty:.4f} "
+            f"fat_pressure_penalty={fat_pressure_penalty:.4f} "
+            f"slot_fat_penalty={slot_fat_over_penalty:.4f} "
+            f"low_fat_bonus={low_fat_recovery_bonus:.4f} "
+            f"carb_bonus={carb_recovery_bonus:.4f} "
+            f"recipe_repeat_count={recipe_repeat_count} "
+            f"recipe_cooldown_penalty={recipe_cooldown_penalty:.4f} "
+            f"main_carb_repeat_penalty={main_carb_repeat_penalty:.4f} "
+            f"macro_hard_block={macro_hard_block} "
+            f"recipe_cooldown_hard_block={recipe_cooldown_hard_block} "
+            f"main_carb_hard_block={main_carb_hard_block} "
+            f"emergency_fallback={emergency_fallback_candidate} "
+            f"low_rescue_block={low_score_rescue_blocked_reason or '-'} "
+            f"floor={rescue_score_floor_applied}"
+        )
+        if rescue_score_floor_applied:
+            print(
+                f"    rescue_floor_before={rescue_score_before_floor} "
+                f"after={rescue_score_after_floor}"
+            )
+        print(
+            f"    selected_pool={selected_pool_name} "
+            f"pools[{pool_text}]"
+        )
+
+    slot_diagnostics = [
+        item
+        for day in report.get("days", [])
+        for item in get_list(day.get("slot_diagnostics"))
+    ]
+
+    if slot_diagnostics:
+        print_subheader("EMPTY SLOT DIAGNOSTICS")
+        for item in slot_diagnostics[:top_n]:
+            counts = get_dict(item.get("candidate_pool_counts"))
+            best_rejected = get_dict(item.get("best_rejected_candidate"))
+            print(
+                f"day={item.get('day')} slot={item.get('slot')} "
+                f"type={item.get('meal_type')} "
+                f"reason={item.get('no_selection_reason')} "
+                f"found={item.get('fetched_candidates')} "
+                f"optimized={item.get('optimized_candidates')} "
+                f"normal={safe_int(counts.get('normal_candidates'))} "
+                f"relaxed={safe_int(counts.get('relaxed_candidates'))} "
+                f"rescue={safe_int(counts.get('rescue_candidates'))} "
+                f"emergency={safe_int(counts.get('emergency_candidates'))} "
+                f"blocked={safe_int(counts.get('blocked_candidates'))} "
+                f"best_rejected={best_rejected.get('name', '-')}:"
+                f"{best_rejected.get('reason', '-')}"
+            )
 
     print_subheader("PROBLEMS")
     if not problems:
