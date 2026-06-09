@@ -1,10 +1,9 @@
 ⚙️ Запуск проекта
 1. Backend
-pip install -r requirements.txt
-python -m ai.pipeline.food_recognizer tests/test.jpg --topk 5
+venv\Scripts\activate
+cd backend
+python run.py
 
 2. Mobile (Flutter)
-flutter pub get
-flutter run -d web-server
-
-Back и Front никак не связаны
+cd "\AI Food\app\aifood"
+flutter run -d web-server --web-port 3000
